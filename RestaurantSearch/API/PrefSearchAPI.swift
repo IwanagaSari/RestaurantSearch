@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+//都道府県
+struct Prefectures: Codable {
+    let prefCode: String
+    let prefName: String
+    let areaCode: String
+    
+    enum CodingKeys: String, CodingKey {
+        case prefCode = "pref_code"
+        case prefName = "pref_name"
+        case areaCode = "area_code"
+    }
+}
