@@ -13,6 +13,7 @@
 		EA2679ED2248CCC100F3091C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2679EC2248CCC100F3091C /* Assets.xcassets */; };
 		EA2679F02248CCC100F3091C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2679EE2248CCC100F3091C /* LaunchScreen.storyboard */; };
 		EA2679FB2248CCC100F3091C /* RestaurantSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679FA2248CCC100F3091C /* RestaurantSearchTests.swift */; };
+		EA267A0A2248E2EE00F3091C /* AreaSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EA2679F62248CCC100F3091C /* RestaurantSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2679FA2248CCC100F3091C /* RestaurantSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchTests.swift; sourceTree = "<group>"; };
 		EA2679FC2248CCC100F3091C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSearchAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		EA2679E42248CCBF00F3091C /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
+				EA267A062248E18A00F3091C /* API */,
 				EA2679E52248CCBF00F3091C /* AppDelegate.swift */,
 				EA2679E72248CCBF00F3091C /* ViewController.swift */,
 				EA2679E92248CCBF00F3091C /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				EA2679FC2248CCC100F3091C /* Info.plist */,
 			);
 			path = RestaurantSearchTests;
+			sourceTree = "<group>";
+		};
+		EA267A062248E18A00F3091C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */,
+				EA267A0A2248E2EE00F3091C /* AreaSearchAPI.swift in Sources */,
 				EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
