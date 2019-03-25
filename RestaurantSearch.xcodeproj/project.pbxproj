@@ -16,6 +16,7 @@
 		EA267A0A2248E2EE00F3091C /* AreaSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */; };
 		EA267A0C2248EC3E00F3091C /* PrefSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0B2248EC3E00F3091C /* PrefSearchAPI.swift */; };
 		EA267A0E2248EFF200F3091C /* GAreaLargeSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0D2248EFF200F3091C /* GAreaLargeSearchAPI.swift */; };
+		EA267A102248F49200F3091C /* GAreaSmallSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* GAreaSmallSearchAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSearchAPI.swift; sourceTree = "<group>"; };
 		EA267A0B2248EC3E00F3091C /* PrefSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefSearchAPI.swift; sourceTree = "<group>"; };
 		EA267A0D2248EFF200F3091C /* GAreaLargeSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAreaLargeSearchAPI.swift; sourceTree = "<group>"; };
+		EA267A0F2248F49200F3091C /* GAreaSmallSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAreaSmallSearchAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */,
 				EA267A0B2248EC3E00F3091C /* PrefSearchAPI.swift */,
 				EA267A0D2248EFF200F3091C /* GAreaLargeSearchAPI.swift */,
+				EA267A0F2248F49200F3091C /* GAreaSmallSearchAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */,
 				EA267A0A2248E2EE00F3091C /* AreaSearchAPI.swift in Sources */,
 				EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */,
+				EA267A102248F49200F3091C /* GAreaSmallSearchAPI.swift in Sources */,
 				EA267A0E2248EFF200F3091C /* GAreaLargeSearchAPI.swift in Sources */,
 				EA267A0C2248EC3E00F3091C /* PrefSearchAPI.swift in Sources */,
 			);
