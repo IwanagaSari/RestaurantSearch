@@ -12,7 +12,7 @@ struct Area: Codable {
     let areaCode: String
     let areaName: String
     
-    enum CordingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case areaCode = "area_code"
         case areaName = "area_name"
     }
