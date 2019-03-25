@@ -9,9 +9,11 @@
 import Foundation
 
 struct Area: Codable {
+    let areaCode: String
     let areaName: String
     
     enum CordingKeys: String, CodingKey {
+        case areaCode = "area_code"
         case areaName = "area_name"
     }
 }
