@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+struct Area: Codable {
+    let areaName: String
+    
+    enum CordingKeys: String, CodingKey {
+        case areaName = "area_name"
+    }
+}
