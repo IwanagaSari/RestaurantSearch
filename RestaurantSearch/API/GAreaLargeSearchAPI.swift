@@ -7,3 +7,24 @@
 //
 
 import Foundation
+
+struct AreaL: Codable {
+    let areacodeL: String
+    let areanameL: String
+    let pref: [Pref]?
+    
+    struct Pref: Codable {
+        let prefCode: String
+        let pref_name: String
+    }
+    
+    enum CodingKeys1: String, CodingKey {
+        case areacodeL = "areacode_l"
+        case areanameL = "areaname_l"
+    }
+    
+    enum CodingKeys2: String, CodingKey {
+        case prefCode = "pref_code"
+        case prefName = "pref_name"
+    }
+}
