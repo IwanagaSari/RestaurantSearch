@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// エリア
 struct Area: Codable {
     let areaCode: String
     let areaName: String
