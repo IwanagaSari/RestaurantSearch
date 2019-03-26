@@ -1,5 +1,5 @@
 //
-//  GAreaLargeSearchAPITests.swift
+//  CityTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永彩里 on 2019/03/26.
@@ -28,5 +28,5 @@ class GAreaLargeSearchAPITests: XCTestCase {
             XCTAssertEqual(city.pref.prefCode, "PREF01")
             XCTAssertEqual(city.pref.prefName, "北海道")
     }
-
+    
 }
