@@ -21,6 +21,7 @@ struct AreaL: Codable {
     enum CodingKeys1: String, CodingKey {
         case areacodeL = "areacode_l"
         case areanameL = "areaname_l"
+        case pref
     }
     
     enum CodingKeys2: String, CodingKey {
