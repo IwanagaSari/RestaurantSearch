@@ -16,7 +16,7 @@
 		EA2679ED2248CCC100F3091C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2679EC2248CCC100F3091C /* Assets.xcassets */; };
 		EA2679F02248CCC100F3091C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2679EE2248CCC100F3091C /* LaunchScreen.storyboard */; };
 		EA2679FB2248CCC100F3091C /* RestaurantSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679FA2248CCC100F3091C /* RestaurantSearchTests.swift */; };
-		EA267A0A2248E2EE00F3091C /* AreaSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */; };
+		EA267A0A2248E2EE00F3091C /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A092248E2EE00F3091C /* Area.swift */; };
 		EA267A0C2248EC3E00F3091C /* PrefSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0B2248EC3E00F3091C /* PrefSearchAPI.swift */; };
 		EA267A0E2248EFF200F3091C /* GAreaLargeSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0D2248EFF200F3091C /* GAreaLargeSearchAPI.swift */; };
 		EA267A102248F49200F3091C /* GAreaSmallSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* GAreaSmallSearchAPI.swift */; };
@@ -46,7 +46,7 @@
 		EA2679F62248CCC100F3091C /* RestaurantSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2679FA2248CCC100F3091C /* RestaurantSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchTests.swift; sourceTree = "<group>"; };
 		EA2679FC2248CCC100F3091C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSearchAPI.swift; sourceTree = "<group>"; };
+		EA267A092248E2EE00F3091C /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		EA267A0B2248EC3E00F3091C /* PrefSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefSearchAPI.swift; sourceTree = "<group>"; };
 		EA267A0D2248EFF200F3091C /* GAreaLargeSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAreaLargeSearchAPI.swift; sourceTree = "<group>"; };
 		EA267A0F2248F49200F3091C /* GAreaSmallSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAreaSmallSearchAPI.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		EA267A062248E18A00F3091C /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EA267A092248E2EE00F3091C /* AreaSearchAPI.swift */,
+				EA267A092248E2EE00F3091C /* Area.swift */,
 				EA267A0B2248EC3E00F3091C /* PrefSearchAPI.swift */,
 				EA267A0D2248EFF200F3091C /* GAreaLargeSearchAPI.swift */,
 				EA267A0F2248F49200F3091C /* GAreaSmallSearchAPI.swift */,
@@ -227,7 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */,
-				EA267A0A2248E2EE00F3091C /* AreaSearchAPI.swift in Sources */,
+				EA267A0A2248E2EE00F3091C /* Area.swift in Sources */,
 				EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */,
 				EA267A102248F49200F3091C /* GAreaSmallSearchAPI.swift in Sources */,
 				EA267A0E2248EFF200F3091C /* GAreaLargeSearchAPI.swift in Sources */,
