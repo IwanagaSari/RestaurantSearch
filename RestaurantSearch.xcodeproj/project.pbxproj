@@ -70,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA0AD329224A2C8900D6526B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA267A092248E2EE00F3091C /* Area.swift */,
+				EA267A0B2248EC3E00F3091C /* Prefecture.swift */,
+				EA267A0D2248EFF200F3091C /* City.swift */,
+				EA267A0F2248F49200F3091C /* Town.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EA2679D92248CCBF00F3091C = {
 			isa = PBXGroup;
 			children = (
@@ -117,10 +128,7 @@
 		EA267A062248E18A00F3091C /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EA267A092248E2EE00F3091C /* Area.swift */,
-				EA267A0B2248EC3E00F3091C /* Prefecture.swift */,
-				EA267A0D2248EFF200F3091C /* City.swift */,
-				EA267A0F2248F49200F3091C /* Town.swift */,
+				EA0AD329224A2C8900D6526B /* Model */,
 			);
 			path = API;
 			sourceTree = "<group>";
