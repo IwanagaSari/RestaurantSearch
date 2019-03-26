@@ -10,5 +10,25 @@ import XCTest
 @testable import RestaurantSearch
 
 class GAreaLargeSearchAPITests: XCTestCase {
+    
+    func testMappingArea() throws {
+        let json = """
+[
+  {
+    "areacode_l": "AREAL5500",
+    "areaname_l": "札幌駅・大通・すすきの",
+    "pref": {
+        "pref_code": "PREF01",
+        "pref_name": "北海道"
+    }
+  }
+]
+"""
+        let allCity = try JSONDecoder().decode([City].self, from: json.data(using: .utf8)!)
+        let city = allCity[0]
+        XCTAssertEqual(city.areacodeL, "AREAL5500")
+        XCTAssertEqual(city.areanameL, "札幌駅・大通・すすきの")
+        
+    }
 
 }
