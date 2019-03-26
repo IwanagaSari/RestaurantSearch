@@ -9,7 +9,7 @@
 import Foundation
 
 //都道府県
-struct Prefectures: Codable {
+struct Prefecture: Codable {
     let prefCode: String
     let prefName: String
     let areaCode: String
