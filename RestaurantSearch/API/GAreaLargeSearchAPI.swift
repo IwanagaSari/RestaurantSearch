@@ -15,7 +15,7 @@ struct AreaL: Codable {
     
     struct Pref: Codable {
         let prefCode: String
-        let pref_name: String
+        let prefName: String
     }
     
     enum CodingKeys1: String, CodingKey {
