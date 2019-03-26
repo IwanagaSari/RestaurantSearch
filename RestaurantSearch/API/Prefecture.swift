@@ -1,5 +1,5 @@
 //
-//  PrefSearchAPI.swift
+//  Prefecture.swift
 //  RestaurantSearch
 //
 //  Created by 岩永 彩里 on 2019/03/25.
