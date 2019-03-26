@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		866273C2224A0165007CA319 /* AreaSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C1224A0165007CA319 /* AreaSearchAPITests.swift */; };
+		866273C2224A0165007CA319 /* AreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C1224A0165007CA319 /* AreaTests.swift */; };
 		866273C4224A09A9007CA319 /* PrefSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C3224A09A9007CA319 /* PrefSearchAPITests.swift */; };
 		866273C6224A0EFB007CA319 /* GAreaLargeSearchAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C5224A0EFB007CA319 /* GAreaLargeSearchAPITests.swift */; };
 		EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E52248CCBF00F3091C /* AppDelegate.swift */; };
@@ -33,7 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		866273C1224A0165007CA319 /* AreaSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSearchAPITests.swift; sourceTree = "<group>"; };
+		866273C1224A0165007CA319 /* AreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTests.swift; sourceTree = "<group>"; };
 		866273C3224A09A9007CA319 /* PrefSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefSearchAPITests.swift; sourceTree = "<group>"; };
 		866273C5224A0EFB007CA319 /* GAreaLargeSearchAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAreaLargeSearchAPITests.swift; sourceTree = "<group>"; };
 		EA2679E22248CCBF00F3091C /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				EA2679FA2248CCC100F3091C /* RestaurantSearchTests.swift */,
-				866273C1224A0165007CA319 /* AreaSearchAPITests.swift */,
+				866273C1224A0165007CA319 /* AreaTests.swift */,
 				EA2679FC2248CCC100F3091C /* Info.plist */,
 				866273C3224A09A9007CA319 /* PrefSearchAPITests.swift */,
 				866273C5224A0EFB007CA319 /* GAreaLargeSearchAPITests.swift */,
@@ -241,7 +241,7 @@
 			files = (
 				866273C4224A09A9007CA319 /* PrefSearchAPITests.swift in Sources */,
 				EA2679FB2248CCC100F3091C /* RestaurantSearchTests.swift in Sources */,
-				866273C2224A0165007CA319 /* AreaSearchAPITests.swift in Sources */,
+				866273C2224A0165007CA319 /* AreaTests.swift in Sources */,
 				866273C6224A0EFB007CA319 /* GAreaLargeSearchAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
