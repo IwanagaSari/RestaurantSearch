@@ -12,7 +12,7 @@ import Foundation
 struct City: Codable {
     let areacodeL: String
     let areanameL: String
-    let pref: [Pref]
+    let pref: Pref
     
     struct Pref: Codable {
         let prefCode: String
@@ -24,7 +24,7 @@ struct City: Codable {
         }
     }
     
-    enum CodingKeys1: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case areacodeL = "areacode_l"
         case areanameL = "areaname_l"
         case pref
