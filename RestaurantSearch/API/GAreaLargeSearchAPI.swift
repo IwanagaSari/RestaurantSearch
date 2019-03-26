@@ -11,7 +11,7 @@ import Foundation
 struct AreaL: Codable {
     let areacodeL: String
     let areanameL: String
-    let pref: [Pref]?
+    let pref: [Pref]
     
     struct Pref: Codable {
         let prefCode: String
