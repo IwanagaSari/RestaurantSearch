@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// 町
 struct Town: Codable {
     let areacodeS: String
     let areanameS: String

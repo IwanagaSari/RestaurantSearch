@@ -8,7 +8,7 @@
 
 import Foundation
 
-//都道府県
+/// 都道府県
 struct Prefecture: Codable {
     let prefCode: String
     let prefName: String
