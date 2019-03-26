@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AreaL: Codable {
+struct City: Codable {
     let areacodeL: String
     let areanameL: String
     let pref: [Pref]

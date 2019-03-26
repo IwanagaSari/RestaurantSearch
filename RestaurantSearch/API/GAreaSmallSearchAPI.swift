@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AreaS: Codable {
+struct Town: Codable {
     let areacodeS: String
     let areanameS: String
     let gareaLarge: [AreaL]?
