@@ -27,6 +27,5 @@ class GAreaLargeSearchAPITests: XCTestCase {
             XCTAssertEqual(city.areanameL, "札幌駅・大通・すすきの")
             XCTAssertEqual(city.pref.prefCode, "PREF01")
             XCTAssertEqual(city.pref.prefName, "北海道")
-    }
-    
+    }    
 }
