@@ -13,7 +13,6 @@ class GAreaLargeSearchAPITests: XCTestCase {
     
     func testMappingArea() throws {
         let json = """
-[
   {
     "areacode_l": "AREAL5500",
     "areaname_l": "札幌駅・大通・すすきの",
@@ -22,13 +21,10 @@ class GAreaLargeSearchAPITests: XCTestCase {
         "pref_name": "北海道"
     }
   }
-]
 """
-        let allCity = try JSONDecoder().decode([City].self, from: json.data(using: .utf8)!)
-        let city = allCity[0]
+        let city = try JSONDecoder().decode(City.self, from: json.data(using: .utf8)!)
         XCTAssertEqual(city.areacodeL, "AREAL5500")
-        XCTAssertEqual(city.areanameL, "札幌駅・大通・すすきの")
-        
+        XCTAssertEqual(city.areanameL, "札幌駅・大通・すすきの")        
     }
 
 }
