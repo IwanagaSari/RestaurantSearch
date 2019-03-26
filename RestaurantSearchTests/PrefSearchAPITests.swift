@@ -13,16 +13,13 @@ class PrefSearchAPITests: XCTestCase {
     
     func testMappingArea() throws {
         let json = """
-[
   {
     "pref_code": "PREF01",
     "pref_name": "北海道",
     "area_code": "AREA150"
   }
-]
 """
-        let allPref = try JSONDecoder().decode([Prefecture].self, from: json.data(using: .utf8)!)
-        let pref = allPref[0]
+        let pref = try JSONDecoder().decode(Prefecture.self, from: json.data(using: .utf8)!)
         XCTAssertEqual(pref.prefCode, "PREF01")
         XCTAssertEqual(pref.prefName, "北海道")
         XCTAssertEqual(pref.areaCode, "AREA150")
