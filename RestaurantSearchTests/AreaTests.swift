@@ -1,5 +1,5 @@
 //
-//  AreaSearchAPITests.swift
+//  AreaTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永彩里 on 2019/03/26.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-final class AreaSearchAPITests: XCTestCase {
+final class AreaTests: XCTestCase {
     
     func testMappingArea() throws {
         let json = """
