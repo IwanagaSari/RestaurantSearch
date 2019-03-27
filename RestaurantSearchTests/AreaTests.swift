@@ -19,7 +19,6 @@ final class AreaTests: XCTestCase {
   }
 """
         let area = try JSONDecoder().decode(Area.self, from: json.data(using: .utf8)!)
-        //let area = allArea[0]
         XCTAssertEqual(area.areaCode, "AREA150")
         XCTAssertEqual(area.areaName, "北海道")
     }
