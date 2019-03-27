@@ -23,9 +23,9 @@ final class CityTests: XCTestCase {
   }
 """
         let city = try JSONDecoder().decode(City.self, from: json.data(using: .utf8)!)
-            XCTAssertEqual(city.areacodeL, "AREAL5500")
-            XCTAssertEqual(city.areanameL, "札幌駅・大通・すすきの")
-            XCTAssertEqual(city.pref.prefCode, "PREF01")
-            XCTAssertEqual(city.pref.prefName, "北海道")
+        XCTAssertEqual(city.areacodeL, "AREAL5500")
+        XCTAssertEqual(city.areanameL, "札幌駅・大通・すすきの")
+        XCTAssertEqual(city.pref.prefCode, "PREF01")
+        XCTAssertEqual(city.pref.prefName, "北海道")
     }    
 }
