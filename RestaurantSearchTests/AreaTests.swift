@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-class AreaSearchAPITests: XCTestCase {
+final class AreaSearchAPITests: XCTestCase {
     
     func testMappingArea() throws {
         let json = """

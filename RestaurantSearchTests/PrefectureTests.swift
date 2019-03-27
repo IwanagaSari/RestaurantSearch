@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-class PrefSearchAPITests: XCTestCase {
+final class PrefSearchAPITests: XCTestCase {
     
     func testMappingArea() throws {
         let json = """
