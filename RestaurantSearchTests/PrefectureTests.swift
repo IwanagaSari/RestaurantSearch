@@ -11,7 +11,7 @@ import XCTest
 
 final class PrefectureTests: XCTestCase {
     
-    func testMappingArea() throws {
+    func testDecode() throws {
         let json = """
   {
     "pref_code": "PREF01",

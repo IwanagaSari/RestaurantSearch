@@ -11,7 +11,7 @@ import XCTest
 
 final class CityTests: XCTestCase {
     
-    func testMappingArea() throws {
+    func testDecode() throws {
         let json = """
   {
     "areacode_l": "AREAL5500",
