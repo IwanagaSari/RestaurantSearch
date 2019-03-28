@@ -1,16 +1,24 @@
 PODS:
   - Alamofire (5.0.0-beta.3)
+  - APIKit (4.0.0):
+    - Result (~> 4.0)
+  - Result (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.3)
+  - APIKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - APIKit
+    - Result
 
 SPEC CHECKSUMS:
   Alamofire: 50d6fa7e8cbe7f84559e86ab641ffd029db655f8
+  APIKit: 23ddce4be7eccd746d2ab3c62713cd80d5846d5a
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: b6dae154dcdcfceb3cf14c463e2aa35788936d6a
+PODFILE CHECKSUM: 762c8c0887683d056459bca6a5617c67311e3df4
 
 COCOAPODS: 1.6.1
