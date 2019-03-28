@@ -18,13 +18,13 @@ struct Town: Codable {
         let areacodeL: String
         let areanameL: String
 
-        enum Codingkeys: String, CodingKey {
+        enum CodingKeys: String, CodingKey {
             case areacodeL = "areacode_l"
             case areanameL = "areaname_l"
         }
     }
 
-    enum Codingkeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case areacodeS = "areacode_s"
         case areanameS = "areaname_s"
         case gareaLarge = "garea_large"
