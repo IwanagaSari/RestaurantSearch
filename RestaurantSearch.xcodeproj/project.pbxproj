@@ -22,6 +22,9 @@
 		EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0B2248EC3E00F3091C /* Prefecture.swift */; };
 		EA267A0E2248EFF200F3091C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0D2248EFF200F3091C /* City.swift */; };
 		EA267A102248F49200F3091C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* Town.swift */; };
+		EA3777E8224CD4030057CCF4 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3777E7224CD4030057CCF4 /* Alamofire.swift */; };
+		EA3777EA224CD8E70057CCF4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3777E9224CD8E70057CCF4 /* Alamofire.framework */; };
+		EA3777ED224CDA140057CCF4 /* APIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3777EC224CDA140057CCF4 /* APIKitViewController.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		EA267A0B2248EC3E00F3091C /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
 		EA267A0D2248EFF200F3091C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		EA267A0F2248F49200F3091C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
+		EA3777E7224CD4030057CCF4 /* Alamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		EA3777E9224CD8E70057CCF4 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA3777EC224CDA140057CCF4 /* APIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKitViewController.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3777EA224CD8E70057CCF4 /* Alamofire.framework in Frameworks */,
 				9E01B705585537534CC2A259 /* Pods_RestaurantSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +92,7 @@
 		7CA7AEEA624F7304F1F14B50 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA3777E9224CD8E70057CCF4 /* Alamofire.framework */,
 				FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */,
 				220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */,
 			);
@@ -99,7 +107,6 @@
 				0E3CF33531AAF3E5071B1D6E /* Pods-RestaurantSearchTests.debug.xcconfig */,
 				C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,6 +151,8 @@
 				EA2679EC2248CCC100F3091C /* Assets.xcassets */,
 				EA2679EE2248CCC100F3091C /* LaunchScreen.storyboard */,
 				EA2679F12248CCC100F3091C /* Info.plist */,
+				EA3777E7224CD4030057CCF4 /* Alamofire.swift */,
+				EA3777EC224CDA140057CCF4 /* APIKitViewController.swift */,
 			);
 			path = RestaurantSearch;
 			sourceTree = "<group>";
@@ -181,6 +190,7 @@
 				EA2679DF2248CCBF00F3091C /* Frameworks */,
 				EA2679E02248CCBF00F3091C /* Resources */,
 				E94F31A2E975F2CF06CAFBB8 /* [CP] Embed Pods Frameworks */,
+				EA3777EB224CD92A0057CCF4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -339,6 +349,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EA3777EB224CD92A0057CCF4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -352,6 +379,8 @@
 				EA267A102248F49200F3091C /* Town.swift in Sources */,
 				EA267A0E2248EFF200F3091C /* City.swift in Sources */,
 				EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */,
+				EA3777ED224CDA140057CCF4 /* APIKitViewController.swift in Sources */,
+				EA3777E8224CD4030057CCF4 /* Alamofire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
