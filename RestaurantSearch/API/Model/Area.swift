@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct AreaResponseBody: Codable {
+    let area: [Area]
+}
+
 /// エリア
 struct Area: Codable {
     let areaCode: String
@@ -17,5 +21,4 @@ struct Area: Codable {
         case areaCode = "area_code"
         case areaName = "area_name"
     }
-    
 }

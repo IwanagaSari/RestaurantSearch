@@ -40,7 +40,8 @@ extension GurunaviRequest {
 
 class API {
     struct FetchRepositoryRequest: GurunaviRequest {
-        typealias Response = Area
+        typealias Response = AreaResponseBody
+        
 
         var path: String {
             return "/v3/"
