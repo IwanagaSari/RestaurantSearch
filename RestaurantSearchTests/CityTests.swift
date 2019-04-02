@@ -30,7 +30,7 @@ final class CityTests: XCTestCase {
 }
 """
         let body = try JSONDecoder().decode(CityResponseBody.self, from: json.data(using: .utf8)!)
-        let city = body.garea_large[0]
+        let city = body.gareaLarge[0]
         XCTAssertEqual(city.areacodeL, "AREAL5500")
         XCTAssertEqual(city.areanameL, "札幌駅・大通・すすきの")
         XCTAssertEqual(city.pref.prefCode, "PREF01")
