@@ -9,7 +9,11 @@
 import Foundation
 
 struct TownResponseBody: Codable {
-    let garea_small: [Town]
+    let gareaSmall: [Town]
+    
+    enum CodingKeys: String, CodingKey {
+        case gareaSmall = "garea_small"
+    }
 }
 /// 町
 struct Town: Codable {
