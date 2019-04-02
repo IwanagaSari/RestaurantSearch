@@ -13,13 +13,21 @@ final class PrefectureTests: XCTestCase {
     
     func testDecode() throws {
         let json = """
-  {
-    "pref_code": "PREF01",
-    "pref_name": "北海道",
-    "area_code": "AREA150"
-  }
+{
+    "@attributes": {
+        "api_version": "v3"
+    },
+    "pref": [
+        {
+            "pref_code": "PREF01",
+            "pref_name": "北海道",
+            "area_code": "AREA150"
+        }
+    ]
+}
 """
-        let pref = try JSONDecoder().decode(Prefecture.self, from: json.data(using: .utf8)!)
+        let body = try JSONDecoder().decode(PrefectureResponseBody.self, from: json.data(using: .utf8)!)
+        let pref = body.pref[0]
         XCTAssertEqual(pref.prefCode, "PREF01")
         XCTAssertEqual(pref.prefName, "北海道")
         XCTAssertEqual(pref.areaCode, "AREA150")
