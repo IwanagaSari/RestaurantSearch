@@ -16,15 +16,12 @@ class APIKitViewController: UIViewController {
         
         let request = API.FetchRepositoryRequest()
         Session.send(request) { result in
-            //request.response(from: <#T##Any#>, urlResponse: <#T##HTTPURLResponse#>)
             switch result {
                 
             case .success(let response):
-                
                 print("成功！！\(response)")
                 
             case .failure(let err):
-                
                 print("失敗してるよ\(err)")
                 print(err.localizedDescription)
                 
@@ -46,7 +43,7 @@ extension GurunaviRequest {
 
 class API {
     struct FetchRepositoryRequest: GurunaviRequest {
-        typealias Response = [Any]
+        typealias Response = Area
 
         var path: String {
             return "/v3/"
@@ -61,10 +58,28 @@ class API {
                 "keyid": "9e168ecbfa31f841eb3a8bc16045a424",
             ]
         }
+        // 作成したJSONDataParserをパーサとして適用する
+        var dataParser: DataParser {
+            return DecodableDataParser()
+        }
         
         func response(from object: Any, urlResponse: HTTPURLResponse) throws -> FetchRepositoryRequest.Response {
-            return try Area(object: object)
+            guard let data = object as? Data else {
+                throw ResponseError.unexpectedObject(object)
+            }
+            return try JSONDecoder().decode(Response.self, from: data)
         }
+    }
+}
+
+final class DecodableDataParser: DataParser {
+    var contentType: String? {
+        return "application/json"
+    }
+    
+    func parse(data: Data) throws -> Any {
+        // ここではデコードせずにそのまま返す
+        return data
     }
 }
 
