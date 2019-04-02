@@ -18,14 +18,4 @@ struct Area: Codable {
         case areaName = "area_name"
     }
     
-//    init(object: Any) throws {
-//        guard let dictionary = object as? [String: Any],
-//              let areaDictionary = dictionary["area"] as? [String: Any],
-//              let areaCode = areaDictionary["area_code"] as? String,
-//              let areaName = areaDictionary["area_name"] as? String else {
-//                throw ResponseError.unexpectedObject(object)
-//        }
-//        self.areaCode = areaCode
-//        self.areaName = areaName
-//    }
 }
