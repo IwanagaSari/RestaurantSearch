@@ -8,6 +8,9 @@
 
 import Foundation
 
+struct CityResponseBody: Codable {
+    let garea_large: [City]
+}
 /// 市
 struct City: Codable {
     let areacodeL: String
