@@ -13,12 +13,20 @@ final class AreaTests: XCTestCase {
     
     func testDecode() throws {
         let json = """
-  {
-    "area_code": "AREA150",
-    "area_name": "北海道"
-  }
+{
+    "@attributes": {
+        "api_version": "v3"
+    },
+    "area": [
+        {
+            "area_code": "AREA150",
+            "area_name": "北海道"
+        }
+    ]
+}
 """
-        let area = try JSONDecoder().decode(Area.self, from: json.data(using: .utf8)!)
+        let body = try JSONDecoder().decode(AreaResponseBody.self, from: json.data(using: .utf8)!)
+        let area = body.area[0]
         XCTAssertEqual(area.areaCode, "AREA150")
         XCTAssertEqual(area.areaName, "北海道")
     }
