@@ -24,12 +24,9 @@ class APIKitViewController: UIViewController {
             case .failure(let err):
                 print("失敗してるよ\(err)")
                 print(err.localizedDescription)
-                
             }
         }
-
     }
-    
 }
 
 protocol GurunaviRequest: Request {  //APIKitが持っているRequestプロトコル
@@ -53,9 +50,9 @@ class API {
             return .get
         }
         
-        var parameters: [String: String] {
+        var parameters: Any? {
             return [
-                "keyid": "9e168ecbfa31f841eb3a8bc16045a424",
+                "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
             ]
         }
         // 作成したJSONDataParserをパーサとして適用する
@@ -78,8 +75,7 @@ final class DecodableDataParser: DataParser {
     }
     
     func parse(data: Data) throws -> Any {
-        // ここではデコードせずにそのまま返す
-        return data
+        return data   // ここではデコードせずにそのまま返す
     }
 }
 
