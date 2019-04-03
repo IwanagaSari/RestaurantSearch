@@ -1,5 +1,5 @@
 //
-//  Alamofire.swift
+//  AlamofireViewController.swift
 //  RestaurantSearch
 //
 //  Created by 岩永 彩里 on 2019/03/28.
@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class Alamofire: UIViewController {
+class AlamofireViewController: UIViewController {
     
     override func viewDidLoad() {
         
