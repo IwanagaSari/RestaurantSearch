@@ -31,7 +31,7 @@ class AlamofireViewController: UIViewController {
                     let result = try decoder.decode(AreaResponseBody.self, from: data)
                     print("結果：\(result)")
                 } catch {
-
+                    print(error)
                 }
             case .failure(let err):
                 print("失敗：\(err)")
