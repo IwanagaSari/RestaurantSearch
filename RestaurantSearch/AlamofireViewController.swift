@@ -16,7 +16,7 @@ class AlamofireViewController: UIViewController {
         let parameters = [
             "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
         ]
-        let url = "https://api.gnavi.co.jp/master/AreaSearchAPI"
+        let url = "https://api.gnavi.co.jp/master/AreaSearchAPI/v3/"
         Alamofire.request(url,parameters: parameters).responseJSON { response in
             print("Request: \(String(describing: response.request))")
             print("Response: \(String(describing: response.response))")
