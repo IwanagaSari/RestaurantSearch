@@ -11,7 +11,19 @@ import XCTest
 
 final class AreaTests: XCTestCase {
     
-    func testDecode() throws {
+    func testAreaDecode() throws {
+        let json = """
+{
+    "area_code": "AREA150",
+    "area_name": "北海道"
+}
+"""
+        let area = try JSONDecoder().decode(Area.self, from: json.data(using: .utf8)!)
+        XCTAssertEqual(area.areaCode, "AREA150")
+        XCTAssertEqual(area.areaName, "北海道")
+    }
+    
+    func testAreaResponseBodyDecode() throws {
         let json = """
 {
     "@attributes": {
@@ -26,8 +38,7 @@ final class AreaTests: XCTestCase {
 }
 """
         let body = try JSONDecoder().decode(AreaResponseBody.self, from: json.data(using: .utf8)!)
-        let area = body.area[0]
-        XCTAssertEqual(area.areaCode, "AREA150")
-        XCTAssertEqual(area.areaName, "北海道")
+        let areaCount = body.area.count
+        XCTAssertEqual(areaCount, 1)
     }
 }
