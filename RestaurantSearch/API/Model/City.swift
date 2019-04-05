@@ -15,6 +15,7 @@ struct CityResponseBody: Codable {
         case gareaLarge = "garea_large"
     }
 }
+
 /// 市
 struct City: Codable {
     let areacodeL: String
