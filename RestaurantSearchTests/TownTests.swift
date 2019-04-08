@@ -64,7 +64,6 @@ final class TownTests: XCTestCase {
 }
 """
         let body = try JSONDecoder().decode(TownResponseBody.self, from: json.data(using: .utf8)!)
-        let townCount = body.gareaSmall.count
-        XCTAssertEqual(townCount, 1)
+        XCTAssertEqual(body.gareaSmall.count, 1)
     }
 }
