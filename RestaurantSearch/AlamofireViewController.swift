@@ -11,8 +11,23 @@ import Alamofire
 
 class AlamofireViewController: UIViewController {
     
+    var areaResponseBody: AreaResponseBody?
+    var error: Error?
+    
     override func viewDidLoad() {
         
+        getAreaAPI(success: { areaResponseBody in
+            self.areaResponseBody = areaResponseBody
+            if let area = areaResponseBody?.area[0] {
+                print("エリアの名前：\(area.areaName)")
+            }
+        }, failure: {
+            
+        })
+
+    }
+    
+    func getAreaAPI(success: @escaping (AreaResponseBody?) -> Void, failure: @escaping () -> Void) {
         let parameters = [
             "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
         ]
@@ -21,7 +36,7 @@ class AlamofireViewController: UIViewController {
             print("Request: \(String(describing: response.request))")
             print("Response: \(String(describing: response.response))")
             print("Result: \(response.result)")
-
+            
             switch response.result {
             case .success(_):
                 do {
@@ -30,55 +45,16 @@ class AlamofireViewController: UIViewController {
                     //decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let result = try decoder.decode(AreaResponseBody.self, from: data)
                     print("結果：\(result)")
+                    success(result)
                 } catch {
                     print(error)
+                    failure()
                 }
             case .failure(let err):
                 print("失敗：\(err)")
+                failure()
             }
         }
-    
     }
     
-}
-
-protocol RequestProtocol {
-    var baseURL: String { get }
-    var path: String { get }
-    var method: Alamofire.HTTPMethod { get }
-    var encoding: Alamofire.ParameterEncoding { get }
-    var parameters: Alamofire.Parameters? { get }
-    var manager: Alamofire.SessionManager { get }
-    var headers: Alamofire.HTTPHeaders? { get }
-}
-
-struct FetchRequest: RequestProtocol {
-    var headers: HTTPHeaders?
-    
-    var manager: SessionManager
-    
-    var baseURL: String {
-        return "https://api.gnavi.co.jp/master/AreaSearchAPI"
-    }
-    var parameters: Parameters? {
-        return [
-            "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
-        ]
-    }
-    
-    var path: String {
-        return "/v3/"
-    }
-    
-    var method: HTTPMethod {
-        return .get
-    }
-    
-    var encoding: ParameterEncoding {
-        return JSONEncoding.default
-    }
-    
-    func createRequest(baseURL: String, parameters: Parameters, path: String, method: HTTPMethod, encoding: ParameterEncoding, manager: SessionManager) -> Alamofire.Request {
-        return manager.request(baseURL, method: method, parameters: parameters, encoding: encoding, headers: headers)
-    }
 }
