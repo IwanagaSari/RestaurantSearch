@@ -12,7 +12,11 @@ import Alamofire
 class AlamofireViewController: UIViewController {
     
     var areaResponseBody: AreaResponseBody?
+    var prefectureResponseBody: PrefectureResponseBody?
     var error: Error?
+    let parameters = [
+        "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
+    ]
     
     override func viewDidLoad() {
         
@@ -21,40 +25,64 @@ class AlamofireViewController: UIViewController {
             if let area = areaResponseBody?.area[0] {
                 print("エリアの名前：\(area.areaName)")
             }
-        }, failure: {
-            
+        }, failure: { error in
+            if let error = error {
+                print(error)
+            }
         })
-
+        
+        getPrefectureAPI(success: { prefectureResponseBody in
+            self.prefectureResponseBody = prefectureResponseBody
+            if let pref = prefectureResponseBody?.pref[0] {
+                print("都道府県の名前：\(pref.prefName)")
+            }
+        }, failure: { error in
+            if let error = error {
+                print(error)
+            }
+        })
     }
     
-    func getAreaAPI(success: @escaping (AreaResponseBody?) -> Void, failure: @escaping () -> Void) {
-        let parameters = [
-            "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
-        ]
+    /// エリアの取得
+    func getAreaAPI(success: @escaping (AreaResponseBody?) -> Void, failure: @escaping (Error?) -> Void) {
         let url = "https://api.gnavi.co.jp/master/AreaSearchAPI/v3/"
+        
         Alamofire.request(url,parameters: parameters).responseJSON { response in
-            print("Request: \(String(describing: response.request))")
-            print("Response: \(String(describing: response.response))")
-            print("Result: \(response.result)")
-            
             switch response.result {
             case .success(_):
                 do {
                     guard let data = response.data else { return }
-                    let decoder = JSONDecoder()
-                    //decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let result = try decoder.decode(AreaResponseBody.self, from: data)
+                    let result = try JSONDecoder().decode(AreaResponseBody.self, from: data)
                     print("結果：\(result)")
                     success(result)
                 } catch {
                     print(error)
-                    failure()
+                    failure(error)
                 }
             case .failure(let err):
                 print("失敗：\(err)")
-                failure()
+                failure(err)
             }
         }
     }
     
+    /// 都道府県の取得
+    func getPrefectureAPI(success: @escaping (PrefectureResponseBody?) -> Void, failure: @escaping (Error?) -> Void) {
+        let url = "https://api.gnavi.co.jp/master/PrefSearchAPI/v3/"
+        
+        Alamofire.request(url, parameters: parameters).responseJSON{ response in
+            switch response.result {
+            case .success(_):
+                do {
+                    guard let data = response.data else{ return }
+                    let result = try JSONDecoder().decode(PrefectureResponseBody.self, from: data)
+                    success(result)
+                } catch {
+                    failure(error)
+                }
+            case .failure(let err):
+                failure(err)
+            }
+        }
+    }
 }
