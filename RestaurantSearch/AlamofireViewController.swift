@@ -43,46 +43,32 @@ class AlamofireViewController: UIViewController {
         })
     }
     
+    func fetchresponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype?) -> Void, failure: @escaping (Error?) -> Void) {
+        Alamofire.request(url, parameters: parameters).responseJSON { response in
+            switch response.result {
+                case .success(_):
+                    do {
+                        guard let data = response.data else { return }
+                        let result = try JSONDecoder().decode(Responsetype.self, from: data)
+                        success(result)
+                    } catch {
+                        failure(error)
+                    }
+                case .failure(let err):
+                    failure(err)
+                }
+        }
+    }
+    
     /// エリアの取得
     func getAreaAPI(success: @escaping (AreaResponseBody?) -> Void, failure: @escaping (Error?) -> Void) {
         let url = "https://api.gnavi.co.jp/master/AreaSearchAPI/v3/"
-        
-        Alamofire.request(url,parameters: parameters).responseJSON { response in
-            switch response.result {
-            case .success(_):
-                do {
-                    guard let data = response.data else { return }
-                    let result = try JSONDecoder().decode(AreaResponseBody.self, from: data)
-                    print("結果：\(result)")
-                    success(result)
-                } catch {
-                    print(error)
-                    failure(error)
-                }
-            case .failure(let err):
-                print("失敗：\(err)")
-                failure(err)
-            }
-        }
+        fetchresponse(url: url, success: success, failure: failure)
     }
     
     /// 都道府県の取得
     func getPrefectureAPI(success: @escaping (PrefectureResponseBody?) -> Void, failure: @escaping (Error?) -> Void) {
         let url = "https://api.gnavi.co.jp/master/PrefSearchAPI/v3/"
-        
-        Alamofire.request(url, parameters: parameters).responseJSON{ response in
-            switch response.result {
-            case .success(_):
-                do {
-                    guard let data = response.data else{ return }
-                    let result = try JSONDecoder().decode(PrefectureResponseBody.self, from: data)
-                    success(result)
-                } catch {
-                    failure(error)
-                }
-            case .failure(let err):
-                failure(err)
-            }
-        }
+        fetchresponse(url: url, success: success, failure: failure)
     }
 }
