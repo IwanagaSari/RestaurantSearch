@@ -99,7 +99,6 @@
 				0E3CF33531AAF3E5071B1D6E /* Pods-RestaurantSearchTests.debug.xcconfig */,
 				C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
