@@ -91,6 +91,117 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		86E8FDFD225DCE4400DCAD11 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				86E8FDFF225DCE5F00DCAD11 /* Shop */,
+				86E8FDFE225DCE4D00DCAD11 /* Search */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		86E8FDFE225DCE4D00DCAD11 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				86E8FE06225DCF0300DCAD11 /* SceneSelect */,
+				86E8FE05225DCEE900DCAD11 /* GenreSelect */,
+				86E8FE04225DCEDC00DCAD11 /* TownSelect */,
+				86E8FE03225DCED300DCAD11 /* CitySelect */,
+				86E8FE02225DCEC800DCAD11 /* PrefectureSelect */,
+				86E8FE01225DCEBD00DCAD11 /* AreaSelect */,
+				86E8FE00225DCEA400DCAD11 /* SearchTop */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		86E8FDFF225DCE5F00DCAD11 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				86E8FE0A225DCF4400DCAD11 /* FavoritesList */,
+				86E8FE09225DCF3A00DCAD11 /* ShopMap */,
+				86E8FE08225DCF2800DCAD11 /* ShopInfo */,
+				86E8FE07225DCF1E00DCAD11 /* ShopList */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		86E8FE00225DCEA400DCAD11 /* SearchTop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchTop;
+			sourceTree = "<group>";
+		};
+		86E8FE01225DCEBD00DCAD11 /* AreaSelect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AreaSelect;
+			sourceTree = "<group>";
+		};
+		86E8FE02225DCEC800DCAD11 /* PrefectureSelect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PrefectureSelect;
+			sourceTree = "<group>";
+		};
+		86E8FE03225DCED300DCAD11 /* CitySelect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CitySelect;
+			sourceTree = "<group>";
+		};
+		86E8FE04225DCEDC00DCAD11 /* TownSelect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TownSelect;
+			sourceTree = "<group>";
+		};
+		86E8FE05225DCEE900DCAD11 /* GenreSelect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GenreSelect;
+			sourceTree = "<group>";
+		};
+		86E8FE06225DCF0300DCAD11 /* SceneSelect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SceneSelect;
+			sourceTree = "<group>";
+		};
+		86E8FE07225DCF1E00DCAD11 /* ShopList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShopList;
+			sourceTree = "<group>";
+		};
+		86E8FE08225DCF2800DCAD11 /* ShopInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShopInfo;
+			sourceTree = "<group>";
+		};
+		86E8FE09225DCF3A00DCAD11 /* ShopMap */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShopMap;
+			sourceTree = "<group>";
+		};
+		86E8FE0A225DCF4400DCAD11 /* FavoritesList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoritesList;
+			sourceTree = "<group>";
+		};
 		C9FFE08E163DFD711C80AB73 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +247,7 @@
 		EA2679E42248CCBF00F3091C /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
+				86E8FDFD225DCE4400DCAD11 /* UI */,
 				EA267A062248E18A00F3091C /* API */,
 				EA2679E52248CCBF00F3091C /* AppDelegate.swift */,
 				EA2679E72248CCBF00F3091C /* ViewController.swift */,
