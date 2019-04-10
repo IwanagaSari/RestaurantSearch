@@ -8,6 +8,14 @@
 
 import Foundation
 
+struct CityResponseBody: Codable {
+    let gareaLarge: [City]
+    
+    enum CodingKeys: String, CodingKey {
+        case gareaLarge = "garea_large"
+    }
+}
+
 /// 市
 struct City: Codable {
     let areacodeL: String

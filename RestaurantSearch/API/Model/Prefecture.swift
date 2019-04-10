@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct PrefectureResponseBody: Codable {
+    let pref: [Prefecture]
+}
+
 /// 都道府県
 struct Prefecture: Codable {
     let prefCode: String
