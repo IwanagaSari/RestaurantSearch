@@ -15,7 +15,6 @@
 		86E8FE10225DD05800DCAD11 /* FavoritesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE0F225DD05800DCAD11 /* FavoritesListViewController.swift */; };
 		86E8FE12225DD09D00DCAD11 /* ShopMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE11225DD09D00DCAD11 /* ShopMap.storyboard */; };
 		86E8FE14225DD0C800DCAD11 /* ShopMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE13225DD0C800DCAD11 /* ShopMapViewController.swift */; };
-		86E8FE16225DD1F700DCAD11 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE15225DD1F700DCAD11 /* ShopInfoViewController.swift */; };
 		86E8FE18225DD21500DCAD11 /* ShopInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */; };
 		86E8FE1A225DD22400DCAD11 /* ShopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE19225DD22400DCAD11 /* ShopList.storyboard */; };
 		86E8FE1C225DD23200DCAD11 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE1B225DD23200DCAD11 /* ShopListViewController.swift */; };
@@ -33,6 +32,7 @@
 		86E8FE35225DD3E800DCAD11 /* AreaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE34225DD3E800DCAD11 /* AreaSelectViewController.swift */; };
 		86E8FE37225DD3F500DCAD11 /* SearchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE36225DD3F500DCAD11 /* SearchTopViewController.swift */; };
 		86E8FE39225DD3FF00DCAD11 /* SearchTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */; };
+		86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */; };
 		9E01B705585537534CC2A259 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */; };
 		EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E52248CCBF00F3091C /* AppDelegate.swift */; };
 		EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E72248CCBF00F3091C /* ViewController.swift */; };
@@ -70,7 +70,6 @@
 		86E8FE0F225DD05800DCAD11 /* FavoritesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewController.swift; sourceTree = "<group>"; };
 		86E8FE11225DD09D00DCAD11 /* ShopMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopMap.storyboard; sourceTree = "<group>"; };
 		86E8FE13225DD0C800DCAD11 /* ShopMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMapViewController.swift; sourceTree = "<group>"; };
-		86E8FE15225DD1F700DCAD11 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShopInfoViewController.swift; path = ../../../../../Desktop/ShopInfoViewController.swift; sourceTree = "<group>"; };
 		86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopInfo.storyboard; sourceTree = "<group>"; };
 		86E8FE19225DD22400DCAD11 /* ShopList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopList.storyboard; sourceTree = "<group>"; };
 		86E8FE1B225DD23200DCAD11 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 		86E8FE34225DD3E800DCAD11 /* AreaSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewController.swift; sourceTree = "<group>"; };
 		86E8FE36225DD3F500DCAD11 /* SearchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopViewController.swift; sourceTree = "<group>"; };
 		86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTop.storyboard; sourceTree = "<group>"; };
+		86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
 		C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearchTests/Pods-RestaurantSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA2679E22248CCBF00F3091C /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2679E52248CCBF00F3091C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 		86E8FE08225DCF2800DCAD11 /* ShopInfo */ = {
 			isa = PBXGroup;
 			children = (
-				86E8FE15225DD1F700DCAD11 /* ShopInfoViewController.swift */,
+				86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */,
 				86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */,
 			);
 			path = ShopInfo;
@@ -519,10 +519,10 @@
 				86E8FE14225DD0C800DCAD11 /* ShopMapViewController.swift in Sources */,
 				86E8FE10225DD05800DCAD11 /* FavoritesListViewController.swift in Sources */,
 				86E8FE37225DD3F500DCAD11 /* SearchTopViewController.swift in Sources */,
-				86E8FE16225DD1F700DCAD11 /* ShopInfoViewController.swift in Sources */,
 				86E8FE1C225DD23200DCAD11 /* ShopListViewController.swift in Sources */,
 				86E8FE27225DD37C00DCAD11 /* TownSelectViewController.swift in Sources */,
 				86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */,
+				86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */,
 				EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
