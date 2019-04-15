@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MW8-SH-LEV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gsa-Vs-6oZ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="5wg-9p-0Hn">
             <objects>
                 <viewController storyboardIdentifier="SearchTop" id="MW8-SH-LEV" sceneMemberID="viewController">
@@ -18,21 +18,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouJ-VV-mj6">
-                                <rect key="frame" x="186" y="195" width="128" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="14G-iI-zl2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2oR-S8-Ejc"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="iJy-06-FzJ"/>
+                    <navigationItem key="navigationItem" id="Qxb-z0-7Tj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1u-gO-Jf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1176.8115942028987" y="222.99107142857142"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="7OH-jN-PNt">
+            <objects>
+                <viewController id="UoK-x5-j5b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iOu-Cg-vFH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QH1-ZH-jdS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="aV8-pw-fJD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hS9-E9-QUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="964"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dKw-f4-DRT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gsa-Vs-6oZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yvf-HE-JXI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PZY-Lb-sL4" kind="relationship" relationship="rootViewController" id="4Sh-3g-hkQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVd-il-qcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-642.02898550724638" y="222.99107142857142"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7Ee-dl-MTY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PZY-Lb-sL4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7yA-Zm-eSL"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KGN-wi-crw">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MW8-SH-LEV" kind="relationship" relationship="viewControllers" id="Dzt-bU-d3W"/>
+                        <segue destination="UoK-x5-j5b" kind="relationship" relationship="viewControllers" id="Qor-zB-D5t"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L14-2Q-Y9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="266.66666666666669" y="222.99107142857142"/>
         </scene>
     </scenes>
 </document>
