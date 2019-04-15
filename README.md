@@ -1,5 +1,6 @@
 # RestaurantSearch
 [![Build Status](https://app.bitrise.io/app/e045223d22de3808/status.svg?token=0d4OsmRRs0lF6GroNUYP5A&branch=master)](https://app.bitrise.io/app/e045223d22de3808)
+[![codecov](https://codecov.io/gh/IwanagaSari/RestaurantSearch/branch/master/graph/badge.svg?token=2xwzgh8zr6)](https://codecov.io/gh/IwanagaSari/RestaurantSearch)
 
 ## 環境
 
