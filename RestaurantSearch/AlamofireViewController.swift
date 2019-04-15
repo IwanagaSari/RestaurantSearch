@@ -9,6 +9,13 @@
 import UIKit
 import Alamofire
 
+protocol GurunaviAPIType {
+    func getAreaAPI(success: @escaping (AreaResponseBody?) -> Void, failure: @escaping (Error?) -> Void)
+    func getPrefectureAPI(success: @escaping (PrefectureResponseBody?) -> Void, failure: @escaping (Error?) -> Void)
+    func getCityAPI(success: @escaping (CityResponseBody?) -> Void, failure: @escaping (Error?) -> Void)
+    func getTownAPI(success: @escaping (TownResponseBody?) -> Void, failure: @escaping (Error?) -> Void)
+}
+
 class AlamofireViewController: UIViewController {
     
     var areaResponseBody: AreaResponseBody?
@@ -16,13 +23,12 @@ class AlamofireViewController: UIViewController {
     var cityResponseBody: CityResponseBody?
     var townResponseBody: TownResponseBody?
     var error: Error?
-    let parameters = [
-        "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
-    ]
+    
+    lazy var gurunaviAPI = GurunaviAPI()
     
     override func viewDidLoad() {
         
-        getAreaAPI(success: { areaResponseBody in
+        gurunaviAPI.getAreaAPI(success: { areaResponseBody in
             self.areaResponseBody = areaResponseBody
             if let area = areaResponseBody?.area[0] {
                 print("エリアの名前：\(area.areaName)")
@@ -33,7 +39,7 @@ class AlamofireViewController: UIViewController {
             }
         })
         
-        getPrefectureAPI(success: { prefectureResponseBody in
+        gurunaviAPI.getPrefectureAPI(success: { prefectureResponseBody in
             self.prefectureResponseBody = prefectureResponseBody
             if let pref = prefectureResponseBody?.pref[0] {
                 print("都道府県の名前：\(pref.prefName)")
@@ -44,7 +50,7 @@ class AlamofireViewController: UIViewController {
             }
         })
         
-        getCityAPI(success: { cityResponseBody in
+        gurunaviAPI.getCityAPI(success: { cityResponseBody in
             self.cityResponseBody = cityResponseBody
             if let city = cityResponseBody?.garea_large[0] {
                 print("市の名前：\(city.areanameL)")
@@ -55,7 +61,7 @@ class AlamofireViewController: UIViewController {
             }
         })
         
-        getTownAPI(success: { townResponseBody in
+        gurunaviAPI.getTownAPI(success: { townResponseBody in
             self.townResponseBody = townResponseBody
             if let town = townResponseBody?.garea_small[0] {
                 print("町の名前：\(town.areanameS)")
@@ -66,21 +72,28 @@ class AlamofireViewController: UIViewController {
             }
         })
     }
+}
+
+
+class GurunaviAPI: GurunaviAPIType {
+    let parameters = [
+        "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
+    ]
     
     func fetchresponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype?) -> Void, failure: @escaping (Error?) -> Void) {
         Alamofire.request(url, parameters: parameters).responseJSON { response in
             switch response.result {
-                case .success(_):
-                    do {
-                        guard let data = response.data else { return }
-                        let result = try JSONDecoder().decode(Responsetype.self, from: data)
-                        success(result)
-                    } catch {
-                        failure(error)
-                    }
-                case .failure(let err):
-                    failure(err)
+            case .success(_):
+                do {
+                    guard let data = response.data else { return }
+                    let result = try JSONDecoder().decode(Responsetype.self, from: data)
+                    success(result)
+                } catch {
+                    failure(error)
                 }
+            case .failure(let err):
+                failure(err)
+            }
         }
     }
     
@@ -107,4 +120,5 @@ class AlamofireViewController: UIViewController {
         let url = "https://api.gnavi.co.jp/master/GAreaSmallSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
+    
 }
