@@ -6,6 +6,7 @@ target 'RestaurantSearch' do
   use_frameworks!
   pod 'Alamofire'
   pod 'APIKit'
+  pod 'OHHTTPStubs/Swift'
 
   # Pods for RestaurantSearch
 
