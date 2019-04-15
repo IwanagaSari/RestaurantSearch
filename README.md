@@ -9,9 +9,6 @@
 ・ macOS 10.13.6  
 ・ Swift 4.2.1
 
-## ライブラリ
-[Alamofire](https://github.com/Alamofire/Alamofire)
-
 ## インストール
 [CocoaPods](https://github.com/cocoapods/cocoapods)
 
