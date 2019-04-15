@@ -13,6 +13,7 @@
 [CocoaPods](https://github.com/cocoapods/cocoapods)
 
 ・ `gem install cocoapods`
+
 ・ `pod install`  
 
 ## API
