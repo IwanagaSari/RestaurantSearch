@@ -12,6 +12,7 @@
 		866273C6224A0EFB007CA319 /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C5224A0EFB007CA319 /* CityTests.swift */; };
 		866273C8224C75A9007CA319 /* TownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C7224C75A9007CA319 /* TownTests.swift */; };
 		9E01B705585537534CC2A259 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */; };
+		EA1A080A2264AE4B00550B4F /* AlamofireViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A08092264AE4B00550B4F /* AlamofireViewControllerTests.swift */; };
 		EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E52248CCBF00F3091C /* AppDelegate.swift */; };
 		EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E72248CCBF00F3091C /* ViewController.swift */; };
 		EA2679EB2248CCBF00F3091C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2679E92248CCBF00F3091C /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		866273C5224A0EFB007CA319 /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
 		866273C7224C75A9007CA319 /* TownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownTests.swift; sourceTree = "<group>"; };
 		C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearchTests/Pods-RestaurantSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA1A08092264AE4B00550B4F /* AlamofireViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewControllerTests.swift; sourceTree = "<group>"; };
 		EA2679E22248CCBF00F3091C /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2679E52248CCBF00F3091C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA2679E72248CCBF00F3091C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				866273C3224A09A9007CA319 /* PrefectureTests.swift */,
 				866273C5224A0EFB007CA319 /* CityTests.swift */,
 				866273C7224C75A9007CA319 /* TownTests.swift */,
+				EA1A08092264AE4B00550B4F /* AlamofireViewControllerTests.swift */,
 			);
 			path = RestaurantSearchTests;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				866273C2224A0165007CA319 /* AreaTests.swift in Sources */,
 				866273C8224C75A9007CA319 /* TownTests.swift in Sources */,
 				866273C6224A0EFB007CA319 /* CityTests.swift in Sources */,
+				EA1A080A2264AE4B00550B4F /* AlamofireViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
