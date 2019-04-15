@@ -12,7 +12,7 @@
 ## インストール
 [CocoaPods](https://github.com/cocoapods/cocoapods)
 
-・ podfileに`pod 'Alamofire'`を追記してください  
+・ `gem install cocoapods`
 ・ `pod install`  
 
 ## API
