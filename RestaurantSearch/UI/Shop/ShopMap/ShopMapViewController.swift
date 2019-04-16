@@ -10,8 +10,4 @@ import UIKit
 
 final class ShopMapViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }

@@ -10,8 +10,4 @@ import UIKit
 
 final class SearchTopViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }

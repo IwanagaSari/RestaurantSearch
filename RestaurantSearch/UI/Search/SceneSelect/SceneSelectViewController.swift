@@ -10,8 +10,4 @@ import UIKit
 
 final class SceneSelectViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }

@@ -10,8 +10,4 @@ import UIKit
 
 final class PrefectureSelectViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }

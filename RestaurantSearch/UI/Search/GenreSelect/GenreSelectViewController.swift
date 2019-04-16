@@ -10,8 +10,4 @@ import UIKit
 
 final class GenreSelectViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }

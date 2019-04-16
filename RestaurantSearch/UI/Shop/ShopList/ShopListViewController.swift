@@ -10,8 +10,4 @@ import UIKit
 
 final class ShopListViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }

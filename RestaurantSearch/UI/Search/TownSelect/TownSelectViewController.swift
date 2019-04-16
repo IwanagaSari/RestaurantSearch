@@ -10,8 +10,4 @@ import UIKit
 
 final class TownSelectViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 }

@@ -10,8 +10,4 @@ import UIKit
 
 final class AreaSelectViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
 }
