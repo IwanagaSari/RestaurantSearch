@@ -4,17 +4,16 @@
 
 ## 環境
 
-・ Xcode バージョン 10.1  (10B61)  
-・ iOS 12.1  
-・ macOS 10.13.6  
-・ Swift 4.2.1
+- Xcode バージョン 10.1  (10B61)  
+- iOS 12.1  
+- macOS 10.13.6  
+- Swift 4.2.1
 
 ## インストール
 [CocoaPods](https://github.com/cocoapods/cocoapods)
 
-・ `gem install cocoapods`
-
-・ `pod install`  
+- `gem install cocoapods`
+- `pod install`  
 
 ## API
 [ぐるなびAPI](https://api.gnavi.co.jp/api/)
