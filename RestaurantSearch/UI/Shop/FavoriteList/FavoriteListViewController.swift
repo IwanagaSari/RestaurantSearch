@@ -1,5 +1,5 @@
 //
-//  FavoritesListViewController.swift
+//  FavoriteListViewController.swift
 //  RestaurantSearch
 //
 //  Created by 岩永彩里 on 2019/04/10.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-final class FavoritesListViewController: UIViewController {
+final class FavoriteListViewController: UIViewController {
 
 }
