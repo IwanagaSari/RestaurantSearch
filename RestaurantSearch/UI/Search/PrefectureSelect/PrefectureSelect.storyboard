@@ -62,6 +62,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YVt-B9-0nJ"/>
                     </view>
+                    <connections>
+                        <outlet property="areaLabel" destination="kFN-Xh-5HA" id="meR-0q-p44"/>
+                        <outlet property="prefectureTableView" destination="lf6-G5-rAX" id="q1B-hY-RRF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czp-hU-N5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
