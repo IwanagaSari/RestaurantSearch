@@ -9,5 +9,7 @@
 import UIKit
 
 final class AreaSelectViewController: UIViewController {
+    @IBOutlet weak var areaTableView: UITableView!
+    
 
 }
