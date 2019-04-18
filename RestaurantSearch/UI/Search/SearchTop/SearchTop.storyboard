@@ -13,7 +13,7 @@
         <!--Item-->
         <scene sceneID="5wg-9p-0Hn">
             <objects>
-                <viewController storyboardIdentifier="SearchTop" id="MW8-SH-LEV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchTop" id="MW8-SH-LEV" customClass="SearchTopViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MFW-9N-34B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
