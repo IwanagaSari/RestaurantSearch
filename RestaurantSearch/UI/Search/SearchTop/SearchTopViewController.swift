@@ -14,15 +14,19 @@ final class SearchTopViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var sceneLabel: UILabel!
     
+    /// エリア選択ボタンをタップ
     @IBAction func areaSelectButton(_ sender: UIButton) {
     }
     
+    /// ジャンル選択ボタンをタップ
     @IBAction func genreSelectButton(_ sender: UIButton) {
     }
     
+    /// シーン選択ボタンをタップ
     @IBAction func seneSelectButton(_ sender: UIButton) {
     }
     
+    /// 検索するボタンタップ
     @IBAction func searchButton(_ sender: UIButton) {
     }
 }
