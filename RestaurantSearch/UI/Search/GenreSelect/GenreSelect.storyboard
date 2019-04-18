@@ -60,6 +60,9 @@
                                 <state key="normal" title="選択する">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="genreSelectgButton:" destination="jNK-dc-amp" eventType="touchUpInside" id="Rk7-61-AhA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,6 +79,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PGD-08-ufe"/>
                     </view>
+                    <connections>
+                        <outlet property="genreListTableView" destination="C8Y-K0-qXQ" id="lfQ-PE-Uh2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFA-mG-m9E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

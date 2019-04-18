@@ -9,5 +9,8 @@
 import UIKit
 
 final class GenreSelectViewController: UIViewController {
-
+    @IBOutlet weak var genreListTableView: UITableView!
+    
+    @IBAction func genreSelectgButton(_ sender: UIButton) {
+    }
 }
