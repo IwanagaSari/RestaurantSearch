@@ -17,7 +17,6 @@ UICollectionViewDelegate {
     override func viewDidLoad() {
         
         collectionView.dataSource = self
-        collectionView.backgroundColor = .lightGray
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width:self.view.frame.width/2 - 5, height: self.view.frame.width/2 - 5)
         collectionView.collectionViewLayout = layout
