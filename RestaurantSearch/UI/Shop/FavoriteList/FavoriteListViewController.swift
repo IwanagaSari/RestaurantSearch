@@ -8,6 +8,33 @@
 
 import UIKit
 
-final class FavoriteListViewController: UIViewController {
+final class FavoriteListViewController: UICollectionViewController {
+    
+    let shopImages = ["1", "2", "3"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width:self.view.frame.width/2 - 5, height: self.view.frame.width/2 - 5)
+        collectionView.collectionViewLayout = layout
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return shopImages.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let testCell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath)
+        
+        let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
+        let cellImage = UIImage(named: shopImages[indexPath.row])
+        imageView.image = cellImage
+        
+        let label = testCell.contentView.viewWithTag(2) as! UILabel
+        label.text = "店の名前"
+        
+        return testCell
+    }
 
 }
