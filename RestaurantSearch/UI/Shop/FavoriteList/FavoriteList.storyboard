@@ -49,7 +49,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="1" alpha="0.62807684075342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="1" alpha="0.671875" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="3h2-Zg-RGE"/>
                                                 <constraint firstItem="4Sp-SW-psv" firstAttribute="leading" secondItem="qtQ-PK-4UV" secondAttribute="leading" constant="3" id="Mjk-2I-Nme"/>
