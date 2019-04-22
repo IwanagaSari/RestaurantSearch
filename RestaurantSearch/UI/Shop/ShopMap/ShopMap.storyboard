@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Shop Map View Controller-->
         <scene sceneID="MNE-tC-V3p">
             <objects>
-                <viewController id="atH-9B-Ho3" sceneMemberID="viewController">
+                <viewController id="atH-9B-Ho3" customClass="ShopMapViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4Q-9l-ZDe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,6 +43,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ELk-0o-cax"/>
                     </view>
+                    <connections>
+                        <outlet property="shopAdressLabel" destination="DlQ-o5-ryH" id="R45-ur-1nb"/>
+                        <outlet property="shopMapView" destination="kqM-IM-coK" id="OnF-jG-buL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1b-Eh-xpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
