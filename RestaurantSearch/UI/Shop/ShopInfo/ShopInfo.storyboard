@@ -59,7 +59,7 @@
                                     <constraint firstItem="gwV-85-X9D" firstAttribute="leading" secondItem="eND-Qr-2ny" secondAttribute="leading" constant="3" id="w5v-Kk-72u"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-tt-5v1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-tt-5v1">
                                 <rect key="frame" x="0.0" y="99" width="414" height="185"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="185" id="W3z-Fz-CBC"/>
@@ -115,23 +115,23 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hWF-xl-Por">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopImageCell" id="hWF-xl-Por">
                                         <rect key="frame" x="0.0" y="0.0" width="178" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="178" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xc3-DQ-ia6">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQk-RF-Q3o">
                                                     <rect key="frame" x="0.0" y="0.0" width="178" height="175"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Xc3-DQ-ia6" firstAttribute="top" secondItem="hWF-xl-Por" secondAttribute="top" id="0Ic-nw-Zg0"/>
-                                            <constraint firstAttribute="trailing" secondItem="Xc3-DQ-ia6" secondAttribute="trailing" id="56U-BM-Uu2"/>
-                                            <constraint firstItem="Xc3-DQ-ia6" firstAttribute="leading" secondItem="hWF-xl-Por" secondAttribute="leading" id="YRs-L0-nDj"/>
-                                            <constraint firstAttribute="bottom" secondItem="Xc3-DQ-ia6" secondAttribute="bottom" id="zBz-s6-bJx"/>
+                                            <constraint firstAttribute="bottom" secondItem="CQk-RF-Q3o" secondAttribute="bottom" id="Etq-nQ-lzg"/>
+                                            <constraint firstItem="CQk-RF-Q3o" firstAttribute="leading" secondItem="hWF-xl-Por" secondAttribute="leading" id="dl5-Gd-r7R"/>
+                                            <constraint firstItem="CQk-RF-Q3o" firstAttribute="top" secondItem="hWF-xl-Por" secondAttribute="top" id="ofV-Jr-AXm"/>
+                                            <constraint firstAttribute="trailing" secondItem="CQk-RF-Q3o" secondAttribute="trailing" id="van-Dv-d9T"/>
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
@@ -158,6 +158,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q7g-aO-x6b"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Gll-RF-Abk" id="vxh-ix-Y4o"/>
+                        <outlet property="shopAdressLabel" destination="boz-zk-nff" id="zb5-ws-NUp"/>
+                        <outlet property="shopNameLabel" destination="gwV-85-X9D" id="uQx-kO-mpg"/>
+                        <outlet property="shopTopImageView" destination="u0a-tt-5v1" id="tk5-Pv-jeh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5D-64-hPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
