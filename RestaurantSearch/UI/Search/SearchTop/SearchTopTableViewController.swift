@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTopTableViewController: UITableViewController {
+class SearchTopTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var freewordSearchBar: UITextField!
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
@@ -16,7 +16,16 @@ class SearchTopTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        freewordSearchBar.delegate = self
 
     }
-
+    @IBAction private func tapView(_ sender: UITapGestureRecognizer) {
+        freewordSearchBar.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        freewordSearchBar.resignFirstResponder()
+        return true
+    }
 }
