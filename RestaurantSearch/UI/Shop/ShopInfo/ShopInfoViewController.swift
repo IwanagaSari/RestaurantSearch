@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
 UICollectionViewDelegate {
@@ -52,6 +53,15 @@ UICollectionViewDelegate {
     
     /// さらに詳しくボタンをタップされた時
     @IBAction func safariButton(_ sender: UIButton) {
+        // 仮に「一蘭」というお店だとする
+        var searchName :String = "一蘭"
+        var testURL = "https://www.google.co.jp/search?q=\(searchName)"
+        testURL = testURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+        
+        if let url = URL(string: testURL) {
+            let safari = SFSafariViewController(url: url)
+            present(safari, animated: true, completion: nil)
+        }
     }
     
 }
