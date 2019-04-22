@@ -21,8 +21,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pdu-wz-ZnC">
                                 <rect key="frame" x="8" y="260" width="399" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ジャンル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AM-pF-FUr">
-                                        <rect key="frame" x="8" y="54.5" width="70" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ジャンル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AM-pF-FUr">
+                                        <rect key="frame" x="8" y="55" width="69.5" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -53,10 +53,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="3AM-pF-FUr" firstAttribute="leading" secondItem="Pdu-wz-ZnC" secondAttribute="leadingMargin" id="EZM-y1-Anv"/>
+                                    <constraint firstItem="3AM-pF-FUr" firstAttribute="top" secondItem="Pdu-wz-ZnC" secondAttribute="top" constant="55" id="II7-HT-20r"/>
                                     <constraint firstAttribute="trailing" secondItem="MJh-uB-b3i" secondAttribute="trailing" constant="10" id="PuY-AW-sjW"/>
                                     <constraint firstItem="XHG-2e-yfY" firstAttribute="centerY" secondItem="Pdu-wz-ZnC" secondAttribute="centerY" id="Vwk-au-yJP"/>
                                     <constraint firstAttribute="height" constant="130" id="Yoa-M7-4h7"/>
                                     <constraint firstItem="XHG-2e-yfY" firstAttribute="centerX" secondItem="Pdu-wz-ZnC" secondAttribute="centerX" constant="30" id="cPk-YN-zMJ"/>
+                                    <constraint firstItem="XHG-2e-yfY" firstAttribute="leading" secondItem="3AM-pF-FUr" secondAttribute="trailing" constant="52" id="fIQ-oY-QM8"/>
                                     <constraint firstItem="MJh-uB-b3i" firstAttribute="centerY" secondItem="Pdu-wz-ZnC" secondAttribute="centerY" id="gre-e6-ncv"/>
                                     <constraint firstItem="3AM-pF-FUr" firstAttribute="centerY" secondItem="Pdu-wz-ZnC" secondAttribute="centerY" id="jXh-tg-dgF"/>
                                 </constraints>
@@ -115,8 +118,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAs-Gb-w64">
                                 <rect key="frame" x="7" y="405" width="400" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="シーン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQF-WH-0wv">
-                                        <rect key="frame" x="8" y="54.5" width="52" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="シーン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQF-WH-0wv">
+                                        <rect key="frame" x="8" y="55" width="52" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -153,6 +156,8 @@
                                     <constraint firstItem="DQF-WH-0wv" firstAttribute="centerY" secondItem="IAs-Gb-w64" secondAttribute="centerY" id="M8f-5Y-3f9"/>
                                     <constraint firstItem="jzd-s2-QDW" firstAttribute="centerY" secondItem="IAs-Gb-w64" secondAttribute="centerY" id="W35-Bw-9IO"/>
                                     <constraint firstItem="NP9-2d-s1y" firstAttribute="centerY" secondItem="IAs-Gb-w64" secondAttribute="centerY" id="gt4-9T-LA2"/>
+                                    <constraint firstItem="DQF-WH-0wv" firstAttribute="leading" secondItem="IAs-Gb-w64" secondAttribute="leadingMargin" id="sfd-2k-LJk"/>
+                                    <constraint firstItem="DQF-WH-0wv" firstAttribute="top" secondItem="IAs-Gb-w64" secondAttribute="top" constant="55" id="uk0-Fh-jul"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2W-tY-0gP">
