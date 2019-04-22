@@ -8,6 +8,42 @@
 
 import UIKit
 
-final class ShopInfoViewController: UIViewController {
-
+final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
+UICollectionViewDelegate {
+    
+    @IBOutlet weak var shopNameLabel: UILabel!
+    @IBOutlet weak var shopAdressLabel: UILabel!
+    @IBOutlet weak var shopTopImageView: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let shopImages = ["1", "2", "3"]
+    
+    override func viewDidLoad() {
+        
+        // collectionViewにのサイズ設定
+        collectionView.dataSource = self
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width:self.view.frame.width/2 - 1, height: self.view.frame.width/2 - 1)
+        layout.minimumInteritemSpacing = 2
+        collectionView.collectionViewLayout = layout
+        
+        // お店のTopImageViewの設定
+        shopTopImageView.image = UIImage(named: "1")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return shopImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+    let testCell:UICollectionViewCell =
+            collectionView.dequeueReusableCell(withReuseIdentifier: "ShopImageCell",
+                                               for: indexPath)
+    let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
+    let cellImage = UIImage(named: shopImages[indexPath.row])
+    imageView.image = cellImage
+        
+    return testCell
+    }
 }
