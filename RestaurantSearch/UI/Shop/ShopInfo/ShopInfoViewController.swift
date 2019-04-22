@@ -46,4 +46,12 @@ UICollectionViewDelegate {
         
     return testCell
     }
+    /// 電話をかけるボタンをタップされた時
+    @IBAction func telephoneButtonTapped(_ sender: UIButton) {
+    }
+    
+    /// さらに詳しくボタンをタップされた時
+    @IBAction func safariButton(_ sender: UIButton) {
+    }
+    
 }
