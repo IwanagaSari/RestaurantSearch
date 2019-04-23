@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-final class ShopInfoViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {    
+final class ShopInfoViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopAdressLabel: UILabel!
     @IBOutlet weak var shopTopImageView: UIImageView!
@@ -31,14 +31,12 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let testCell:UICollectionViewCell =
-                collectionView.dequeueReusableCell(withReuseIdentifier: "ShopImageCell",
-                                                   for: indexPath)
-        let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopImageCell", for: indexPath)
+        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         let cellImage = UIImage(named: shopImages[indexPath.row])
         imageView.image = cellImage
         
-        return testCell
+        return cell
     }
     
     /// 電話をかけるボタンをタップされた時
