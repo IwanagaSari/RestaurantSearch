@@ -44,7 +44,7 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     }
     
     /// さらに詳しくボタンをタップされた時
-    @IBAction func safariButton(_ sender: UIButton) {
+    @IBAction func detailButtonTapped(_ sender: UIButton) {
         // 仮に「一蘭」というお店だとする
         var searchName :String = "一蘭"
         var testURL = "https://www.google.co.jp/search?q=\(searchName)"
