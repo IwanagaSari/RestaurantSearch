@@ -9,7 +9,7 @@
 import UIKit
 
 final class GenreSelectViewController: UIViewController {
-    @IBOutlet weak var genreListTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     @IBAction func genreSelectgButton(_ sender: UIButton) {
     }
