@@ -96,7 +96,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="safariButton:" destination="opu-gT-qyw" eventType="touchUpInside" id="ujG-vX-ahc"/>
+                                            <action selector="detailButtonTapped:" destination="opu-gT-qyw" eventType="touchUpInside" id="sX2-1Q-20a"/>
                                         </connections>
                                     </button>
                                 </subviews>
