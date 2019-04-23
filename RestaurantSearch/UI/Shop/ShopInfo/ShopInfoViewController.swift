@@ -19,7 +19,7 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     
     override func viewDidLoad() {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width:self.view.frame.width/2 - 1, height: self.view.frame.width/2 - 1)
+        layout.itemSize = CGSize(width: self.view.frame.width/2 - 1, height: self.view.frame.width/2 - 1)
         collectionView.collectionViewLayout = layout
         
         // お店のTopImageViewの設定
@@ -46,13 +46,14 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     /// さらに詳しくボタンをタップされた時
     @IBAction func detailButtonTapped(_ sender: UIButton) {
         // 仮に「一蘭」というお店だとする
-        var searchName :String = "一蘭"
-        var testURL = "https://www.google.co.jp/search?q=\(searchName)"
-        testURL = testURL.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
-        
-        if let url = URL(string: testURL) {
+        let searchName: String = "一蘭"
+        let testURL = URL(string: "https://www.google.co.jp/search")!
+        var components = URLComponents(url: testURL, resolvingAgainstBaseURL: true)!
+        components.queryItems = [URLQueryItem(name: "q", value: searchName)]
+        if let url = components.url {
             let safari = SFSafariViewController(url: url)
             present(safari, animated: true, completion: nil)
         }
     }
+    
 }
