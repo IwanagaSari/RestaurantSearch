@@ -15,8 +15,8 @@ final class FavoriteListViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width:self.view.frame.width/2 - 5, height: self.view.frame.width/2 - 5)
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: self.view.frame.width/2 - 1, height: self.view.frame.width/2 - 1)
         collectionView.collectionViewLayout = layout
     }
     
