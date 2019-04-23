@@ -21,7 +21,7 @@ UICollectionViewDelegate {
     
     override func viewDidLoad() {
         
-        let layout = UICollectionViewFlowLayout()
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width:self.view.frame.width/2 - 1, height: self.view.frame.width/2 - 1)
         layout.minimumInteritemSpacing = 2
         collectionView.collectionViewLayout = layout
