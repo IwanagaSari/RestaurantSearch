@@ -9,9 +9,7 @@
 import UIKit
 import SafariServices
 
-final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
-UICollectionViewDelegate {
-    
+final class ShopInfoViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {    
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopAdressLabel: UILabel!
     @IBOutlet weak var shopTopImageView: UIImageView!
@@ -20,7 +18,6 @@ UICollectionViewDelegate {
     let shopImages = ["1", "2", "3"]
     
     override func viewDidLoad() {
-        
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width:self.view.frame.width/2 - 1, height: self.view.frame.width/2 - 1)
         collectionView.collectionViewLayout = layout
@@ -33,17 +30,17 @@ UICollectionViewDelegate {
         return shopImages.count
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-    let testCell:UICollectionViewCell =
-            collectionView.dequeueReusableCell(withReuseIdentifier: "ShopImageCell",
-                                               for: indexPath)
-    let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
-    let cellImage = UIImage(named: shopImages[indexPath.row])
-    imageView.image = cellImage
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        let testCell:UICollectionViewCell =
+                collectionView.dequeueReusableCell(withReuseIdentifier: "ShopImageCell",
+                                                   for: indexPath)
+        let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
+        let cellImage = UIImage(named: shopImages[indexPath.row])
+        imageView.image = cellImage
         
-    return testCell
+        return testCell
     }
+    
     /// 電話をかけるボタンをタップされた時
     @IBAction func telephoneButtonTapped(_ sender: UIButton) {
     }
@@ -60,5 +57,4 @@ UICollectionViewDelegate {
             present(safari, animated: true, completion: nil)
         }
     }
-    
 }
