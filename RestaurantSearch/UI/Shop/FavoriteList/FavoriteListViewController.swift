@@ -20,12 +20,6 @@ final class FavoriteListViewController: UICollectionViewController {
         collectionView.collectionViewLayout = layout
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "追加", style: UIBarButtonItem.Style.plain, target: self, action: #selector(FavoriteListViewController.addTapped(sender:)))
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shopImages.count
     }
@@ -41,9 +35,5 @@ final class FavoriteListViewController: UICollectionViewController {
         label.text = "店の名前"
         
         return cell
-    }
-    
-    /// 追加ボタンがタップされた時
-    @objc func addTapped(sender: UIBarButtonItem) {
     }
 }
