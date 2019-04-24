@@ -20,7 +20,7 @@ UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let testCell: UICollectionViewCell =
-            collectionView.dequeueReusableCell(withReuseIdentifier: "cell",
+            collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell",
                                                for: indexPath)
         let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
         let cellImage = UIImage(named: photos[indexPath.row])
