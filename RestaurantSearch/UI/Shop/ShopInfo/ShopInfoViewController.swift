@@ -60,8 +60,7 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     @IBAction func detailButtonTapped(_ sender: UIButton) {
         // 仮に「一蘭」というお店だとする
         let searchName: String = "一蘭"
-        let testURL = URL(string: "https://www.google.co.jp/search")!
-        var components = URLComponents(url: testURL, resolvingAgainstBaseURL: true)!
+        var components = URLComponents(string: "https://www.google.co.jp/search")!
         components.queryItems = [URLQueryItem(name: "q", value: searchName)]
         if let url = components.url {
             let safari = SFSafariViewController(url: url)
