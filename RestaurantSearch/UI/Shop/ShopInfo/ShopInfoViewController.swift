@@ -18,9 +18,12 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     let shopImages = ["1", "2", "3"]
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSize(width: self.view.frame.width/2 - 1, height: self.view.frame.width/2 - 1)
-        collectionView.collectionViewLayout = layout
+        let width = (self.collectionView.frame.width - layout.minimumInteritemSpacing) / 2
+        layout.itemSize = CGSize(width: width, height: width)
+        //collectionView.collectionViewLayout = layout
         
         // お店のTopImageViewの設定
         shopTopImageView.image = UIImage(named: "1")
