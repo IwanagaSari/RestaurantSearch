@@ -40,5 +40,4 @@ UICollectionViewDelegate {
         
         return testCell
     }
-    
 }
