@@ -9,5 +9,7 @@
 import UIKit
 
 final class CitySelectViewController: UIViewController {
-
+    @IBOutlet weak var PrefectureLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
 }
