@@ -61,7 +61,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="genreSelectgButton:" destination="jNK-dc-amp" eventType="touchUpInside" id="Rk7-61-AhA"/>
+                                    <action selector="selectButtonTapped:" destination="jNK-dc-amp" eventType="touchUpInside" id="0Hx-hW-5bb"/>
                                 </connections>
                             </button>
                         </subviews>

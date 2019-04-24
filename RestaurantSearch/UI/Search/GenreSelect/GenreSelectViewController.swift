@@ -11,6 +11,6 @@ import UIKit
 final class GenreSelectViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func genreSelectgButton(_ sender: UIButton) {
+    @IBAction func selectButtonTapped(_ sender: UIButton) {
     }
 }
