@@ -47,6 +47,7 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     
     /// 追加ボタンがタップされた時
     @objc func addTapped(sender: UIBarButtonItem) {
+        //店舗IDを保存
     }
     
     /// 電話をかけるボタンをタップされた時
@@ -67,5 +68,4 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
             present(safari, animated: true, completion: nil)
         }
     }
-    
 }
