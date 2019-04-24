@@ -171,7 +171,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="lSa-xJ-2pJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gJ5-GA-t6v"/>
+                        <barButtonItem key="rightBarButtonItem" title="ボタン" id="gJ5-GA-t6v">
+                            <connections>
+                                <action selector="rightBarButtonTapped:" destination="opu-gT-qyw" id="9nq-rv-GNB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>

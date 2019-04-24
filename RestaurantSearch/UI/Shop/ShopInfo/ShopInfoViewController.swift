@@ -49,9 +49,11 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     }
     
     /// 追加ボタンがタップされた時
-    @objc func addTapped(sender: UIBarButtonItem) {
-        //店舗IDを保存
+    @IBAction func rightBarButtonTapped(_ sender: UIBarButtonItem) {
+        //お気に入りにすでに入っているお店なら、削除ボタンに、
+        //入っていないお店であれば、追加ボタンに条件わけ
     }
+    
     
     /// 電話をかけるボタンをタップされた時
     @IBAction func telephoneButtonTapped(_ sender: UIButton) {
