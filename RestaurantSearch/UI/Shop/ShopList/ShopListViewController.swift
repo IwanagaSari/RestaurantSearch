@@ -17,10 +17,6 @@ UICollectionViewDelegate {
     override func viewDidLoad() {
         
         collectionView.dataSource = self
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width:self.view.frame.width/2 - 1, height: self.view.frame.width/2 - 1)
-        layout.minimumInteritemSpacing = 2
-        collectionView.collectionViewLayout = layout
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -28,7 +24,7 @@ UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let testCell:UICollectionViewCell =
+        let testCell: UICollectionViewCell =
             collectionView.dequeueReusableCell(withReuseIdentifier: "cell",
                                                for: indexPath)
         let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
@@ -39,5 +35,16 @@ UICollectionViewDelegate {
         label.text = "店の名前"
         
         return testCell
+    }
+}
+extension ShopListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
+        layout.itemSize = CGSize(width: width, height: width)
+        
+        return layout.itemSize
     }
 }
