@@ -62,6 +62,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qh7-sJ-wdX"/>
                     </view>
+                    <connections>
+                        <outlet property="CityLabel" destination="TSb-Km-73T" id="ZGy-yZ-vUN"/>
+                        <outlet property="tableView" destination="nwu-MY-cZ8" id="XBV-Xa-iHx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IT-wz-U2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
