@@ -13,11 +13,6 @@ UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let photos = ["2", "3"]
-
-    override func viewDidLoad() {
-        
-        collectionView.dataSource = self
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
@@ -37,6 +32,7 @@ UICollectionViewDelegate {
         return testCell
     }
 }
+
 extension ShopListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
