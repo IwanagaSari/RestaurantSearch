@@ -19,17 +19,17 @@ UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let testCell: UICollectionViewCell =
+        let cell =
             collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell",
                                                for: indexPath)
-        let imageView = testCell.contentView.viewWithTag(1) as! UIImageView
+        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         let cellImage = UIImage(named: photos[indexPath.row])
         imageView.image = cellImage
         
-        let label = testCell.contentView.viewWithTag(2) as! UILabel
+        let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = "店の名前"
         
-        return testCell
+        return cell
     }
 }
 
