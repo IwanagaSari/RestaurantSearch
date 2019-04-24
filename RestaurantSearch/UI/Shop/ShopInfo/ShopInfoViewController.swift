@@ -20,9 +20,9 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let width = (self.collectionView.frame.width - layout.minimumInteritemSpacing) / 2
-        layout.itemSize = CGSize(width: width, height: width)
+//        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+//        let width = (self.collectionView.frame.width - layout.minimumInteritemSpacing) / 2
+//        layout.itemSize = CGSize(width: width, height: width)
         
         // お店のTopImageViewの設定
         shopTopImageView.image = UIImage(named: "1")
@@ -63,5 +63,17 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
             let safari = SFSafariViewController(url: url)
             present(safari, animated: true, completion: nil)
         }
+    }
+}
+
+extension ShopInfoViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
+        layout.itemSize = CGSize(width: width, height: width)
+        
+        return layout.itemSize
     }
 }
