@@ -31,16 +31,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="福岡県福岡市中央区大名4丁目20-31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="boz-zk-nff">
-                                        <rect key="frame" x="5" y="35" width="317" height="25"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <rect key="frame" x="5" y="35" width="320" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P74-yd-oDw">
-                                        <rect key="frame" x="322" y="35" width="50" height="25"/>
+                                        <rect key="frame" x="325" y="35" width="50" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Prz-Ls-uBj"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="地図"/>
                                     </button>
                                 </subviews>
@@ -50,7 +51,7 @@
                                     <constraint firstItem="boz-zk-nff" firstAttribute="top" secondItem="gwV-85-X9D" secondAttribute="bottom" id="65k-ks-aWI"/>
                                     <constraint firstAttribute="trailing" secondItem="gwV-85-X9D" secondAttribute="trailing" constant="3" id="Fdh-tE-p2q"/>
                                     <constraint firstAttribute="bottom" secondItem="boz-zk-nff" secondAttribute="bottom" id="Pw1-ZG-cNm"/>
-                                    <constraint firstAttribute="trailing" secondItem="P74-yd-oDw" secondAttribute="trailing" constant="3" id="Rwc-1O-6Xx"/>
+                                    <constraint firstAttribute="trailing" secondItem="P74-yd-oDw" secondAttribute="trailing" id="Rwc-1O-6Xx"/>
                                     <constraint firstItem="P74-yd-oDw" firstAttribute="top" secondItem="gwV-85-X9D" secondAttribute="bottom" id="SqH-32-zfA"/>
                                     <constraint firstItem="gwV-85-X9D" firstAttribute="top" secondItem="eND-Qr-2ny" secondAttribute="top" constant="5" id="bnz-RR-ZD8"/>
                                     <constraint firstAttribute="bottom" secondItem="P74-yd-oDw" secondAttribute="bottom" id="fGJ-l2-GT2"/>
