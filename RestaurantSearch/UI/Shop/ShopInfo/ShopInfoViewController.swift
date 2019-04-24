@@ -29,11 +29,11 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
         shopTopImageView.image = UIImage(named: "1")
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "追加", style: UIBarButtonItem.Style.plain, target: self, action: #selector(ShopInfoViewController.addTapped(sender:)))
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "追加", style: UIBarButtonItem.Style.plain, target: self, action: #selector(ShopInfoViewController.addTapped(sender:)))
+//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shopImages.count
