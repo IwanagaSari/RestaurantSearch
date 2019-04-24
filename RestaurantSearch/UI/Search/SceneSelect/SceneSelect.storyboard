@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scene Select View Controller-->
         <scene sceneID="3gz-c3-3Nd">
             <objects>
-                <viewController id="bXR-T0-scV" sceneMemberID="viewController">
+                <viewController id="bXR-T0-scV" customClass="SceneSelectViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DbO-2y-AXR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
