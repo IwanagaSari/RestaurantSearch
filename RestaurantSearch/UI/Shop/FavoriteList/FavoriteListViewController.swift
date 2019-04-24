@@ -12,14 +12,6 @@ final class FavoriteListViewController: UICollectionViewController {
     
     let shopImages = ["1", "2", "3"]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
-        layout.itemSize = CGSize(width: width, height: width)
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shopImages.count
     }
@@ -35,5 +27,17 @@ final class FavoriteListViewController: UICollectionViewController {
         label.text = "店の名前"
         
         return cell
+    }
+}
+
+extension FavoriteListViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
+        layout.itemSize = CGSize(width: width, height: width)
+        
+        return layout.itemSize
     }
 }
