@@ -18,8 +18,8 @@ class SearchTopTableViewController: UITableViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         freewordSearchBar.delegate = self
-
     }
+    
     @IBAction private func tapView(_ sender: UITapGestureRecognizer) {
         freewordSearchBar.resignFirstResponder()
     }
