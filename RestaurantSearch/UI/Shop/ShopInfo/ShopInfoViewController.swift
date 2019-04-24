@@ -23,17 +23,10 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         let width = (self.collectionView.frame.width - layout.minimumInteritemSpacing) / 2
         layout.itemSize = CGSize(width: width, height: width)
-        //collectionView.collectionViewLayout = layout
         
         // お店のTopImageViewの設定
         shopTopImageView.image = UIImage(named: "1")
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "追加", style: UIBarButtonItem.Style.plain, target: self, action: #selector(ShopInfoViewController.addTapped(sender:)))
-//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shopImages.count
@@ -53,7 +46,6 @@ final class ShopInfoViewController: UIViewController,UICollectionViewDataSource,
         //お気に入りにすでに入っているお店なら、削除ボタンに、
         //入っていないお店であれば、追加ボタンに条件わけ
     }
-    
     
     /// 電話をかけるボタンをタップされた時
     @IBAction func telephoneButtonTapped(_ sender: UIButton) {
