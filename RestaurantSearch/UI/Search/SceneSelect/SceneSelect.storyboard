@@ -36,8 +36,18 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-ET-dJi">
-                                <rect key="frame" x="0.0" y="89" width="414" height="723"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="720"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f9L-l1-cJK">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f9L-l1-cJK" id="Mpu-5q-4Om">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBt-fN-hKo">
                                 <rect key="frame" x="132" y="812" width="150" height="45"/>
@@ -55,7 +65,7 @@
                         <constraints>
                             <constraint firstItem="bpk-VA-go8" firstAttribute="trailing" secondItem="qBd-QD-Sp0" secondAttribute="trailing" id="8Kt-eB-GMP"/>
                             <constraint firstItem="M4G-ET-dJi" firstAttribute="leading" secondItem="bpk-VA-go8" secondAttribute="leading" id="InG-QA-MCu"/>
-                            <constraint firstItem="DBt-fN-hKo" firstAttribute="top" secondItem="M4G-ET-dJi" secondAttribute="bottom" id="O9z-9P-bND"/>
+                            <constraint firstItem="DBt-fN-hKo" firstAttribute="top" secondItem="M4G-ET-dJi" secondAttribute="bottom" constant="3" id="O9z-9P-bND"/>
                             <constraint firstItem="qBd-QD-Sp0" firstAttribute="leading" secondItem="bpk-VA-go8" secondAttribute="leading" id="Wfc-ID-lhH"/>
                             <constraint firstItem="M4G-ET-dJi" firstAttribute="top" secondItem="qBd-QD-Sp0" secondAttribute="bottom" id="aT2-Im-0i7"/>
                             <constraint firstItem="bpk-VA-go8" firstAttribute="bottom" secondItem="DBt-fN-hKo" secondAttribute="bottom" constant="5" id="bS3-V8-e8n"/>
