@@ -37,10 +37,14 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         return cell
     }
     
-    /// 追加ボタンがタップされた時
-    @IBAction func rightBarButtonTapped(_ sender: UIBarButtonItem) {
-        //お気に入りにすでに入っているお店なら、削除ボタンに、
-        //入っていないお店であれば、追加ボタンに条件わけ
+    /// 追加するボタンをタップされた時
+    @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+        //お気に入りに入っていないお店であれば、追加ボタンを表示する
+    }
+    
+    /// 削除ボタンをタップされた時
+    @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
+        //お気に入りにすでに入っているお店なら、削除ボタンを表示する
     }
     
     /// 電話をかけるボタンをタップされた時
