@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Shop Info View Controller-->
         <scene sceneID="gSR-MK-fbe">
             <objects>
                 <viewController id="opu-gT-qyw" customClass="ShopInfoViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
@@ -169,11 +169,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q7g-aO-x6b"/>
                     </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="lSa-xJ-2pJ">
-                        <barButtonItem key="rightBarButtonItem" title="ボタン" id="gJ5-GA-t6v">
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="g7m-Kc-ns5"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="u5f-ab-VNN"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="lSa-xJ-2pJ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="SoY-jn-zgd">
                             <connections>
-                                <action selector="rightBarButtonTapped:" destination="opu-gT-qyw" id="9nq-rv-GNB"/>
+                                <action selector="deleteButtonTapped:" destination="opu-gT-qyw" id="VoY-sr-wge"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HGJ-gx-Kgu">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="opu-gT-qyw" id="tpu-Fd-HE3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
