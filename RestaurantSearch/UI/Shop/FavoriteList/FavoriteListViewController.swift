@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class FavoriteListViewController: UICollectionViewController {
+final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let shopImages = ["1", "2", "3"]
     
@@ -28,16 +28,11 @@ final class FavoriteListViewController: UICollectionViewController {
         
         return cell
     }
-}
-
-extension FavoriteListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
         let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
-        layout.itemSize = CGSize(width: width, height: width)
         
-        return layout.itemSize
+        return CGSize(width: width, height: width)
     }
 }
