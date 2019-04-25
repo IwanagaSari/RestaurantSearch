@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var shopAdressLabel: UILabel!
     @IBOutlet weak var shopTopImageView: UIImageView!
@@ -35,6 +35,13 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         imageView.image = cellImage
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
+        
+        return CGSize(width: width, height: width)
     }
     
     /// 追加するボタンをタップされた時
@@ -63,17 +70,5 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
             let safari = SFSafariViewController(url: url)
             present(safari, animated: true, completion: nil)
         }
-    }
-}
-
-extension ShopInfoViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
-        layout.itemSize = CGSize(width: width, height: width)
-        
-        return layout.itemSize
     }
 }
