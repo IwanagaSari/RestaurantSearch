@@ -8,8 +8,6 @@
 
 import UIKit
 
-final class TownSelectViewController: UIViewController {
-    @IBOutlet weak var cityLabel: UIView!
-    @IBOutlet weak var tableView: UITableView!
+final class TownSelectViewController: UITableViewController {
     
 }
