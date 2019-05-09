@@ -1,7 +1,87 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4eE-aK-OcT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--お気に入りのお店-->
+        <scene sceneID="fK0-c5-vzA">
+            <objects>
+                <collectionViewController id="4eE-aK-OcT" customClass="FavoriteListViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Dgi-EV-orx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="nuv-8S-Le2">
+                            <size key="itemSize" width="141" height="143"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="05S-QO-y1m">
+                            <rect key="frame" x="0.0" y="-64" width="375" height="667"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavoriteListCell" id="NPr-wP-Hjh">
+                                <rect key="frame" x="0.0" y="0.0" width="141" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="141" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Ol-DI-gAn">
+                                            <rect key="frame" x="0.0" y="0.0" width="141" height="143"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtQ-PK-4UV">
+                                            <rect key="frame" x="0.0" y="113" width="141" height="30"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shopName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sp-SW-psv">
+                                                    <rect key="frame" x="3" y="7.5" width="138" height="15.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="0.62807684075342463" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="1" alpha="0.671875" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="3h2-Zg-RGE"/>
+                                                <constraint firstItem="4Sp-SW-psv" firstAttribute="leading" secondItem="qtQ-PK-4UV" secondAttribute="leading" constant="3" id="Mjk-2I-Nme"/>
+                                                <constraint firstAttribute="trailing" secondItem="4Sp-SW-psv" secondAttribute="trailing" id="ONj-v3-CET"/>
+                                                <constraint firstItem="4Sp-SW-psv" firstAttribute="centerY" secondItem="qtQ-PK-4UV" secondAttribute="centerY" id="mAT-9l-vkT"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8Ol-DI-gAn" secondAttribute="bottom" id="0Fz-hV-dFC"/>
+                                    <constraint firstItem="8Ol-DI-gAn" firstAttribute="top" secondItem="NPr-wP-Hjh" secondAttribute="top" id="0na-9t-qKT"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ol-DI-gAn" secondAttribute="trailing" id="3xl-Nc-5Rq"/>
+                                    <constraint firstAttribute="bottom" secondItem="qtQ-PK-4UV" secondAttribute="bottom" id="Sk9-11-4WO"/>
+                                    <constraint firstItem="qtQ-PK-4UV" firstAttribute="leading" secondItem="NPr-wP-Hjh" secondAttribute="leading" id="cwp-KM-IOd"/>
+                                    <constraint firstAttribute="trailing" secondItem="qtQ-PK-4UV" secondAttribute="trailing" id="pjl-Bm-4QJ"/>
+                                    <constraint firstItem="8Ol-DI-gAn" firstAttribute="leading" secondItem="NPr-wP-Hjh" secondAttribute="leading" id="wTA-eq-AZd"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="4eE-aK-OcT" id="M5p-6F-opo"/>
+                            <outlet property="delegate" destination="4eE-aK-OcT" id="c25-iP-Tdl"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="お気に入りのお店" id="dNl-rU-pm4"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i1H-RG-YGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="143"/>
+        </scene>
+    </scenes>
 </document>
