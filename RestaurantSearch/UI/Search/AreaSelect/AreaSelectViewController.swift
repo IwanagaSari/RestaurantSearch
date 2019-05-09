@@ -8,6 +8,6 @@
 
 import UIKit
 
-class AreaSelectViewController: UITableViewController {
+final class AreaSelectViewController: UITableViewController {
 
 }
