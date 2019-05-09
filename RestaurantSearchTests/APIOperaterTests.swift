@@ -17,7 +17,6 @@ final class APIOperaterTests: XCTestCase {
     var townResponseBody: TownResponseBody?
     
     func testGetAreaAPI() {
-        
         apiOperater.getAreaAPI(success: { areaResponseBody in
             self.areaResponseBody = areaResponseBody
             XCTAssertEqual("北海道", areaResponseBody?.area[0].areaName)
