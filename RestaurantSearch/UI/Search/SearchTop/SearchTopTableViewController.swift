@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTopTableViewController: UITableViewController, UITextFieldDelegate {
+final class SearchTopTableViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var freewordSearchBar: UITextField!
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
