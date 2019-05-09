@@ -21,7 +21,7 @@ final class APIOperaterTests: XCTestCase {
             self.areaResponseBody = areaResponseBody
             XCTAssertEqual("北海道", areaResponseBody?.area[0].areaName)
         }, failure: { error in
-            
+
         })
     }
     
