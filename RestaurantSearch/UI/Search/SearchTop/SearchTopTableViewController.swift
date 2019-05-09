@@ -20,10 +20,13 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
         freewordSearchBar.delegate = self
     }
     
-    // MARK: - UITextFieldDelegate
+    // MARK: - Actions
+
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         freewordSearchBar.resignFirstResponder()
     }
+
+    // MARK: - UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         freewordSearchBar.resignFirstResponder()
