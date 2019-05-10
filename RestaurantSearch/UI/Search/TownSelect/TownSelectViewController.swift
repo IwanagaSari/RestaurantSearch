@@ -8,6 +8,6 @@
 
 import UIKit
 
-final class TownSelectViewController: UIViewController {
+final class TownSelectViewController: UITableViewController {
 
 }
