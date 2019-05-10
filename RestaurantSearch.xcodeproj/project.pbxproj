@@ -29,7 +29,7 @@
 		86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE2E225DD3BF00DCAD11 /* PrefectureSelectViewController.swift */; };
 		86E8FE31225DD3C900DCAD11 /* PrefectureSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE30225DD3C900DCAD11 /* PrefectureSelect.storyboard */; };
 		86E8FE33225DD3DB00DCAD11 /* AreaSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE32225DD3DB00DCAD11 /* AreaSelect.storyboard */; };
-		86E8FE37225DD3F500DCAD11 /* SearchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE36225DD3F500DCAD11 /* SearchTopViewController.swift */; };
+		EA1A080C226DC4AD00550B4F /* SearchTopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */; };
 		86E8FE39225DD3FF00DCAD11 /* SearchTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */; };
 		86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */; };
 		9E01B705585537534CC2A259 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */; };
@@ -84,7 +84,7 @@
 		86E8FE2E225DD3BF00DCAD11 /* PrefectureSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureSelectViewController.swift; sourceTree = "<group>"; };
 		86E8FE30225DD3C900DCAD11 /* PrefectureSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrefectureSelect.storyboard; sourceTree = "<group>"; };
 		86E8FE32225DD3DB00DCAD11 /* AreaSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaSelect.storyboard; sourceTree = "<group>"; };
-		86E8FE36225DD3F500DCAD11 /* SearchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopViewController.swift; sourceTree = "<group>"; };
+		EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopTableViewController.swift; sourceTree = "<group>"; };
 		86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTop.storyboard; sourceTree = "<group>"; };
 		86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
 		C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearchTests/Pods-RestaurantSearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,8 +172,8 @@
 		86E8FE00225DCEA400DCAD11 /* SearchTop */ = {
 			isa = PBXGroup;
 			children = (
-				86E8FE36225DD3F500DCAD11 /* SearchTopViewController.swift */,
 				86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */,
+				EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */,
 			);
 			path = SearchTop;
 			sourceTree = "<group>";
@@ -536,10 +536,10 @@
 				86E8FE2D225DD3A700DCAD11 /* CitySelectViewController.swift in Sources */,
 				86E8FE14225DD0C800DCAD11 /* ShopMapViewController.swift in Sources */,
 				86E8FE10225DD05800DCAD11 /* FavoriteListViewController.swift in Sources */,
-				86E8FE37225DD3F500DCAD11 /* SearchTopViewController.swift in Sources */,
 				86E8FE1C225DD23200DCAD11 /* ShopListViewController.swift in Sources */,
 				86E8FE27225DD37C00DCAD11 /* TownSelectViewController.swift in Sources */,
 				86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */,
+				EA1A080C226DC4AD00550B4F /* SearchTopTableViewController.swift in Sources */,
 				86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */,
 				EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */,
 			);
