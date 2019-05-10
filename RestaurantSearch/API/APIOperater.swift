@@ -15,11 +15,10 @@ final class APIOperater {
     ]
     
     func fetchresponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype?) -> Void, failure: @escaping (Error?) -> Void) {
-        Alamofire.request(url, parameters: parameters).responseJSON { response in
+        Alamofire.request(url, parameters: parameters).responseData { response in
             switch response.result {
-            case .success(_):
+            case .success(let data):
                 do {
-                    guard let data = response.data else { return }
                     let result = try JSONDecoder().decode(Responsetype.self, from: data)
                     success(result)
                 } catch {
