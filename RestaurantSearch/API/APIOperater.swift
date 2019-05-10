@@ -14,7 +14,7 @@ final class APIOperater {
         "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
     
-    func fetchresponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype?) -> Void, failure: @escaping (Error?) -> Void) {
+    func fetchresponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
         Alamofire.request(url, parameters: parameters).responseData { response in
             switch response.result {
             case .success(let data):
@@ -31,25 +31,25 @@ final class APIOperater {
     }
     
     /// エリアの取得
-    func getAreaAPI(success: @escaping (AreaResponseBody?) -> Void, failure: @escaping (Error?) -> Void) {
+    func getAreaAPI(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/AreaSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
     
     /// 都道府県の取得
-    func getPrefectureAPI(success: @escaping (PrefectureResponseBody?) -> Void, failure: @escaping (Error?) -> Void) {
+    func getPrefectureAPI(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/PrefSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
     
     /// 市の取得
-    func getCityAPI(success: @escaping (CityResponseBody?) -> Void, failure: @escaping (Error?) -> Void) {
+    func getCityAPI(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaLargeSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
     
     /// 町の取得
-    func getTownAPI(success: @escaping (TownResponseBody?) -> Void, failure: @escaping (Error?) -> Void) {
+    func getTownAPI(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaSmallSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
