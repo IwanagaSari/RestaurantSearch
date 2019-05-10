@@ -8,17 +8,15 @@
 
 import UIKit
 
-final class ShopListViewController: UIViewController, UICollectionViewDataSource,
-UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak var collectionView: UICollectionView!
+final class ShopListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let photos = ["2", "3"]
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell =
             collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell",
                                                for: indexPath)
@@ -31,6 +29,8 @@ UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         
         return cell
     }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let layout =  collectionViewLayout as! UICollectionViewFlowLayout
