@@ -14,12 +14,6 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var sceneLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        freewordSearchBar.delegate = self
-    }
-    
     // MARK: - Actions
 
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
