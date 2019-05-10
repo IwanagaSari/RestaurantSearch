@@ -9,5 +9,8 @@
 import UIKit
 
 final class GenreSelectViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func selectButtonTapped(_ sender: UIButton) {
+    }
 }
