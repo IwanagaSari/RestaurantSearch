@@ -14,7 +14,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetAreaAPI() {
         apiOperater.getAreaAPI(success: { areaResponseBody in
-            XCTAssertEqual("北海道", areaResponseBody?.area[0].areaName)
+            XCTAssertEqual("北海道", areaResponseBody.area[0].areaName)
         }, failure: { error in
 
         })
@@ -22,7 +22,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetPrefectureAPI() {
         apiOperater.getPrefectureAPI(success: { prefectureResponseBody in
-            XCTAssertEqual(prefectureResponseBody?.pref[0].prefName, "北海道")
+            XCTAssertEqual(prefectureResponseBody.pref[0].prefName, "北海道")
         }, failure: { error in
             
         })
@@ -30,7 +30,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetCityAPI() {
         apiOperater.getCityAPI(success: { cityResponseBody in
-            XCTAssertEqual(cityResponseBody?.gareaLarge[0].areanameL, "札幌駅・大通・すすきの")
+            XCTAssertEqual(cityResponseBody.gareaLarge[0].areanameL, "札幌駅・大通・すすきの")
         }, failure: { error in
             
         })
@@ -38,7 +38,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetTownAPI() {
         apiOperater.getTownAPI(success: { townResponseBody in
-            XCTAssertEqual(townResponseBody?.gareaSmall[0].areanameS, "札幌駅")
+            XCTAssertEqual(townResponseBody.gareaSmall[0].areanameS, "札幌駅")
         }, failure: { error in
             
         })
