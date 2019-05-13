@@ -25,7 +25,6 @@ disabled_rules: # 無効にするルール
   - sorted_imports
   - nesting
   - force_cast
-  - object_literal
 
 line_length: 200
 number_separator:
