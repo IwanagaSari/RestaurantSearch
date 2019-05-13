@@ -9,6 +9,7 @@
 import UIKit
 
 final class AreaSelectViewController: UITableViewController {
+    @IBOutlet var backgroundView: UIView!
     let apiOperater = APIOperater()
     var areas: [Area] = []
     var areaName: String = ""
@@ -20,8 +21,9 @@ final class AreaSelectViewController: UITableViewController {
             self.areas = areaResponseBody.area
             self.tableView.reloadData()
         }, failure: { error in
-            //
+            print("reason: \(error.localizedDescription)")
         })
+        self.tableView.backgroundView = backgroundView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
