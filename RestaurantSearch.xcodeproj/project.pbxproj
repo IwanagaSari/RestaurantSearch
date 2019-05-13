@@ -44,6 +44,8 @@
 		EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0B2248EC3E00F3091C /* Prefecture.swift */; };
 		EA267A0E2248EFF200F3091C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0D2248EFF200F3091C /* City.swift */; };
 		EA267A102248F49200F3091C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* Town.swift */; };
+		EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCAE22842F2E00EB5656 /* APIOperater.swift */; };
+		EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +105,8 @@
 		EA267A0B2248EC3E00F3091C /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
 		EA267A0D2248EFF200F3091C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		EA267A0F2248F49200F3091C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
+		EA47FCAE22842F2E00EB5656 /* APIOperater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperater.swift; sourceTree = "<group>"; };
+		EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperaterTests.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -334,6 +338,7 @@
 				866273C3224A09A9007CA319 /* PrefectureTests.swift */,
 				866273C5224A0EFB007CA319 /* CityTests.swift */,
 				866273C7224C75A9007CA319 /* TownTests.swift */,
+				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
 			);
 			path = RestaurantSearchTests;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				EA0AD329224A2C8900D6526B /* Model */,
+				EA47FCAE22842F2E00EB5656 /* APIOperater.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -358,6 +364,7 @@
 				EA2679DF2248CCBF00F3091C /* Frameworks */,
 				EA2679E02248CCBF00F3091C /* Resources */,
 				EAB1F9462257652B009B669D /* ShellScript */,
+				CF83C4BE27E7A8BA41969BCE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -501,6 +508,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CF83C4BE27E7A8BA41969BCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EAB1F9462257652B009B669D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -525,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */,
 				EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */,
 				EA267A0A2248E2EE00F3091C /* Area.swift in Sources */,
 				86E8FE25225DD36E00DCAD11 /* GenreSelectViewController.swift in Sources */,
@@ -551,6 +581,7 @@
 			files = (
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
 				EA2679FB2248CCC100F3091C /* RestaurantSearchTests.swift in Sources */,
+				EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */,
 				866273C2224A0165007CA319 /* AreaTests.swift in Sources */,
 				866273C8224C75A9007CA319 /* TownTests.swift in Sources */,
 				866273C6224A0EFB007CA319 /* CityTests.swift in Sources */,

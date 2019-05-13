@@ -28,7 +28,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         return shopImages.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath)
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         let cellImage = UIImage(named: shopImages[indexPath.row])
