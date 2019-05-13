@@ -16,16 +16,12 @@ final class APIOperater {
     
     func fetchresponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
         Alamofire.request(url, parameters: parameters).responseData { response in
-            switch response.result {
-            case .success(let data):
-                do {
-                    let result = try JSONDecoder().decode(Responsetype.self, from: data)
-                    success(result)
-                } catch {
-                    failure(error)
-                }
-            case .failure(let err):
-                failure(err)
+            let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
+            switch result {
+            case .success(let object):
+                success(object)
+            case .failure(let error):
+                failure(error)
             }
         }
     }
