@@ -20,22 +20,22 @@ class DummyAPI: APIType {
     var prefecture: PrefectureResponseBody?
     var city: CityResponseBody?
     var town: TownResponseBody?
-    var error: Error?
+    //var error: Error?
     
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(area!); failure(error!)
+        success(area!)//; failure(error!)
     }
     
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(prefecture!); failure(error!)
+        success(prefecture!)//; failure(error!)
     }
     
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(city!); failure(error!)
+        success(city!)//; failure(error!)
     }
     
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(town!); failure(error!)
+        success(town!)//; failure(error!)
     }
 }
 
@@ -46,10 +46,16 @@ final class AreaSelectViewController: UITableViewController {
     var areas: [Area] = []
     var areaName: String = ""
     
+    let dummyAPI = DummyAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        apiOperater.getArea(success: { areaResponseBody in
+        let area = Area(areaCode: "000", areaName: "福岡県")
+        let areares = AreaResponseBody.init(area: [area])
+        dummyAPI.area = areares
+        
+        dummyAPI.getArea(success: { areaResponseBody in
             self.areas = areaResponseBody.area
             self.tableView.reloadData()
         }, failure: { error in
