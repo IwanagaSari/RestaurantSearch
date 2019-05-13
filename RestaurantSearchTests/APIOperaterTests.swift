@@ -14,7 +14,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetAreaAPI() {
         let expect = self.expectation(description: #function)
-        apiOperater.getAreaAPI(success: { areaResponseBody in
+        apiOperater.getArea(success: { areaResponseBody in
             XCTAssertEqual("北海道", areaResponseBody.area[0].areaName)
             expect.fulfill()
         }, failure: { error in
@@ -26,7 +26,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetPrefectureAPI() {
         let expect = self.expectation(description: #function)
-        apiOperater.getPrefectureAPI(success: { prefectureResponseBody in
+        apiOperater.getPrefecture(success: { prefectureResponseBody in
             XCTAssertEqual(prefectureResponseBody.pref[0].prefName, "北海道")
             expect.fulfill()
         }, failure: { error in
@@ -38,7 +38,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetCityAPI() {
         let expect = self.expectation(description: #function)
-        apiOperater.getCityAPI(success: { cityResponseBody in
+        apiOperater.getCity(success: { cityResponseBody in
             XCTAssertEqual(cityResponseBody.gareaLarge[0].areanameL, "札幌駅・大通・すすきの")
             expect.fulfill()
         }, failure: { error in
@@ -50,7 +50,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetTownAPI() {
         let expect = self.expectation(description: #function)
-        apiOperater.getTownAPI(success: { townResponseBody in
+        apiOperater.getTown(success: { townResponseBody in
             XCTAssertEqual(townResponseBody.gareaSmall[0].areanameS, "札幌駅")
             expect.fulfill()
         }, failure: { error in
