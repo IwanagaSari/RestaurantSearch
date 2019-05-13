@@ -14,7 +14,7 @@ final class APIOperater {
         "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
     
-    func fetchResponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
+    private func fetchResponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
         Alamofire.request(url, parameters: parameters).responseData { response in
             let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
             switch result {
