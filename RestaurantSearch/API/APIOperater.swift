@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-final class APIOperater {
+final class APIOperater: APIType {
     let parameters = [
         "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
