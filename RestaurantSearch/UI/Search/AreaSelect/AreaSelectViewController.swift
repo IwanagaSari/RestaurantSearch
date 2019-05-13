@@ -10,6 +10,7 @@ import UIKit
 
 final class AreaSelectViewController: UITableViewController {
     @IBOutlet var backgroundView: UIView!
+    @IBOutlet weak var errorTextView: UITextView!
     let apiOperater = APIOperater()
     var areas: [Area] = []
     var areaName: String = ""
@@ -21,7 +22,7 @@ final class AreaSelectViewController: UITableViewController {
             self.areas = areaResponseBody.area
             self.tableView.reloadData()
         }, failure: { error in
-            print("reason: \(error.localizedDescription)")
+            self.errorTextView.text = error.localizedDescription
         })
         self.tableView.backgroundView = backgroundView
     }
