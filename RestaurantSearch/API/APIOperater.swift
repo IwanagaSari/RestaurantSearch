@@ -31,25 +31,25 @@ final class APIOperater {
     }
     
     /// エリアの取得
-    func getAreaAPI(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/AreaSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
     
     /// 都道府県の取得
-    func getPrefectureAPI(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/PrefSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
     
     /// 市の取得
-    func getCityAPI(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaLargeSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
     
     /// 町の取得
-    func getTownAPI(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaSmallSearchAPI/v3/"
         fetchresponse(url: url, success: success, failure: failure)
     }
