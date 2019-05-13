@@ -11,6 +11,7 @@ import UIKit
 final class AreaSelectViewController: UITableViewController {
     let apiOperater = APIOperater()
     var areas: [Area] = []
+    var areaName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,5 +35,10 @@ final class AreaSelectViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return areas.count
     }
-
+    
+    //セル選択時にエリア名をareaNameに代入
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.areaName = areas[indexPath.row].areaName
+        performSegue(withIdentifier: "toPrefectureSelect", sender: IndexPath.self)
+    }
 }
