@@ -46,16 +46,10 @@ final class AreaSelectViewController: UITableViewController {
     var areas: [Area] = []
     var areaName: String = ""
     
-    let dummyAPI = DummyAPI()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let area = Area(areaCode: "000", areaName: "福岡県")
-        let areares = AreaResponseBody.init(area: [area])
-        dummyAPI.area = areares
-        
-        dummyAPI.getArea(success: { areaResponseBody in
+        apiOperater.getArea(success: { areaResponseBody in
             self.areas = areaResponseBody.area
             self.tableView.reloadData()
         }, failure: { error in
