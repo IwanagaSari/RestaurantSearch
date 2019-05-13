@@ -33,7 +33,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     // MARK: - UICollectionViewDelegateFlowLayout
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout =  collectionViewLayout as! UICollectionViewFlowLayout
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
         let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
         
         return CGSize(width: width, height: width)

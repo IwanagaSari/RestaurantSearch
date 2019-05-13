@@ -1,7 +1,7 @@
 included:
   - RestaurantSearch
   - RestaurantSearchTests
-opt_in_rules:
+opt_in_rules: # デフォルト無効のルールのうち、有効にするもの。
   - empty_count
   - file_header
   - explicit_init
@@ -15,12 +15,11 @@ opt_in_rules:
   - closure_end_indentation
   - first_where
   - sorted_imports
-  - object_literal
   - number_separator
   - prohibited_super_call
   - fatal_error_message
-
-disabled_rules:
+  
+disabled_rules: # 無効にするルール
   - trailing_whitespace
   - file_header
   - sorted_imports
