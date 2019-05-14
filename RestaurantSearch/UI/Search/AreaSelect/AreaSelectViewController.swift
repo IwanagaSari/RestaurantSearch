@@ -8,37 +8,6 @@
 
 import UIKit
 
-protocol APIType {
-    func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void)
-    func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void)
-    func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void)
-    func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void)
-}
-
-class DummyAPI: APIType {
-    var area: AreaResponseBody?
-    var prefecture: PrefectureResponseBody?
-    var city: CityResponseBody?
-    var town: TownResponseBody?
-    //var error: Error?
-    
-    func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(area!)//; failure(error!)
-    }
-    
-    func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(prefecture!)//; failure(error!)
-    }
-    
-    func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(city!)//; failure(error!)
-    }
-    
-    func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(town!)//; failure(error!)
-    }
-}
-
 final class AreaSelectViewController: UITableViewController {
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var errorTextView: UITextView!
