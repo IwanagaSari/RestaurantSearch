@@ -11,7 +11,7 @@ import UIKit
 final class AreaSelectViewController: UITableViewController {
     @IBOutlet var backgroundView: UIView!
     @IBOutlet weak var errorTextView: UITextView!
-    let apiOperater = APIOperater()
+    private let apiOperater: APIType = APIOperater()
     var areas: [Area] = []
     var areaName: String = ""
     
