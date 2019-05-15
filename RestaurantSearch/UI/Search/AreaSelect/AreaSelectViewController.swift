@@ -41,7 +41,7 @@ final class AreaSelectViewController: UITableViewController {
     //セル選択時にエリア名をareaNameに代入
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.areaName = areas[indexPath.row].areaName
-        performSegue(withIdentifier: "toPrefectureSelect", sender: IndexPath.self)
+        performSegue(withIdentifier: "toPrefectureSelect", sender: self)
     }
     
     func showArea(areaResponseBody: AreaResponseBody) {
