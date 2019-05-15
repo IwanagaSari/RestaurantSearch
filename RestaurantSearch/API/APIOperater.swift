@@ -22,19 +22,19 @@ class DummyAPI: APIType {
     var city: CityResponseBody?
     var town: TownResponseBody?
     //var error: Error?
-    
+
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(area!)//; failure(error!)
     }
-    
+
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(prefecture!)//; failure(error!)
     }
-    
+
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(city!)//; failure(error!)
     }
-    
+
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(town!)//; failure(error!)
     }
@@ -50,6 +50,7 @@ final class APIOperater: APIType {
             let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
             switch result {
             case .success(let object):
+                print("成功した")
                 success(object)
             case .failure(let error):
                 failure(error)

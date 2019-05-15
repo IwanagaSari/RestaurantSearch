@@ -9,7 +9,7 @@
 import UIKit
 
 final class AreaSelectViewController: UITableViewController {
-    @IBOutlet var backgroundView: UIView!
+    @IBOutlet var errorView: UIView!
     @IBOutlet weak var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
     var areas: [Area] = []
@@ -19,12 +19,11 @@ final class AreaSelectViewController: UITableViewController {
         super.viewDidLoad()
         
         apiOperater.getArea(success: { areaResponseBody in
-            self.areas = areaResponseBody.area
-            self.tableView.reloadData()
+            self.showArea(areaResponseBody: areaResponseBody)
         }, failure: { error in
-            self.errorTextView.text = error.localizedDescription
+            self.showError(error: error)
         })
-        self.tableView.backgroundView = backgroundView
+        self.tableView.backgroundView = errorView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,5 +42,14 @@ final class AreaSelectViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.areaName = areas[indexPath.row].areaName
         performSegue(withIdentifier: "toPrefectureSelect", sender: IndexPath.self)
+    }
+    
+    func showArea(areaResponseBody: AreaResponseBody) {
+        self.areas = areaResponseBody.area
+        self.tableView.reloadData()
+    }
+    
+    func showError(error: Error) {
+        self.errorTextView.text = error.localizedDescription
     }
 }
