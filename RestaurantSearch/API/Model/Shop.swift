@@ -9,7 +9,11 @@
 import Foundation
 
 struct ShopResponseBody: Codable {
-    let rest: [Shop]
+    let shop: [Shop]
+    
+    enum CodingKeys: String, CodingKey {
+        case shop = "rest"
+    }
 }
 
 struct Shop: Codable {
