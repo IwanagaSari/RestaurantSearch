@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 final class APIOperater {
-    let parameters = [
+    var parameters = [
         "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
     
@@ -47,6 +47,13 @@ final class APIOperater {
     /// 町の取得
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaSmallSearchAPI/v3/"
+        fetchResponse(url: url, success: success, failure: failure)
+    }
+    
+    /// お店情報の取得
+    func getShop(success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+        let url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
+        parameters.updateValue("AREAS5504", forKey: "areacode_s")
         fetchResponse(url: url, success: success, failure: failure)
     }
 }
