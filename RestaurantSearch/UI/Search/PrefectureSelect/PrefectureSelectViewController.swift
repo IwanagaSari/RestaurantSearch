@@ -11,8 +11,10 @@ import UIKit
 final class PrefectureSelectViewController: UITableViewController {
     private let apiOperater: APIType = APIOperater()
     private var prefectures: [Prefecture] = []
+    private var selectedPrefectures: [Prefecture] = []
     var prefName: String = ""
     var areaName: String = ""
+    var areaCode: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +29,22 @@ final class PrefectureSelectViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrefectureCell", for: indexPath)
-        cell.textLabel?.text = prefectures[indexPath.row].prefName
+        cell.textLabel?.text = selectedPrefectures[indexPath.row].prefName
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return prefectures.count
+        return selectedPrefectures.count
     }
     
     func showPrefecture(_ prefectureResponseBody: PrefectureResponseBody) {
-        self.prefectures = prefectureResponseBody.pref
+        prefectures = prefectureResponseBody.pref
+        for data in prefectures {
+            if areaCode == data.areaCode {
+                selectedPrefectures.append(data)
+            }
+        }
         self.tableView.reloadData()
     }
     
