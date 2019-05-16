@@ -53,7 +53,7 @@ final class APIOperater {
     /// お店情報の取得
     func getShop(success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
-        parameters.updateValue("AREAS5504", forKey: "areacode_s")
+        parameters.updateValue("AREAS5504", forKey: "areacode_s") //実際はユーザーの選ぶ条件によって変化する
         fetchResponse(url: url, success: success, failure: failure)
     }
 }
