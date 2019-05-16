@@ -17,8 +17,8 @@ final class AreaSelectViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiOperater.getArea(success: { areaResponseBody in
-            self.showArea(areaResponseBody)
+        apiOperater.getArea(success: { [weak self] areaResponseBody in
+            self?.showArea(areaResponseBody)
         }, failure: { error in
             self.showError(error)
         })
