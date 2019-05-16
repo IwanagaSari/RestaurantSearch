@@ -18,9 +18,9 @@ final class AreaSelectViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         apiOperater.getArea(success: { areaResponseBody in
-            self.showArea(areaResponseBody: areaResponseBody)
+            self.showArea(areaResponseBody)
         }, failure: { error in
-            self.showError(error: error)
+            self.showError(error)
         })
         self.tableView.backgroundView = errorView
     }
@@ -43,12 +43,12 @@ final class AreaSelectViewController: UITableViewController {
         performSegue(withIdentifier: "toPrefectureSelect", sender: self)
     }
     
-    func showArea(areaResponseBody: AreaResponseBody) {
+    func showArea(_ areaResponseBody: AreaResponseBody) {
         self.areas = areaResponseBody.area
         self.tableView.reloadData()
     }
     
-    func showError(error: Error) {
+    func showError(_ error: Error) {
         self.errorTextView.text = error.localizedDescription
     }
 }
