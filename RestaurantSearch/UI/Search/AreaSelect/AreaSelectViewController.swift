@@ -19,8 +19,8 @@ final class AreaSelectViewController: UITableViewController {
         super.viewDidLoad()
         apiOperater.getArea(success: { [weak self] areaResponseBody in
             self?.showArea(areaResponseBody)
-        }, failure: { error in
-            self.showError(error)
+        }, failure: { [weak self] error in
+            self?.showError(error)
         })
         self.tableView.backgroundView = errorView
     }
