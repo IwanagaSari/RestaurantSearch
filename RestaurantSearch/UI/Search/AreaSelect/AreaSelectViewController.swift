@@ -9,10 +9,10 @@
 import UIKit
 
 final class AreaSelectViewController: UITableViewController {
-    @IBOutlet var errorView: UIView!
-    @IBOutlet weak var errorTextView: UITextView!
+    @IBOutlet private var errorView: UIView!
+    @IBOutlet weak private var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
-    var areas: [Area] = []
+    private var areas: [Area] = []
     var areaName: String = ""
     
     override func viewDidLoad() {
