@@ -17,7 +17,7 @@ protocol APIType {
 }
 
 class DummyAPI: APIType {
-    let area = AreaResponseBody(area: [Area(areaCode: "000", areaName: "九州")])
+    var area = AreaResponseBody(area: [Area(areaCode: "000", areaName: "九州")])
     var prefecture = PrefectureResponseBody(pref: [Prefecture(prefCode: "111",
                                                               prefName: "福岡県",
                                                               areaCode: "222")])
