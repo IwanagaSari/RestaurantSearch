@@ -58,7 +58,6 @@ final class APIOperater: APIType {
             let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
             switch result {
             case .success(let object):
-                print("成功した")
                 success(object)
             case .failure(let error):
                 failure(error)
