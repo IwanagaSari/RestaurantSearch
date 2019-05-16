@@ -14,6 +14,7 @@ final class AreaSelectViewController: UITableViewController {
     private let apiOperater: APIType = APIOperater()
     private var areas: [Area] = []
     var areaName: String = ""
+    var areaCode: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,8 @@ final class AreaSelectViewController: UITableViewController {
     
     //セル選択時にエリア名をareaNameに代入
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.areaName = areas[indexPath.row].areaName
+        areaName = areas[indexPath.row].areaName
+        areaCode = areas[indexPath.row].areaCode
         performSegue(withIdentifier: "toPrefectureSelect", sender: self)
     }
     
@@ -55,5 +57,6 @@ final class AreaSelectViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let prefectureSelectViewController = segue.destination as? PrefectureSelectViewController
         prefectureSelectViewController?.areaName = self.areaName
+        prefectureSelectViewController?.areaCode = self.areaCode
     }
 }
