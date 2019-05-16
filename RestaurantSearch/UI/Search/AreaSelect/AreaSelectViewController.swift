@@ -51,4 +51,9 @@ final class AreaSelectViewController: UITableViewController {
     func showError(_ error: Error) {
         self.errorTextView.text = error.localizedDescription
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let prefectureSelectViewController = segue.destination as? PrefectureSelectViewController
+        prefectureSelectViewController?.areaName = self.areaName
+    }
 }
