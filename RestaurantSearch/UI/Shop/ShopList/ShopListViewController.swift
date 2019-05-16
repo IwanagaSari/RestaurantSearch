@@ -11,22 +11,9 @@ import UIKit
 final class ShopListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let photos = ["2", "3"]
-    let apiOperater = APIOperater()
-    var shops: [Shop] = []
-    
-    override func viewDidLoad() {
-        apiOperater.getShop(success: { shopResponseBody in
-            self.shops = shopResponseBody.shop
-            print(self.shops.count)
-            print(self.shops[0].imageUrl.shopImage1)
-            self.collectionView.reloadData()
-        }, failure: { error in
-            print(error)
-        })
-    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shops.count
+        return photos.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -34,10 +21,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
             collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell",
                                                for: indexPath)
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-        let shopimage = URL(string: shops[indexPath.row].imageUrl.shopImage1)!
-        let imageData = try? Data(contentsOf: shopimage)
-        //let cellImage = UIImage(named: photos[indexPath.row])
-        imageView.image = UIImage(data: imageData!)
+        let cellImage = UIImage(named: photos[indexPath.row])
+        imageView.image = cellImage
         
         let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = "店の名前"
