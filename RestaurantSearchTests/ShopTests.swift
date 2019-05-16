@@ -35,4 +35,47 @@ class ShopTests: XCTestCase {
         XCTAssertEqual(shop.address, "〒831-0031 福岡県大川市大字上巻字野口430-1")
         XCTAssertEqual(shop.tel, "050-3464-8707")
     }
+    
+    func testShopResponseBodyDecode() throws {
+        let json = """
+{
+    "@attributes": {
+        "api_version": "v3"
+    },
+    "total_hit_count": 50213,
+    "hit_per_page": 10,
+    "page_offset": 1,
+    "rest": [
+        {
+            "@attributes": {
+                "order": 0
+            },
+            "id": "f082211",
+            "update_date": "2019-05-12T14:00:14+09:00",
+            "name": "博多うまかんもん 小野 博多本店",
+            "name_kana": "ハカタウマカンモンオノ ハカタホンテン",
+            "latitude": "33.589188",
+            "longitude": "130.422632",
+            "category": "博多お祭り居酒屋",
+            "url": "https://r.gnavi.co.jp/e77btpdb0000/?ak=7CsVrTaV3F2RedNSaEr9ctXRf%2BI3gYZZeM9BIuJEVYY%3D",
+            "url_mobile": "http://mobile.gnavi.co.jp/shop/f082211/?ak=7CsVrTaV3F2RedNSaEr9ctXRf%2BI3gYZZeM9BIuJEVYY%3D",
+            "coupon_url": {
+                "pc": "https://r.gnavi.co.jp/e77btpdb0000/coupon/",
+                "mobile": "http://mobile.gnavi.co.jp/shop/f082211/coupon"
+            },
+            "image_url": {
+                "shop_image1": "https://uds.gnst.jp/rest/img/e77btpdb0000/t_001x.jpg",
+                "shop_image2": "https://uds.gnst.jp/rest/img/e77btpdb0000/t_001y.jpg",
+                "qrcode": "https://c-r.gnst.jp/tool/qr/?id=f082211&q=6"
+            },
+            "address": "〒812-0013 福岡県福岡市博多区博多駅東2-1-24 ギャラリーハカタビルB1",
+            "tel": "050-3464-1508",
+            "parking_lots": ""
+        }
+    ]
+}
+"""
+        let body = try JSONDecoder().decode(ShopResponseBody.self, from: json.data(using: .utf8)!)
+        XCTAssertEqual(body.shop.count, 1)
+    }
 }
