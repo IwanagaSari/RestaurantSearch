@@ -17,26 +17,34 @@ protocol APIType {
 }
 
 class DummyAPI: APIType {
-    var area: AreaResponseBody?
-    var prefecture: PrefectureResponseBody?
-    var city: CityResponseBody?
-    var town: TownResponseBody?
+    let area = AreaResponseBody(area: [Area(areaCode: "000", areaName: "九州")])
+    var prefecture = PrefectureResponseBody(pref: [Prefecture(prefCode: "111",
+                                                              prefName: "福岡県",
+                                                              areaCode: "222")])
+    var city = CityResponseBody(gareaLarge: [City(areacodeL: "333",
+                                                  areanameL: "大濠・六本松・桜坂",
+                                                  pref: City.Pref(prefCode: "444",
+                                                                  prefName: "福岡県"))])
+    var town = TownResponseBody(gareaSmall: [Town(areacodeS: "555",
+                                                  areanameS: "桜坂・小笹",
+                                                  gareaLarge: Town.AreaL(areacodeL: "666",
+                                                                         areanameL: "大濠・六本松・桜坂"))])
     //var error: Error?
 
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(area!)//; failure(error!)
+        success(area)//; failure(error!)
     }
 
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(prefecture!)//; failure(error!)
+        success(prefecture)//; failure(error!)
     }
 
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(city!)//; failure(error!)
+        success(city)//; failure(error!)
     }
 
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(town!)//; failure(error!)
+        success(town)//; failure(error!)
     }
 }
 
