@@ -32,6 +32,8 @@ class ShopTests: XCTestCase {
         let shop = try JSONDecoder().decode(Shop.self, from: json.data(using: .utf8)!)
         XCTAssertEqual(shop.name, "今生焼 大川店")
         XCTAssertEqual(shop.imageUrl.shopImage1, "https://uds.gnst.jp/rest/img/a9b68a5k0000/t_0n5c.jpg")
+        XCTAssertEqual(shop.imageUrl.shopImage2, "https://uds.gnst.jp/rest/img/a9b68a5k0000/t_0n5d.jpg")
+        XCTAssertEqual(shop.imageUrl.qrcode, "https://c-r.gnst.jp/tool/qr/?id=fap1004&q=6")
         XCTAssertEqual(shop.address, "〒831-0031 福岡県大川市大字上巻字野口430-1")
         XCTAssertEqual(shop.tel, "050-3464-8707")
     }
