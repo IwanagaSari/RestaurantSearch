@@ -30,6 +30,15 @@ final class AreaSelectViewController: UITableViewController {
         })
     }
     
+    func showArea(_ areaResponseBody: AreaResponseBody) {
+        self.areas = areaResponseBody.area
+        self.tableView.reloadData()
+    }
+    
+    func showError(_ error: Error) {
+        self.errorTextView.text = error.localizedDescription
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath)
         let area = areas[indexPath.row]
@@ -46,14 +55,5 @@ final class AreaSelectViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.areaName = areas[indexPath.row].areaName
         performSegue(withIdentifier: "toPrefectureSelect", sender: self)
-    }
-    
-    func showArea(_ areaResponseBody: AreaResponseBody) {
-        self.areas = areaResponseBody.area
-        self.tableView.reloadData()
-    }
-    
-    func showError(_ error: Error) {
-        self.errorTextView.text = error.localizedDescription
     }
 }
