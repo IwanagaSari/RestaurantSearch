@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 final class APIOperater {
-    let commonParameter: [String : Any] = [
+    private let commonParameters: [String : Any] = [
     "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
     
