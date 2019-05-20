@@ -31,10 +31,10 @@ final class TownTests: XCTestCase {
 }
 """
         let town = try JSONDecoder().decode(Town.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(town.areacodeS, "AREAS5502")
-        XCTAssertEqual(town.areanameS, "札幌駅")
-        XCTAssertEqual(town.gareaLarge.areacodeL, "AREAL5500")
-        XCTAssertEqual(town.gareaLarge.areanameL, "札幌駅・大通・すすきの")
+        XCTAssertEqual(town.townCode, "AREAS5502")
+        XCTAssertEqual(town.townName, "札幌駅")
+        XCTAssertEqual(town.city.areacodeL, "AREAL5500")
+        XCTAssertEqual(town.city.areanameL, "札幌駅・大通・すすきの")
     }
     
     func testTownResponseBodyDecode() throws {
@@ -64,6 +64,6 @@ final class TownTests: XCTestCase {
 }
 """
         let body = try JSONDecoder().decode(TownResponseBody.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(body.gareaSmall.count, 1)
+        XCTAssertEqual(body.town.count, 1)
     }
 }
