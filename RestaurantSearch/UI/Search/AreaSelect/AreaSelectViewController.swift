@@ -17,12 +17,17 @@ final class AreaSelectViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getArea()
+        self.tableView.backgroundView = errorView
+    }
+    
+    func getArea() {
         apiOperater.getArea(success: { [weak self] areaResponseBody in
             self?.showArea(areaResponseBody)
-        }, failure: { [weak self] error in
-            self?.showError(error)
+            }, failure: { [weak self] error in
+                self?.showError(error)
         })
-        self.tableView.backgroundView = errorView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
