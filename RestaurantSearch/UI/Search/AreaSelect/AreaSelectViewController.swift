@@ -12,41 +12,44 @@ final class AreaSelectViewController: UITableViewController {
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
-    private var areas: [Area] = []
-    var areaName: String = ""
-    var areaCode: String = ""
+    private var area: [Area] = []
+    private var selectedArea: Area!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiOperater.getArea(success: { [weak self] areaResponseBody in
-            self?.showArea(areaResponseBody)
-        }, failure: { [weak self] error in
-            self?.showError(error)
-        })
+        
+        getArea()
+        
         self.tableView.backgroundView = errorView
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath)
-        let area = areas[indexPath.row]
-        cell.textLabel?.text = area.areaName
+        cell.textLabel?.text = area[indexPath.row].areaName
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return areas.count
+        return area.count
     }
     
     //セル選択時にエリア名をareaNameに代入
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        areaName = areas[indexPath.row].areaName
-        areaCode = areas[indexPath.row].areaCode
+        selectedArea = area[indexPath.row]
         performSegue(withIdentifier: "toPrefectureSelect", sender: self)
     }
     
+    func getArea() {
+        apiOperater.getArea(success: { [weak self] areaResponseBody in
+            self?.showArea(areaResponseBody)
+            }, failure: { [weak self] error in
+                self?.showError(error)
+        })
+    }
+    
     func showArea(_ areaResponseBody: AreaResponseBody) {
-        self.areas = areaResponseBody.area
+        self.area = areaResponseBody.area
         self.tableView.reloadData()
     }
     
@@ -56,7 +59,6 @@ final class AreaSelectViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let prefectureSelectViewController = segue.destination as? PrefectureSelectViewController
-        prefectureSelectViewController?.areaName = self.areaName
-        prefectureSelectViewController?.areaCode = self.areaCode
+        prefectureSelectViewController?.area = selectedArea
     }
 }
