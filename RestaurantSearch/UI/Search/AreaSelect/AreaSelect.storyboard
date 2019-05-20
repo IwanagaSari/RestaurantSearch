@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fpw-zl-wEh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fpw-zl-wEh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZkB-bq-puQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AreaCell" id="ZkB-bq-puQ">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZkB-bq-puQ" id="5Go-ka-6uR">
@@ -34,10 +35,42 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="エリアを選択" id="wt0-a0-NXV"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="errorTextView" destination="eC2-1l-wo2" id="4Qt-cJ-N2V"/>
+                        <outlet property="errorView" destination="axe-Bh-HHO" id="hjp-zX-8Jp"/>
+                        <segue destination="mS7-C1-KIp" kind="show" identifier="toPrefectureSelect" id="bWQ-e3-RjX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWL-CN-m1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="axe-Bh-HHO">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="エラーメッセージ" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eC2-1l-wo2">
+                            <rect key="frame" x="30" y="30" width="180" height="68"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="eC2-1l-wo2" firstAttribute="top" secondItem="6y2-K5-HtS" secondAttribute="top" constant="30" id="D3x-HP-fbh"/>
+                        <constraint firstItem="eC2-1l-wo2" firstAttribute="centerX" secondItem="axe-Bh-HHO" secondAttribute="centerX" id="KMy-Mz-K3v"/>
+                        <constraint firstItem="eC2-1l-wo2" firstAttribute="leading" secondItem="6y2-K5-HtS" secondAttribute="leading" constant="30" id="Znx-dK-Lm1"/>
+                        <constraint firstItem="eC2-1l-wo2" firstAttribute="centerY" secondItem="axe-Bh-HHO" secondAttribute="centerY" id="sgT-cS-mvZ"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="6y2-K5-HtS"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-1068" y="-269"/>
+        </scene>
+        <!--PrefectureSelect-->
+        <scene sceneID="jPO-N4-FaC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PrefectureSelect" id="mS7-C1-KIp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OkZ-yf-NoX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-457" y="-270"/>
         </scene>
     </scenes>
 </document>

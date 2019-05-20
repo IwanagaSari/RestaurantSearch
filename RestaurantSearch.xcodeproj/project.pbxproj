@@ -29,10 +29,10 @@
 		86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE2E225DD3BF00DCAD11 /* PrefectureSelectViewController.swift */; };
 		86E8FE31225DD3C900DCAD11 /* PrefectureSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE30225DD3C900DCAD11 /* PrefectureSelect.storyboard */; };
 		86E8FE33225DD3DB00DCAD11 /* AreaSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE32225DD3DB00DCAD11 /* AreaSelect.storyboard */; };
-		EA1A080C226DC4AD00550B4F /* SearchTopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */; };
 		86E8FE39225DD3FF00DCAD11 /* SearchTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */; };
 		86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */; };
 		9E01B705585537534CC2A259 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */; };
+		EA1A080C226DC4AD00550B4F /* SearchTopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */; };
 		EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */; };
 		EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E52248CCBF00F3091C /* AppDelegate.swift */; };
 		EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E72248CCBF00F3091C /* ViewController.swift */; };
@@ -46,6 +46,7 @@
 		EA267A102248F49200F3091C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* Town.swift */; };
 		EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCAE22842F2E00EB5656 /* APIOperater.swift */; };
 		EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */; };
+		EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66AD7D22929F6E007355BB /* DummyAPI.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,10 +87,10 @@
 		86E8FE2E225DD3BF00DCAD11 /* PrefectureSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureSelectViewController.swift; sourceTree = "<group>"; };
 		86E8FE30225DD3C900DCAD11 /* PrefectureSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrefectureSelect.storyboard; sourceTree = "<group>"; };
 		86E8FE32225DD3DB00DCAD11 /* AreaSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaSelect.storyboard; sourceTree = "<group>"; };
-		EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopTableViewController.swift; sourceTree = "<group>"; };
 		86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTop.storyboard; sourceTree = "<group>"; };
 		86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
 		C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearchTests/Pods-RestaurantSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopTableViewController.swift; sourceTree = "<group>"; };
 		EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewController.swift; sourceTree = "<group>"; };
 		EA2679E22248CCBF00F3091C /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2679E52248CCBF00F3091C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		EA267A0F2248F49200F3091C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		EA47FCAE22842F2E00EB5656 /* APIOperater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperater.swift; sourceTree = "<group>"; };
 		EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperaterTests.swift; sourceTree = "<group>"; };
+		EA66AD7D22929F6E007355BB /* DummyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyAPI.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -348,6 +350,7 @@
 			children = (
 				EA0AD329224A2C8900D6526B /* Model */,
 				EA47FCAE22842F2E00EB5656 /* APIOperater.swift */,
+				EA66AD7D22929F6E007355BB /* DummyAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				EA1A080C226DC4AD00550B4F /* SearchTopTableViewController.swift in Sources */,
 				86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */,
 				EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */,
+				EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
