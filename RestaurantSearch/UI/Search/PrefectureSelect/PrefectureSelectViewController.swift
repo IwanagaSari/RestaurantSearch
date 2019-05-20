@@ -35,7 +35,7 @@ final class PrefectureSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        prefName = prefecture[indexPath.row].prefName
+        prefName = selectedPrefecture[indexPath.row].prefName
         performSegue(withIdentifier: "toCitySelect", sender: self)
     }
     
