@@ -21,21 +21,20 @@ class DummyAPI: APIType {
                                                   areanameS: "桜坂・小笹",
                                                   gareaLarge: Town.AreaL(areacodeL: "666",
                                                                          areanameL: "大濠・六本松・桜坂"))])
-    //var error: Error?
     
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(area)//; failure(error!)
+        success(area)
     }
     
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(prefecture)//; failure(error!)
+        success(prefecture)
     }
     
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(city)//; failure(error!)
+        success(city)
     }
     
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
-        success(town)//; failure(error!)
+        success(town)
     }
 }
