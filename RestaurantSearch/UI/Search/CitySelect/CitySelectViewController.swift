@@ -57,4 +57,9 @@ final class CitySelectViewController: UITableViewController {
     func showError(_ error: Error) {
         print(error) //とりあえず
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let townSelectViewController = segue.destination as? TownSelectViewController
+        townSelectViewController?.city = selectedCity
+    }
 }
