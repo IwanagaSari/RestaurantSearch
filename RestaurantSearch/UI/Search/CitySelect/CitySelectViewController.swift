@@ -10,31 +10,31 @@ import UIKit
 
 final class CitySelectViewController: UITableViewController {
     private let apiOperater: APIType = APIOperater()
-    private var selectedCity: [City] = []
     private var city: [City] = []
-    var prefName: String = ""
-    var areanameL: String = ""
+    private var selectedCity: City!
+    var prefecture: Prefecture!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = prefName
+        navigationItem.title = prefecture.prefName
         
         getCity()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath)
-        cell.textLabel?.text = selectedCity[indexPath.row].areanameL
+        cell.textLabel?.text = city[indexPath.row].areanameL
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedCity.count
+        return city.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        areanameL = city[indexPath.row].areanameL
+        selectedCity = city[indexPath.row]
+        performSegue(withIdentifier: "toTownSelect", sender: self)
     }
     
     func getCity() {
@@ -46,10 +46,9 @@ final class CitySelectViewController: UITableViewController {
     }
     
     func showCity(_ cityResponseBody: CityResponseBody) {
-        city = cityResponseBody.gareaLarge
-        for data in city {
-            if prefName == data.pref.prefName {
-                selectedCity.append(data)
+        for data in cityResponseBody.gareaLarge {
+            if prefecture.prefName == data.pref.prefName {
+                city.append(data)
             }
         }
         self.tableView.reloadData()
