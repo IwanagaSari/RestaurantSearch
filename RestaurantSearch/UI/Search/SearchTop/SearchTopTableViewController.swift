@@ -13,6 +13,7 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     @IBOutlet weak var areaLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var sceneLabel: UILabel!
+    var areaInfo: Town?
     
     // MARK: - Actions
 
