@@ -11,31 +11,29 @@ import UIKit
 final class PrefectureSelectViewController: UITableViewController {
     private let apiOperater: APIType = APIOperater()
     private var prefecture: [Prefecture] = []
-    private var selectedPrefecture: [Prefecture] = []
-    var prefName: String = ""
-    var areaName: String = ""
-    var areaCode: String = ""
+    private var selectedPrefecture: Prefecture!
+    var area: Area!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = areaName
+        navigationItem.title = area.areaName
         
         getPrefecture()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrefectureCell", for: indexPath)
-        cell.textLabel?.text = selectedPrefecture[indexPath.row].prefName
+        cell.textLabel?.text = prefecture[indexPath.row].prefName
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectedPrefecture.count
+        return prefecture.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        prefName = selectedPrefecture[indexPath.row].prefName
+        selectedPrefecture = prefecture[indexPath.row]
         performSegue(withIdentifier: "toCitySelect", sender: self)
     }
     
@@ -48,10 +46,9 @@ final class PrefectureSelectViewController: UITableViewController {
     }
     
     func showPrefecture(_ prefectureResponseBody: PrefectureResponseBody) {
-        prefecture = prefectureResponseBody.pref
-        for data in prefecture {
-            if areaCode == data.areaCode {
-                selectedPrefecture.append(data)
+        for data in prefectureResponseBody.pref {
+            if area.areaCode == data.areaCode {
+                prefecture.append(data)
             }
         }
         self.tableView.reloadData()
@@ -63,6 +60,6 @@ final class PrefectureSelectViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let citySelectViewController = segue.destination as? CitySelectViewController
-        citySelectViewController?.prefName = self.prefName
+        citySelectViewController?.prefecture = selectedPrefecture
     }
 }
