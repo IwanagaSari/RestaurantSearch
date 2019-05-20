@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-class ShopTests: XCTestCase {
+final class ShopTests: XCTestCase {
     
     func testShopDecode() throws {
         let json = """
