@@ -137,6 +137,9 @@
                                                     <state key="normal" title="検索する">
                                                         <color key="titleColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="searchButtonTapped:" destination="8dS-t8-OOb" eventType="touchUpInside" id="nya-LI-vdH"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -158,6 +161,7 @@
                         <outlet property="freewordSearchBar" destination="vGY-ic-fJh" id="73C-kJ-hvs"/>
                         <outlet property="genreLabel" destination="nL4-oz-oVT" id="yNc-XM-3aR"/>
                         <outlet property="sceneLabel" destination="kis-hC-HV0" id="f5q-NS-4Lo"/>
+                        <segue destination="DJZ-mo-xSl" kind="show" identifier="toShopList" id="xEB-Xm-q75"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xv9-8s-W2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,6 +172,14 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="87.723214285714278"/>
+        </scene>
+        <!--ShopList-->
+        <scene sceneID="eqt-Gb-qEI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ShopList" id="DJZ-mo-xSl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2E-98-V5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="88"/>
         </scene>
     </scenes>
 </document>

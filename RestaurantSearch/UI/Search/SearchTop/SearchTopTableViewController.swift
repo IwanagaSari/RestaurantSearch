@@ -19,7 +19,11 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         freewordSearchBar.resignFirstResponder()
     }
-
+    
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "toShopList", sender: self)
+    }
+    
     // MARK: - UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
