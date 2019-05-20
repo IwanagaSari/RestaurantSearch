@@ -53,7 +53,6 @@ final class CitySelectViewController: UITableViewController {
             }
         }
         self.tableView.reloadData()
-        print(selectedCity.count)
     }
     
     func showError(_ error: Error) {
