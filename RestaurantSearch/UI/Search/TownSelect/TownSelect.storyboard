@@ -34,10 +34,21 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="市を表示" id="03C-0O-hhF"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="QBY-PC-MgG" kind="show" identifier="toSearchTopView" id="XEp-xz-wwc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qg1-3R-Jc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100" y="84"/>
+        </scene>
+        <!--SearchTop-->
+        <scene sceneID="bFU-1B-IIm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchTop" id="QBY-PC-MgG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sby-To-hSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="84"/>
         </scene>
     </scenes>
 </document>
