@@ -9,7 +9,15 @@
 import Foundation
 import Alamofire
 
-final class APIOperater {
+protocol APIType {
+    func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getShop(areacodeS: String?, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void)
+}
+
+final class APIOperater: APIType {
     private let commonParameters: [String : Any] = [
     "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
