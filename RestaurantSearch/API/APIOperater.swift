@@ -29,30 +29,34 @@ final class APIOperater {
     /// エリアの取得
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/AreaSearchAPI/v3/"
-        fetchResponse(url: url, parameters: commonParameter, success: success, failure: failure)
+        fetchResponse(url: url, parameters: commonParameters, success: success, failure: failure)
     }
     
     /// 都道府県の取得
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/PrefSearchAPI/v3/"
-        fetchResponse(url: url, parameters: commonParameter, success: success, failure: failure)
+        fetchResponse(url: url, parameters: commonParameters, success: success, failure: failure)
     }
     
     /// 市の取得
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaLargeSearchAPI/v3/"
-        fetchResponse(url: url, parameters: commonParameter, success: success, failure: failure)
+        fetchResponse(url: url, parameters: commonParameters, success: success, failure: failure)
     }
     
     /// 町の取得
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaSmallSearchAPI/v3/"
-        fetchResponse(url: url, parameters: commonParameter, success: success, failure: failure)
+        fetchResponse(url: url, parameters: commonParameters, success: success, failure: failure)
     }
     
     /// お店情報の取得
-    func getShop(parameters: [String : Any], success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getShop(areacodeS: String?, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
+        var parameters = commonParameters
+        if let areacodeS = areacodeS {
+            parameters["areacode_s"] = areacodeS
+        }
         fetchResponse(url: url, parameters: parameters, success: success, failure: failure)
     }
 }
