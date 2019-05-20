@@ -13,7 +13,7 @@ final class AreaSelectViewController: UITableViewController {
     @IBOutlet weak private var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
     private var areas: [Area] = []
-    var areaName: String = ""
+    private var selectedArea: Area?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ final class AreaSelectViewController: UITableViewController {
         self.tableView.backgroundView = errorView
     }
     
-    func getArea() {
+    private func getArea() {
         apiOperater.getArea(success: { [weak self] areaResponseBody in
             self?.showArea(areaResponseBody)
             }, failure: { [weak self] error in
@@ -30,12 +30,12 @@ final class AreaSelectViewController: UITableViewController {
         })
     }
     
-    func showArea(_ areaResponseBody: AreaResponseBody) {
+    private func showArea(_ areaResponseBody: AreaResponseBody) {
         self.areas = areaResponseBody.area
         self.tableView.reloadData()
     }
     
-    func showError(_ error: Error) {
+    private func showError(_ error: Error) {
         self.errorTextView.text = error.localizedDescription
     }
     
@@ -53,7 +53,7 @@ final class AreaSelectViewController: UITableViewController {
     
     //セル選択時にエリア名をareaNameに代入
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.areaName = areas[indexPath.row].areaName
+        selectedArea = areas[indexPath.row]
         performSegue(withIdentifier: "toPrefectureSelect", sender: self)
     }
 }
