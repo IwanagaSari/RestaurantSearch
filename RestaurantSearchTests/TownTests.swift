@@ -33,8 +33,8 @@ final class TownTests: XCTestCase {
         let town = try JSONDecoder().decode(Town.self, from: json.data(using: .utf8)!)
         XCTAssertEqual(town.townCode, "AREAS5502")
         XCTAssertEqual(town.townName, "札幌駅")
-        XCTAssertEqual(town.city.areacodeL, "AREAL5500")
-        XCTAssertEqual(town.city.areanameL, "札幌駅・大通・すすきの")
+        XCTAssertEqual(town.city.cityCode, "AREAL5500")
+        XCTAssertEqual(town.city.cityName, "札幌駅・大通・すすきの")
     }
     
     func testTownResponseBodyDecode() throws {
