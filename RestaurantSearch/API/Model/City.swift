@@ -9,17 +9,17 @@
 import Foundation
 
 struct CityResponseBody: Codable {
-    let gareaLarge: [City]
+    let city: [City]
     
     enum CodingKeys: String, CodingKey {
-        case gareaLarge = "garea_large"
+        case city = "garea_large"
     }
 }
 
 /// 市
 struct City: Codable {
-    let areacodeL: String
-    let areanameL: String
+    let cityCode: String
+    let cityName: String
     let pref: Pref
     
     struct Pref: Codable {
@@ -33,8 +33,8 @@ struct City: Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case areacodeL = "areacode_l"
-        case areanameL = "areaname_l"
+        case cityCode = "areacode_l"
+        case cityName = "areaname_l"
         case pref
     }
 }
