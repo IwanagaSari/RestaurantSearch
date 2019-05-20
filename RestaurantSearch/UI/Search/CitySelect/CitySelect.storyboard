@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" title="県名を表示" id="eOP-LO-pJk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="eJj-0A-gwc" kind="show" id="h0b-cJ-ucC"/>
+                        <segue destination="eJj-0A-gwc" kind="show" identifier="toTownSelect" id="h0b-cJ-ucC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8s-E6-QBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
