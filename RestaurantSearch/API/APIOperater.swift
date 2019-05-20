@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 
 final class APIOperater {
-    let commonParameter = [
+    let commonParameter: [String : Any] = [
     "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
     
-    private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String : String], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
+    private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String : Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
         Alamofire.request(url, parameters: parameters).responseData { response in
             let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
             switch result {
