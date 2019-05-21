@@ -51,12 +51,10 @@ final class APIOperater {
     }
     
     /// お店情報の取得
-    func getShop(areacodeS: String?, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
         var parameters = commonParameters
-        if let areacodeS = areacodeS {
-            parameters["areacode_s"] = areacodeS
-        }
+        parameters["areacode_s"] = areacodeS
         fetchResponse(url: url, parameters: parameters, success: success, failure: failure)
     }
 }
