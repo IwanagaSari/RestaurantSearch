@@ -62,9 +62,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetShopAPI() {
         let expect = self.expectation(description: #function)
-        var shopParameter = ["keyid": "9e168ecbfa31f841eb3a8bc16045a424"]
-        shopParameter.updateValue("AREAS5504", forKey: "areacode_s")
-        apiOperater.getShop(parameters: shopParameter, success: { shopResponseBody in
+        apiOperater.getShop(areacodeS: "AREAS5504", success: { shopResponseBody in
             XCTAssertEqual(shopResponseBody.shop[0].name, "和食個室居酒屋 緋焔 大通店")
             expect.fulfill()
         }, failure: { error in
