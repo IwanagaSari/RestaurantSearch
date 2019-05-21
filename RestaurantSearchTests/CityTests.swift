@@ -23,8 +23,8 @@ final class CityTests: XCTestCase {
 }
 """
         let city = try JSONDecoder().decode(City.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(city.areacodeL, "AREAL5500")
-        XCTAssertEqual(city.areanameL, "札幌駅・大通・すすきの")
+        XCTAssertEqual(city.cityCode, "AREAL5500")
+        XCTAssertEqual(city.cityName, "札幌駅・大通・すすきの")
         XCTAssertEqual(city.pref.prefCode, "PREF01")
         XCTAssertEqual(city.pref.prefName, "北海道")
     }
@@ -48,6 +48,6 @@ final class CityTests: XCTestCase {
 }
 """
         let body = try JSONDecoder().decode(CityResponseBody.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(body.gareaLarge.count, 1)
+        XCTAssertEqual(body.city.count, 1)
     }    
 }

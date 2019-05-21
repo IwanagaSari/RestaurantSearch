@@ -9,32 +9,32 @@
 import Foundation
 
 struct TownResponseBody: Codable {
-    let gareaSmall: [Town]
+    let town: [Town]
     
     enum CodingKeys: String, CodingKey {
-        case gareaSmall = "garea_small"
+        case town = "garea_small"
     }
 }
 
 /// 町
 struct Town: Codable {
-    let areacodeS: String
-    let areanameS: String
-    let gareaLarge: AreaL
+    let townCode: String
+    let townName: String
+    let city: AreaL
 
     struct AreaL: Codable {
-        let areacodeL: String
-        let areanameL: String
+        let cityCode: String
+        let cityName: String
 
         enum CodingKeys: String, CodingKey {
-            case areacodeL = "areacode_l"
-            case areanameL = "areaname_l"
+            case cityCode = "areacode_l"
+            case cityName = "areaname_l"
         }
     }
 
     enum CodingKeys: String, CodingKey {
-        case areacodeS = "areacode_s"
-        case areanameS = "areaname_s"
-        case gareaLarge = "garea_large"
+        case townCode = "areacode_s"
+        case townName = "areaname_s"
+        case city = "garea_large"
     }
 }
