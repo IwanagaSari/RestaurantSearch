@@ -11,7 +11,7 @@ import Alamofire
 
 final class APIOperater {
     private let commonParameters: [String : Any] = [
-    "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
+        "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
     
     private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String : Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
