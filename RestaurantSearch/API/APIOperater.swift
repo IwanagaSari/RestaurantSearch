@@ -9,10 +9,6 @@
 import Foundation
 import Alamofire
 
-<<<<<<< HEAD
-final class APIOperater {
-    private let commonParameters: [String : Any] = [
-=======
 protocol APIType {
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void)
@@ -21,8 +17,7 @@ protocol APIType {
 }
 
 final class APIOperater: APIType {
-    let parameters = [
->>>>>>> master
+    private let commonParameters: [String : Any] = [
         "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
     
