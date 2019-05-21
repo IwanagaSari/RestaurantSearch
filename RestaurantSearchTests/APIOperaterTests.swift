@@ -39,7 +39,7 @@ final class APIOperaterTests: XCTestCase {
     func testGetCityAPI() {
         let expect = self.expectation(description: #function)
         apiOperater.getCity(success: { cityResponseBody in
-            XCTAssertEqual(cityResponseBody.gareaLarge[0].areanameL, "札幌駅・大通・すすきの")
+            XCTAssertEqual(cityResponseBody.city[0].cityName, "札幌駅・大通・すすきの")
             expect.fulfill()
         }, failure: { error in
             XCTFail("\(error)")
@@ -51,7 +51,7 @@ final class APIOperaterTests: XCTestCase {
     func testGetTownAPI() {
         let expect = self.expectation(description: #function)
         apiOperater.getTown(success: { townResponseBody in
-            XCTAssertEqual(townResponseBody.gareaSmall[0].areanameS, "札幌駅")
+            XCTAssertEqual(townResponseBody.town[0].townName, "札幌駅")
             expect.fulfill()
         }, failure: { error in
             XCTFail("\(error)")
