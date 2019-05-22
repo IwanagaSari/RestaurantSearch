@@ -30,13 +30,13 @@ final class TownSelectViewController: UITableViewController {
         apiOperater.getTown(success: { [weak self] townResponseBody in
             self?.showTown(townResponseBody)
             }, failure: { error in
-                self.showError(error)
+            self.showError(error)
         })
     }
     
     private func showTown(_ townResponseBody: TownResponseBody) {
         for data in townResponseBody.town {
-            if city.cityName == data.city.cityCode {
+            if city.cityCode == data.city.cityCode {
                 town.append(data)
             }
         }
