@@ -11,7 +11,6 @@ import UIKit
 final class PrefectureSelectViewController: UITableViewController {
     private let apiOperater: APIType = APIOperater()
     private var prefecture: [Prefecture] = []
-    private var selectedPrefecture: Prefecture!
     private var area: Area!
     
     static func instantiate(area: Area) -> PrefectureSelectViewController {
@@ -60,7 +59,6 @@ final class PrefectureSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPrefecture = prefecture[indexPath.row]
         performSegue(withIdentifier: "toCitySelect", sender: self)
     }
     
