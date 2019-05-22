@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" title="エリア名を表示" id="rsG-QY-Zuf"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="fHc-nV-vfd" kind="show" id="cuw-0l-S3W"/>
+                        <segue destination="fHc-nV-vfd" kind="show" identifier="toCitySelect" id="cuw-0l-S3W"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQN-fh-Vl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
