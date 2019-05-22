@@ -59,11 +59,7 @@ final class PrefectureSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toCitySelect", sender: self)
+        let vc = CitySelectViewController.instantiate(prefecture: prefecture[indexPath.row])
+        show(vc, sender: nil)
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let citySelectViewController = segue.destination as? CitySelectViewController
-//        citySelectViewController?.prefecture = selectedPrefecture
-//    }
 }
