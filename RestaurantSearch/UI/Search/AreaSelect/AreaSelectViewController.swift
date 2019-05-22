@@ -56,4 +56,9 @@ final class AreaSelectViewController: UITableViewController {
         selectedArea = areas[indexPath.row]
         performSegue(withIdentifier: "toPrefectureSelect", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let prefectureSelectViewController = segue.destination as? PrefectureSelectViewController
+        prefectureSelectViewController?.area = selectedArea
+    }
 }
