@@ -22,12 +22,12 @@ final class APIOperater: APIType {
     ]
     
     private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String : Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
-        var finalParameter = commonParameters
+        var finalParameters = commonParameters
         for (key, value) in parameters {
-            finalParameter.updateValue(value, forKey: key)
+            finalParameters.updateValue(value, forKey: key)
         }
         
-        Alamofire.request(url, parameters: finalParameter).responseData { response in
+        Alamofire.request(url, parameters: finalParameters).responseData { response in
             let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
             switch result {
             case .success(let object):
