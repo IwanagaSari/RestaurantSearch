@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,6 +37,26 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qg1-3R-Jc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="sxE-PF-JGL">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="エラーメッセージ" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rmy-xI-G2T">
+                            <rect key="frame" x="30" y="30" width="180" height="68"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="rmy-xI-G2T" firstAttribute="centerY" secondItem="sxE-PF-JGL" secondAttribute="centerY" id="Eqd-eD-VUf"/>
+                        <constraint firstItem="rmy-xI-G2T" firstAttribute="top" secondItem="sxE-PF-JGL" secondAttribute="top" constant="30" id="HmR-wq-k1j"/>
+                        <constraint firstItem="rmy-xI-G2T" firstAttribute="centerX" secondItem="sxE-PF-JGL" secondAttribute="centerX" id="QMK-Ya-bFH"/>
+                        <constraint firstItem="rmy-xI-G2T" firstAttribute="leading" secondItem="Dl9-DN-8S4" secondAttribute="leading" constant="30" id="ngc-NC-GLG"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Dl9-DN-8S4"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="100" y="84"/>
         </scene>
