@@ -30,7 +30,7 @@ final class TownSelectViewController: UITableViewController {
         apiOperater.getTown(success: { [weak self] townResponseBody in
             self?.showTown(townResponseBody)
             }, failure: { error in
-            self.showError(error)
+                self.showError(error)
         })
     }
     
