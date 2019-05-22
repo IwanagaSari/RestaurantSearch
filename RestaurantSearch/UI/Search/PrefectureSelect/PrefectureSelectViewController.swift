@@ -9,6 +9,8 @@
 import UIKit
 
 final class PrefectureSelectViewController: UITableViewController {
+    @IBOutlet var errorView: UIView!
+    @IBOutlet weak var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
     private var prefecture: [Prefecture] = []
     private var area: Area!
@@ -24,6 +26,7 @@ final class PrefectureSelectViewController: UITableViewController {
         navigationItem.title = area.areaName
         
         getPrefecture()
+        self.tableView.backgroundView = errorView
     }
     
     private func getPrefecture() {
@@ -44,7 +47,7 @@ final class PrefectureSelectViewController: UITableViewController {
     }
     
     private func showError(_ error: Error) {
-        print(error) //とりあえず
+        self.errorTextView.text = error.localizedDescription
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
