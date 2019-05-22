@@ -12,7 +12,7 @@ final class PrefectureSelectViewController: UITableViewController {
     private let apiOperater: APIType = APIOperater()
     private var prefecture: [Prefecture] = []
     private var selectedPrefecture: Prefecture!
-    var area: Area!
+    private var area: Area!
     
     static func instantiate(area: Area) -> PrefectureSelectViewController {
         let vc = UIStoryboard(name: "PrefectureSelect", bundle: nil).instantiateInitialViewController() as! PrefectureSelectViewController
@@ -27,7 +27,7 @@ final class PrefectureSelectViewController: UITableViewController {
         getPrefecture()
     }
     
-    func getPrefecture() {
+    private func getPrefecture() {
         apiOperater.getPrefecture(success: { [weak self] prefectureResponseBody in
             self?.showPrefecture(prefectureResponseBody)
             }, failure: { error in
@@ -35,7 +35,7 @@ final class PrefectureSelectViewController: UITableViewController {
         })
     }
     
-    func showPrefecture(_ prefectureResponseBody: PrefectureResponseBody) {
+    private func showPrefecture(_ prefectureResponseBody: PrefectureResponseBody) {
         for data in prefectureResponseBody.pref {
             if area.areaCode == data.areaCode {
                 prefecture.append(data)
@@ -44,7 +44,7 @@ final class PrefectureSelectViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    func showError(_ error: Error) {
+    private func showError(_ error: Error) {
         print(error) //とりあえず
     }
     
