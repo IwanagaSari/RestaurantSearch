@@ -14,6 +14,12 @@ final class PrefectureSelectViewController: UITableViewController {
     private var selectedPrefecture: Prefecture!
     var area: Area!
     
+    static func instantiate(area: Area) -> PrefectureSelectViewController {
+        let vc = UIStoryboard(name: "PrefectureSelect", bundle: nil).instantiateInitialViewController() as! PrefectureSelectViewController
+        vc.area = area
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = area.areaName
