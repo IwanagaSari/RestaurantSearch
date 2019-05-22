@@ -21,22 +21,6 @@ final class PrefectureSelectViewController: UITableViewController {
         getPrefecture()
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PrefectureCell", for: indexPath)
-        cell.textLabel?.text = prefecture[indexPath.row].prefName
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return prefecture.count
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPrefecture = prefecture[indexPath.row]
-        performSegue(withIdentifier: "toCitySelect", sender: self)
-    }
-    
     func getPrefecture() {
         apiOperater.getPrefecture(success: { [weak self] prefectureResponseBody in
             self?.showPrefecture(prefectureResponseBody)
@@ -56,6 +40,22 @@ final class PrefectureSelectViewController: UITableViewController {
     
     func showError(_ error: Error) {
         print(error) //とりあえず
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PrefectureCell", for: indexPath)
+        cell.textLabel?.text = prefecture[indexPath.row].prefName
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return prefecture.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPrefecture = prefecture[indexPath.row]
+        performSegue(withIdentifier: "toCitySelect", sender: self)
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
