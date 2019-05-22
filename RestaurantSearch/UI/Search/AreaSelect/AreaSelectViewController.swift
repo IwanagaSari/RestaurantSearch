@@ -13,7 +13,6 @@ final class AreaSelectViewController: UITableViewController {
     @IBOutlet weak private var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
     private var areas: [Area] = []
-    private var selectedArea: Area?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +50,7 @@ final class AreaSelectViewController: UITableViewController {
         return areas.count
     }
     
-    //セル選択時にエリア名をareaNameに代入
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedArea = areas[indexPath.row]
         
         let vc = PrefectureSelectViewController.instantiate(area: areas[indexPath.row])
         show(vc, sender: nil)
