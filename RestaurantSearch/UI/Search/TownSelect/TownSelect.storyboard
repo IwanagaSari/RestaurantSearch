@@ -35,6 +35,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="市を表示" id="03C-0O-hhF"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="errorTextView" destination="rmy-xI-G2T" id="sah-Lu-mat"/>
+                        <outlet property="errorView" destination="sxE-PF-JGL" id="VIy-fr-ROm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qg1-3R-Jc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="sxE-PF-JGL">

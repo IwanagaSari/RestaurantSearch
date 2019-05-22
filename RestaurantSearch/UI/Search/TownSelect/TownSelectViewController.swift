@@ -9,6 +9,8 @@
 import UIKit
 
 final class TownSelectViewController: UITableViewController {
+    @IBOutlet var errorView: UIView!
+    @IBOutlet weak var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
     private var town: [Town] = []
     private var city: City!
@@ -24,6 +26,7 @@ final class TownSelectViewController: UITableViewController {
         navigationItem.title = city.cityName
         
         getTown()
+        self.tableView.backgroundView = errorView
     }
     
     private func getTown() {
@@ -44,7 +47,7 @@ final class TownSelectViewController: UITableViewController {
     }
     
     private func showError(_ error: Error) {
-        print(error) //とりあえず
+       self.errorTextView.text = error.localizedDescription
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
