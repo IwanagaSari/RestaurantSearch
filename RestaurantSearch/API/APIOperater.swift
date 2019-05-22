@@ -14,6 +14,7 @@ protocol APIType {
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void)
 }
 
 final class APIOperater: APIType {
@@ -22,10 +23,9 @@ final class APIOperater: APIType {
     ]
     
     private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String: Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
-        var finalParameters = commonParameters
-        for (key, value) in parameters {
-            finalParameters.updateValue(value, forKey: key)
-        }
+        
+        let finalParameters = commonParameters.merging(parameters) { $1 }
+        print(finalParameters)
         
         Alamofire.request(url, parameters: finalParameters).responseData { response in
             let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
