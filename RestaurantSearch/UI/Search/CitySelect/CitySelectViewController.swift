@@ -14,7 +14,7 @@ final class CitySelectViewController: UITableViewController {
     private var prefecture: Prefecture!
     
     static func instantiate(prefecture: Prefecture) -> CitySelectViewController {
-        let vc = UIStoryboard(name: "PrefectureSelect", bundle: nil).instantiateInitialViewController() as! CitySelectViewController
+        let vc = UIStoryboard(name: "CitySelect", bundle: nil).instantiateInitialViewController() as! CitySelectViewController
         vc.prefecture = prefecture
         return vc
     }
@@ -59,6 +59,7 @@ final class CitySelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toTownSelect", sender: self)
+        let vc = TownSelectViewController.instantiate(city: city[indexPath.row])
+        show(vc, sender: nil)
     }
 }
