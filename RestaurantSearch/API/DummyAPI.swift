@@ -43,6 +43,7 @@ class DummyAPI: APIType {
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(town)
     }
+    
     func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(shop)
     }
