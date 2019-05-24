@@ -11,6 +11,7 @@
 		866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C3224A09A9007CA319 /* PrefectureTests.swift */; };
 		866273C6224A0EFB007CA319 /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C5224A0EFB007CA319 /* CityTests.swift */; };
 		866273C8224C75A9007CA319 /* TownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C7224C75A9007CA319 /* TownTests.swift */; };
+		86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */; };
 		86E8FE0E225DD03D00DCAD11 /* FavoriteList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE0D225DD03D00DCAD11 /* FavoriteList.storyboard */; };
 		86E8FE10225DD05800DCAD11 /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE0F225DD05800DCAD11 /* FavoriteListViewController.swift */; };
 		86E8FE12225DD09D00DCAD11 /* ShopMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE11225DD09D00DCAD11 /* ShopMap.storyboard */; };
@@ -34,6 +35,7 @@
 		9E01B705585537534CC2A259 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */; };
 		EA1A080C226DC4AD00550B4F /* SearchTopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */; };
 		EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */; };
+		EA1D8CA2228C0C2300B6065E /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D8CA1228C0C2300B6065E /* Shop.swift */; };
 		EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E52248CCBF00F3091C /* AppDelegate.swift */; };
 		EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E72248CCBF00F3091C /* ViewController.swift */; };
 		EA2679EB2248CCBF00F3091C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2679E92248CCBF00F3091C /* Main.storyboard */; };
@@ -69,6 +71,7 @@
 		866273C3224A09A9007CA319 /* PrefectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureTests.swift; sourceTree = "<group>"; };
 		866273C5224A0EFB007CA319 /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
 		866273C7224C75A9007CA319 /* TownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownTests.swift; sourceTree = "<group>"; };
+		86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTests.swift; sourceTree = "<group>"; };
 		86E8FE0D225DD03D00DCAD11 /* FavoriteList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteList.storyboard; sourceTree = "<group>"; };
 		86E8FE0F225DD05800DCAD11 /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
 		86E8FE11225DD09D00DCAD11 /* ShopMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopMap.storyboard; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearchTests/Pods-RestaurantSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopTableViewController.swift; sourceTree = "<group>"; };
 		EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewController.swift; sourceTree = "<group>"; };
+		EA1D8CA1228C0C2300B6065E /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		EA2679E22248CCBF00F3091C /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2679E52248CCBF00F3091C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA2679E72248CCBF00F3091C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 				EA267A0B2248EC3E00F3091C /* Prefecture.swift */,
 				EA267A0D2248EFF200F3091C /* City.swift */,
 				EA267A0F2248F49200F3091C /* Town.swift */,
+				EA1D8CA1228C0C2300B6065E /* Shop.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				866273C3224A09A9007CA319 /* PrefectureTests.swift */,
 				866273C5224A0EFB007CA319 /* CityTests.swift */,
 				866273C7224C75A9007CA319 /* TownTests.swift */,
+				86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */,
 				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
 			);
 			path = RestaurantSearchTests;
@@ -571,6 +577,7 @@
 				86E8FE10225DD05800DCAD11 /* FavoriteListViewController.swift in Sources */,
 				86E8FE1C225DD23200DCAD11 /* ShopListViewController.swift in Sources */,
 				86E8FE27225DD37C00DCAD11 /* TownSelectViewController.swift in Sources */,
+				EA1D8CA2228C0C2300B6065E /* Shop.swift in Sources */,
 				86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */,
 				EA1A080C226DC4AD00550B4F /* SearchTopTableViewController.swift in Sources */,
 				86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */,
@@ -585,6 +592,7 @@
 			files = (
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
 				EA2679FB2248CCC100F3091C /* RestaurantSearchTests.swift in Sources */,
+				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
 				EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */,
 				866273C2224A0165007CA319 /* AreaTests.swift in Sources */,
 				866273C8224C75A9007CA319 /* TownTests.swift in Sources */,

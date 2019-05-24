@@ -13,14 +13,20 @@ class DummyAPI: APIType {
     var prefecture = PrefectureResponseBody(pref: [Prefecture(prefCode: "111",
                                                               prefName: "福岡県",
                                                               areaCode: "222")])
-    var city = CityResponseBody(gareaLarge: [City(areacodeL: "333",
-                                                  areanameL: "大濠・六本松・桜坂",
+    var city = CityResponseBody(city: [City(cityCode: "333",
+                                            cityName: "大濠・六本松・桜坂",
                                                   pref: City.Pref(prefCode: "444",
                                                                   prefName: "福岡県"))])
-    var town = TownResponseBody(gareaSmall: [Town(areacodeS: "555",
-                                                  areanameS: "桜坂・小笹",
-                                                  gareaLarge: Town.AreaL(areacodeL: "666",
-                                                                         areanameL: "大濠・六本松・桜坂"))])
+    var town = TownResponseBody(town: [Town(townCode: "555",
+                                            townName: "桜坂・小笹",
+                                            city: Town.AreaL(cityCode: "666",
+                                                                         cityName: "大濠・六本松・桜坂"))])
+    var shop = ShopResponseBody(shop: [Shop(name: "店の名前",
+                                            tel: "092-642-6900",
+                                            address: "福岡市東区馬出",
+                                            imageUrl: Shop.Image(shopImage1: "https://uds.gnst.jp/rest/img/e0p4w8tb0000/t_0n5s.png",
+                                                                 shopImage2: "",
+                                                                 qrcode: "https://c-r.gnst.jp/tool/qr/?id=h598811&q=6"))])
     
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(area)
@@ -36,5 +42,9 @@ class DummyAPI: APIType {
     
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(town)
+    }
+    
+    func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+        success(shop)
     }
 }
