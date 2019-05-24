@@ -14,15 +14,6 @@ class DummyAPI: APIType {
                                                               prefName: "福岡県",
                                                               areaCode: "222")])
     var city = CityResponseBody(city: [City(cityCode: "333",
-<<<<<<< HEAD
-                                                  cityName: "大濠・六本松・桜坂",
-                                                  pref: City.Pref(prefCode: "444",
-                                                                  prefName: "福岡県"))])
-    var town = TownResponseBody(town: [Town(townCode: "555",
-                                                  townName: "桜坂・小笹",
-                                                  city: Town.AreaL(cityCode: "666",
-                                                                         cityName: "大濠・六本松・桜坂"))])
-=======
                                             cityName: "大濠・六本松・桜坂",
                                                   pref: City.Pref(prefCode: "444",
                                                                   prefName: "福岡県"))])
@@ -36,7 +27,6 @@ class DummyAPI: APIType {
                                             imageUrl: Shop.Image(shopImage1: "https://uds.gnst.jp/rest/img/e0p4w8tb0000/t_0n5s.png",
                                                                  shopImage2: "",
                                                                  qrcode: "https://c-r.gnst.jp/tool/qr/?id=h598811&q=6"))])
->>>>>>> master
     
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(area)
