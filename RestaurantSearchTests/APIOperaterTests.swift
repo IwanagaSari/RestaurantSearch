@@ -59,4 +59,16 @@ final class APIOperaterTests: XCTestCase {
         
         wait(for: [expect], timeout: 5)
     }
+    
+    func testGetShopAPI() {
+        let expect = self.expectation(description: #function)
+        apiOperater.getShop(areacodeS: "AREAS5504", success: { shopResponseBody in
+            XCTAssertEqual(shopResponseBody.shop[0].name, "Wood Space Cafe 大通店")
+            expect.fulfill()
+        }, failure: { error in
+            XCTFail("\(error)")
+        })
+        
+        wait(for: [expect], timeout: 5)
+    }
 }

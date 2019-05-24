@@ -14,15 +14,20 @@ protocol APIType {
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void)
 }
 
 final class APIOperater: APIType {
-    let parameters = [
+    private let commonParameters: [String: Any] = [
         "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
     ]
     
-    private func fetchResponse<Responsetype: Decodable>(url: String, success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
-        Alamofire.request(url, parameters: parameters).responseData { response in
+    private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String: Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
+        
+        let finalParameters = commonParameters.merging(parameters) { $1 }
+        print(finalParameters)
+        
+        Alamofire.request(url, parameters: finalParameters).responseData { response in
             let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
             switch result {
             case .success(let object):
@@ -36,24 +41,31 @@ final class APIOperater: APIType {
     /// エリアの取得
     func getArea(success: @escaping (AreaResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/AreaSearchAPI/v3/"
-        fetchResponse(url: url, success: success, failure: failure)
+        fetchResponse(url: url, parameters: [:], success: success, failure: failure)
     }
     
     /// 都道府県の取得
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/PrefSearchAPI/v3/"
-        fetchResponse(url: url, success: success, failure: failure)
+        fetchResponse(url: url, parameters: [:], success: success, failure: failure)
     }
     
     /// 市の取得
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaLargeSearchAPI/v3/"
-        fetchResponse(url: url, success: success, failure: failure)
+        fetchResponse(url: url, parameters: [:], success: success, failure: failure)
     }
     
     /// 町の取得
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/master/GAreaSmallSearchAPI/v3/"
-        fetchResponse(url: url, success: success, failure: failure)
+        fetchResponse(url: url, parameters: [:], success: success, failure: failure)
+    }
+    
+    /// お店情報の取得
+    func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+        let url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
+        let parameters = ["areacode_s": areacodeS]
+        fetchResponse(url: url, parameters: parameters, success: success, failure: failure)
     }
 }
