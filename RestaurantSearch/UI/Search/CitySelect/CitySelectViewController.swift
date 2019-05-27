@@ -49,6 +49,11 @@ final class CitySelectViewController: UITableViewController {
         self.errorTextView.text = error.localizedDescription
     }
     
+    private func showCitySelect(_ row: Int) {
+        let vc = TownSelectViewController.instantiate(city: cityList[row])
+        show(vc, sender: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath)
         cell.textLabel?.text = cityList[indexPath.row].cityName
@@ -62,10 +67,5 @@ final class CitySelectViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showCitySelect(indexPath.row)
-    }
-    
-    func showCitySelect(_ row: Int) {
-        let vc = TownSelectViewController.instantiate(city: cityList[row])
-        show(vc, sender: nil)
     }
 }
