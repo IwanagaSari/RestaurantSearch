@@ -12,7 +12,7 @@ final class CitySelectViewController: UITableViewController {
     @IBOutlet var errorView: UIView!
     @IBOutlet weak var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
-    private var city: [City] = []
+    private var cityList: [City] = []
     private var prefecture: Prefecture!
     
     static func instantiate(prefecture: Prefecture) -> CitySelectViewController {
@@ -43,7 +43,7 @@ final class CitySelectViewController: UITableViewController {
     private func showCity(_ cityResponseBody: CityResponseBody) {
         for data in cityResponseBody.city {
             if prefecture.prefName == data.pref.prefName {
-                city.append(data)
+                cityList.append(data)
             }
         }
         self.tableView.reloadData()
@@ -55,17 +55,17 @@ final class CitySelectViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CityCell", for: indexPath)
-        cell.textLabel?.text = city[indexPath.row].cityName
+        cell.textLabel?.text = cityList[indexPath.row].cityName
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return city.count
+        return cityList.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = TownSelectViewController.instantiate(city: city[indexPath.row])
+        let vc = TownSelectViewController.instantiate(city: cityList[indexPath.row])
         show(vc, sender: nil)
     }
 }

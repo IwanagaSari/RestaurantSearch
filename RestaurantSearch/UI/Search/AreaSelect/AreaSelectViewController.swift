@@ -12,7 +12,7 @@ final class AreaSelectViewController: UITableViewController {
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
-    private var areas: [Area] = []
+    private var areaList: [Area] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ final class AreaSelectViewController: UITableViewController {
     }
     
     private func showArea(_ areaResponseBody: AreaResponseBody) {
-        self.areas = areaResponseBody.area
+        self.areaList = areaResponseBody.area
         self.tableView.reloadData()
     }
     
@@ -43,18 +43,18 @@ final class AreaSelectViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath)
-        let area = areas[indexPath.row]
+        let area = areaList[indexPath.row]
         cell.textLabel?.text = area.areaName
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return areas.count
+        return areaList.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = PrefectureSelectViewController.instantiate(area: areas[indexPath.row])
+        let vc = PrefectureSelectViewController.instantiate(area: areaList[indexPath.row])
         show(vc, sender: nil)
     }
 }

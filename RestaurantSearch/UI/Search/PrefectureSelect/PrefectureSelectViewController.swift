@@ -12,7 +12,7 @@ final class PrefectureSelectViewController: UITableViewController {
     @IBOutlet var errorView: UIView!
     @IBOutlet weak var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
-    private var prefecture: [Prefecture] = []
+    private var prefectureList: [Prefecture] = []
     private var area: Area!
     
     static func instantiate(area: Area) -> PrefectureSelectViewController {
@@ -43,7 +43,7 @@ final class PrefectureSelectViewController: UITableViewController {
     private func showPrefecture(_ prefectureResponseBody: PrefectureResponseBody) {
         for data in prefectureResponseBody.pref {
             if area.areaCode == data.areaCode {
-                prefecture.append(data)
+                prefectureList.append(data)
             }
         }
         self.tableView.reloadData()
@@ -55,17 +55,17 @@ final class PrefectureSelectViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrefectureCell", for: indexPath)
-        cell.textLabel?.text = prefecture[indexPath.row].prefName
+        cell.textLabel?.text = prefectureList[indexPath.row].prefName
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return prefecture.count
+        return prefectureList.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = CitySelectViewController.instantiate(prefecture: prefecture[indexPath.row])
+        let vc = CitySelectViewController.instantiate(prefecture: prefectureList[indexPath.row])
         show(vc, sender: nil)
     }
 }
