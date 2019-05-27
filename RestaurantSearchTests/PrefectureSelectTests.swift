@@ -13,8 +13,7 @@ final class PrefectureSelectTests: XCTestCase {
     
     func testInitialize() {
         let area = Area(areaCode: "000", areaName: "九州")
-        let vc: PrefectureSelectViewController!
-        vc = PrefectureSelectViewController.instantiate(area: area)
+        let vc = PrefectureSelectViewController.instantiate(area: area)
         XCTAssertNotNil(vc)
     }
 }
