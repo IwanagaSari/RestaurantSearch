@@ -49,7 +49,7 @@ final class TownSelectViewController: UITableViewController {
        self.errorTextView.text = error.localizedDescription
     }
     
-    private func showCitySelect() {
+    private func showSearchTop() {
         let vc = SearchTopTableViewController()
         show(vc, sender: nil)
     }
@@ -66,6 +66,6 @@ final class TownSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showCitySelect()
+        showSearchTop()
     }
 }
