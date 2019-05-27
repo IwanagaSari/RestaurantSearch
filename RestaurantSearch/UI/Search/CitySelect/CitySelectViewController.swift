@@ -61,7 +61,11 @@ final class CitySelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = TownSelectViewController.instantiate(city: cityList[indexPath.row])
+        showCitySelect(indexPath.row)
+    }
+    
+    func showCitySelect(_ row: Int) {
+        let vc = TownSelectViewController.instantiate(city: cityList[row])
         show(vc, sender: nil)
     }
 }

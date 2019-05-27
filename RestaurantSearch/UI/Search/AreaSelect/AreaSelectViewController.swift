@@ -54,7 +54,11 @@ final class AreaSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = PrefectureSelectViewController.instantiate(area: areaList[indexPath.row])
+        showPrefectureSelect(indexPath.row)
+    }
+    
+    func showPrefectureSelect(_ row: Int) {
+        let vc = PrefectureSelectViewController.instantiate(area: areaList[row])
         show(vc, sender: nil)
     }
 }

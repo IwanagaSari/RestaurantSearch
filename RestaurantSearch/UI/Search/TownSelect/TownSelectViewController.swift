@@ -61,6 +61,10 @@ final class TownSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showCitySelect()
+    }
+    
+    func showCitySelect() {
         let vc = SearchTopTableViewController()
         show(vc, sender: nil)
     }
