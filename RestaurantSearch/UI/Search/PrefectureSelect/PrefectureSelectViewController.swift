@@ -41,11 +41,7 @@ final class PrefectureSelectViewController: UITableViewController {
     }
     
     private func showPrefecture(_ prefectureResponseBody: PrefectureResponseBody) {
-        for data in prefectureResponseBody.pref {
-            if area.areaCode == data.areaCode {
-                prefectureList.append(data)
-            }
-        }
+        prefectureList = prefectureResponseBody.pref.filter{ $0.areaCode == area.areaCode }
         self.tableView.reloadData()
     }
     
