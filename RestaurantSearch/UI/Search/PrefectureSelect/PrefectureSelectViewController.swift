@@ -49,8 +49,8 @@ final class PrefectureSelectViewController: UITableViewController {
         self.errorTextView.text = error.localizedDescription
     }
     
-    private func showCitySelect(_ row: Int) {
-        let vc = CitySelectViewController.instantiate(prefecture: prefectureList[row])
+    private func showCitySelect(_ prefecture: Prefecture) {
+        let vc = CitySelectViewController.instantiate(prefecture: prefecture)
         show(vc, sender: nil)
     }
     
@@ -66,6 +66,7 @@ final class PrefectureSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showCitySelect(indexPath.row)
+        let prefecture = prefectureList[indexPath.row]
+        showCitySelect(prefecture)
     }
 }
