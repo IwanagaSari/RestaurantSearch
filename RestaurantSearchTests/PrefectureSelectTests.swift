@@ -10,12 +10,11 @@ import XCTest
 @testable import RestaurantSearch
 
 class PrefectureSelectTests: XCTestCase {
-    var  vc:  PrefectureSelectViewController!
     
-    override func setUp() {
-        super.setUp()
-        
-        vc = UIStoryboard(name: "PrefectureSelect", bundle: nil).instantiateViewController(withIdentifier: " PrefectureSelect") as? PrefectureSelectViewController
+    func testInitialize() {
+        let area = Area(areaCode: "000", areaName: "九州")
+        let vc: PrefectureSelectViewController!
+        vc = PrefectureSelectViewController.instantiate(area: area)
         XCTAssertNotNil(vc)
     }
 }
