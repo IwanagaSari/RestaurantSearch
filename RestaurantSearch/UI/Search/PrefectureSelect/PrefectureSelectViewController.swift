@@ -34,8 +34,8 @@ final class PrefectureSelectViewController: UITableViewController {
             success: { [weak self] prefectureResponseBody in
                 self?.showPrefecture(prefectureResponseBody)
             },
-            failure: { error in
-                self.showError(error)
+            failure: { [weak self] error in
+                self?.showError(error)
             }
         )
     }

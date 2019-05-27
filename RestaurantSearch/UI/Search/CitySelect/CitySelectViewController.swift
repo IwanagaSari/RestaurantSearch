@@ -34,8 +34,8 @@ final class CitySelectViewController: UITableViewController {
             success: { [weak self] cityResponseBody in
                 self?.showCity(cityResponseBody)
             },
-            failure: { error in
-                self.showError(error)
+            failure: { [weak self] error in
+                self?.showError(error)
             }
         )
     }
