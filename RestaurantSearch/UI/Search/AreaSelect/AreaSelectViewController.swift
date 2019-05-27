@@ -41,8 +41,8 @@ final class AreaSelectViewController: UITableViewController {
         self.errorTextView.text = error.localizedDescription
     }
     
-    private func showPrefectureSelect(_ row: Int) {
-        let vc = PrefectureSelectViewController.instantiate(area: areaList[row])
+    private func showPrefectureSelect(_ area: Area) {
+        let vc = PrefectureSelectViewController.instantiate(area: area)
         show(vc, sender: nil)
     }
     
@@ -59,6 +59,7 @@ final class AreaSelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showPrefectureSelect(indexPath.row)
+        let area = areaList[indexPath.row]
+        showPrefectureSelect(area)
     }
 }
