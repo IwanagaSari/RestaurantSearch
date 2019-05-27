@@ -7,6 +7,14 @@
 //
 
 import XCTest
+@testable import RestaurantSearch
 
 class CitySelectTests: XCTestCase {
+    
+    func testInitialize() {
+        let prefecture = Prefecture(prefCode: "111", prefName: "福岡県", areaCode: "000")
+        let vc: CitySelectViewController!
+        vc = CitySelectViewController.instantiate(prefecture: prefecture)
+        XCTAssertNotNil(vc)
+    }
 }
