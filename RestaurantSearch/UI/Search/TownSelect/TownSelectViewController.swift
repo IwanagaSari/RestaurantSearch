@@ -41,7 +41,7 @@ final class TownSelectViewController: UITableViewController {
     }
     
     private func showTown(_ townResponseBody: TownResponseBody) {
-        townList = townResponseBody.town.filter { $0.city.cityCode == city.cityCode }
+        townList = townResponseBody.townList.filter { $0.city.cityCode == city.cityCode }
         self.tableView.reloadData()
     }
     

@@ -9,10 +9,10 @@
 import Foundation
 
 struct TownResponseBody: Codable {
-    let town: [Town]
+    let townList: [Town]
     
     enum CodingKeys: String, CodingKey {
-        case town = "garea_small"
+        case townList = "garea_small"
     }
 }
 
