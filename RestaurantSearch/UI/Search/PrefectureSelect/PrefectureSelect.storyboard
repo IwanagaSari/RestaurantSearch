@@ -38,7 +38,6 @@
                     <connections>
                         <outlet property="errorTextView" destination="aFL-YT-0cl" id="tq3-Xk-3uT"/>
                         <outlet property="errorView" destination="mQh-8Z-gUy" id="ne2-Tq-chU"/>
-                        <segue destination="fHc-nV-vfd" kind="show" identifier="toCitySelect" id="cuw-0l-S3W"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQN-fh-Vl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -64,14 +63,6 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="-356" y="-19"/>
-        </scene>
-        <!--CitySelect-->
-        <scene sceneID="2nu-tX-0kG">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CitySelect" id="fHc-nV-vfd" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dWi-lo-iIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="343" y="-20"/>
         </scene>
     </scenes>
 </document>
