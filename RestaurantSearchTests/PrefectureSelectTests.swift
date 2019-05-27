@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-class PrefectureSelectTests: XCTestCase {
+final class PrefectureSelectTests: XCTestCase {
     
     func testInitialize() {
         let area = Area(areaCode: "000", areaName: "九州")
