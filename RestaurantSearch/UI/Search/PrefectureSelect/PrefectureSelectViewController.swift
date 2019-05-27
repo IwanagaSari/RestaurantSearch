@@ -30,11 +30,14 @@ final class PrefectureSelectViewController: UITableViewController {
     }
     
     private func getPrefecture() {
-        apiOperater.getPrefecture(success: { [weak self] prefectureResponseBody in
-            self?.showPrefecture(prefectureResponseBody)
-            }, failure: { error in
+        apiOperater.getPrefecture(
+            success: { [weak self] prefectureResponseBody in
+                self?.showPrefecture(prefectureResponseBody)
+            },
+            failure: { error in
                 self.showError(error)
-        })
+            }
+        )
     }
     
     private func showPrefecture(_ prefectureResponseBody: PrefectureResponseBody) {

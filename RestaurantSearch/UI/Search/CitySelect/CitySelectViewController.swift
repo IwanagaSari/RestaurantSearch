@@ -30,11 +30,14 @@ final class CitySelectViewController: UITableViewController {
     }
     
     private func getCity() {
-        apiOperater.getCity(success: { [weak self] cityResponseBody in
-            self?.showCity(cityResponseBody)
-            }, failure: { error in
+        apiOperater.getCity(
+            success: { [weak self] cityResponseBody in
+                self?.showCity(cityResponseBody)
+            },
+            failure: { error in
                 self.showError(error)
-        })
+            }
+        )
     }
     
     private func showCity(_ cityResponseBody: CityResponseBody) {

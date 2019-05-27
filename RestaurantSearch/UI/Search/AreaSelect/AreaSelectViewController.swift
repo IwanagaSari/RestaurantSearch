@@ -22,11 +22,14 @@ final class AreaSelectViewController: UITableViewController {
     }
     
     private func getArea() {
-        apiOperater.getArea(success: { [weak self] areaResponseBody in
-            self?.showArea(areaResponseBody)
-            }, failure: { [weak self] error in
+        apiOperater.getArea(
+            success: { [weak self] areaResponseBody in
+                self?.showArea(areaResponseBody)
+            },
+            failure: { [weak self] error in
                 self?.showError(error)
-        })
+            }
+        )
     }
     
     private func showArea(_ areaResponseBody: AreaResponseBody) {
