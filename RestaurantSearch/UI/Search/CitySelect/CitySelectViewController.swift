@@ -41,7 +41,7 @@ final class CitySelectViewController: UITableViewController {
     }
     
     private func showCity(_ cityResponseBody: CityResponseBody) {
-        cityList = cityResponseBody.city.filter { $0.pref.prefName == prefecture.prefName }
+        cityList = cityResponseBody.cityList.filter { $0.pref.prefName == prefecture.prefName }
         self.tableView.reloadData()
     }
     
