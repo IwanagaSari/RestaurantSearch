@@ -15,7 +15,7 @@ final class APIOperaterTests: XCTestCase {
     func testGetAreaAPI() {
         let expect = self.expectation(description: #function)
         apiOperater.getArea(success: { areaResponseBody in
-            XCTAssertEqual("北海道", areaResponseBody.area[0].areaName)
+            XCTAssertEqual("北海道", areaResponseBody.areaList[0].areaName)
             expect.fulfill()
         }, failure: { error in
             XCTFail("\(error)")
