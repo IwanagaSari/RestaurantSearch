@@ -41,6 +41,6 @@ final class PrefectureTests: XCTestCase {
 }
 """
         let body = try JSONDecoder().decode(PrefectureResponseBody.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(body.pref.count, 1)
+        XCTAssertEqual(body.prefectureList.count, 1)
     }
 }
