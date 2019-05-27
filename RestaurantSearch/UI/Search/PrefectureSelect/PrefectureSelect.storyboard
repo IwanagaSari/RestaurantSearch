@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bhz-gA-eov">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrefectureCell" id="bhz-gA-eov">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bhz-gA-eov" id="ZNz-1L-kEF">
@@ -34,8 +35,32 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="エリア名を表示" id="rsG-QY-Zuf"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="errorTextView" destination="aFL-YT-0cl" id="tq3-Xk-3uT"/>
+                        <outlet property="errorView" destination="mQh-8Z-gUy" id="ne2-Tq-chU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQN-fh-Vl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="mQh-8Z-gUy">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="エラーメッセージ" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-YT-0cl">
+                            <rect key="frame" x="30" y="30" width="180" height="68"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="aFL-YT-0cl" firstAttribute="leading" secondItem="ibP-Ht-Vq9" secondAttribute="leading" constant="30" id="6V5-Hu-dPu"/>
+                        <constraint firstItem="aFL-YT-0cl" firstAttribute="top" secondItem="ibP-Ht-Vq9" secondAttribute="top" constant="30" id="B7b-tm-caZ"/>
+                        <constraint firstItem="aFL-YT-0cl" firstAttribute="centerX" secondItem="mQh-8Z-gUy" secondAttribute="centerX" id="gPP-j8-fMe"/>
+                        <constraint firstItem="aFL-YT-0cl" firstAttribute="centerY" secondItem="mQh-8Z-gUy" secondAttribute="centerY" id="vzY-cE-jVa"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="ibP-Ht-Vq9"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-356" y="-19"/>
         </scene>

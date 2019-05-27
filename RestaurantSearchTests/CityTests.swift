@@ -48,6 +48,6 @@ final class CityTests: XCTestCase {
 }
 """
         let body = try JSONDecoder().decode(CityResponseBody.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(body.city.count, 1)
+        XCTAssertEqual(body.cityList.count, 1)
     }    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860CCD0E229BC0CA00943F17 /* PrefectureSelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */; };
 		866273C2224A0165007CA319 /* AreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C1224A0165007CA319 /* AreaTests.swift */; };
 		866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C3224A09A9007CA319 /* PrefectureTests.swift */; };
 		866273C6224A0EFB007CA319 /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C5224A0EFB007CA319 /* CityTests.swift */; };
@@ -48,6 +49,8 @@
 		EA267A102248F49200F3091C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* Town.swift */; };
 		EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCAE22842F2E00EB5656 /* APIOperater.swift */; };
 		EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */; };
+		EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497750229BD419001BE1DB /* CitySelectTests.swift */; };
+		EA497753229BD428001BE1DB /* TownSelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497752229BD428001BE1DB /* TownSelectTests.swift */; };
 		EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66AD7D22929F6E007355BB /* DummyAPI.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +70,7 @@
 		220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DA32510038EF2A008F17D9 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		6B8D096C2BEB44B89D1587B4 /* Pods-RestaurantSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureSelectTests.swift; sourceTree = "<group>"; };
 		866273C1224A0165007CA319 /* AreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTests.swift; sourceTree = "<group>"; };
 		866273C3224A09A9007CA319 /* PrefectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureTests.swift; sourceTree = "<group>"; };
 		866273C5224A0EFB007CA319 /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		EA267A0F2248F49200F3091C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		EA47FCAE22842F2E00EB5656 /* APIOperater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperater.swift; sourceTree = "<group>"; };
 		EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperaterTests.swift; sourceTree = "<group>"; };
+		EA497750229BD419001BE1DB /* CitySelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectTests.swift; sourceTree = "<group>"; };
+		EA497752229BD428001BE1DB /* TownSelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectTests.swift; sourceTree = "<group>"; };
 		EA66AD7D22929F6E007355BB /* DummyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyAPI.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -347,6 +353,9 @@
 				866273C7224C75A9007CA319 /* TownTests.swift */,
 				86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */,
 				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
+				860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */,
+				EA497750229BD419001BE1DB /* CitySelectTests.swift */,
+				EA497752229BD428001BE1DB /* TownSelectTests.swift */,
 			);
 			path = RestaurantSearchTests;
 			sourceTree = "<group>";
@@ -590,12 +599,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */,
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
 				EA2679FB2248CCC100F3091C /* RestaurantSearchTests.swift in Sources */,
 				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
 				EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */,
+				EA497753229BD428001BE1DB /* TownSelectTests.swift in Sources */,
 				866273C2224A0165007CA319 /* AreaTests.swift in Sources */,
 				866273C8224C75A9007CA319 /* TownTests.swift in Sources */,
+				860CCD0E229BC0CA00943F17 /* PrefectureSelectTests.swift in Sources */,
 				866273C6224A0EFB007CA319 /* CityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

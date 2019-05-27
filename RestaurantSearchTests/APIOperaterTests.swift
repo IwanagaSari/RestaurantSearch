@@ -15,7 +15,7 @@ final class APIOperaterTests: XCTestCase {
     func testGetAreaAPI() {
         let expect = self.expectation(description: #function)
         apiOperater.getArea(success: { areaResponseBody in
-            XCTAssertEqual("北海道", areaResponseBody.area[0].areaName)
+            XCTAssertEqual("北海道", areaResponseBody.areaList[0].areaName)
             expect.fulfill()
         }, failure: { error in
             XCTFail("\(error)")
@@ -27,7 +27,7 @@ final class APIOperaterTests: XCTestCase {
     func testGetPrefectureAPI() {
         let expect = self.expectation(description: #function)
         apiOperater.getPrefecture(success: { prefectureResponseBody in
-            XCTAssertEqual(prefectureResponseBody.pref[0].prefName, "北海道")
+            XCTAssertEqual(prefectureResponseBody.prefectureList[0].prefName, "北海道")
             expect.fulfill()
         }, failure: { error in
             XCTFail("\(error)")
@@ -39,7 +39,7 @@ final class APIOperaterTests: XCTestCase {
     func testGetCityAPI() {
         let expect = self.expectation(description: #function)
         apiOperater.getCity(success: { cityResponseBody in
-            XCTAssertEqual(cityResponseBody.city[0].cityName, "札幌駅・大通・すすきの")
+            XCTAssertEqual(cityResponseBody.cityList[0].cityName, "札幌駅・大通・すすきの")
             expect.fulfill()
         }, failure: { error in
             XCTFail("\(error)")
@@ -51,7 +51,7 @@ final class APIOperaterTests: XCTestCase {
     func testGetTownAPI() {
         let expect = self.expectation(description: #function)
         apiOperater.getTown(success: { townResponseBody in
-            XCTAssertEqual(townResponseBody.town[0].townName, "札幌駅")
+            XCTAssertEqual(townResponseBody.townList[0].townName, "札幌駅")
             expect.fulfill()
         }, failure: { error in
             XCTFail("\(error)")
@@ -63,7 +63,7 @@ final class APIOperaterTests: XCTestCase {
     func testGetShopAPI() {
         let expect = self.expectation(description: #function)
         apiOperater.getShop(areacodeS: "AREAS5504", success: { shopResponseBody in
-            XCTAssertEqual(shopResponseBody.shop[0].name, "Wood Space Cafe 大通店")
+            XCTAssertEqual(shopResponseBody.shop[0].name, "和食個室居酒屋 緋焔 大通店")
             expect.fulfill()
         }, failure: { error in
             XCTFail("\(error)")

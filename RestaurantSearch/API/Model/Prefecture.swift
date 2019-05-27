@@ -9,7 +9,11 @@
 import Foundation
 
 struct PrefectureResponseBody: Codable {
-    let pref: [Prefecture]
+    let prefectureList: [Prefecture]
+    
+    enum CodingKeys: String, CodingKey {
+        case prefectureList = "pref"
+    }
 }
 
 /// 都道府県

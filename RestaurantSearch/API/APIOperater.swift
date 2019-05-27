@@ -23,9 +23,7 @@ final class APIOperater: APIType {
     ]
     
     private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String: Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
-        
         let finalParameters = commonParameters.merging(parameters) { $1 }
-        print(finalParameters)
         
         Alamofire.request(url, parameters: finalParameters).responseData { response in
             let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })

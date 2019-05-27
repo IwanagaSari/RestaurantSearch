@@ -38,6 +38,6 @@ final class AreaTests: XCTestCase {
 }
 """
         let body = try JSONDecoder().decode(AreaResponseBody.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(body.area.count, 1)
+        XCTAssertEqual(body.areaList.count, 1)
     }
 }

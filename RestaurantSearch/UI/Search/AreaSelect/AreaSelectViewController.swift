@@ -12,8 +12,7 @@ final class AreaSelectViewController: UITableViewController {
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorTextView: UITextView!
     private let apiOperater: APIType = APIOperater()
-    private var areas: [Area] = []
-    private var selectedArea: Area?
+    private var areaList: [Area] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,15 +22,18 @@ final class AreaSelectViewController: UITableViewController {
     }
     
     private func getArea() {
-        apiOperater.getArea(success: { [weak self] areaResponseBody in
-            self?.showArea(areaResponseBody)
-            }, failure: { [weak self] error in
+        apiOperater.getArea(
+            success: { [weak self] areaResponseBody in
+                self?.showArea(areaResponseBody)
+            },
+            failure: { [weak self] error in
                 self?.showError(error)
-        })
+            }
+        )
     }
     
     private func showArea(_ areaResponseBody: AreaResponseBody) {
-        self.areas = areaResponseBody.area
+        self.areaList = areaResponseBody.areaList
         self.tableView.reloadData()
     }
     
@@ -39,21 +41,25 @@ final class AreaSelectViewController: UITableViewController {
         self.errorTextView.text = error.localizedDescription
     }
     
+    private func showPrefectureSelect(_ area: Area) {
+        let vc = PrefectureSelectViewController.instantiate(area: area)
+        show(vc, sender: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AreaCell", for: indexPath)
-        let area = areas[indexPath.row]
+        let area = areaList[indexPath.row]
         cell.textLabel?.text = area.areaName
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return areas.count
+        return areaList.count
     }
     
-    //セル選択時にエリア名をareaNameに代入
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedArea = areas[indexPath.row]
-        performSegue(withIdentifier: "toPrefectureSelect", sender: self)
+        let area = areaList[indexPath.row]
+        showPrefectureSelect(area)
     }
 }
