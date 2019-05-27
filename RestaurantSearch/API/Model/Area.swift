@@ -9,7 +9,11 @@
 import Foundation
 
 struct AreaResponseBody: Codable {
-    let area: [Area]
+    let areaList: [Area]
+    
+    enum CodingKeys: String, CodingKey {
+        case areaList = "area"
+    }
 }
 
 /// エリア

@@ -33,7 +33,7 @@ final class AreaSelectViewController: UITableViewController {
     }
     
     private func showArea(_ areaResponseBody: AreaResponseBody) {
-        self.areaList = areaResponseBody.area
+        self.areaList = areaResponseBody.areaList
         self.tableView.reloadData()
     }
     
