@@ -10,29 +10,66 @@ import UIKit
 import SafariServices
 
 final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak var shopNameLabel: UILabel!
-    @IBOutlet weak var shopAdressLabel: UILabel!
-    @IBOutlet weak var shopTopImageView: UIImageView!
-    @IBOutlet weak var collectionView: UICollectionView!
     
-    let shopImages = ["1", "2", "3"]
+    @IBOutlet private weak var shopNameLabel: UILabel!
+    @IBOutlet private weak var shopAdressLabel: UILabel!
+    @IBOutlet private weak var shopTopImageView: UIImageView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    private var shop: Shop!
+    
+    static func instantiate(shop: Shop) -> ShopInfoViewController {
+        let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
+        vc.shop = shop
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // お店のTopImageViewの設定
-        shopTopImageView.image = UIImage(named: "1")
+        let topImageURL = URL(string: shop.imageUrl.shopImage1)!
+        getImage(url: topImageURL, completion: { topImage, error in
+            if error != nil {
+                print("error")
+            } else {
+                self.shopTopImageView.image = topImage
+            }
+        })
     }
     
+    private func getImage(url: URL, completion: @escaping ((UIImage?, Error?) -> Void)) -> URLSessionTask? {
+        // キャッシュに保存されていないとする
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
+            if let data = data {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async { completion(image, nil) }
+                }
+            } else {
+                DispatchQueue.main.async { completion(nil, error) }
+            }
+        })
+        task.resume()
+        return task
+    }        
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shopImages.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath)
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-        let cellImage = UIImage(named: shopImages[indexPath.row])
-        imageView.image = cellImage
+        
+        let shouldGetImages = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
+        var image = shouldGetImages.filter { $0 != "" }
+        let imageURL = URL(string: image[indexPath.row])!
+        getImage(url: imageURL, completion: { shopImage, error in
+            if error != nil {
+                print("error")
+            } else {
+                imageView.image = shopImage
+            }
+        })
         
         return cell
     }
