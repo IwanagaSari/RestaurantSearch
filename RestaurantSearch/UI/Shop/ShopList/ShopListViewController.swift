@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 final class ShopListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private let apiOperater = APIOperater()
@@ -28,19 +29,17 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         )
     }
     
-    private func getImage(url: URL, completion: @escaping ((UIImage?, Error?) -> Void)) -> URLSessionTask? {
+    private func getImage(url: URL, success: @escaping (UIImage) -> Void, failure: @escaping (Error) -> Void) {
         // キャッシュに保存されていないとする
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
-            if let data = data {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async { completion(image, nil) }
-                }
-            } else {
-                DispatchQueue.main.async { completion(nil, error) }
+        Alamofire.request(url).responseData { response in
+            switch response.result {
+            case .success:
+                let image = UIImage(data: response.data!)
+                success(image!)
+            case .failure(let error):
+                failure(error)
             }
-        })
-        task.resume()
-        return task
+        }
     }
     
     private func showShopList(_ shopResponseBody: ShopResponseBody) {
@@ -66,13 +65,14 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
         
-        getImage(url: imageURL, completion: { shopImage, error in
-            if error != nil {
-                print(error!)
-            } else {
-                imageView.image = shopImage
-            }
-        })
+        getImage(url: imageURL,
+                 success: { shopImage in
+                    imageView.image = shopImage
+                 },
+                 failure: { [weak self] error in
+                    self?.showError(error)
+                 }
+        )
         
         let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = shopList[indexPath.row].name
