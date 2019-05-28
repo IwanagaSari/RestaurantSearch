@@ -50,7 +50,12 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         })
         task.resume()
         return task
-    }        
+    }
+    
+    private func showShopMap() {
+        let vc = ShopMapViewController.instantiate(shop: shop)
+        show(vc, sender: nil)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
@@ -81,6 +86,8 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         return CGSize(width: width, height: width)
     }
     
+    // MARK: - Actions
+    
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
         //お気に入りに入っていないお店であれば、追加ボタンを表示する
@@ -89,6 +96,11 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
         //お気に入りにすでに入っているお店なら、削除ボタンを表示する
+    }
+    
+    /// 地図ボタンをタップされた時
+    @IBAction func mapButtonTapped(_ sender: UIButton) {
+        showShopMap()
     }
     
     /// 電話をかけるボタンをタップされた時
