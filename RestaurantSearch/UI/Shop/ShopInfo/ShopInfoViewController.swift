@@ -18,6 +18,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak private var collectionView: UICollectionView!
     private var shop: Shop!
     private let imageDownloader = ImageDownloader()
+    var imageList: [String] = []
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
         let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
@@ -30,6 +31,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         
         showTopInfo()
         showTopImage()
+        getImageList()
     }
     
     private func showTopInfo() {
@@ -58,19 +60,20 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         print(error.localizedDescription)
     }
     
+    private func getImageList() {
+        let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
+        imageList = allImage.filter { $0 != "" }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let shouldGetImages = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
-        let image = shouldGetImages.filter { $0 != "" }
-        return image.count
+        return imageList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath)
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         
-        let shouldGetImages = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
-        let image = shouldGetImages.filter { $0 != "" }
-        let imageURL = URL(string: image[indexPath.row])!
+        let imageURL = URL(string: imageList[indexPath.row])!
         
         imageDownloader.getImage(url: imageURL,
                                  success: { shopImage in
