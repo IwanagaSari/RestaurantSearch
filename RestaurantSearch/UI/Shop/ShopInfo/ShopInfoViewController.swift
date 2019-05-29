@@ -28,9 +28,14 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showTopInfo()
         showTopImage()
     }
     
+    private func showTopInfo() {
+        shopNameLabel.text = shop.name
+        shopAdressLabel.text = shop.address
+    }
     private func showTopImage() {
         let topImageURL = URL(string: shop.imageUrl.shopImage1)!
         
