@@ -61,7 +61,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     private func updateImageList() {
         let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
-        imageList = allImage.filter { $0.isEmpty }
+        imageList = allImage.filter { !$0.isEmpty }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -118,7 +118,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     @IBAction func detailButtonTapped(_ sender: UIButton) {
         // 仮に「一蘭」というお店だとする
         var components = URLComponents(string: "https://www.google.co.jp/search")!
-        components.queryItems = [URLQueryItem(name: "q", value: "\(shop.name)")]
+        components.queryItems = [URLQueryItem(name: "q", value: shop.name)]
         if let url = components.url {
             let safari = SFSafariViewController(url: url)
             present(safari, animated: true, completion: nil)
