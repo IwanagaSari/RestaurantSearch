@@ -12,6 +12,7 @@ import Alamofire
 final class ShopListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private let apiOperater = APIOperater()
     private var shopList: [Shop] = []
+    private let imageDownloader = ImageDownloader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,15 +66,14 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
         
-        getImage(url: imageURL,
-                 success: { shopImage in
-                    imageView.image = shopImage
-                 },
-                 failure: { [weak self] error in
-                    self?.showError(error)
-                 }
+        imageDownloader.getImage(url: imageURL,
+                                 success: {shopImage in
+                                    imageView.image = shopImage
+                                },
+                                 failure: { [weak self] error in
+                                    self?.showError(error)
+                                }
         )
-        
         let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = shopList[indexPath.row].name
         
