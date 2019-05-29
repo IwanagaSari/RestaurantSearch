@@ -11,11 +11,11 @@ import Alamofire
 
 final class ImageDownloader {
     private let cache = NSCache<NSURL, UIImage>()
-    static let shared = ImageDownloader().cache
+    static let shared = ImageDownloader()
     
     func getImage(url: URL, success: @escaping (UIImage) -> Void, failure: @escaping (Error) -> Void) {
         //キャッシュに保存されている場合
-        if let imageFromCache = ImageDownloader.shared.object(forKey: url as NSURL) {
+        if let imageFromCache = self.cache.object(forKey: url as NSURL) {
             success(imageFromCache)
         // キャッシュに保存されていないとする
         } else {
@@ -24,7 +24,7 @@ final class ImageDownloader {
                 case .success:
                     let image = UIImage(data: response.data!)
                     success(image!)
-                    ImageDownloader.shared.setObject(image!, forKey: url as NSURL)
+                    self.cache.setObject(image!, forKey: url as NSURL)
                 case .failure(let error):
                     failure(error)
                 }
