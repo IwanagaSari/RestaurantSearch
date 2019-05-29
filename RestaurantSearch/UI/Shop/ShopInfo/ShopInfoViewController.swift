@@ -12,10 +12,10 @@ import Alamofire
 
 final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet private weak var shopNameLabel: UILabel!
-    @IBOutlet private weak var shopAdressLabel: UILabel!
-    @IBOutlet private weak var shopTopImageView: UIImageView!
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet weak private var shopNameLabel: UILabel!
+    @IBOutlet weak private var shopAdressLabel: UILabel!
+    @IBOutlet weak private var shopTopImageView: UIImageView!
+    @IBOutlet weak private var collectionView: UICollectionView!
     private var shop: Shop!
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
