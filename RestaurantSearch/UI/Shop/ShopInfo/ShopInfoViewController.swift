@@ -62,7 +62,9 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        let shouldGetImages = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
+        let image = shouldGetImages.filter { $0 != "" }
+        return image.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -70,7 +72,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         
         let shouldGetImages = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
-        var image = shouldGetImages.filter { $0 != "" }
+        let image = shouldGetImages.filter { $0 != "" }
         let imageURL = URL(string: image[indexPath.row])!
         getImage(url: imageURL,
                  success: { shopImage in
