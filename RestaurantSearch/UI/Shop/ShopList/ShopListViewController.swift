@@ -30,19 +30,6 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         )
     }
     
-    private func getImage(url: URL, success: @escaping (UIImage) -> Void, failure: @escaping (Error) -> Void) {
-        // キャッシュに保存されていないとする
-        Alamofire.request(url).responseData { response in
-            switch response.result {
-            case .success:
-                let image = UIImage(data: response.data!)
-                success(image!)
-            case .failure(let error):
-                failure(error)
-            }
-        }
-    }
-    
     private func showShopList(_ shopResponseBody: ShopResponseBody) {
         self.shopList = shopResponseBody.shop
         self.collectionView.reloadData()
