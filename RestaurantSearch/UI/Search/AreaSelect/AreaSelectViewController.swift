@@ -18,6 +18,7 @@ final class AreaSelectViewController: UITableViewController {
         super.viewDidLoad()
         
         getArea()
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "AreaCell")
         self.tableView.backgroundView = errorView
     }
     
