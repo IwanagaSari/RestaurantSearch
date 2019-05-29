@@ -17,6 +17,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak private var shopTopImageView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
     private var shop: Shop!
+    private let imageDownloader = ImageDownloader()
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
         let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
@@ -29,27 +30,15 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         
         // お店のTopImageViewの設定
         let topImageURL = URL(string: shop.imageUrl.shopImage1)!
-        getImage(url: topImageURL,
-                 success: { topImage in
-                    self.shopTopImageView.image = topImage
-                },
-                 failure: { [weak self] error in
-                    self?.showError(error)
-                }
+        
+        imageDownloader.getImage(url: topImageURL,
+                                 success: { [weak self] topImage in
+                                    self?.shopTopImageView.image = topImage
+                                },
+                                 failure: { [weak self] error in
+                                    self?.showError(error)
+                                }
         )
-    }
-    
-    private func getImage(url: URL, success: @escaping (UIImage) -> Void, failure: @escaping (Error) -> Void) {
-        // キャッシュに保存されていないとする
-        Alamofire.request(url).responseData { response in
-            switch response.result {
-            case .success:
-                let image = UIImage(data: response.data!)
-                success(image!)
-            case .failure(let error):
-                failure(error)
-            }
-        }
     }
     
     private func showShopMap() {
@@ -74,15 +63,15 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         let shouldGetImages = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
         let image = shouldGetImages.filter { $0 != "" }
         let imageURL = URL(string: image[indexPath.row])!
-        getImage(url: imageURL,
-                 success: { shopImage in
-                    imageView.image = shopImage
-        },
-                 failure: { [weak self] error in
-                    self?.showError(error)
-            }
-        )
         
+        imageDownloader.getImage(url: imageURL,
+                                 success: { shopImage in
+                                    imageView.image = shopImage
+                                },
+                                 failure: { [weak self] error in
+                                    self?.showError(error)
+                                }
+        )
         return cell
     }
     
