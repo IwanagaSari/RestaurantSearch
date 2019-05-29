@@ -8,7 +8,6 @@
 
 import UIKit
 import SafariServices
-import Alamofire
 
 final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
