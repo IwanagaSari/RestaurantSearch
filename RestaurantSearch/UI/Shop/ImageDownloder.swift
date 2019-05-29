@@ -17,7 +17,7 @@ final class ImageDownloader {
         //キャッシュに保存されている場合
         if let imageFromCache = ImageDownloader.shared.object(forKey: url as NSURL) {
             success(imageFromCache)
-            // キャッシュに保存されていないとする
+        // キャッシュに保存されていないとする
         } else {
             Alamofire.request(url).responseData { response in
                 switch response.result {
