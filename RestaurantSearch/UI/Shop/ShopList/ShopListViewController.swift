@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 final class ShopListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private let apiOperater = APIOperater()
