@@ -13,11 +13,14 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private let apiOperater = APIOperater()
     private var shopList: [Shop] = []
     private let imageDownloader = ImageDownloader()
+    @IBOutlet private var errorView: UIView!
+    @IBOutlet weak private var errorTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getShop()
+        self.collectionView.backgroundView = errorView
     }
     
     private func getShop() {
@@ -36,7 +39,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     private func showError(_ error: Error) {
-        print(error.localizedDescription)
+        errorTextView.text = error.localizedDescription
     }
     
     private func showShopInfo(_ shop: Shop) {
