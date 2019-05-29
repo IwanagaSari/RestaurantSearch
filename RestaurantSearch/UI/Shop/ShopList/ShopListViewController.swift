@@ -27,7 +27,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         apiOperater.getShop(areacodeS: "AREAS5504", // とりあえず
             success: { [weak self] shopResponseBody in
                 self?.showShopList(shopResponseBody)
-            }, failure: { [weak self] error in
+            },
+            failure: { [weak self] error in
                 self?.showError(error)
             }
         )
