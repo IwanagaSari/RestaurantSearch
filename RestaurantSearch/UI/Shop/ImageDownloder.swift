@@ -24,8 +24,8 @@ final class ImageDownloader {
                 case .success:
                     if let image = UIImage(data: response.data!) {
                         success(image)
+                        self.cache.setObject(image, forKey: url as NSURL)
                     }
-                    self.cache.setObject(image, forKey: url as NSURL)
                 case .failure(let error):
                     failure(error)
                 }
