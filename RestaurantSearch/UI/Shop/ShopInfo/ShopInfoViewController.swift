@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import Alamofire
 
 final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -28,33 +29,36 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         
         // お店のTopImageViewの設定
         let topImageURL = URL(string: shop.imageUrl.shopImage1)!
-        getImage(url: topImageURL, completion: { topImage, error in
-            if error != nil {
-                print("error")
-            } else {
-                self.shopTopImageView.image = topImage
-            }
-        })
+        getImage(url: topImageURL,
+                 success: { topImage in
+                    self.shopTopImageView.image = topImage
+                },
+                 failure: { [weak self] error in
+                    self?.showError(error)
+                }
+        )
     }
     
-    private func getImage(url: URL, completion: @escaping ((UIImage?, Error?) -> Void)) -> URLSessionTask? {
+    private func getImage(url: URL, success: @escaping (UIImage) -> Void, failure: @escaping (Error) -> Void) {
         // キャッシュに保存されていないとする
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
-            if let data = data {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async { completion(image, nil) }
-                }
-            } else {
-                DispatchQueue.main.async { completion(nil, error) }
+        Alamofire.request(url).responseData { response in
+            switch response.result {
+            case .success:
+                let image = UIImage(data: response.data!)
+                success(image!)
+            case .failure(let error):
+                failure(error)
             }
-        })
-        task.resume()
-        return task
+        }
     }
     
     private func showShopMap() {
         let vc = ShopMapViewController.instantiate(shop: shop)
         show(vc, sender: nil)
+    }
+    
+    private func showError(_ error: Error) {
+        print(error.localizedDescription)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -68,13 +72,14 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         let shouldGetImages = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
         var image = shouldGetImages.filter { $0 != "" }
         let imageURL = URL(string: image[indexPath.row])!
-        getImage(url: imageURL, completion: { shopImage, error in
-            if error != nil {
-                print("error")
-            } else {
-                imageView.image = shopImage
+        getImage(url: imageURL,
+                 success: { shopImage in
+                    imageView.image = shopImage
+        },
+                 failure: { [weak self] error in
+                    self?.showError(error)
             }
-        })
+        )
         
         return cell
     }
