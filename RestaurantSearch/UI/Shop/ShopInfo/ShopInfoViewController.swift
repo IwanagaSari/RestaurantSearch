@@ -30,7 +30,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         
         showTopInfo()
         showTopImage()
-        getImageList()
+        updateImageList()
     }
     
     private func showTopInfo() {
@@ -59,9 +59,9 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         print(error.localizedDescription)
     }
     
-    private func getImageList() {
+    private func updateImageList() {
         let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
-        imageList = allImage.filter { $0 != "" }
+        imageList = allImage.filter { $0.isEmpty }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
