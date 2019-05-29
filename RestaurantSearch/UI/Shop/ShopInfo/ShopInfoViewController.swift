@@ -28,7 +28,10 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // お店のTopImageViewの設定
+        showTopImage()
+    }
+    
+    private func showTopImage() {
         let topImageURL = URL(string: shop.imageUrl.shopImage1)!
         
         imageDownloader.getImage(url: topImageURL,
