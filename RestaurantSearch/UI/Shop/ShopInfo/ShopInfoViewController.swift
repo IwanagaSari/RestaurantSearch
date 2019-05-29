@@ -109,8 +109,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// 電話をかけるボタンをタップされた時
     @IBAction func telephoneButtonTapped(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "telprompt://0926426900")!, completionHandler: nil)
-        print("電話をかける")
+        UIApplication.shared.open(URL(string: "telprompt://\(shop.tel)")!, completionHandler: nil)
     }
     
     /// さらに詳しくボタンをタップされた時
