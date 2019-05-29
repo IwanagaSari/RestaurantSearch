@@ -29,3 +29,6 @@ disabled_rules: # 無効にするルール
 line_length: 200
 number_separator:
   minimum_length: 5
+  
+identifier_name:
+  min_length: 2
