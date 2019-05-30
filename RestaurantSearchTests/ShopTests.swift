@@ -20,6 +20,10 @@ final class ShopTests: XCTestCase {
     "id": "fap1004",
     "update_date": "2019-04-02T02:33:06+09:00",
     "name": "今生焼 大川店",
+    "name_kana": "コンジョウヤキ オオカワテン",
+    "latitude": "33.202820",
+    "longitude": "130.388015",
+    "category": "鉄板×広島流お好み焼",
     "image_url": {
         "shop_image1": "https://uds.gnst.jp/rest/img/a9b68a5k0000/t_0n5c.jpg",
         "shop_image2": "https://uds.gnst.jp/rest/img/a9b68a5k0000/t_0n5d.jpg",
@@ -27,15 +31,51 @@ final class ShopTests: XCTestCase {
     },
     "address": "〒831-0031 福岡県大川市大字上巻字野口430-1",
     "tel": "050-3464-8707",
+    "opentime": "月～日 11:00～21:00",
+    "parking_lots": "",
+    "pr": {
+        "pr_short": "【大川市上巻野口エリア】 ゆめタウン大川1F 広島のソウルフード“お好み焼”と鉄板料理を楽しめる『今生焼』"
+    },
+    "code": {
+        "areacode": "AREA140",
+        "areaname": "九州",
+        "prefcode": "PREF40",
+        "prefname": "福岡県",
+        "areacode_s": "AREAS5434",
+        "areaname_s": "柳川",
+        "category_code_l": [
+            "RSFST07000",
+            ""
+        ],
+        "category_name_l": [
+            "お好み焼き・粉物",
+            ""
+        ],
+        "category_code_s": [
+            "RSFST07002",
+            ""
+        ],
+        "category_name_s": [
+            "広島風お好み焼き",
+            ""
+        ]
+    }
 }
 """
         let shop = try JSONDecoder().decode(Shop.self, from: json.data(using: .utf8)!)
         XCTAssertEqual(shop.name, "今生焼 大川店")
+        XCTAssertEqual(shop.nameKana, "コンジョウヤキ オオカワテン")
+        XCTAssertEqual(shop.latitude, "33.202820")
+        XCTAssertEqual(shop.longitude, "130.388015")
+        XCTAssertEqual(shop.category, "鉄板×広島流お好み焼")
         XCTAssertEqual(shop.imageUrl.shopImage1, "https://uds.gnst.jp/rest/img/a9b68a5k0000/t_0n5c.jpg")
         XCTAssertEqual(shop.imageUrl.shopImage2, "https://uds.gnst.jp/rest/img/a9b68a5k0000/t_0n5d.jpg")
         XCTAssertEqual(shop.imageUrl.qrcode, "https://c-r.gnst.jp/tool/qr/?id=fap1004&q=6")
         XCTAssertEqual(shop.address, "〒831-0031 福岡県大川市大字上巻字野口430-1")
         XCTAssertEqual(shop.tel, "050-3464-8707")
+        XCTAssertEqual(shop.opentime, "月～日 11:00～21:00")
+        XCTAssertEqual(shop.pr.prShort, "【大川市上巻野口エリア】 ゆめタウン大川1F 広島のソウルフード“お好み焼”と鉄板料理を楽しめる『今生焼』")
+        XCTAssertEqual(shop.code.genre.count, 2)
     }
     
     func testShopResponseBodyDecode() throws {
@@ -52,27 +92,49 @@ final class ShopTests: XCTestCase {
             "@attributes": {
                 "order": 0
             },
-            "id": "f082211",
-            "update_date": "2019-05-12T14:00:14+09:00",
-            "name": "博多うまかんもん 小野 博多本店",
-            "name_kana": "ハカタウマカンモンオノ ハカタホンテン",
-            "latitude": "33.589188",
-            "longitude": "130.422632",
-            "category": "博多お祭り居酒屋",
-            "url": "https://r.gnavi.co.jp/e77btpdb0000/?ak=7CsVrTaV3F2RedNSaEr9ctXRf%2BI3gYZZeM9BIuJEVYY%3D",
-            "url_mobile": "http://mobile.gnavi.co.jp/shop/f082211/?ak=7CsVrTaV3F2RedNSaEr9ctXRf%2BI3gYZZeM9BIuJEVYY%3D",
-            "coupon_url": {
-                "pc": "https://r.gnavi.co.jp/e77btpdb0000/coupon/",
-                "mobile": "http://mobile.gnavi.co.jp/shop/f082211/coupon"
-            },
+            "id": "fap1004",
+            "update_date": "2019-04-02T02:33:06+09:00",
+            "name": "今生焼 大川店",
+            "name_kana": "コンジョウヤキ オオカワテン",
+            "latitude": "33.202820",
+            "longitude": "130.388015",
+            "category": "鉄板×広島流お好み焼",
             "image_url": {
-                "shop_image1": "https://uds.gnst.jp/rest/img/e77btpdb0000/t_001x.jpg",
-                "shop_image2": "https://uds.gnst.jp/rest/img/e77btpdb0000/t_001y.jpg",
-                "qrcode": "https://c-r.gnst.jp/tool/qr/?id=f082211&q=6"
+                "shop_image1": "https://uds.gnst.jp/rest/img/a9b68a5k0000/t_0n5c.jpg",
+                "shop_image2": "https://uds.gnst.jp/rest/img/a9b68a5k0000/t_0n5d.jpg",
+                "qrcode": "https://c-r.gnst.jp/tool/qr/?id=fap1004&q=6"
             },
-            "address": "〒812-0013 福岡県福岡市博多区博多駅東2-1-24 ギャラリーハカタビルB1",
-            "tel": "050-3464-1508",
-            "parking_lots": ""
+            "address": "〒831-0031 福岡県大川市大字上巻字野口430-1",
+            "tel": "050-3464-8707",
+            "opentime": "月～日 11:00～21:00",
+            "parking_lots": "",
+            "pr": {
+                "pr_short": "【大川市上巻野口エリア】 ゆめタウン大川1F 広島のソウルフード“お好み焼”と鉄板料理を楽しめる『今生焼』"
+            },
+            "code": {
+                "areacode": "AREA140",
+                "areaname": "九州",
+                "prefcode": "PREF40",
+                "prefname": "福岡県",
+                "areacode_s": "AREAS5434",
+                "areaname_s": "柳川",
+                "category_code_l": [
+                    "RSFST07000",
+                    ""
+                ],
+                "category_name_l": [
+                    "お好み焼き・粉物",
+                    ""
+                ],
+                "category_code_s": [
+                    "RSFST07002",
+                    ""
+                ],
+                "category_name_s": [
+                    "広島風お好み焼き",
+                    ""
+                ]
+            }
         }
     ]
 }

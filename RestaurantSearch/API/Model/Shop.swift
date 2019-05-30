@@ -18,9 +18,30 @@ struct ShopResponseBody: Codable {
 
 struct Shop: Codable {
     let name: String
-    let tel: String
-    let address: String
+    let nameKana: String
+    let latitude: String
+    let longitude: String
+    let category: String
     let imageUrl: Image
+    let address: String
+    let tel: String
+    let opentime: String
+    let pr: Pr
+    let code: Code
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case nameKana = "name_kana"
+        case latitude
+        case longitude
+        case category
+        case imageUrl = "image_url"
+        case address
+        case tel
+        case opentime
+        case pr
+        case code
+    }
     
     struct Image: Codable {
         let shopImage1: String
@@ -34,10 +55,19 @@ struct Shop: Codable {
         }
     }
     
-    enum CodingKeys: String, CodingKey {
-        case name
-        case imageUrl = "image_url"
-        case tel
-        case address
+    struct Pr: Codable {
+        let prShort: String
+        
+        enum CodingKeys: String, CodingKey {
+            case prShort = "pr_short"
+        }
+    }
+    
+    struct Code: Codable {
+        let genre: [String]
+        
+        enum CodingKeys: String, CodingKey {
+            case genre = "category_name_s"
+        }
     }
 }
