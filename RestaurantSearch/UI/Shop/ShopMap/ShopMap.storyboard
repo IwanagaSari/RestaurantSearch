@@ -44,7 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="ELk-0o-cax"/>
                     </view>
                     <connections>
-                        <outlet property="shopAdressLabel" destination="Xzk-Ia-Oxv" id="tUL-q6-hoO"/>
+                        <outlet property="shopAddressLabel" destination="Xzk-Ia-Oxv" id="Y8c-xi-kxw"/>
                         <outlet property="shopMapView" destination="kqM-IM-coK" id="OnF-jG-buL"/>
                     </connections>
                 </viewController>

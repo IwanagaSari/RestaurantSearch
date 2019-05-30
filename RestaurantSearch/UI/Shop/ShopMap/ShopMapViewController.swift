@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 final class ShopMapViewController: UIViewController {
-    @IBOutlet weak private var shopAdressLabel: UITextView!
+    @IBOutlet weak var shopAddressLabel: UITextView!
     @IBOutlet weak private var shopMapView: MKMapView!
     private var shop: Shop!
     
@@ -23,6 +23,6 @@ final class ShopMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        shopAdressLabel.text = shop.address
+        shopAddressLabel.text = shop.address
     }
 }
