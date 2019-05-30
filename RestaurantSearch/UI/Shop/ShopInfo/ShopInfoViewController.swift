@@ -37,6 +37,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         shopNameLabel.text = shop.name
         shopAdressLabel.text = shop.address
     }
+    
     private func showTopImage() {
         let topImageURL = URL(string: shop.imageUrl.shopImage1)!
         
