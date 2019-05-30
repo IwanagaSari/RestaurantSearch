@@ -13,7 +13,7 @@ final class PrefectureSelectTests: XCTestCase {
     private let dummyAPI = DummyAPI()
     
     func testInstantiate() {
-        let area = Area(areaCode: "000", areaName: "九州")
+        let area = Area(areaCode: "222", areaName: "九州")
         let vc = PrefectureSelectViewController.instantiate(area: area)
         XCTAssertNotNil(vc)
     }
@@ -28,6 +28,6 @@ final class PrefectureSelectTests: XCTestCase {
         XCTAssertEqual(number, 1)
         
         let cell = vc.tableView.cellForRow(at: IndexPath(row: 0, section: 0))!
-        XCTAssertEqual(cell.textLabel?.text, "大濠・六本松・桜坂")
+        XCTAssertEqual(cell.textLabel?.text, "福岡県")
     }
 }
