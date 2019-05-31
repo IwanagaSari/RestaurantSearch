@@ -14,6 +14,11 @@ final class AreaSelectViewController: UITableViewController {
     private let apiOperater: APIType = APIOperater()
     private var areaList: [Area] = []
     
+    static func instantiate() -> AreaSelectViewController {
+        let vc = UIStoryboard(name: "AreaSelect", bundle: nil).instantiateInitialViewController() as! AreaSelectViewController
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

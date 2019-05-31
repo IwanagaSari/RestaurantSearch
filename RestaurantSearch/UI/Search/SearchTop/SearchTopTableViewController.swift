@@ -34,7 +34,7 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     }
     
     private func showAreaSelect() {
-        let vc = AreaSelectViewController()
+        let vc = AreaSelectViewController.instantiate()
         show(vc, sender: nil)
     }
     
