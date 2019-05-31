@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="716" y="-273"/>
         </scene>
-        <!--SearchTop-->
+        <!--ShopMap-->
         <scene sceneID="aCs-uS-AvJ">
             <objects>
-                <viewControllerPlaceholder storyboardName="SearchTop" id="Nug-hv-Cs6" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ShopMap" id="Nug-hv-Cs6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3kE-ub-w2B"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLQ-YE-C8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
