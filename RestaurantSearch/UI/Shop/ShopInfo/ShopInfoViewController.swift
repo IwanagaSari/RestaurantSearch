@@ -10,7 +10,6 @@ import UIKit
 import SafariServices
 
 final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
     @IBOutlet weak private var shopNameLabel: UILabel!
     @IBOutlet weak private var shopAdressLabel: UILabel!
     @IBOutlet weak private var shopTopImageView: UIImageView!
