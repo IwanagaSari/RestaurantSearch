@@ -25,11 +25,25 @@ final class ImageDownloader {
                     if let image = UIImage(data: data) {
                         success(image)
                         self.cache.setObject(image, forKey: url as NSURL)
+                    } else {
+                        let error = ImageDownloaderError.cannotDecodeAsImage
+                        failure(error)
                     }
                 case .failure(let error):
                     failure(error)
                 }
             }
+        }
+    }
+}
+
+enum ImageDownloaderError: LocalizedError {
+    case cannotDecodeAsImage
+    
+    var errorDescription: String? {
+        switch self {
+        case .cannotDecodeAsImage:
+            return "受信したデータを画像に変換できませんでした"
         }
     }
 }
