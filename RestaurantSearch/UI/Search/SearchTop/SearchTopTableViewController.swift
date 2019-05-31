@@ -42,7 +42,7 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
         switch indexPath.row {
         case 1:
             showAreaSelect()
-        default :
+        default:
             return
         }
     }
