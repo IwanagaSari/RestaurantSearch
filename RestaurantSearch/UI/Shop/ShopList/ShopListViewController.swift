@@ -59,10 +59,10 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         imageDownloader.getImage(url: imageURL,
                                  success: {shopImage in
                                     imageView.image = shopImage
-                                },
+                                 },
                                  failure: { [weak self] error in
                                     self?.showError(error)
-                                }
+                                 }
         )
         let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = shopList[indexPath.row].name

@@ -43,10 +43,10 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         imageDownloader.getImage(url: topImageURL,
                                  success: { [weak self] topImage in
                                     self?.shopTopImageView.image = topImage
-                                },
+                                 },
                                  failure: { [weak self] error in
                                     self?.showError(error)
-                                }
+                                 }
         )
     }
     
@@ -77,10 +77,10 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         imageDownloader.getImage(url: imageURL,
                                  success: { shopImage in
                                     imageView.image = shopImage
-                                },
+                                 },
                                  failure: { [weak self] error in
                                     self?.showError(error)
-                                }
+                                 }
         )
         return cell
     }
