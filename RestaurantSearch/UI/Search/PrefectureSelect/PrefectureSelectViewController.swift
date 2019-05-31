@@ -11,7 +11,7 @@ import UIKit
 final class PrefectureSelectViewController: UITableViewController {
     @IBOutlet var errorView: UIView!
     @IBOutlet weak var errorTextView: UITextView!
-    private let apiOperater: APIType = APIOperater()
+    var apiOperater: APIType = APIOperater()
     private var prefectureList: [Prefecture] = []
     private var area: Area!
     
