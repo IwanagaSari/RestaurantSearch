@@ -19,7 +19,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         super.viewDidLoad()
         
         getShop()
-        self.collectionView.backgroundView = errorView
+        collectionView.backgroundView = errorView
     }
     
     private func getShop() {
@@ -34,8 +34,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     private func showShopList(_ shopResponseBody: ShopResponseBody) {
-        self.shopList = shopResponseBody.shop
-        self.collectionView.reloadData()
+        shopList = shopResponseBody.shop
+        collectionView.reloadData()
     }
     
     private func showError(_ error: Error) {
