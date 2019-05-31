@@ -15,7 +15,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak private var shopTopImageView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
     private var shop: Shop!
-    private let imageDownloader = ImageDownloader()
+    private let imageDownloader = ImageDownloader.shared
     var imageList: [String] = []
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {

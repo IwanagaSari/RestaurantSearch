@@ -11,7 +11,7 @@ import UIKit
 final class ShopListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private let apiOperater = APIOperater()
     private var shopList: [Shop] = []
-    private let imageDownloader = ImageDownloader()
+    private let imageDownloader = ImageDownloader.shared
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorTextView: UITextView!
     
