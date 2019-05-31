@@ -13,7 +13,7 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     @IBOutlet weak private var areaLabel: UILabel!
     @IBOutlet weak private var genreLabel: UILabel!
     @IBOutlet weak private var sceneLabel: UILabel!
-    private var town: Town?
+    private var town: Town!
     
     static func instantiate(town: Town) -> SearchTopTableViewController {
         let vc = UIStoryboard(name: "SearchTop", bundle: nil).instantiateInitialViewController() as! SearchTopTableViewController
