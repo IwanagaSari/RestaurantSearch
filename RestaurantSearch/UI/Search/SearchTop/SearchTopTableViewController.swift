@@ -28,9 +28,7 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     }
     
     private func updateArea() {
-        if let town = town {
             areaLabel.text = town.townName
-        }
     }
     
     private func showAreaSelect() {
