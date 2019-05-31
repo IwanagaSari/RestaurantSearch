@@ -21,8 +21,8 @@ final class ImageDownloader {
         } else {
             Alamofire.request(url).responseData { response in
                 switch response.result {
-                case .success:
-                    if let image = UIImage(data: response.data!) {
+                case .success(let data):
+                    if let image = UIImage(data: data) {
                         success(image)
                         self.cache.setObject(image, forKey: url as NSURL)
                     }
