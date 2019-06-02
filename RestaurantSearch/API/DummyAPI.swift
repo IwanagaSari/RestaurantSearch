@@ -23,8 +23,8 @@ class DummyAPI: APIType {
                                                                  cityName: "大濠・六本松・桜坂"))])
     var shop = ShopResponseBody(shop: [Shop(name: "店の名前",
                                             nameKana: "カタカナ",
-                                            latitude: "緯度",
-                                            longitude: "経度",
+                                            latitude: "33.593713",
+                                            longitude: "130.407861",
                                             category: "カテゴリー",
                                             imageUrl: Shop.Image(shopImage1: "https://uds.gnst.jp/rest/img/e0p4w8tb0000/t_0n5s.png",
                                                                  shopImage2: "",
