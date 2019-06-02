@@ -10,6 +10,19 @@ import UIKit
 import MapKit
 
 final class ShopMapViewController: UIViewController {
-    @IBOutlet weak var shopAdressLabel: UILabel!
-    @IBOutlet weak var shopMapView: MKMapView!
+    @IBOutlet weak var shopAddressLabel: UITextView!
+    @IBOutlet weak private var shopMapView: MKMapView!
+    private var shop: Shop!
+    
+    static func instantiate(shop: Shop) -> ShopMapViewController {
+        let vc = UIStoryboard(name: "ShopMap", bundle: nil).instantiateInitialViewController() as! ShopMapViewController
+        vc.shop = shop
+        return vc
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        shopAddressLabel.text = shop.address
+    }
 }

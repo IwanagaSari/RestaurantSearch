@@ -10,30 +10,78 @@ import UIKit
 import SafariServices
 
 final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak var shopNameLabel: UILabel!
-    @IBOutlet weak var shopAdressLabel: UILabel!
-    @IBOutlet weak var shopTopImageView: UIImageView!
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak private var shopNameLabel: UILabel!
+    @IBOutlet weak private var shopAdressLabel: UILabel!
+    @IBOutlet weak private var shopTopImageView: UIImageView!
+    @IBOutlet weak private var collectionView: UICollectionView!
+    private var shop: Shop!
+    private let imageDownloader = ImageDownloader.shared
+    private var imageList: [String] = []
     
-    let shopImages = ["1", "2", "3"]
+    static func instantiate(shop: Shop) -> ShopInfoViewController {
+        let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
+        vc.shop = shop
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // お店のTopImageViewの設定
-        shopTopImageView.image = UIImage(named: "1")
+        showTopInfo()
+        showTopImage()
+        updateImageList()
+    }
+    
+    private func showTopInfo() {
+        shopNameLabel.text = shop.name
+        shopAdressLabel.text = shop.address
+    }
+    
+    private func showTopImage() {
+        let topImageURL = URL(string: shop.imageUrl.shopImage1)!
+        
+        imageDownloader.getImage(url: topImageURL,
+                                 success: { [weak self] topImage in
+                                    self?.shopTopImageView.image = topImage
+                                 },
+                                 failure: { [weak self] error in
+                                    self?.showError(error)
+                                 }
+        )
+    }
+    
+    private func showShopMap() {
+        let vc = ShopMapViewController.instantiate(shop: shop)
+        show(vc, sender: nil)
+    }
+    
+    private func showError(_ error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    private func updateImageList() {
+        let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
+        imageList = allImage.filter { !$0.isEmpty }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shopImages.count
+        return imageList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath)
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-        let cellImage = UIImage(named: shopImages[indexPath.row])
-        imageView.image = cellImage
         
+        let imageURL = URL(string: imageList[indexPath.row])!
+        
+        imageDownloader.getImage(url: imageURL,
+                                 success: { shopImage in
+                                    imageView.image = shopImage
+                                 },
+                                 failure: { [weak self] error in
+                                    self?.showError(error)
+                                 }
+        )
         return cell
     }
     
@@ -43,6 +91,8 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         
         return CGSize(width: width, height: width)
     }
+    
+    // MARK: - Actions
     
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
@@ -54,18 +104,21 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         //お気に入りにすでに入っているお店なら、削除ボタンを表示する
     }
     
+    /// 地図ボタンをタップされた時
+    @IBAction func mapButtonTapped(_ sender: UIButton) {
+        showShopMap()
+    }
+    
     /// 電話をかけるボタンをタップされた時
     @IBAction func telephoneButtonTapped(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "telprompt://0926426900")!, completionHandler: nil)
-        print("電話をかける")
+        UIApplication.shared.open(URL(string: "telprompt://\(shop.tel)")!, completionHandler: nil)
     }
     
     /// さらに詳しくボタンをタップされた時
     @IBAction func detailButtonTapped(_ sender: UIButton) {
         // 仮に「一蘭」というお店だとする
-        let searchName: String = "一蘭"
         var components = URLComponents(string: "https://www.google.co.jp/search")!
-        components.queryItems = [URLQueryItem(name: "q", value: searchName)]
+        components.queryItems = [URLQueryItem(name: "q", value: shop.name)]
         if let url = components.url {
             let safari = SFSafariViewController(url: url)
             present(safari, animated: true, completion: nil)
