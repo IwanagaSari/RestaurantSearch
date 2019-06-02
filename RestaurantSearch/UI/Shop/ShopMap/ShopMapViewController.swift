@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 final class ShopMapViewController: UIViewController {
-    @IBOutlet weak var shopAddressLabel: UITextView!
+    @IBOutlet weak private var shopAddressLabel: UITextView!
     @IBOutlet weak private var shopMapView: MKMapView!
     private var shop: Shop!
     
@@ -23,6 +23,27 @@ final class ShopMapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showShopMap()
+    }
+    
+    func showShopMap() {
+        let latitude = Double(shop.latitude)!
+        let longitude = Double(shop.longitude)!
+        
         shopAddressLabel.text = shop.address
+        let center: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        shopMapView.setCenter(center, animated: true)
+        
+        let mySpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let myRegion = MKCoordinateRegion(center: center, span: mySpan)
+        shopMapView.region = myRegion
+        
+        let myPin = MKPointAnnotation()
+        myPin.coordinate = center
+        
+        myPin.title = shop.name
+        myPin.subtitle = shop.category
+        
+        shopMapView.addAnnotation(myPin)
     }
 }
