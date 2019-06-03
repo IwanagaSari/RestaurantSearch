@@ -27,7 +27,7 @@ final class ShopMapViewController: UIViewController {
         showShopMap()
     }
     
-    func showShopMap() {
+    private func showShopMap() {
         let latitude = Double(shop.latitude)!
         let longitude = Double(shop.longitude)!
         let center = CLLocationCoordinate2DMake(latitude, longitude)
