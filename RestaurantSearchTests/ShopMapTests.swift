@@ -9,6 +9,23 @@
 import XCTest
 @testable import RestaurantSearch
 
-class ShopMapTests: XCTestCase {
-
+final class ShopMapTests: XCTestCase {
+    
+    func testInstantiate() {
+        let shop = Shop(name: "店の名前",
+                        nameKana: "カタカナ",
+                        latitude: "33.593713",
+                        longitude: "130.407861",
+                        category: "カテゴリー",
+                        imageUrl: Shop.Image(shopImage1: "https://uds.gnst.jp/rest/img/e0p4w8tb0000/t_0n5s.png",
+                                             shopImage2: "",
+                                             qrcode: "https://c-r.gnst.jp/tool/qr/?id=h598811&q=6"),
+                        address: "福岡市東区馬出",
+                        tel: "092-642-6900",
+                        opentime: "18:00~24:00",
+                        pr: Shop.Pr(prShort: "すっごく美味しいですよ〜"),
+                        code: Shop.Code(genre: ["広島風お好み焼き", ""]))
+        let vc = ShopMapViewController.instantiate(shop: shop)
+        XCTAssertNotNil(vc)
+    }
 }
