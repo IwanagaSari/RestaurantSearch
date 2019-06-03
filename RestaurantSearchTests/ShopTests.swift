@@ -63,6 +63,7 @@ final class ShopTests: XCTestCase {
 }
 """
         let shop = try JSONDecoder().decode(Shop.self, from: json.data(using: .utf8)!)
+        XCTAssertEqual(shop.id, "fap1004")
         XCTAssertEqual(shop.name, "今生焼 大川店")
         XCTAssertEqual(shop.nameKana, "コンジョウヤキ オオカワテン")
         XCTAssertEqual(shop.latitude, "33.202820")
