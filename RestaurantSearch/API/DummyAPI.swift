@@ -9,6 +9,7 @@
 import Foundation
 
 class DummyAPI: APIType {
+    
     var area = AreaResponseBody(areaList: [Area(areaCode: "000", areaName: "九州")])
     var prefecture = PrefectureResponseBody(prefectureList: [Prefecture(prefCode: "111",
                                                                         prefName: "福岡県",
