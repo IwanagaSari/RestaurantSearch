@@ -12,7 +12,8 @@ import XCTest
 final class ShopMapTests: XCTestCase {
     
     func testInstantiate() {
-        let shop = Shop(name: "店の名前",
+        let shop = Shop(id: "h793032",
+                        name: "店の名前",
                         nameKana: "カタカナ",
                         latitude: "33.593713",
                         longitude: "130.407861",
