@@ -30,7 +30,7 @@ final class ShopMapViewController: UIViewController {
     func showShopMap() {
         let latitude = Double(shop.latitude)!
         let longitude = Double(shop.longitude)!
-        let center: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let center = CLLocationCoordinate2DMake(latitude, longitude)
         shopMapView.setCenter(center, animated: true)
         
         let mySpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
