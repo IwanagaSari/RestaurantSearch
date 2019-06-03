@@ -17,6 +17,7 @@ struct ShopResponseBody: Codable {
 }
 
 struct Shop: Codable {
+    let id: String
     let name: String
     let nameKana: String
     let latitude: String
@@ -30,6 +31,7 @@ struct Shop: Codable {
     let code: Code
     
     enum CodingKeys: String, CodingKey {
+        case id
         case name
         case nameKana = "name_kana"
         case latitude
