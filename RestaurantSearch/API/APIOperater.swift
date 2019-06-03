@@ -14,7 +14,8 @@ protocol APIType {
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void)
-    func getShop(townCode: String, freeword: String, shopID: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getShop(townCode: String, freeword: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getShopByID(shopID: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void)
 }
 
 final class APIOperater: APIType {
