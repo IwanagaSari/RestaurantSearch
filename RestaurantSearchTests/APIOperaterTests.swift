@@ -62,7 +62,7 @@ final class APIOperaterTests: XCTestCase {
     
     func testGetShopAPI() {
         let expect = self.expectation(description: #function)
-        apiOperater.getShop(townCode: "AREAS5504", freeword: "焼肉", success: { shopResponseBody in
+        apiOperater.getShop(townCode: "AREAS5504", freeword: "焼肉", shopID: "", success: { shopResponseBody in
             XCTAssertEqual(shopResponseBody.shop[0].name, "岩見沢精肉卸直営 牛乃家 本店")
             expect.fulfill()
         }, failure: { error in
