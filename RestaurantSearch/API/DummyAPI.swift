@@ -52,7 +52,11 @@ class DummyAPI: APIType {
         success(town)
     }
     
-    func getShop(townCode: String, freeword: String, shopID: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getShop(townCode: String, freeword: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+        success(shop)
+    }
+    
+    func getShopByID(shopID: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(shop)
     }
 }
