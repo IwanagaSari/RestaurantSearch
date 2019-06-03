@@ -32,7 +32,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     private func getShop() {
-        apiOperater.getShop(townCode: townCode, freeword: freeword, shopID: "",
+        apiOperater.getShop(townCode: townCode, freeword: freeword,
             success: { [weak self] shopResponseBody in
                 self?.showShopList(shopResponseBody)
             },
