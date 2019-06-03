@@ -14,7 +14,7 @@ protocol APIType {
     func getPrefecture(success: @escaping (PrefectureResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getCity(success: @escaping (CityResponseBody) -> Void, failure: @escaping (Error) -> Void)
     func getTown(success: @escaping (TownResponseBody) -> Void, failure: @escaping (Error) -> Void)
-    func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void)
+    func getShop(townCode: String, freeword: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void)
 }
 
 final class APIOperater: APIType {
@@ -61,9 +61,12 @@ final class APIOperater: APIType {
     }
     
     /// お店情報の取得
-    func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getShop(townCode: String, freeword: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
-        let parameters = ["areacode_s": areacodeS]
+        let parameters = [
+            "areacode_s": townCode,
+            "freeword": freeword
+        ]
         fetchResponse(url: url, parameters: parameters, success: success, failure: failure)
     }
 }
