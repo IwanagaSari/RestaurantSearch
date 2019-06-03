@@ -12,8 +12,17 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private let apiOperater = APIOperater()
     private var shopList: [Shop] = []
     private let imageDownloader = ImageDownloader.shared
+    private var townCode: String = "AREAS5504" // とりあえず
+    private var freeword: String = "焼肉"
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorTextView: UITextView!
+    
+    static func instantiate(townCode: String, freeword: String) -> ShopListViewController {
+        let vc = UIStoryboard(name: "ShopList", bundle: nil).instantiateInitialViewController() as! ShopListViewController
+        vc.townCode = townCode
+        vc.freeword = freeword
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +32,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     private func getShop() {
-        apiOperater.getShop(areacodeS: "AREAS5504", // とりあえず
+        apiOperater.getShop(townCode: townCode, freeword: freeword, 
             success: { [weak self] shopResponseBody in
                 self?.showShopList(shopResponseBody)
             },
