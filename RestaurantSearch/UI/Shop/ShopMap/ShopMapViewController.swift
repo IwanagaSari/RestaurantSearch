@@ -33,16 +33,16 @@ final class ShopMapViewController: UIViewController {
         let center = CLLocationCoordinate2DMake(latitude, longitude)
         shopMapView.setCenter(center, animated: true)
         
-        let mySpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let myRegion = MKCoordinateRegion(center: center, span: mySpan)
-        shopMapView.region = myRegion
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: center, span: span)
+        shopMapView.region = region
         
-        let myPin = MKPointAnnotation()
-        myPin.coordinate = center
+        let pin = MKPointAnnotation()
+        pin.coordinate = center
         
-        myPin.title = shop.name
-        myPin.subtitle = shop.category
+        pin.title = shop.name
+        pin.subtitle = shop.category
         
-        shopMapView.addAnnotation(myPin)
+        shopMapView.addAnnotation(pin)
     }
 }
