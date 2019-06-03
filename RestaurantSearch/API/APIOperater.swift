@@ -66,7 +66,7 @@ final class APIOperater: APIType {
         let url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
         let parameters = [
             "areacode_s": townCode,
-            "freeword": freeword,
+            "freeword": freeword
         ]
         fetchResponse(url: url, parameters: parameters, success: success, failure: failure)
     }
