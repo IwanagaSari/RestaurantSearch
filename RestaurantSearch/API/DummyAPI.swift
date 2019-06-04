@@ -21,7 +21,8 @@ class DummyAPI: APIType {
                                                 townName: "桜坂・小笹",
                                                 city: Town.AreaL(cityCode: "666",
                                                                  cityName: "大濠・六本松・桜坂"))])
-    var shop = ShopResponseBody(shop: [Shop(name: "店の名前",
+    var shop = ShopResponseBody(shop: [Shop(id: "fap1004",
+                                            name: "店の名前",
                                             nameKana: "カタカナ",
                                             latitude: "緯度",
                                             longitude: "経度",
@@ -51,7 +52,11 @@ class DummyAPI: APIType {
         success(town)
     }
     
-    func getShop(areacodeS: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+    func getShop(townCode: String, freeword: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
+        success(shop)
+    }
+    
+    func getShopByID(shopID: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         success(shop)
     }
 }
