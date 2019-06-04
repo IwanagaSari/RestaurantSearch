@@ -11,6 +11,7 @@ import XCTest
 
 final class ShopTests: XCTestCase {
     
+    // swiftlint:disable function_body_length
     func testShopDecode() throws {
         let json = """
 {
