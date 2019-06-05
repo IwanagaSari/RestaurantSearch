@@ -23,7 +23,6 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateArea()
     }
     
@@ -43,12 +42,23 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
         show(vc, sender: nil)
     }
     
+    private func showAlert() {
+        let alertController = UIAlertController(title: "Error", message: "検索条件を入力してください", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 1:
             showAreaSelect()
         case 4:
-            showShopList()
+            if town?.townCode == nil && freewordSearchBar.text == "" {
+                showAlert()
+            } else {
+                showShopList()
+            }
         default:
             return
         }
