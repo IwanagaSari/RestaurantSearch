@@ -38,10 +38,17 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
         show(vc, sender: nil)
     }
     
+    private func showShopList() {
+        let vc = ShopListViewController.instantiate(townCode: town?.townCode ?? "", freeword: freewordSearchBar.text ?? "")
+        show(vc, sender: nil)
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 1:
             showAreaSelect()
+        case 4:
+            showShopList()
         default:
             return
         }
