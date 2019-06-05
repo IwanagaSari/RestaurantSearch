@@ -17,6 +17,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     private var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
+    private let defaults = UserDefaults.standard
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
         let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
@@ -101,6 +102,8 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
+        let setting = Setting(defaults: defaults)
+        setting.shopID.append(shop.id)
         showFavoriteList()
     }
     

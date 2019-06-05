@@ -25,7 +25,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         super.viewDidLoad()
         
         getIDList()
-        idList = ["h793032"]
         getShopByIDList()
     }
     
