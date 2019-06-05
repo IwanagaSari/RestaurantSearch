@@ -14,6 +14,8 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak private var shopAdressLabel: UILabel!
     @IBOutlet weak private var shopTopImageView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
+    @IBOutlet weak private var addButton: UIBarButtonItem!
+    @IBOutlet weak private var deleteButton: UIBarButtonItem!
     private var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
@@ -31,6 +33,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         showTopInfo()
         showTopImage()
         updateImageList()
+        showUIBarButton()
     }
     
     private func showTopInfo() {
@@ -68,6 +71,19 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     private func updateImageList() {
         let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
         imageList = allImage.filter { !$0.isEmpty }
+    }
+    
+    private func showUIBarButton() {
+        let setting = Setting(defaults: defaults)
+        if setting.shopID.contains(shop.id) {
+            // shopIDがすでに保存されていたら削除ボタンだけを表示
+            addButton.isEnabled = false
+            addButton.tintColor = UIColor.clear
+        } else {
+            // shopIDが保存されていなかった＋ボタンだけを表示
+            deleteButton.isEnabled = false
+            deleteButton.tintColor = UIColor.clear
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -109,7 +125,9 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
-        //お気に入りにすでに入っているお店なら、削除ボタンを表示する
+        let setting = Setting(defaults: defaults)
+        setting.shopID.remove(at: setting.shopID.index(of: shop.id)!)
+        showFavoriteList()
     }
     
     /// 地図ボタンをタップされた時
