@@ -9,27 +9,74 @@
 import UIKit
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
-    let shopImages = ["1", "2", "3"]
+    private let defaults = UserDefaults.standard
+    private var idList: [String] = []
+    private var imageList: [String] = []
+    private var shop: [Shop] = []
+    private let apiOperater = APIOperater()
+    private let imageDownloader = ImageDownloader.shared
     
     static func instantiate() -> FavoriteListViewController {
         let vc = UIStoryboard(name: "FavoriteList", bundle: nil).instantiateInitialViewController() as! FavoriteListViewController
         return vc
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        getIDList()
+        //idList = ["h793032"]
+        getShopByIDList()
+    }
+    
+    private func getIDList() {
+        let setting = Setting(defaults: self.defaults)
+        idList = setting.shopID
+    }
+    
+    private func getShopByIDList() {
+        for id in idList {
+            apiOperater.getShopByID(shopID: id,
+                                    success: { [weak self] shopResponseBody in
+                                        self?.showShopList(shopResponseBody)
+                },
+                                    failure: { [weak self] error in
+                                        self?.showError(error)
+            })
+        }
+    }
+    
+    private func showShopList(_ shopResponseBody: ShopResponseBody) {
+        shop.append(shopResponseBody.shop[0])
+        imageList.append(shopResponseBody.shop[0].imageUrl.shopImage1)
+        collectionView.reloadData()
+    }
+    
+    private func showError(_ error: Error) {
+        print(error.localizedDescription) // 後でエラー画面追加後変更
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shopImages.count
+        return shop.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath)
         
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-        let cellImage = UIImage(named: shopImages[indexPath.row])
-        imageView.image = cellImage
+        let imageURL = URL(string: imageList[indexPath.row])!
+        
+        imageDownloader.getImage(url: imageURL,
+                                 success: {shopImage in
+                                    imageView.image = shopImage
+        },
+                                 failure: { [weak self] error in
+                                    self?.showError(error)
+            }
+        )
         
         let label = cell.contentView.viewWithTag(2) as! UILabel
-        label.text = "店の名前"
+        label.text = shop[indexPath.row].name
         
         return cell
     }
