@@ -15,6 +15,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     private var shop: [Shop] = []
     private let apiOperater = APIOperater()
     private let imageDownloader = ImageDownloader.shared
+    @IBOutlet private var errorView: UIView!
+    @IBOutlet weak private var errorTextView: UITextView!
     
     static func instantiate() -> FavoriteListViewController {
         let vc = UIStoryboard(name: "FavoriteList", bundle: nil).instantiateInitialViewController() as! FavoriteListViewController
@@ -26,6 +28,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         
         getIDList()
         getShopByIDList()
+        collectionView.backgroundView = errorView
     }
     
     private func getIDList() {
@@ -52,7 +55,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func showError(_ error: Error) {
-        print(error.localizedDescription) // 後でエラー画面追加後変更
+        errorTextView.text = error.localizedDescription
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
