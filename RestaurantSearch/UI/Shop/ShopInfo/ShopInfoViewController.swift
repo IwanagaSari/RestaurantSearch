@@ -140,7 +140,6 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// さらに詳しくボタンをタップされた時
     @IBAction func detailButtonTapped(_ sender: UIButton) {
-        // 仮に「一蘭」というお店だとする
         var components = URLComponents(string: "https://www.google.co.jp/search")!
         components.queryItems = [URLQueryItem(name: "q", value: shop.name)]
         if let url = components.url {
