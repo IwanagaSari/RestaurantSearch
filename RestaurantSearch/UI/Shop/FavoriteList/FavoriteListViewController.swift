@@ -12,6 +12,11 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     let shopImages = ["1", "2", "3"]
     
+    static func instantiate() -> FavoriteListViewController {
+        let vc = UIStoryboard(name: "FavoriteList", bundle: nil).instantiateInitialViewController() as! FavoriteListViewController
+        return vc
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shopImages.count
     }

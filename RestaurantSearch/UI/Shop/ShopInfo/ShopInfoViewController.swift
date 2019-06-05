@@ -59,6 +59,11 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         print(error.localizedDescription)
     }
     
+    private func showFavoriteList() {
+        let vc = FavoriteListViewController.instantiate()
+        show(vc, sender: nil)
+    }
+    
     private func updateImageList() {
         let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
         imageList = allImage.filter { !$0.isEmpty }
@@ -96,7 +101,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-        //お気に入りに入っていないお店であれば、追加ボタンを表示する
+        showFavoriteList()
     }
     
     /// 削除ボタンをタップされた時
