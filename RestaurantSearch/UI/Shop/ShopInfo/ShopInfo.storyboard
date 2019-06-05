@@ -182,12 +182,12 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="HGJ-gx-Kgu">
                                 <connections>
-                                    <action selector="addButtonTapped:" destination="opu-gT-qyw" id="tpu-Fd-HE3"/>
+                                    <action selector="addButtonTapped:" destination="opu-gT-qyw" id="Ygc-nK-XYw"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="SoY-jn-zgd">
                                 <connections>
-                                    <action selector="deleteButtonTapped:" destination="opu-gT-qyw" id="VoY-sr-wge"/>
+                                    <action selector="deleteButtonTapped:" destination="opu-gT-qyw" id="bLR-dQ-f0U"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -195,7 +195,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="HGJ-gx-Kgu" id="MIl-Aw-QLX"/>
                         <outlet property="collectionView" destination="Gll-RF-Abk" id="vxh-ix-Y4o"/>
+                        <outlet property="deleteButton" destination="SoY-jn-zgd" id="FtF-Gg-Now"/>
                         <outlet property="shopAdressLabel" destination="boz-zk-nff" id="zb5-ws-NUp"/>
                         <outlet property="shopNameLabel" destination="gwV-85-X9D" id="uQx-kO-mpg"/>
                         <outlet property="shopTopImageView" destination="u0a-tt-5v1" id="tk5-Pv-jeh"/>
