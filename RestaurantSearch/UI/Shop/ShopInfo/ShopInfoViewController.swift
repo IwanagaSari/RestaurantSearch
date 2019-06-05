@@ -50,8 +50,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
                                  },
                                  failure: { [weak self] error in
                                     self?.showError(error)
-                                 }
-        )
+                                 })
     }
     
     private func showShopMap() {
@@ -102,8 +101,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
                                  },
                                  failure: { [weak self] error in
                                     self?.showError(error)
-                                 }
-        )
+                                 })
         return cell
     }
     

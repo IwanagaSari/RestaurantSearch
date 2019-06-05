@@ -38,10 +38,10 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             apiOperater.getShopByID(shopID: id,
                                     success: { [weak self] shopResponseBody in
                                         self?.showShopList(shopResponseBody)
-                },
+                                    },
                                     failure: { [weak self] error in
                                         self?.showError(error)
-            })
+                                    })
         }
     }
     
@@ -68,11 +68,10 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         imageDownloader.getImage(url: imageURL,
                                  success: {shopImage in
                                     imageView.image = shopImage
-        },
+                                },
                                  failure: { [weak self] error in
                                     self?.showError(error)
-            }
-        )
+                                })
         
         let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = shop[indexPath.row].name
