@@ -13,7 +13,7 @@ final class FavoriteDatabase {
     
     private static let shopIDsKey: String = "shopID"
     
-    var shopIDList: [String] {
+    private(set) var shopIDList: [String] {
         get {
             let shopID = defaults.object(forKey: type(of: self).shopIDsKey) as? [String]
             return shopID ?? []
