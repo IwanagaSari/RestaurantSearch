@@ -11,15 +11,15 @@ import Foundation
 final class Setting {
     private let defaults: UserDefaults
     
-    private static let shopID: String = "shopID"
+    private static let shopIDsKey: String = "shopID"
     
     var shopIDList: [String] {
         get {
-            let shopID = defaults.object(forKey: type(of: self).shopID) as? [String]
+            let shopID = defaults.object(forKey: type(of: self).shopIDsKey) as? [String]
             return shopID ?? []
         }
         set {
-            defaults.set(newValue, forKey: type(of: self).shopID)
+            defaults.set(newValue, forKey: type(of: self).shopIDsKey)
             defaults.synchronize()
         }
     }
