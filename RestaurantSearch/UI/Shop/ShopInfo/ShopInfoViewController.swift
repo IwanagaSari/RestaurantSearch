@@ -26,13 +26,18 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         return vc
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        showUIBarButton()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         showTopInfo()
         showTopImage()
         updateImageList()
-        showUIBarButton()
     }
     
     private func showTopInfo() {
@@ -73,7 +78,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     private func showUIBarButton() {
         let database = FavoriteDatabase.shared
-        if database.shopIDList.contains(shop.id) {
+        if database.contain(shop.id) {
             // shopIDがすでに保存されていたら削除ボタンだけを表示
             addButton.isEnabled = false
             addButton.tintColor = UIColor.clear
@@ -116,16 +121,14 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
         let database = FavoriteDatabase.shared
-        // メソッドを追加した後に以下変更
-        database.shopIDList.append(shop.id)
+        database.add(shop.id)
         showFavoriteList()
     }
     
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
         let database = FavoriteDatabase.shared
-        // メソッドを追加した後に以下変更
-        database.shopIDList.remove(at: setting.shopIDList.index(of: shop.id)!)
+        database.remove(shop.id)
         showFavoriteList()
     }
     
