@@ -10,7 +10,7 @@ import Foundation
 
 final class FavoriteDatabase {
     private let defaults: UserDefaults
-    
+    static let shared = FavoriteDatabase(defaults: UserDefaults.standard)
     private static let shopIDsKey: String = "shopID"
     
     private(set) var shopIDList: [String] {

@@ -19,7 +19,6 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     private var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
-    private let defaults = UserDefaults.standard
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
         let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
@@ -73,7 +72,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     }
     
     private func showUIBarButton() {
-        let database = FavoriteDatabase(defaults: defaults)
+        let database = FavoriteDatabase.shared
         if database.shopIDList.contains(shop.id) {
             // shopIDがすでに保存されていたら削除ボタンだけを表示
             addButton.isEnabled = false
@@ -116,15 +115,17 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-        let database = FavoriteDatabase(defaults: defaults)
+        let database = FavoriteDatabase.shared
+        // メソッドを追加した後に以下変更
         database.shopIDList.append(shop.id)
         showFavoriteList()
     }
     
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
-        let setting = FavoriteDatabase(defaults: defaults)
-        setting.shopIDList.remove(at: setting.shopIDList.index(of: shop.id)!)
+        let database = FavoriteDatabase.shared
+        // メソッドを追加した後に以下変更
+        database.shopIDList.remove(at: setting.shopIDList.index(of: shop.id)!)
         showFavoriteList()
     }
     
