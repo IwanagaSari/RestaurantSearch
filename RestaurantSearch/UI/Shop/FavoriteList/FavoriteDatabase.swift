@@ -8,7 +8,14 @@
 
 import Foundation
 
-final class FavoriteDatabase {
+protocol DatabaseType {
+    func add(_ shopID: String)
+    func remove(_ shopID: String)
+    func contain(_ shopID: String) -> Bool
+    func all() -> [String]
+}
+
+final class FavoriteDatabase: DatabaseType {
     private let defaults: UserDefaults
     static let shared = FavoriteDatabase(defaults: UserDefaults.standard)
     private static let shopIDsKey: String = "shopID"
@@ -26,5 +33,22 @@ final class FavoriteDatabase {
     
     init(defaults: UserDefaults) {
         self.defaults = defaults
+    }
+    
+    func add(_ shopID: String) {
+        shopIDList.append(shopID)
+    }
+    
+    func remove(_ shopID: String) {
+        shopIDList.remove(at: shopIDList.index(of: shopID)!)
+    }
+    
+    func contain(_ shopID: String) -> Bool {
+        let contain = shopIDList.contains(shopID)
+        return contain
+    }
+    
+    func all() -> [String] {
+        return shopIDList
     }
 }
