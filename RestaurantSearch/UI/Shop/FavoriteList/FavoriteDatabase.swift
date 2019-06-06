@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Setting {
+final class FavoriteDatabase {
     private let defaults: UserDefaults
     
     private static let shopIDsKey: String = "shopID"
