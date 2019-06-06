@@ -29,7 +29,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func getShopByIDList() {
-        for id in FavoriteDatabase.shared.shopIDList {
+        for id in FavoriteDatabase.shared.all() {
             apiOperater.getShopByID(shopID: id,
                                     success: { [weak self] shopResponseBody in
                                         self?.showShopList(shopResponseBody)
