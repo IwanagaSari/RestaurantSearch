@@ -73,8 +73,8 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     }
     
     private func showUIBarButton() {
-        let setting = Setting(defaults: defaults)
-        if setting.shopIDList.contains(shop.id) {
+        let database = FavoriteDatabase(defaults: defaults)
+        if database.shopIDList.contains(shop.id) {
             // shopIDがすでに保存されていたら削除ボタンだけを表示
             addButton.isEnabled = false
             addButton.tintColor = UIColor.clear
@@ -116,14 +116,14 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-        let setting = Setting(defaults: defaults)
-        setting.shopIDList.append(shop.id)
+        let database = FavoriteDatabase(defaults: defaults)
+        database.shopIDList.append(shop.id)
         showFavoriteList()
     }
     
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
-        let setting = Setting(defaults: defaults)
+        let setting = FavoriteDatabase(defaults: defaults)
         setting.shopIDList.remove(at: setting.shopIDList.index(of: shop.id)!)
         showFavoriteList()
     }
