@@ -11,7 +11,7 @@ import UIKit
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private let defaults = UserDefaults.standard
     private var imageList: [String] = []
-    private var shop: [Shop] = []
+    private var shopList: [Shop] = []
     private let apiOperater = APIOperater()
     private let imageDownloader = ImageDownloader.shared
     @IBOutlet private var errorView: UIView!
@@ -42,7 +42,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func showShopList(_ shopResponseBody: ShopResponseBody) {
-        shop.append(shopResponseBody.shop[0])
+        shopList.append(shopResponseBody.shop[0])
         imageList.append(shopResponseBody.shop[0].imageUrl.shopImage1)
         collectionView.reloadData()
     }
@@ -52,7 +52,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shop.count
+        return shopList.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -70,7 +70,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                                 })
         
         let label = cell.contentView.viewWithTag(2) as! UILabel
-        label.text = shop[indexPath.row].name
+        label.text = shopList[indexPath.row].name
         
         return cell
     }
