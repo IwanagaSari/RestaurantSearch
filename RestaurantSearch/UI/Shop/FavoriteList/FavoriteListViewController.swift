@@ -10,7 +10,6 @@ import UIKit
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private let defaults = UserDefaults.standard
-    private var idList: [String] = []
     private var imageList: [String] = []
     private var shop: [Shop] = []
     private let apiOperater = APIOperater()
@@ -26,18 +25,12 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getIDList()
         getShopByIDList()
         collectionView.backgroundView = errorView
     }
     
-    private func getIDList() {
-        let setting = Setting(defaults: self.defaults)
-        idList = setting.shopIDList
-    }
-    
     private func getShopByIDList() {
-        for id in idList {
+        for id in Setting(defaults: self.defaults).shopIDList {
             apiOperater.getShopByID(shopID: id,
                                     success: { [weak self] shopResponseBody in
                                         self?.showShopList(shopResponseBody)
