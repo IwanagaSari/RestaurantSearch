@@ -13,7 +13,7 @@ final class Setting {
     
     private static let shopID: String = "shopID"
     
-    var shopID: [String] {
+    var shopIDList: [String] {
         get {
             let shopID = defaults.object(forKey: type(of: self).shopID) as? [String]
             return shopID ?? []

@@ -33,7 +33,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     private func getIDList() {
         let setting = Setting(defaults: self.defaults)
-        idList = setting.shopID
+        idList = setting.shopIDList
     }
     
     private func getShopByIDList() {
