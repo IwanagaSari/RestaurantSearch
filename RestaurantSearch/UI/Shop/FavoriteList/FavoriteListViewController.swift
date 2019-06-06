@@ -59,7 +59,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath)
         
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-        let imageURL = URL(string: imageList[indexPath.row])!
+        let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
         
         imageDownloader.getImage(url: imageURL,
                                  success: {shopImage in
