@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol DatabaseType {
+protocol FavoriteDatabaseType {
     func add(_ shopID: String)
     func remove(_ shopID: String)
     func contain(_ shopID: String) -> Bool
     func all() -> [String]
 }
 
-final class FavoriteDatabase: DatabaseType {
+final class FavoriteDatabase: FavoriteDatabaseType {
     private let defaults: UserDefaults
     static let shared = FavoriteDatabase(defaults: UserDefaults.standard)
     private static let shopIDsKey: String = "shopID"
