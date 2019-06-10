@@ -9,8 +9,12 @@
 import Foundation
 import Alamofire
 
+// swiftlint:disable private_outlet
+
 final class ImageListCell: UICollectionViewCell {
     var onReuse: (() -> Void)?
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var shopName: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
