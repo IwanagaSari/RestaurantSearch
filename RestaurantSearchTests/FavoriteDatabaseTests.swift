@@ -11,9 +11,14 @@ import XCTest
 
 final class FavoriteDatabaseTests: XCTestCase {
 
-    func test() {
+    func testSettingShopIDList() {
         let database = FavoriteDatabase(defaults: UserDefaults.standard)
         database.shopIDList = ["testID"]
         XCTAssertEqual(database.shopIDList, ["testID"])
+    }
+    
+    func testSettingShopIDListForTestonly() {
+        let database = FavoriteDatabase(defaults: UserDefaults(suiteName: "TestOnly")!)
+        XCTAssertEqual(database.shopIDList.count, 0)
     }
 }
