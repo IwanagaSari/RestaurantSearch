@@ -82,8 +82,12 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
             // shopIDがすでに保存されていたら削除ボタンだけを表示
             addButton.isEnabled = false
             addButton.tintColor = UIColor.clear
+            deleteButton.isEnabled = true
+            deleteButton.tintColor = UIColor.blue
         } else {
             // shopIDが保存されていなかった＋ボタンだけを表示
+            addButton.isEnabled = true
+            addButton.tintColor = UIColor.blue
             deleteButton.isEnabled = false
             deleteButton.tintColor = UIColor.clear
         }
