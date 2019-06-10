@@ -106,7 +106,9 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
                                                failure: { [weak self] error in
                                                     self?.showError(error)
                                                })
-        cell.request = request
+        cell.onReuse = {
+            request?.cancel()
+        }
         return cell
     }
     

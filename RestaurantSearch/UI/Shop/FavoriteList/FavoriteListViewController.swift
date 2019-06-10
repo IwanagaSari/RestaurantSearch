@@ -67,7 +67,9 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                                                failure: { [weak self] error in
                                                     self?.showError(error)
                                                })
-        cell.request = request
+        cell.onReuse = {
+            request?.cancel()
+        }
 
         let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = shopList[indexPath.row].name
