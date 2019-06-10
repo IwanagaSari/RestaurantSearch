@@ -62,12 +62,11 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell", for: indexPath) as! ImageListCell
-        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
         
         let request = imageDownloader.getImage(url: imageURL,
                                                success: {shopImage in
-                                                   imageView.image = shopImage
+                                                   cell.imageView.image = shopImage
                                                },
                                                failure: { [weak self] error in
                                                    self?.showError(error)
@@ -75,9 +74,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         cell.onReuse = {
             request?.cancel()
         }
-        
-        let label = cell.contentView.viewWithTag(2) as! UILabel
-        label.text = shopList[indexPath.row].name
+    
+        cell.shopName.text = shopList[indexPath.row].name
         
         return cell
     }
