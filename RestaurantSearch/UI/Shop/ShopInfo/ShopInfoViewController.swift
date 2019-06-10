@@ -80,10 +80,16 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         let database = FavoriteDatabase.shared
         if database.contain(shop.id) {
             // shopIDがすでに保存されていたら削除ボタンだけを表示
-            navigationItem.rightBarButtonItems = [deleteButton]
+            addButton.isEnabled = false
+            addButton.tintColor = UIColor.clear
+            deleteButton.isEnabled = true
+            deleteButton.tintColor = UIColor.blue
         } else {
             // shopIDが保存されていなかった＋ボタンだけを表示
-            navigationItem.rightBarButtonItems = [addButton]
+            addButton.isEnabled = true
+            addButton.tintColor = UIColor.blue
+            deleteButton.isEnabled = false
+            deleteButton.tintColor = UIColor.clear
         }
     }
     
