@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class ImageListCell: UICollectionViewCell {
+final class ImageListCell: UICollectionViewCell {
     var request: DataRequest?
     
     override func prepareForReuse() {
