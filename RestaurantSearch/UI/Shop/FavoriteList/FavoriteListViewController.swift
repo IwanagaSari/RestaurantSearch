@@ -9,7 +9,6 @@
 import UIKit
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    private var imageList: [String] = []
     private var shopList: [Shop] = []
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
@@ -42,7 +41,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     private func showShopList(_ shopResponseBody: ShopResponseBody) {
         shopList.append(shopResponseBody.shop[0])
-        imageList.append(shopResponseBody.shop[0].imageUrl.shopImage1)
         collectionView.reloadData()
     }
     
