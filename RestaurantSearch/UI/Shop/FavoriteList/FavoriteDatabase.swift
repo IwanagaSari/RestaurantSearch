@@ -52,8 +52,7 @@ final class FavoriteDatabase: FavoriteDatabaseType {
     }
     
     func contain(_ shopID: String) -> Bool {
-        let contain = shopIDList.contains(shopID)
-        return contain
+        return shopIDList.contains(shopID)
     }
     
     func all() -> [String] {
