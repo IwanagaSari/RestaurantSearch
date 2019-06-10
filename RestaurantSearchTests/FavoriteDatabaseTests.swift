@@ -12,5 +12,8 @@ import XCTest
 final class FavoriteDatabaseTests: XCTestCase {
 
     func test() {
+        let database = FavoriteDatabase(defaults: UserDefaults.standard)
+        database.shopIDList = ["testID"]
+        XCTAssertEqual(database.shopIDList, ["testID"])
     }
 }
