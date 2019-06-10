@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 
 final class ImageListCell: UICollectionViewCell {
-    var request: DataRequest?
+    var onReuse: (() -> Void)?
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        request?.cancel()
+        onReuse?()
     }
 }
