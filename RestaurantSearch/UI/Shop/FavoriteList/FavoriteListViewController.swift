@@ -61,12 +61,12 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
         
         let request = imageDownloader.getImage(url: imageURL,
-                                            success: {shopImage in
-                                                imageView.image = shopImage
-                                            },
-                                            failure: { [weak self] error in
-                                                self?.showError(error)
-                                            })
+                                               success: {shopImage in
+                                                    imageView.image = shopImage
+                                               },
+                                               failure: { [weak self] error in
+                                                    self?.showError(error)
+                                               })
         cell.request = request
 
         let label = cell.contentView.viewWithTag(2) as! UILabel
