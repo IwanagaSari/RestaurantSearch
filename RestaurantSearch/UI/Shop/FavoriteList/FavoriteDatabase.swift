@@ -20,7 +20,7 @@ final class FavoriteDatabase: FavoriteDatabaseType {
     static let shared = FavoriteDatabase(defaults: UserDefaults.standard)
     private static let shopIDsKey: String = "shopID"
     
-    var shopIDList: [String] {
+    private var shopIDList: [String] {
         get {
             let shopIDs = defaults.object(forKey: type(of: self).shopIDsKey) as? [String]
             return shopIDs ?? []

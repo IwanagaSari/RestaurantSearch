@@ -18,16 +18,20 @@ final class FavoriteDatabaseTests: XCTestCase {
         database = FavoriteDatabase(defaults: UserDefaults(suiteName: UUID().uuidString)!)
     }
     
-    func testNoSettingShopIDList() {
-        XCTAssertEqual(database.shopIDList.count, 0)
-    }
-
-    func testSettingShopIDList() {
-        database.shopIDList = ["testID"]
-        XCTAssertEqual(database.shopIDList, ["testID"])
+    func testAddANDRemove() {
+        database.add("shopID")
+        XCTAssertEqual(database.all().contains("shopID"), true)
+        XCTAssertEqual(database.all().count, 1)
+        
+        database.remove("shopID")
+        XCTAssertEqual(database.all().contains("test"), false)
+        XCTAssertEqual(database.all().count, 0)
     }
     
     override func tearDown() {
-        database.shopIDList.removeAll()
+        super.tearDown()
+        var shopIDList = database.all()
+        shopIDList.removeAll()
+        
     }
 }
