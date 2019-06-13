@@ -19,6 +19,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     private var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
+    private let database: FavoriteDatabaseType = FavoriteDatabase.shared
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
         let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
@@ -118,14 +119,12 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-        let database = FavoriteDatabase.shared
         database.add(shop.id)
         showFavoriteList()
     }
     
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
-        let database = FavoriteDatabase.shared
         database.remove(shop.id)
         showFavoriteList()
     }
