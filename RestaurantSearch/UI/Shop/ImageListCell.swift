@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Alamofire
+import UIKit
 
 // swiftlint:disable private_outlet
 
