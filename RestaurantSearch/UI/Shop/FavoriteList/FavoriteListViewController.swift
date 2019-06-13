@@ -55,12 +55,11 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
         
-        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
         
         let request = imageDownloader.getImage(url: imageURL,
                                                success: {shopImage in
-                                                    imageView.image = shopImage
+                                                    cell.imageViewInFavoliteList.image = shopImage
                                                },
                                                failure: { [weak self] error in
                                                     self?.showError(error)
@@ -69,8 +68,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             request?.cancel()
         }
 
-        let label = cell.contentView.viewWithTag(2) as! UILabel
-        label.text = shopList[indexPath.row].name
+        cell.shopNameInfavoriteList.text = shopList[indexPath.row].name
         
         return cell
     }
