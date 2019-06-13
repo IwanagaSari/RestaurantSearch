@@ -26,7 +26,7 @@ final class ImageDownloader {
             return nil
         // キャッシュに保存されていないとする
         } else {
-            let request = Alamofire.request(url).responseData { response in
+            return Alamofire.request(url).responseData { response in
                 switch response.result {
                 case .success(let data):
                     if let image = UIImage(data: data) {
@@ -40,7 +40,6 @@ final class ImageDownloader {
                     failure(error)
                 }
             }
-            return request
         }
     }
 }
