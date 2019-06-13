@@ -36,9 +36,7 @@ final class FavoriteDatabase: FavoriteDatabaseType {
     }
     
     func add(_ shopID: String) {
-        if shopIDList.contains(shopID) {
-            return
-        } else {
+        if !shopIDList.contains(shopID) {
             shopIDList.append(shopID)
         }
     }
@@ -46,8 +44,6 @@ final class FavoriteDatabase: FavoriteDatabaseType {
     func remove(_ shopID: String) {
         if shopIDList.contains(shopID) {
             shopIDList.remove(at: shopIDList.index(of: shopID)!)
-        } else {
-            return
         }
     }
     
