@@ -145,6 +145,9 @@
                                             <constraint firstItem="CQk-RF-Q3o" firstAttribute="top" secondItem="hWF-xl-Por" secondAttribute="top" id="ofV-Jr-AXm"/>
                                             <constraint firstAttribute="trailing" secondItem="CQk-RF-Q3o" secondAttribute="trailing" id="van-Dv-d9T"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageViewInShopInfo" destination="CQk-RF-Q3o" id="XXW-Ix-Xme"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
