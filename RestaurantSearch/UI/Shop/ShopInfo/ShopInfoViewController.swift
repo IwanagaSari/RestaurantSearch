@@ -14,8 +14,8 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak private var shopAdressLabel: UILabel!
     @IBOutlet weak private var shopTopImageView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
-    @IBOutlet weak private var addButton: UIBarButtonItem!
-    @IBOutlet weak private var deleteButton: UIBarButtonItem!
+    @IBOutlet private var addButton: UIBarButtonItem!
+    @IBOutlet private var deleteButton: UIBarButtonItem!
     private var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
@@ -79,17 +79,9 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     private func showUIBarButton() {
         let database = FavoriteDatabase.shared
         if database.contain(shop.id) {
-            // shopIDがすでに保存されていたら削除ボタンだけを表示
-            addButton.isEnabled = false
-            addButton.tintColor = UIColor.clear
-            deleteButton.isEnabled = true
-            deleteButton.tintColor = UIColor.blue
+            navigationItem.rightBarButtonItems = [deleteButton]
         } else {
-            // shopIDが保存されていなかった＋ボタンだけを表示
-            addButton.isEnabled = true
-            addButton.tintColor = UIColor.blue
-            deleteButton.isEnabled = false
-            deleteButton.tintColor = UIColor.clear
+            navigationItem.rightBarButtonItems = [addButton]
         }
     }
     
