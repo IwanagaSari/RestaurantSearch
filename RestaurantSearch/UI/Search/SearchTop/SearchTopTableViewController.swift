@@ -49,12 +49,16 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
         present(alertController, animated: true, completion: nil)
     }
     
+    private func validateInput() -> Bool {
+        return town?.townCode == nil && freewordSearchBar.text == ""
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 1:
             showAreaSelect()
         case 4:
-            if town?.townCode == nil && freewordSearchBar.text == "" {
+            if validateInput() {
                 showAlert()
             } else {
                 showShopList()
