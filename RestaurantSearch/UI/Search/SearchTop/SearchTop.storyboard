@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8dS-t8-OOb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aFn-gm-xC0">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -169,5 +170,81 @@
             </objects>
             <point key="canvasLocation" x="92.753623188405811" y="87.723214285714278"/>
         </scene>
+        <!--Test Search Top View Controller-->
+        <scene sceneID="XcE-zK-0Uk">
+            <objects>
+                <viewController id="aFn-gm-xC0" customClass="TestSearchTopViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CGs-Qd-3J8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top2" translatesAutoresizingMaskIntoConstraints="NO" id="r7l-ze-7dt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7f-Fc-ozb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリーワードで検索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8H-RI-NeG">
+                                        <rect key="frame" x="40" y="60" width="335" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NOQ-MT-wmq"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI4-kT-c8q">
+                                        <rect key="frame" x="40" y="110" width="335" height="40"/>
+                                        <color key="backgroundColor" red="0.22086977242633027" green="0.68153312144356637" blue="0.85773409834973102" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="e5R-VT-44y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <state key="normal" title="エリアを選択">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FI4-kT-c8q" firstAttribute="top" secondItem="q8H-RI-NeG" secondAttribute="bottom" constant="10" id="Fpd-tl-R3i"/>
+                                    <constraint firstItem="q8H-RI-NeG" firstAttribute="leading" secondItem="O7f-Fc-ozb" secondAttribute="leading" constant="40" id="Ghm-Xs-wap"/>
+                                    <constraint firstAttribute="height" constant="170" id="GuZ-O6-jRG"/>
+                                    <constraint firstItem="q8H-RI-NeG" firstAttribute="top" secondItem="O7f-Fc-ozb" secondAttribute="top" constant="60" id="Hi3-Pc-dze"/>
+                                    <constraint firstItem="FI4-kT-c8q" firstAttribute="leading" secondItem="O7f-Fc-ozb" secondAttribute="leading" constant="40" id="P07-vV-w6c"/>
+                                    <constraint firstAttribute="trailing" secondItem="FI4-kT-c8q" secondAttribute="trailing" constant="40" id="aVk-g4-Ia9"/>
+                                    <constraint firstAttribute="trailing" secondItem="q8H-RI-NeG" secondAttribute="trailing" constant="40" id="pAw-4K-eJC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="r7l-ze-7dt" secondAttribute="bottom" id="G0R-Io-1mp"/>
+                            <constraint firstItem="r7l-ze-7dt" firstAttribute="top" secondItem="CGs-Qd-3J8" secondAttribute="top" id="QlM-up-QlN"/>
+                            <constraint firstItem="O7f-Fc-ozb" firstAttribute="top" secondItem="CGs-Qd-3J8" secondAttribute="top" id="fSv-u0-so9"/>
+                            <constraint firstItem="O7f-Fc-ozb" firstAttribute="trailing" secondItem="xLG-7z-Cf0" secondAttribute="trailing" id="lX5-3I-Sai"/>
+                            <constraint firstItem="r7l-ze-7dt" firstAttribute="leading" secondItem="xLG-7z-Cf0" secondAttribute="leading" id="p6d-qE-fZV"/>
+                            <constraint firstItem="xLG-7z-Cf0" firstAttribute="trailing" secondItem="r7l-ze-7dt" secondAttribute="trailing" id="qzs-Gw-wCc"/>
+                            <constraint firstItem="O7f-Fc-ozb" firstAttribute="leading" secondItem="xLG-7z-Cf0" secondAttribute="leading" id="zO1-kJ-S56"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xLG-7z-Cf0"/>
+                    </view>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="areaSelectButton" destination="FI4-kT-c8q" id="cZZ-JO-K4a"/>
+                        <outlet property="bottomView" destination="O7f-Fc-ozb" id="26B-a9-ndi"/>
+                        <outlet property="freewordTextField" destination="q8H-RI-NeG" id="geD-tl-Pf4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tAt-8s-fkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="87.723214285714278"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="top2" width="1024" height="1024"/>
+    </resources>
 </document>

@@ -56,6 +56,7 @@
 		EA267A102248F49200F3091C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* Town.swift */; };
 		EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCAE22842F2E00EB5656 /* APIOperater.swift */; };
 		EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */; };
+		EA48D08F22B24152002CD44E /* TestSearchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA48D08E22B24152002CD44E /* TestSearchTopViewController.swift */; };
 		EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497750229BD419001BE1DB /* CitySelectTests.swift */; };
 		EA497753229BD428001BE1DB /* TownSelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497752229BD428001BE1DB /* TownSelectTests.swift */; };
 		EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66AD7D22929F6E007355BB /* DummyAPI.swift */; };
@@ -130,6 +131,7 @@
 		EA267A0F2248F49200F3091C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		EA47FCAE22842F2E00EB5656 /* APIOperater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperater.swift; sourceTree = "<group>"; };
 		EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperaterTests.swift; sourceTree = "<group>"; };
+		EA48D08E22B24152002CD44E /* TestSearchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearchTopViewController.swift; sourceTree = "<group>"; };
 		EA497750229BD419001BE1DB /* CitySelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectTests.swift; sourceTree = "<group>"; };
 		EA497752229BD428001BE1DB /* TownSelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectTests.swift; sourceTree = "<group>"; };
 		EA66AD7D22929F6E007355BB /* DummyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyAPI.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */,
 				EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */,
+				EA48D08E22B24152002CD44E /* TestSearchTopViewController.swift */,
 			);
 			path = SearchTop;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */,
 				EA267A0A2248E2EE00F3091C /* Area.swift in Sources */,
 				86E8FE25225DD36E00DCAD11 /* GenreSelectViewController.swift in Sources */,
+				EA48D08F22B24152002CD44E /* TestSearchTopViewController.swift in Sources */,
 				EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */,
 				EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */,
 				860CCD2022A7611000943F17 /* FavoriteDatabase.swift in Sources */,
