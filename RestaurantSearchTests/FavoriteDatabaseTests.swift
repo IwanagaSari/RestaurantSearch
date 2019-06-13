@@ -10,15 +10,24 @@ import XCTest
 @testable import RestaurantSearch
 
 final class FavoriteDatabaseTests: XCTestCase {
+    private var database: FavoriteDatabase!
+    
+    override func setUp() {
+        super.setUp()
+        
+        database = FavoriteDatabase(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+    }
+    
+    func testNoSettingShopIDList() {
+        XCTAssertEqual(database.shopIDList.count, 0)
+    }
 
     func testSettingShopIDList() {
-        let database = FavoriteDatabase(defaults: UserDefaults.standard)
         database.shopIDList = ["testID"]
         XCTAssertEqual(database.shopIDList, ["testID"])
     }
     
-    func testSettingShopIDListForTestonly() {
-        let database = FavoriteDatabase(defaults: UserDefaults(suiteName: "TestOnly")!)
-        XCTAssertEqual(database.shopIDList.count, 0)
+    override func tearDown() {
+        database.shopIDList.removeAll()
     }
 }
