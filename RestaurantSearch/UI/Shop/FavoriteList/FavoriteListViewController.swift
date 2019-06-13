@@ -12,6 +12,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     private var shopList: [Shop] = []
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
+    private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorTextView: UITextView!
     
@@ -28,7 +29,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func getShopByIDList() {
-        for id in FavoriteDatabase.shared.all() {
+        for id in favoriteDatabase.all() {
             apiOperater.getShopByID(shopID: id,
                                     success: { [weak self] shopResponseBody in
                                         self?.showShopList(shopResponseBody)
