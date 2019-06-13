@@ -22,8 +22,8 @@ final class FavoriteDatabase: FavoriteDatabaseType {
     
     var shopIDList: [String] {
         get {
-            let shopID = defaults.object(forKey: type(of: self).shopIDsKey) as? [String]
-            return shopID ?? []
+            let shopIDs = defaults.object(forKey: type(of: self).shopIDsKey) as? [String]
+            return shopIDs ?? []
         }
         set {
             defaults.set(newValue, forKey: type(of: self).shopIDsKey)
