@@ -99,13 +99,12 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath) as! ImageListCell
-        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         
         let imageURL = URL(string: imageList[indexPath.row])!
         
         let request = imageDownloader.getImage(url: imageURL,
                                                success: { shopImage in
-                                                    imageView.image = shopImage
+                                                    cell.imageViewInShopInfo.image = shopImage
                                                },
                                                failure: { [weak self] error in
                                                     self?.showError(error)
