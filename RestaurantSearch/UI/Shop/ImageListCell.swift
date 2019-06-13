@@ -13,9 +13,11 @@ import Alamofire
 
 final class ImageListCell: UICollectionViewCell {
     var onReuse: (() -> Void)?
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var shopName: UILabel!
+    @IBOutlet weak var imageViewInShopList: UIImageView!
+    @IBOutlet weak var shopNameInShopList: UILabel!
     @IBOutlet weak var imageViewInShopInfo: UIImageView!
+    @IBOutlet weak var imageViewInFavoliteList: UIImageView!
+    @IBOutlet weak var shopNameInfavoriteList: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()

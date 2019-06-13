@@ -70,6 +70,10 @@
                                     <constraint firstAttribute="trailing" secondItem="qtQ-PK-4UV" secondAttribute="trailing" id="pjl-Bm-4QJ"/>
                                     <constraint firstItem="8Ol-DI-gAn" firstAttribute="leading" secondItem="NPr-wP-Hjh" secondAttribute="leading" id="wTA-eq-AZd"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imageViewInFavoliteList" destination="8Ol-DI-gAn" id="aNw-bC-HYN"/>
+                                    <outlet property="shopNameInfavoriteList" destination="4Sp-SW-psv" id="v7h-Hm-GeC"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
