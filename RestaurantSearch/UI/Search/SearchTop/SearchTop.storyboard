@@ -182,10 +182,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O7f-Fc-ozb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリーワードで検索" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8H-RI-NeG">
-                                        <rect key="frame" x="40" y="60" width="335" height="40"/>
+                                        <rect key="frame" x="40" y="60" width="277" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NOQ-MT-wmq"/>
@@ -194,8 +194,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI4-kT-c8q">
-                                        <rect key="frame" x="40" y="110" width="335" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI4-kT-c8q">
+                                        <rect key="frame" x="124" y="110" width="251" height="40"/>
                                         <color key="backgroundColor" red="0.22086977242633027" green="0.68153312144356637" blue="0.85773409834973102" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="e5R-VT-44y"/>
@@ -206,20 +206,20 @@
                                         </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.9069440038071066" green="0.90241322017900572" blue="0.88835180770152622" alpha="0.34503424657534248" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="FI4-kT-c8q" firstAttribute="top" secondItem="q8H-RI-NeG" secondAttribute="bottom" constant="10" id="Fpd-tl-R3i"/>
                                     <constraint firstItem="q8H-RI-NeG" firstAttribute="leading" secondItem="O7f-Fc-ozb" secondAttribute="leading" constant="40" id="Ghm-Xs-wap"/>
-                                    <constraint firstAttribute="height" constant="170" id="GuZ-O6-jRG"/>
                                     <constraint firstItem="q8H-RI-NeG" firstAttribute="top" secondItem="O7f-Fc-ozb" secondAttribute="top" constant="60" id="Hi3-Pc-dze"/>
-                                    <constraint firstItem="FI4-kT-c8q" firstAttribute="leading" secondItem="O7f-Fc-ozb" secondAttribute="leading" constant="40" id="P07-vV-w6c"/>
-                                    <constraint firstAttribute="trailing" secondItem="FI4-kT-c8q" secondAttribute="trailing" constant="40" id="aVk-g4-Ia9"/>
+                                    <constraint firstItem="FI4-kT-c8q" firstAttribute="leading" secondItem="O7f-Fc-ozb" secondAttribute="leading" constant="124" id="P07-vV-w6c"/>
+                                    <constraint firstAttribute="trailing" secondItem="FI4-kT-c8q" secondAttribute="trailing" constant="39" id="aVk-g4-Ia9"/>
                                     <constraint firstAttribute="trailing" secondItem="q8H-RI-NeG" secondAttribute="trailing" constant="40" id="pAw-4K-eJC"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xLG-7z-Cf0" firstAttribute="bottom" secondItem="O7f-Fc-ozb" secondAttribute="bottom" id="7XF-G8-0fe"/>
                             <constraint firstAttribute="bottom" secondItem="r7l-ze-7dt" secondAttribute="bottom" id="G0R-Io-1mp"/>
                             <constraint firstItem="r7l-ze-7dt" firstAttribute="top" secondItem="CGs-Qd-3J8" secondAttribute="top" id="QlM-up-QlN"/>
                             <constraint firstItem="O7f-Fc-ozb" firstAttribute="top" secondItem="CGs-Qd-3J8" secondAttribute="top" id="fSv-u0-so9"/>

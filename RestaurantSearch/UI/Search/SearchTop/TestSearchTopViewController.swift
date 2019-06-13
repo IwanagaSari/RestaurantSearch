@@ -20,7 +20,7 @@ class TestSearchTopViewController: UIViewController {
         tabBarController?.tabBar.isHidden = true
         
         UIView.animate(withDuration: 1.5, animations: { () -> Void in
-            self.bottomView.backgroundColor = UIColor.black// UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
+            self.bottomView.backgroundColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 0.3)
         })
 //        self.bottomView.center = self.view.center
 //        UIView.animate(withDuration: 0.5, delay: 0.0, options: .autoreverse, animations: {
