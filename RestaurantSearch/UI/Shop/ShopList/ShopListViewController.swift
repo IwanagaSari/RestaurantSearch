@@ -66,7 +66,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         
         let request = imageDownloader.getImage(url: imageURL,
                                                success: {shopImage in
-                                                   cell.imageView.image = shopImage
+                                                   cell.imageViewInShopList.image = shopImage
                                                },
                                                failure: { [weak self] error in
                                                    self?.showError(error)
@@ -75,7 +75,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
             request?.cancel()
         }
     
-        cell.shopName.text = shopList[indexPath.row].name
+        cell.shopNameInShopList.text = shopList[indexPath.row].name
         
         return cell
     }
