@@ -42,7 +42,7 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
         show(vc, sender: nil)
     }
     
-    private func showAlert() {
+    private func showValidationAlert() {
         let alertController = UIAlertController(title: "Error", message: "検索条件を入力してください", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
@@ -59,7 +59,7 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
             showAreaSelect()
         case 4:
             if validateInput() {
-                showAlert()
+                showValidationAlert()
             } else {
                 showShopList()
             }
