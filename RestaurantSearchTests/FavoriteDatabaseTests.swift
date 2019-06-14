@@ -19,19 +19,19 @@ final class FavoriteDatabaseTests: XCTestCase {
     }
     
     func testAddANDRemove() {
+        XCTAssertTrue(database.all().isEmpty)
         database.add("shopID")
-        XCTAssertEqual(database.all().contains("shopID"), true)
+        XCTAssertTrue(database.all().contains("shopID"))
         XCTAssertEqual(database.all().count, 1)
         
         database.remove("shopID")
-        XCTAssertEqual(database.all().contains("test"), false)
-        XCTAssertEqual(database.all().count, 0)
+        XCTAssertFalse(database.all().contains("shopID"))
+        XCTAssertTrue(database.all().isEmpty)
     }
     
     override func tearDown() {
         super.tearDown()
         var shopIDList = database.all()
         shopIDList.removeAll()
-        
     }
 }
