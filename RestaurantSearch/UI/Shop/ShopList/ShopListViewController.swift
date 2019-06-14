@@ -65,7 +65,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
         
         let request = imageDownloader.getImage(url: imageURL,
-                                               success: {shopImage in
+                                               success: { shopImage in
                                                    cell.imageViewInShopList.image = shopImage
                                                },
                                                failure: { [weak self] error in
