@@ -9,8 +9,8 @@
 import UIKit
 
 final class CitySelectViewController: UITableViewController {
-    @IBOutlet var errorView: UIView!
-    @IBOutlet weak var errorTextView: UITextView!
+    @IBOutlet private var errorView: UIView!
+    @IBOutlet weak private var errorMessageLabel: UILabel!
     var apiOperater: APIType = APIOperater()
     private var cityList: [City] = []
     private var prefecture: Prefecture!
@@ -26,7 +26,6 @@ final class CitySelectViewController: UITableViewController {
         navigationItem.title = prefecture.prefName
         
         getCity()
-        self.tableView.backgroundView = errorView
     }
     
     private func getCity() {
@@ -42,11 +41,13 @@ final class CitySelectViewController: UITableViewController {
     
     private func showCity(_ cityResponseBody: CityResponseBody) {
         cityList = cityResponseBody.cityList.filter { $0.pref.prefName == prefecture.prefName }
-        self.tableView.reloadData()
+        tableView.backgroundView = nil
+        tableView.reloadData()
     }
     
     private func showError(_ error: Error) {
-        self.errorTextView.text = error.localizedDescription
+        errorMessageLabel.text = error.localizedDescription
+        tableView.backgroundView = errorView
     }
     
     private func showTownSelect(_ city: City) {
