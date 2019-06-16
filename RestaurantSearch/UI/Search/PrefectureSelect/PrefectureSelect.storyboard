@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EbI-vy-Xn5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EbI-vy-Xn5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" title="エリア名を表示" id="rsG-QY-Zuf"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="errorTextView" destination="aFL-YT-0cl" id="tq3-Xk-3uT"/>
+                        <outlet property="errorMessageLabel" destination="hqV-qu-fBn" id="rCE-1E-Jjb"/>
                         <outlet property="errorView" destination="mQh-8Z-gUy" id="ne2-Tq-chU"/>
                     </connections>
                 </tableViewController>
@@ -45,19 +45,21 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="エラーメッセージ" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aFL-YT-0cl">
-                            <rect key="frame" x="30" y="30" width="180" height="68"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqV-qu-fBn">
+                            <rect key="frame" x="15" y="15" width="210" height="98"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="aFL-YT-0cl" firstAttribute="leading" secondItem="ibP-Ht-Vq9" secondAttribute="leading" constant="30" id="6V5-Hu-dPu"/>
-                        <constraint firstItem="aFL-YT-0cl" firstAttribute="top" secondItem="ibP-Ht-Vq9" secondAttribute="top" constant="30" id="B7b-tm-caZ"/>
-                        <constraint firstItem="aFL-YT-0cl" firstAttribute="centerX" secondItem="mQh-8Z-gUy" secondAttribute="centerX" id="gPP-j8-fMe"/>
-                        <constraint firstItem="aFL-YT-0cl" firstAttribute="centerY" secondItem="mQh-8Z-gUy" secondAttribute="centerY" id="vzY-cE-jVa"/>
+                        <constraint firstItem="ibP-Ht-Vq9" firstAttribute="trailing" secondItem="hqV-qu-fBn" secondAttribute="trailing" constant="15" id="3VW-hB-M3T"/>
+                        <constraint firstItem="hqV-qu-fBn" firstAttribute="top" secondItem="ibP-Ht-Vq9" secondAttribute="top" constant="15" id="3ak-ys-GJi"/>
+                        <constraint firstItem="hqV-qu-fBn" firstAttribute="centerY" secondItem="mQh-8Z-gUy" secondAttribute="centerY" id="9VH-dK-GeV"/>
+                        <constraint firstItem="hqV-qu-fBn" firstAttribute="centerX" secondItem="mQh-8Z-gUy" secondAttribute="centerX" id="ESs-09-2Vk"/>
+                        <constraint firstItem="hqV-qu-fBn" firstAttribute="leading" secondItem="ibP-Ht-Vq9" secondAttribute="leading" constant="15" id="PXR-Ab-9rc"/>
+                        <constraint firstItem="ibP-Ht-Vq9" firstAttribute="bottom" secondItem="hqV-qu-fBn" secondAttribute="bottom" constant="15" id="RhK-ba-ZXZ"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="ibP-Ht-Vq9"/>
                 </view>
