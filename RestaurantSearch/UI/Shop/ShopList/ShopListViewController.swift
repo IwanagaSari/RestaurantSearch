@@ -58,7 +58,6 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("お店の数：\(shopList.count)")
         return shopList.count
     }
     
