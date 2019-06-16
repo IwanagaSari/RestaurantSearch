@@ -11,11 +11,19 @@ import XCTest
 
 final class FavoriteDatabaseTests: XCTestCase {
     private var database: FavoriteDatabase!
+    private let uuID = UUID().uuidString
+    private lazy var defaults = UserDefaults(suiteName: self.uuID)!
     
     override func setUp() {
         super.setUp()
         
-        database = FavoriteDatabase(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        database = FavoriteDatabase(defaults: defaults)
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        
+        self.defaults.removeSuite(named: uuID)
     }
     
     func testAddANDRemove() {
@@ -27,11 +35,5 @@ final class FavoriteDatabaseTests: XCTestCase {
         database.remove("shopID")
         XCTAssertFalse(database.all().contains("shopID"))
         XCTAssertTrue(database.all().isEmpty)
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-        var shopIDList = database.all()
-        shopIDList.removeAll()
     }
 }
