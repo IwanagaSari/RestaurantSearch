@@ -15,7 +15,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private var townCode: String = "AREAS5504" // とりあえず
     private var freeword: String = "焼肉"
     @IBOutlet private var errorView: UIView!
-    @IBOutlet private weak var errorMessageLabel: UILabel!
+    @IBOutlet weak private var errorMessageLabel: UILabel!
     
     static func instantiate(townCode: String, freeword: String) -> ShopListViewController {
         let vc = UIStoryboard(name: "ShopList", bundle: nil).instantiateInitialViewController() as! ShopListViewController
@@ -58,6 +58,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("お店の数：\(shopList.count)")
         return shopList.count
     }
     
