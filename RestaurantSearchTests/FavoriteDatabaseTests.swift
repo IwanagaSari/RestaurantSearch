@@ -28,6 +28,7 @@ final class FavoriteDatabaseTests: XCTestCase {
     
     func testAddANDRemove() {
         XCTAssertTrue(database.all().isEmpty)
+        
         database.add("shopID")
         XCTAssertTrue(database.all().contains("shopID"))
         XCTAssertEqual(database.all().count, 1)
