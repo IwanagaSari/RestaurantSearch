@@ -11,8 +11,8 @@ import XCTest
 
 final class FavoriteDatabaseTests: XCTestCase {
     private var database: FavoriteDatabase!
-    private let uuID = UUID().uuidString
-    private lazy var defaults = UserDefaults(suiteName: self.uuID)!
+    private let uuid = UUID().uuidString
+    private lazy var defaults = UserDefaults(suiteName: self.uuid)!
     
     override func setUp() {
         super.setUp()
@@ -23,7 +23,7 @@ final class FavoriteDatabaseTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         
-        self.defaults.removeSuite(named: uuID)
+        self.defaults.removeSuite(named: uuid)
     }
     
     func testAddANDRemove() {
