@@ -16,7 +16,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorMessageLabel: UILabel!
     
-    
     static func instantiate() -> FavoriteListViewController {
         let vc = UIStoryboard(name: "FavoriteList", bundle: nil).instantiateInitialViewController() as! FavoriteListViewController
         return vc
@@ -26,7 +25,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         super.viewDidLoad()
         
         getShopByIDList()
-        collectionView.backgroundView = errorView
     }
     
     private func getShopByIDList() {
@@ -43,11 +41,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     private func showShopList(_ shopResponseBody: ShopResponseBody) {
         shopList.append(shopResponseBody.shop[0])
+        collectionView.backgroundView = nil
         collectionView.reloadData()
     }
     
     private func showError(_ error: Error) {
-        errorTextView.text = error.localizedDescription
+        errorMessageLabel.text = error.localizedDescription
+        collectionView.backgroundView = errorView
     }
     
     private func showShopInfo(_ shop: Shop) {
