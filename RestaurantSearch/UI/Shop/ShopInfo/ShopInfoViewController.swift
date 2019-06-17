@@ -54,11 +54,11 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
             
             imageDownloader.getImage(url: topImageURL,
                                      success: { [weak self] topImage in
-                                        self?.shopTopImageView.image = topImage
-                },
+                                            self?.shopTopImageView.image = topImage
+                                     },
                                      failure: { [weak self] error in
-                                        self?.showError(error)
-            })
+                                            self?.showError(error)
+                                     })
         }
     }
     

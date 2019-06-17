@@ -71,11 +71,11 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
             let imageURL = URL(string: shopImage)!
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
-                                                    cell.imageViewInShopList.image = shopImage
-            },
+                                                        cell.imageViewInShopList.image = shopImage
+                                                   },
                                                    failure: { [weak self] error in
-                                                    self?.showError(error)
-            })
+                                                        self?.showError(error)
+                                                   })
             cell.onReuse = {
                 request?.cancel()
             }

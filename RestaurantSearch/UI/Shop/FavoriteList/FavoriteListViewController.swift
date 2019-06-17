@@ -68,11 +68,11 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             let imageURL = URL(string: shopImage)!
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
-                                                    cell.imageViewInFavoliteList.image = shopImage
-            },
+                                                        cell.imageViewInFavoliteList.image = shopImage
+                                                   },
                                                    failure: { [weak self] error in
-                                                    self?.showError(error)
-            })
+                                                        self?.showError(error)
+                                                   })
             cell.onReuse = {
                 request?.cancel()
             }
