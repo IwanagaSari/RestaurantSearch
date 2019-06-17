@@ -47,15 +47,19 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     }
     
     private func showTopImage() {
-        let topImageURL = URL(string: shop.imageUrl.shopImage1)!
-        
-        imageDownloader.getImage(url: topImageURL,
-                                 success: { [weak self] topImage in
-                                    self?.shopTopImageView.image = topImage
-                                 },
-                                 failure: { [weak self] error in
-                                    self?.showError(error)
-                                 })
+        if shop.imageUrl.shopImage1.isEmpty {
+            shopTopImageView.image = UIImage(named: "error")
+        } else {
+            let topImageURL = URL(string: shop.imageUrl.shopImage1)!
+            
+            imageDownloader.getImage(url: topImageURL,
+                                     success: { [weak self] topImage in
+                                        self?.shopTopImageView.image = topImage
+                },
+                                     failure: { [weak self] error in
+                                        self?.showError(error)
+            })
+        }
     }
     
     private func showShopMap() {
