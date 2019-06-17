@@ -49,6 +49,11 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         errorTextView.text = error.localizedDescription
     }
     
+    private func showShopInfo(_ shop: Shop) {
+        let vc = ShopInfoViewController.instantiate(shop: shop)
+        show(vc, sender: nil)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return shopList.count
     }
@@ -72,6 +77,11 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         cell.shopNameInfavoriteList.text = shopList[indexPath.row].name
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let shop = shopList[indexPath.row]
+        showShopInfo(shop)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
