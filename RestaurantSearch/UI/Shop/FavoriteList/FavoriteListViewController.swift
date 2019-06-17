@@ -14,7 +14,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
     @IBOutlet private var errorView: UIView!
-    @IBOutlet weak private var errorTextView: UITextView!
+    @IBOutlet weak private var errorMessageLabel: UILabel!
+    
     
     static func instantiate() -> FavoriteListViewController {
         let vc = UIStoryboard(name: "FavoriteList", bundle: nil).instantiateInitialViewController() as! FavoriteListViewController
