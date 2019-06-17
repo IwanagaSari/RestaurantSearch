@@ -25,7 +25,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopListCell" id="k9C-vp-mKQ">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopListCell" id="k9C-vp-mKQ" customClass="ImageListCell" customModule="RestaurantSearch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="188" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -64,6 +64,10 @@
                                     <constraint firstItem="fCf-jE-BwR" firstAttribute="top" secondItem="k9C-vp-mKQ" secondAttribute="top" id="jML-3A-MXV"/>
                                     <constraint firstAttribute="trailing" secondItem="coD-nR-LKe" secondAttribute="trailing" id="xie-Hs-bhh"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imageViewInShopList" destination="fCf-jE-BwR" id="3eg-A6-UR0"/>
+                                    <outlet property="shopNameInShopList" destination="VYh-Tj-NKA" id="p7f-K1-Hk0"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860AD39422AE42950009E9C6 /* FavoriteDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */; };
 		860CCD0E229BC0CA00943F17 /* PrefectureSelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */; };
 		860CCD10229E4C4700943F17 /* ImageDownloder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0F229E4C4700943F17 /* ImageDownloder.swift */; };
+		860CCD1622A4BAC700943F17 /* ShopMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1522A4BAC700943F17 /* ShopMapTests.swift */; };
 		860CCD1A22A4D88700943F17 /* ShopInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1922A4D88700943F17 /* ShopInfoTests.swift */; };
 		860CCD1C22A4E35C00943F17 /* ShopListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1B22A4E35C00943F17 /* ShopListTests.swift */; };
-		860CCD1622A4BAC700943F17 /* ShopMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1522A4BAC700943F17 /* ShopMapTests.swift */; };
+		860CCD2022A7611000943F17 /* FavoriteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */; };
+		865693C422AA18E000B9DEBD /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865693C322AA18E000B9DEBD /* ImageListCell.swift */; };
 		866273C2224A0165007CA319 /* AreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C1224A0165007CA319 /* AreaTests.swift */; };
 		866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C3224A09A9007CA319 /* PrefectureTests.swift */; };
 		866273C6224A0EFB007CA319 /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C5224A0EFB007CA319 /* CityTests.swift */; };
@@ -74,11 +77,14 @@
 		220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55DA32510038EF2A008F17D9 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		6B8D096C2BEB44B89D1587B4 /* Pods-RestaurantSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDatabaseTests.swift; sourceTree = "<group>"; };
 		860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureSelectTests.swift; sourceTree = "<group>"; };
 		860CCD0F229E4C4700943F17 /* ImageDownloder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloder.swift; sourceTree = "<group>"; };
+		860CCD1522A4BAC700943F17 /* ShopMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMapTests.swift; sourceTree = "<group>"; };
 		860CCD1922A4D88700943F17 /* ShopInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoTests.swift; sourceTree = "<group>"; };
 		860CCD1B22A4E35C00943F17 /* ShopListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTests.swift; sourceTree = "<group>"; };
-		860CCD1522A4BAC700943F17 /* ShopMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMapTests.swift; sourceTree = "<group>"; };
+		860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDatabase.swift; sourceTree = "<group>"; };
+		865693C322AA18E000B9DEBD /* ImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
 		866273C1224A0165007CA319 /* AreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTests.swift; sourceTree = "<group>"; };
 		866273C3224A09A9007CA319 /* PrefectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureTests.swift; sourceTree = "<group>"; };
 		866273C5224A0EFB007CA319 /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
@@ -190,6 +196,7 @@
 				86E8FE08225DCF2800DCAD11 /* ShopInfo */,
 				86E8FE07225DCF1E00DCAD11 /* ShopList */,
 				860CCD0F229E4C4700943F17 /* ImageDownloder.swift */,
+				865693C322AA18E000B9DEBD /* ImageListCell.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -289,6 +296,7 @@
 			children = (
 				86E8FE0D225DD03D00DCAD11 /* FavoriteList.storyboard */,
 				86E8FE0F225DD05800DCAD11 /* FavoriteListViewController.swift */,
+				860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */,
 			);
 			path = FavoriteList;
 			sourceTree = "<group>";
@@ -368,6 +376,7 @@
 				860CCD1922A4D88700943F17 /* ShopInfoTests.swift */,
 				860CCD1B22A4E35C00943F17 /* ShopListTests.swift */,
 				860CCD1522A4BAC700943F17 /* ShopMapTests.swift */,
+				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
 			);
 			path = RestaurantSearchTests;
 			sourceTree = "<group>";
@@ -590,6 +599,7 @@
 				86E8FE25225DD36E00DCAD11 /* GenreSelectViewController.swift in Sources */,
 				EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */,
 				EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */,
+				860CCD2022A7611000943F17 /* FavoriteDatabase.swift in Sources */,
 				86E8FE1F225DD34300DCAD11 /* SceneSelectViewController.swift in Sources */,
 				EA267A102248F49200F3091C /* Town.swift in Sources */,
 				EA267A0E2248EFF200F3091C /* City.swift in Sources */,
@@ -600,6 +610,7 @@
 				86E8FE1C225DD23200DCAD11 /* ShopListViewController.swift in Sources */,
 				86E8FE27225DD37C00DCAD11 /* TownSelectViewController.swift in Sources */,
 				EA1D8CA2228C0C2300B6065E /* Shop.swift in Sources */,
+				865693C422AA18E000B9DEBD /* ImageListCell.swift in Sources */,
 				86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */,
 				EA1A080C226DC4AD00550B4F /* SearchTopTableViewController.swift in Sources */,
 				86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */,
@@ -616,6 +627,7 @@
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
 				EA2679FB2248CCC100F3091C /* RestaurantSearchTests.swift in Sources */,
 				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
+				860AD39422AE42950009E9C6 /* FavoriteDatabaseTests.swift in Sources */,
 				EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */,
 				EA497753229BD428001BE1DB /* TownSelectTests.swift in Sources */,
 				866273C2224A0165007CA319 /* AreaTests.swift in Sources */,

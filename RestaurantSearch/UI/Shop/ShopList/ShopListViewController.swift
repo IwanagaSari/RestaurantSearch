@@ -9,7 +9,7 @@
 import UIKit
 
 final class ShopListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    private let apiOperater = APIOperater()
+    private let apiOperater: APIType = APIOperater()
     private var shopList: [Shop] = []
     private let imageDownloader = ImageDownloader.shared
     private var townCode: String = "AREAS5504" // とりあえず
@@ -31,14 +31,14 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     private func getShop() {
-        apiOperater.getShop(townCode: townCode, freeword: freeword,
-            success: { [weak self] shopResponseBody in
-                self?.showShopList(shopResponseBody)
-            },
-            failure: { [weak self] error in
-                self?.showError(error)
-            }
-        )
+        apiOperater.getShop(townCode: townCode,
+                            freeword: freeword,
+                            success: { [weak self] shopResponseBody in
+                                self?.showShopList(shopResponseBody)
+                            },
+                            failure: { [weak self] error in
+                                self?.showError(error)
+                            })
     }
     
     private func showShopList(_ shopResponseBody: ShopResponseBody) {
@@ -62,20 +62,21 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell", for: indexPath)
-        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell", for: indexPath) as! ImageListCell
         let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
         
-        imageDownloader.getImage(url: imageURL,
-                                 success: {shopImage in
-                                    imageView.image = shopImage
-                                 },
-                                 failure: { [weak self] error in
-                                    self?.showError(error)
-                                 }
-        )
-        let label = cell.contentView.viewWithTag(2) as! UILabel
-        label.text = shopList[indexPath.row].name
+        let request = imageDownloader.getImage(url: imageURL,
+                                               success: { shopImage in
+                                                   cell.imageViewInShopList.image = shopImage
+                                               },
+                                               failure: { [weak self] error in
+                                                   self?.showError(error)
+                                               })
+        cell.onReuse = {
+            request?.cancel()
+        }
+    
+        cell.shopNameInShopList.text = shopList[indexPath.row].name
         
         return cell
     }

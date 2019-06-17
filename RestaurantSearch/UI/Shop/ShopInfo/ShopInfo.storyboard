@@ -127,7 +127,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopInfoCell" id="hWF-xl-Por">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShopInfoCell" id="hWF-xl-Por" customClass="ImageListCell" customModule="RestaurantSearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="178" height="175"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -145,6 +145,9 @@
                                             <constraint firstItem="CQk-RF-Q3o" firstAttribute="top" secondItem="hWF-xl-Por" secondAttribute="top" id="ofV-Jr-AXm"/>
                                             <constraint firstAttribute="trailing" secondItem="CQk-RF-Q3o" secondAttribute="trailing" id="van-Dv-d9T"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="imageViewInShopInfo" destination="CQk-RF-Q3o" id="XXW-Ix-Xme"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -182,12 +185,12 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="HGJ-gx-Kgu">
                                 <connections>
-                                    <action selector="addButtonTapped:" destination="opu-gT-qyw" id="tpu-Fd-HE3"/>
+                                    <action selector="addButtonTapped:" destination="opu-gT-qyw" id="Ygc-nK-XYw"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="trash" id="SoY-jn-zgd">
                                 <connections>
-                                    <action selector="deleteButtonTapped:" destination="opu-gT-qyw" id="VoY-sr-wge"/>
+                                    <action selector="deleteButtonTapped:" destination="opu-gT-qyw" id="bLR-dQ-f0U"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -195,7 +198,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="HGJ-gx-Kgu" id="MIl-Aw-QLX"/>
                         <outlet property="collectionView" destination="Gll-RF-Abk" id="vxh-ix-Y4o"/>
+                        <outlet property="deleteButton" destination="SoY-jn-zgd" id="FtF-Gg-Now"/>
                         <outlet property="shopAdressLabel" destination="boz-zk-nff" id="zb5-ws-NUp"/>
                         <outlet property="shopNameLabel" destination="gwV-85-X9D" id="uQx-kO-mpg"/>
                         <outlet property="shopTopImageView" destination="u0a-tt-5v1" id="tk5-Pv-jeh"/>

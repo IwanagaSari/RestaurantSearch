@@ -9,17 +9,24 @@
 import Foundation
 import Alamofire
 
+protocol Cancellable {
+    func cancel()
+}
+
+extension DataRequest: Cancellable {}
+
 final class ImageDownloader {
     private let cache = NSCache<NSURL, UIImage>()
     static let shared = ImageDownloader()
     
-    func getImage(url: URL, success: @escaping (UIImage) -> Void, failure: @escaping (Error) -> Void) {
+    func getImage(url: URL, success: @escaping (UIImage) -> Void, failure: @escaping (Error) -> Void) -> Cancellable? {
         //キャッシュに保存されている場合
         if let imageFromCache = self.cache.object(forKey: url as NSURL) {
             success(imageFromCache)
+            return nil
         // キャッシュに保存されていないとする
         } else {
-            Alamofire.request(url).responseData { response in
+            return Alamofire.request(url).responseData { response in
                 switch response.result {
                 case .success(let data):
                     if let image = UIImage(data: data) {

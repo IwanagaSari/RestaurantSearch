@@ -14,14 +14,23 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak private var shopAdressLabel: UILabel!
     @IBOutlet weak private var shopTopImageView: UIImageView!
     @IBOutlet weak private var collectionView: UICollectionView!
+    @IBOutlet private var addButton: UIBarButtonItem!
+    @IBOutlet private var deleteButton: UIBarButtonItem!
     private var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
+    private let database: FavoriteDatabaseType = FavoriteDatabase.shared
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
         let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
         vc.shop = shop
         return vc
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        showUIBarButton()
     }
     
     override func viewDidLoad() {
@@ -46,8 +55,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
                                  },
                                  failure: { [weak self] error in
                                     self?.showError(error)
-                                 }
-        )
+                                 })
     }
     
     private func showShopMap() {
@@ -59,9 +67,19 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         print(error.localizedDescription)
     }
     
+    private func showFavoriteList() {
+        let vc = FavoriteListViewController.instantiate()
+        show(vc, sender: nil)
+    }
+    
     private func updateImageList() {
         let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
         imageList = allImage.filter { !$0.isEmpty }
+    }
+    
+    private func showUIBarButton() {
+        let isFavorite = database.contain(shop.id)
+        navigationItem.rightBarButtonItems = isFavorite ? [deleteButton] : [addButton]
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -69,19 +87,20 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath)
-        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath) as! ImageListCell
         
         let imageURL = URL(string: imageList[indexPath.row])!
         
-        imageDownloader.getImage(url: imageURL,
-                                 success: { shopImage in
-                                    imageView.image = shopImage
-                                 },
-                                 failure: { [weak self] error in
-                                    self?.showError(error)
-                                 }
-        )
+        let request = imageDownloader.getImage(url: imageURL,
+                                               success: { shopImage in
+                                                    cell.imageViewInShopInfo.image = shopImage
+                                               },
+                                               failure: { [weak self] error in
+                                                    self?.showError(error)
+                                               })
+        cell.onReuse = {
+            request?.cancel()
+        }
         return cell
     }
     
@@ -96,12 +115,14 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
-        //お気に入りに入っていないお店であれば、追加ボタンを表示する
+        database.add(shop.id)
+        showFavoriteList()
     }
     
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
-        //お気に入りにすでに入っているお店なら、削除ボタンを表示する
+        database.remove(shop.id)
+        showFavoriteList()
     }
     
     /// 地図ボタンをタップされた時
@@ -116,7 +137,6 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     
     /// さらに詳しくボタンをタップされた時
     @IBAction func detailButtonTapped(_ sender: UIButton) {
-        // 仮に「一蘭」というお店だとする
         var components = URLComponents(string: "https://www.google.co.jp/search")!
         components.queryItems = [URLQueryItem(name: "q", value: shop.name)]
         if let url = components.url {
