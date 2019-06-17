@@ -74,28 +74,30 @@
                     <navigationItem key="navigationItem" title="検索結果一覧" id="qgE-hH-2BF"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="errorTextView" destination="3XU-Fd-Dh5" id="Lxn-gm-3mZ"/>
+                        <outlet property="errorMessageLabel" destination="5In-w4-cwo" id="u5M-wb-fNG"/>
                         <outlet property="errorView" destination="LJv-Cg-wy3" id="tUc-Ad-yde"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKJ-hf-ppn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="LJv-Cg-wy3">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <rect key="frame" x="0.0" y="0.0" width="252" height="413"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="エラーメッセージ" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3XU-Fd-Dh5">
-                            <rect key="frame" x="30" y="30" width="180" height="68"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5In-w4-cwo">
+                            <rect key="frame" x="15" y="15" width="222" height="383"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="3XU-Fd-Dh5" firstAttribute="top" secondItem="LJv-Cg-wy3" secondAttribute="top" constant="30" id="Ris-Tu-AjF"/>
-                        <constraint firstItem="3XU-Fd-Dh5" firstAttribute="leading" secondItem="oGb-pp-BMy" secondAttribute="leading" constant="30" id="o4R-Ji-ft3"/>
-                        <constraint firstItem="3XU-Fd-Dh5" firstAttribute="centerY" secondItem="LJv-Cg-wy3" secondAttribute="centerY" id="pYH-xu-z4u"/>
-                        <constraint firstItem="3XU-Fd-Dh5" firstAttribute="centerX" secondItem="LJv-Cg-wy3" secondAttribute="centerX" id="peg-we-r08"/>
+                        <constraint firstAttribute="bottom" secondItem="5In-w4-cwo" secondAttribute="bottom" constant="15" id="5b3-3q-PQg"/>
+                        <constraint firstItem="5In-w4-cwo" firstAttribute="centerX" secondItem="LJv-Cg-wy3" secondAttribute="centerX" id="aPg-zN-F31"/>
+                        <constraint firstItem="oGb-pp-BMy" firstAttribute="trailing" secondItem="5In-w4-cwo" secondAttribute="trailing" constant="15" id="cqj-U3-P0g"/>
+                        <constraint firstItem="5In-w4-cwo" firstAttribute="top" secondItem="LJv-Cg-wy3" secondAttribute="top" constant="15" id="fIc-p0-TKZ"/>
+                        <constraint firstItem="5In-w4-cwo" firstAttribute="leading" secondItem="oGb-pp-BMy" secondAttribute="leading" constant="15" id="jVg-Tz-NJL"/>
+                        <constraint firstItem="5In-w4-cwo" firstAttribute="centerY" secondItem="LJv-Cg-wy3" secondAttribute="centerY" id="kdA-Ia-Fwg"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="oGb-pp-BMy"/>
                 </view>

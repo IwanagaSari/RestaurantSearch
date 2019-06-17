@@ -36,28 +36,30 @@
                     <navigationItem key="navigationItem" title="県名を表示" id="eOP-LO-pJk"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="errorTextView" destination="j0m-1L-dkV" id="Nwn-eC-FRC"/>
+                        <outlet property="errorMessageLabel" destination="R8g-j9-SFH" id="ofy-8q-6Xw"/>
                         <outlet property="errorView" destination="FhO-O4-FUK" id="bqM-Bi-0ZJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8s-E6-QBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="FhO-O4-FUK">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="311"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="エラーメッセージ" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j0m-1L-dkV">
-                            <rect key="frame" x="30" y="30" width="180" height="68"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8g-j9-SFH">
+                            <rect key="frame" x="15" y="15" width="210" height="281"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="j0m-1L-dkV" firstAttribute="top" secondItem="FhO-O4-FUK" secondAttribute="top" constant="30" id="LMH-VJ-2R1"/>
-                        <constraint firstItem="j0m-1L-dkV" firstAttribute="centerX" secondItem="FhO-O4-FUK" secondAttribute="centerX" id="cYF-se-52Q"/>
-                        <constraint firstItem="j0m-1L-dkV" firstAttribute="leading" secondItem="21m-Yy-lQN" secondAttribute="leading" constant="30" id="m1q-Oo-pSH"/>
-                        <constraint firstItem="j0m-1L-dkV" firstAttribute="centerY" secondItem="FhO-O4-FUK" secondAttribute="centerY" id="xPK-ef-O7Q"/>
+                        <constraint firstItem="R8g-j9-SFH" firstAttribute="centerY" secondItem="FhO-O4-FUK" secondAttribute="centerY" id="U3Z-Vp-Tce"/>
+                        <constraint firstItem="R8g-j9-SFH" firstAttribute="leading" secondItem="21m-Yy-lQN" secondAttribute="leading" constant="15" id="UDw-8i-9Lg"/>
+                        <constraint firstItem="21m-Yy-lQN" firstAttribute="trailing" secondItem="R8g-j9-SFH" secondAttribute="trailing" constant="15" id="chl-mH-pwD"/>
+                        <constraint firstAttribute="bottom" secondItem="R8g-j9-SFH" secondAttribute="bottom" constant="15" id="mKc-re-ASp"/>
+                        <constraint firstItem="R8g-j9-SFH" firstAttribute="centerX" secondItem="FhO-O4-FUK" secondAttribute="centerX" id="mfr-46-p3W"/>
+                        <constraint firstItem="R8g-j9-SFH" firstAttribute="top" secondItem="FhO-O4-FUK" secondAttribute="top" constant="15" id="wQT-di-tU7"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="21m-Yy-lQN"/>
                 </view>

@@ -9,8 +9,8 @@
 import UIKit
 
 final class PrefectureSelectViewController: UITableViewController {
-    @IBOutlet var errorView: UIView!
-    @IBOutlet weak var errorTextView: UITextView!
+    @IBOutlet private var errorView: UIView!
+    @IBOutlet weak private var errorMessageLabel: UILabel!
     var apiOperater: APIType = APIOperater()
     private var prefectureList: [Prefecture] = []
     private var area: Area!
@@ -26,7 +26,6 @@ final class PrefectureSelectViewController: UITableViewController {
         navigationItem.title = area.areaName
         
         getPrefecture()
-        self.tableView.backgroundView = errorView
     }
     
     private func getPrefecture() {
@@ -42,11 +41,13 @@ final class PrefectureSelectViewController: UITableViewController {
     
     private func showPrefecture(_ prefectureResponseBody: PrefectureResponseBody) {
         prefectureList = prefectureResponseBody.prefectureList.filter { $0.areaCode == area.areaCode }
-        self.tableView.reloadData()
+        tableView.backgroundView = nil
+        tableView.reloadData()
     }
     
     private func showError(_ error: Error) {
-        self.errorTextView.text = error.localizedDescription
+        errorMessageLabel.text = error.localizedDescription
+        tableView.backgroundView = errorView
     }
     
     private func showCitySelect(_ prefecture: Prefecture) {

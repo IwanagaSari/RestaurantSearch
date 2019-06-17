@@ -9,8 +9,8 @@
 import UIKit
 
 final class TownSelectViewController: UITableViewController {
-    @IBOutlet var errorView: UIView!
-    @IBOutlet weak var errorTextView: UITextView!
+    @IBOutlet private var errorView: UIView!
+    @IBOutlet weak private var errorMessageLabel: UILabel!
     var apiOperater: APIType = APIOperater()
     private var townList: [Town] = []
     private var city: City!
@@ -26,7 +26,6 @@ final class TownSelectViewController: UITableViewController {
         navigationItem.title = city.cityName
         
         getTown()
-        self.tableView.backgroundView = errorView
     }
     
     private func getTown() {
@@ -42,11 +41,13 @@ final class TownSelectViewController: UITableViewController {
     
     private func showTown(_ townResponseBody: TownResponseBody) {
         townList = townResponseBody.townList.filter { $0.city.cityCode == city.cityCode }
-        self.tableView.reloadData()
+        tableView.backgroundView = nil
+        tableView.reloadData()
     }
     
     private func showError(_ error: Error) {
-       self.errorTextView.text = error.localizedDescription
+        errorMessageLabel.text = error.localizedDescription
+        tableView.backgroundView = errorView
     }
     
     private func showSearchTop(_ town: Town) {
