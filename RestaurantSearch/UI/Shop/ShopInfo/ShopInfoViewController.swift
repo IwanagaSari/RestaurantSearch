@@ -78,7 +78,6 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     }
     
     private func showUIBarButton() {
-        let database = FavoriteDatabase.shared
         let isFavorite = database.contain(shop.id)
         navigationItem.rightBarButtonItems = isFavorite ? [deleteButton] : [addButton]
     }
