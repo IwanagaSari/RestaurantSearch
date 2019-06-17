@@ -63,11 +63,12 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell", for: indexPath) as! ImageListCell
-        if shopList[indexPath.row].imageUrl.shopImage1.isEmpty {
+        let shopImage = shopList[indexPath.row].imageUrl.shopImage1
+        
+        if shopImage.isEmpty {
             cell.imageViewInShopList.image = UIImage(named: "error")
         } else {
-            let imageURL = URL(string: shopList[indexPath.row].imageUrl.shopImage1)!
-            
+            let imageURL = URL(string: shopImage)!
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
                                                     cell.imageViewInShopList.image = shopImage
