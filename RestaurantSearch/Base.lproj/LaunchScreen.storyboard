@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,18 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top2" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-nY-ouQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top3" translatesAutoresizingMaskIntoConstraints="NO" id="dEz-nY-ouQ">
+                                <rect key="frame" x="103.66666666666669" y="300" width="207" height="296"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKb-CI-qFd">
+                                <rect key="frame" x="0.0" y="274.66666666666669" width="414" height="25.333333333333314"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-BlackItalic" family="Hoefler Text" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HMu-7D-5lb"/>
-                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="WgD-Sx-fCD"/>
-                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cvU-Dm-kv1"/>
-                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g1p-fb-xKO"/>
-                            <constraint firstAttribute="bottom" secondItem="dEz-nY-ouQ" secondAttribute="bottom" id="kOr-H6-aRj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dEz-nY-ouQ" secondAttribute="trailing" id="zBK-Sb-dUX"/>
+                            <constraint firstItem="xKb-CI-qFd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5lZ-Nc-9AQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xKb-CI-qFd" secondAttribute="trailing" id="KE0-zF-dok"/>
+                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="McR-ri-Q29"/>
+                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Odt-Ng-E0L"/>
+                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.33" id="XkP-Fk-6gG"/>
+                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="top" secondItem="xKb-CI-qFd" secondAttribute="bottom" id="iDl-QD-nAX"/>
+                            <constraint firstItem="dEz-nY-ouQ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="sCr-fu-96o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -37,10 +44,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="50.625" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="top2" width="1024" height="1024"/>
+        <image name="top3" width="300" height="281"/>
     </resources>
 </document>

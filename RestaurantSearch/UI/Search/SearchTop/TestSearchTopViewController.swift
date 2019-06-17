@@ -21,7 +21,12 @@ class TestSearchTopViewController: UIViewController {
         
         UIView.animate(withDuration: 1.5, animations: { () -> Void in
             self.bottomView.backgroundColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 0.3)
+        }, completion: { _ in
+            // なぜか反映されない
+            self.areaSelectButton.layer.borderColor = UIColor.black.cgColor
+            self.areaSelectButton.layer.cornerRadius = 0.3
         })
+        
 //        self.bottomView.center = self.view.center
 //        UIView.animate(withDuration: 0.5, delay: 0.0, options: .autoreverse, animations: {
 //            self.bottomView.center.y += 85.0
