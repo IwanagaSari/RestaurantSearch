@@ -64,9 +64,10 @@ final class APIOperater: APIType {
     /// エリア・フリーワードからお店情報の取得
     func getShop(townCode: String, freeword: String, success: @escaping (ShopResponseBody) -> Void, failure: @escaping (Error) -> Void) {
         let url = "https://api.gnavi.co.jp/RestSearchAPI/v3/"
-        let parameters = [
+        let parameters: [String: Any] = [
             "areacode_s": townCode,
-            "freeword": freeword
+            "freeword": freeword,
+            "hit_per_page": 100
         ]
         fetchResponse(url: url, parameters: parameters, success: success, failure: failure)
     }
