@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 protocol FreewordDatabaseType {
     func get() -> String
     func set(_ inputFreeword: String?)
