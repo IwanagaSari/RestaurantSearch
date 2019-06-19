@@ -14,6 +14,7 @@
 		860CCD1A22A4D88700943F17 /* ShopInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1922A4D88700943F17 /* ShopInfoTests.swift */; };
 		860CCD1C22A4E35C00943F17 /* ShopListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1B22A4E35C00943F17 /* ShopListTests.swift */; };
 		860CCD2022A7611000943F17 /* FavoriteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */; };
+		863E8E2E22B9FA2600733D61 /* FreewordDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E8E2D22B9FA2600733D61 /* FreewordDatabase.swift */; };
 		865693C422AA18E000B9DEBD /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865693C322AA18E000B9DEBD /* ImageListCell.swift */; };
 		866273C2224A0165007CA319 /* AreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C1224A0165007CA319 /* AreaTests.swift */; };
 		866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C3224A09A9007CA319 /* PrefectureTests.swift */; };
@@ -84,6 +85,7 @@
 		860CCD1922A4D88700943F17 /* ShopInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoTests.swift; sourceTree = "<group>"; };
 		860CCD1B22A4E35C00943F17 /* ShopListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTests.swift; sourceTree = "<group>"; };
 		860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDatabase.swift; sourceTree = "<group>"; };
+		863E8E2D22B9FA2600733D61 /* FreewordDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreewordDatabase.swift; sourceTree = "<group>"; };
 		865693C322AA18E000B9DEBD /* ImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
 		866273C1224A0165007CA319 /* AreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTests.swift; sourceTree = "<group>"; };
 		866273C3224A09A9007CA319 /* PrefectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureTests.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */,
 				EA1A080B226DC4AD00550B4F /* SearchTopTableViewController.swift */,
+				863E8E2D22B9FA2600733D61 /* FreewordDatabase.swift */,
 			);
 			path = SearchTop;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				EA267A0E2248EFF200F3091C /* City.swift in Sources */,
 				860CCD10229E4C4700943F17 /* ImageDownloder.swift in Sources */,
 				86E8FE2D225DD3A700DCAD11 /* CitySelectViewController.swift in Sources */,
+				863E8E2E22B9FA2600733D61 /* FreewordDatabase.swift in Sources */,
 				86E8FE14225DD0C800DCAD11 /* ShopMapViewController.swift in Sources */,
 				86E8FE10225DD05800DCAD11 /* FavoriteListViewController.swift in Sources */,
 				86E8FE1C225DD23200DCAD11 /* ShopListViewController.swift in Sources */,
