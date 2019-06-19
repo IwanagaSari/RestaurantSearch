@@ -13,23 +13,29 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     @IBOutlet weak private var areaLabel: UILabel!
     @IBOutlet weak private var genreLabel: UILabel!
     @IBOutlet weak private var sceneLabel: UILabel!
-    private var town: Town?
+    private var inputTown: Town?
+    let freewordDatabase = FreewordDatabase.shared
     
     static func instantiate(town: Town) -> SearchTopTableViewController {
         let vc = UIStoryboard(name: "SearchTop", bundle: nil).instantiateInitialViewController() as! SearchTopTableViewController
-        vc.town = town
+        vc.inputTown = town
         return vc
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateArea()
+        updateFreeword()
     }
     
     private func updateArea() {
-        if let town = town {
+        if let town = inputTown {
             areaLabel.text = town.townName
         }
+    }
+    
+    private func updateFreeword() {
+        freewordSearchBar.text = freewordDatabase.get()
     }
     
     private func showAreaSelect() {
@@ -38,7 +44,7 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     }
     
     private func showShopList() {
-        let vc = ShopListViewController.instantiate(townCode: town?.townCode ?? "", freeword: freewordSearchBar.text ?? "")
+        let vc = ShopListViewController.instantiate(townCode: inputTown?.townCode ?? "", freeword: freewordSearchBar.text ?? "")
         show(vc, sender: nil)
     }
     
@@ -50,13 +56,14 @@ final class SearchTopTableViewController: UITableViewController, UITextFieldDele
     }
     
     private func validateInput() -> Bool {
-        return town?.townCode == nil && freewordSearchBar.text == ""
+        return inputTown?.townCode == nil && freewordSearchBar.text == ""
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 1:
             showAreaSelect()
+            freewordDatabase.set(freewordSearchBar.text)
         case 4:
             if validateInput() {
                 showValidationAlert()
