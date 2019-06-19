@@ -32,7 +32,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         for id in favoriteDatabase.all() {
             apiOperater.getShopByID(shopID: id,
                                     success: { [weak self] shopResponseBody in
-                                        self?.showShopList(shopResponseBody)
+                                        self?.updateShopList(shopResponseBody)
                                     },
                                     failure: { [weak self] error in
                                         self?.showError(error)
@@ -40,7 +40,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         }
     }
     
-    private func showShopList(_ shopResponseBody: ShopResponseBody) {
+    private func updateShopList(_ shopResponseBody: ShopResponseBody) {
         shopList.append(shopResponseBody.shop[0])
         collectionView.reloadData()
     }
