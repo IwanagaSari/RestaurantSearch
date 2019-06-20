@@ -175,8 +175,8 @@
 		86AE04A322BA8CE400F9DC94 /* APITests */ = {
 			isa = PBXGroup;
 			children = (
-				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
 				86AE04A622BA8D1800F9DC94 /* ModelTests */,
+				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
 			);
 			path = APITests;
 			sourceTree = "<group>";
