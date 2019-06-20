@@ -121,7 +121,6 @@
 		EA2679EF2248CCC100F3091C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA2679F12248CCC100F3091C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA2679F62248CCC100F3091C /* RestaurantSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA2679FA2248CCC100F3091C /* RestaurantSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchTests.swift; sourceTree = "<group>"; };
 		EA2679FC2248CCC100F3091C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA267A092248E2EE00F3091C /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
 		EA267A0B2248EC3E00F3091C /* Prefecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prefecture.swift; sourceTree = "<group>"; };
@@ -162,6 +161,129 @@
 				220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86AE04A222BA8C2B00F9DC94 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				86AE04A422BA8CFA00F9DC94 /* ShopTests */,
+				86AE04A522BA8D0400F9DC94 /* SearchTests */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		86AE04A322BA8CE400F9DC94 /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
+				86AE04A622BA8D1800F9DC94 /* ModelTests */,
+			);
+			path = APITests;
+			sourceTree = "<group>";
+		};
+		86AE04A422BA8CFA00F9DC94 /* ShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				86AE04A722BA8D6200F9DC94 /* FavoriteListTests */,
+				86AE04A822BA8D7200F9DC94 /* ShopMapTests */,
+				86AE04A922BA8D7B00F9DC94 /* ShopInfoTests */,
+				86AE04AA22BA8D8500F9DC94 /* ShopListTests */,
+			);
+			path = ShopTests;
+			sourceTree = "<group>";
+		};
+		86AE04A522BA8D0400F9DC94 /* SearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				86AE04AB22BA8E0400F9DC94 /* TownSelectTests */,
+				86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */,
+				86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */,
+				86AE04AE22BA8E3000F9DC94 /* AreaSelectTests */,
+				86AE04AF22BA8E3900F9DC94 /* SearchTopTests */,
+			);
+			path = SearchTests;
+			sourceTree = "<group>";
+		};
+		86AE04A622BA8D1800F9DC94 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				866273C1224A0165007CA319 /* AreaTests.swift */,
+				866273C3224A09A9007CA319 /* PrefectureTests.swift */,
+				866273C5224A0EFB007CA319 /* CityTests.swift */,
+				866273C7224C75A9007CA319 /* TownTests.swift */,
+				86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		86AE04A722BA8D6200F9DC94 /* FavoriteListTests */ = {
+			isa = PBXGroup;
+			children = (
+				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
+			);
+			path = FavoriteListTests;
+			sourceTree = "<group>";
+		};
+		86AE04A822BA8D7200F9DC94 /* ShopMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				860CCD1522A4BAC700943F17 /* ShopMapTests.swift */,
+			);
+			path = ShopMapTests;
+			sourceTree = "<group>";
+		};
+		86AE04A922BA8D7B00F9DC94 /* ShopInfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				860CCD1922A4D88700943F17 /* ShopInfoTests.swift */,
+			);
+			path = ShopInfoTests;
+			sourceTree = "<group>";
+		};
+		86AE04AA22BA8D8500F9DC94 /* ShopListTests */ = {
+			isa = PBXGroup;
+			children = (
+				860CCD1B22A4E35C00943F17 /* ShopListTests.swift */,
+			);
+			path = ShopListTests;
+			sourceTree = "<group>";
+		};
+		86AE04AB22BA8E0400F9DC94 /* TownSelectTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA497752229BD428001BE1DB /* TownSelectTests.swift */,
+			);
+			path = TownSelectTests;
+			sourceTree = "<group>";
+		};
+		86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA497750229BD419001BE1DB /* CitySelectTests.swift */,
+			);
+			path = CitySelectTests;
+			sourceTree = "<group>";
+		};
+		86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */ = {
+			isa = PBXGroup;
+			children = (
+				860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */,
+			);
+			path = PrefectureSelectTests;
+			sourceTree = "<group>";
+		};
+		86AE04AE22BA8E3000F9DC94 /* AreaSelectTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AreaSelectTests;
+			sourceTree = "<group>";
+		};
+		86AE04AF22BA8E3900F9DC94 /* SearchTopTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchTopTests;
 			sourceTree = "<group>";
 		};
 		86E8FDFD225DCE4400DCAD11 /* UI */ = {
@@ -361,21 +483,9 @@
 		EA2679F92248CCC100F3091C /* RestaurantSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA2679FA2248CCC100F3091C /* RestaurantSearchTests.swift */,
-				866273C1224A0165007CA319 /* AreaTests.swift */,
+				86AE04A222BA8C2B00F9DC94 /* UITests */,
+				86AE04A322BA8CE400F9DC94 /* APITests */,
 				EA2679FC2248CCC100F3091C /* Info.plist */,
-				866273C3224A09A9007CA319 /* PrefectureTests.swift */,
-				866273C5224A0EFB007CA319 /* CityTests.swift */,
-				866273C7224C75A9007CA319 /* TownTests.swift */,
-				86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */,
-				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
-				860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */,
-				EA497750229BD419001BE1DB /* CitySelectTests.swift */,
-				EA497752229BD428001BE1DB /* TownSelectTests.swift */,
-				860CCD1922A4D88700943F17 /* ShopInfoTests.swift */,
-				860CCD1B22A4E35C00943F17 /* ShopListTests.swift */,
-				860CCD1522A4BAC700943F17 /* ShopMapTests.swift */,
-				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
 			);
 			path = RestaurantSearchTests;
 			sourceTree = "<group>";
@@ -624,7 +734,6 @@
 			files = (
 				EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */,
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
-				EA2679FB2248CCC100F3091C /* RestaurantSearchTests.swift in Sources */,
 				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
 				860AD39422AE42950009E9C6 /* FavoriteDatabaseTests.swift in Sources */,
 				EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */,
