@@ -51,7 +51,7 @@ final class TownSelectViewController: UITableViewController {
     }
     
     private func showSearchTop(_ town: Town) {
-        let vc = SearchTopTableViewController.instantiate(town: town)
+        let vc = SearchTopViewController.instantiate(town: town)
         show(vc, sender: nil)
     }
     
