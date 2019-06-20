@@ -1,5 +1,5 @@
 //
-//  SearchTopTableViewController.swift
+//  SearchTopViewController.swift
 //  RestaurantSearch
 //
 //  Created by 岩永 彩里 on 2019/04/22.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-final class SearchTopTableViewController: UITableViewController, UITextFieldDelegate {
+final class SearchTopViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak private var freewordSearchBar: UITextField!
     @IBOutlet weak private var areaLabel: UILabel!
     @IBOutlet weak private var genreLabel: UILabel!
     @IBOutlet weak private var sceneLabel: UILabel!
     private var town: Town?
     
-    static func instantiate(town: Town) -> SearchTopTableViewController {
-        let vc = UIStoryboard(name: "SearchTop", bundle: nil).instantiateInitialViewController() as! SearchTopTableViewController
+    static func instantiate(town: Town) -> SearchTopViewController {
+        let vc = UIStoryboard(name: "SearchTop", bundle: nil).instantiateInitialViewController() as! SearchTopViewController
         vc.town = town
         return vc
     }
