@@ -16,16 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage1" translatesAutoresizingMaskIntoConstraints="NO" id="dL1-yp-tuB">
-                                <rect key="frame" x="57" y="307.5" width="300" height="281"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage1" translatesAutoresizingMaskIntoConstraints="NO" id="dL1-yp-tuB">
+                                <rect key="frame" x="103.5" y="313" width="207" height="270"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVC-CL-WWt">
-                                <rect key="frame" x="10" y="598.5" width="394" height="30"/>
+                                <rect key="frame" x="10" y="593" width="394" height="24"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Restaurant Searach">
+                                    <fragment content="Restaurant Search">
                                         <attributes>
                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="30" name="HoeflerText-Black"/>
+                                            <font key="NSFont" size="24" name="HoeflerText-Black"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -39,7 +39,9 @@
                             <constraint firstItem="FVC-CL-WWt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Mf8-3j-h9K"/>
                             <constraint firstItem="dL1-yp-tuB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Wm5-n5-XHY"/>
                             <constraint firstItem="FVC-CL-WWt" firstAttribute="top" secondItem="dL1-yp-tuB" secondAttribute="bottom" constant="10" id="XeS-Vd-XpB"/>
+                            <constraint firstItem="dL1-yp-tuB" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="euQ-xY-ewP"/>
                             <constraint firstItem="FVC-CL-WWt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lpw-zZ-ZaT"/>
+                            <constraint firstItem="dL1-yp-tuB" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.33" id="ne6-XO-NXz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FVC-CL-WWt" secondAttribute="trailing" constant="10" id="nna-9G-DiL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
