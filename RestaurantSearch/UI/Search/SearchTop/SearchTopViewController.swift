@@ -14,16 +14,10 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
     @IBOutlet weak private var genreLabel: UILabel!
     @IBOutlet weak private var sceneLabel: UILabel!
     private var selectedTown: Town?
-    let freewordDatabase = FreewordDatabase.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        updateFreeword()
-    }
     
-    private func updateFreeword() {
-        freewordSearchBar.text = freewordDatabase.get()
     }
     
     private func showAreaSelect() {
@@ -51,7 +45,6 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
         switch indexPath.row {
         case 1:
             showAreaSelect()
-            freewordDatabase.set(freewordSearchBar.text)
         case 4:
             if validateInput() {
                 showValidationAlert()
