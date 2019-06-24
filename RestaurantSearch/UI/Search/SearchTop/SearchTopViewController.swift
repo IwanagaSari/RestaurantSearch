@@ -16,22 +16,10 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
     private var inputTown: Town?
     let freewordDatabase = FreewordDatabase.shared
     
-    static func instantiate(town: Town) -> SearchTopViewController {
-        let vc = UIStoryboard(name: "SearchTop", bundle: nil).instantiateInitialViewController() as! SearchTopViewController
-        vc.inputTown = town
-        return vc
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateArea()
+        
         updateFreeword()
-    }
-    
-    private func updateArea() {
-        if let town = inputTown {
-            areaLabel.text = town.townName
-        }
     }
     
     private func updateFreeword() {
