@@ -103,10 +103,11 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         
         let request = imageDownloader.getImage(url: imageURL,
                                                success: { shopImage in
+                                                    cell.imageListErrorLabelInShopInfo.text = ""
                                                     cell.imageViewInShopInfo.image = shopImage
                                                },
-                                               failure: { [weak self] error in
-                                                    self?.showError(error)
+                                               failure: { error in
+                                                    cell.imageListErrorLabelInShopInfo.text = error.localizedDescription
                                                })
         cell.onReuse = {
             request?.cancel()
