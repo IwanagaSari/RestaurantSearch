@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="opu-gT-qyw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="opu-gT-qyw">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -137,15 +137,26 @@
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQk-RF-Q3o">
                                                     <rect key="frame" x="0.0" y="0.0" width="178" height="175"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIT-WX-atK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="175"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="CQk-RF-Q3o" secondAttribute="bottom" id="Etq-nQ-lzg"/>
+                                            <constraint firstAttribute="bottom" secondItem="SIT-WX-atK" secondAttribute="bottom" id="S5D-xh-c8v"/>
+                                            <constraint firstItem="SIT-WX-atK" firstAttribute="leading" secondItem="hWF-xl-Por" secondAttribute="leading" id="bcN-JQ-CbW"/>
                                             <constraint firstItem="CQk-RF-Q3o" firstAttribute="leading" secondItem="hWF-xl-Por" secondAttribute="leading" id="dl5-Gd-r7R"/>
+                                            <constraint firstAttribute="trailing" secondItem="SIT-WX-atK" secondAttribute="trailing" id="hjU-NT-ScL"/>
+                                            <constraint firstItem="SIT-WX-atK" firstAttribute="top" secondItem="hWF-xl-Por" secondAttribute="top" id="iuj-Dl-be9"/>
                                             <constraint firstItem="CQk-RF-Q3o" firstAttribute="top" secondItem="hWF-xl-Por" secondAttribute="top" id="ofV-Jr-AXm"/>
                                             <constraint firstAttribute="trailing" secondItem="CQk-RF-Q3o" secondAttribute="trailing" id="van-Dv-d9T"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="imageListErrorLabelInShopInfo" destination="SIT-WX-atK" id="e1Q-mM-WCr"/>
                                             <outlet property="imageViewInShopInfo" destination="CQk-RF-Q3o" id="XXW-Ix-Xme"/>
                                         </connections>
                                     </collectionViewCell>
@@ -155,10 +166,18 @@
                                     <outlet property="delegate" destination="opu-gT-qyw" id="WCy-ky-uuA"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXW-Yr-dbH">
+                                <rect key="frame" x="0.0" y="148" width="375" height="185"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="w2g-AG-EYv" firstAttribute="leading" secondItem="Q7g-aO-x6b" secondAttribute="leading" id="3bN-5q-5Un"/>
+                            <constraint firstItem="Q7g-aO-x6b" firstAttribute="trailing" secondItem="IXW-Yr-dbH" secondAttribute="trailing" id="43L-1n-2dt"/>
+                            <constraint firstItem="IXW-Yr-dbH" firstAttribute="leading" secondItem="Q7g-aO-x6b" secondAttribute="leading" id="4VP-qT-pPA"/>
                             <constraint firstItem="Gll-RF-Abk" firstAttribute="leading" secondItem="Q7g-aO-x6b" secondAttribute="leading" id="7kc-Fi-7xq"/>
                             <constraint firstItem="w2g-AG-EYv" firstAttribute="top" secondItem="u0a-tt-5v1" secondAttribute="bottom" id="9Ag-pH-4ne"/>
                             <constraint firstItem="u0a-tt-5v1" firstAttribute="top" secondItem="eND-Qr-2ny" secondAttribute="bottom" id="Ake-Ah-p6Q"/>
@@ -169,10 +188,12 @@
                             <constraint firstAttribute="trailing" secondItem="E9O-bP-1Qq" secondAttribute="trailing" id="T4v-4A-oZC"/>
                             <constraint firstItem="E9O-bP-1Qq" firstAttribute="trailing" secondItem="w2g-AG-EYv" secondAttribute="trailing" id="guX-9N-JeZ"/>
                             <constraint firstItem="eND-Qr-2ny" firstAttribute="top" secondItem="Q7g-aO-x6b" secondAttribute="top" id="jM7-3e-Apw"/>
+                            <constraint firstItem="IXW-Yr-dbH" firstAttribute="top" secondItem="eND-Qr-2ny" secondAttribute="bottom" id="lb9-5V-3h3"/>
                             <constraint firstItem="E9O-bP-1Qq" firstAttribute="leading" secondItem="w2g-AG-EYv" secondAttribute="trailing" id="mSx-fy-31I"/>
                             <constraint firstItem="Q7g-aO-x6b" firstAttribute="trailing" secondItem="eND-Qr-2ny" secondAttribute="trailing" id="mgn-Ww-BBL"/>
                             <constraint firstItem="Q7g-aO-x6b" firstAttribute="bottom" secondItem="Gll-RF-Abk" secondAttribute="bottom" id="nn0-aI-PSs"/>
                             <constraint firstItem="E9O-bP-1Qq" firstAttribute="top" secondItem="u0a-tt-5v1" secondAttribute="bottom" id="qxQ-c9-AZP"/>
+                            <constraint firstItem="w2g-AG-EYv" firstAttribute="top" secondItem="IXW-Yr-dbH" secondAttribute="bottom" id="tOT-Hy-c3t"/>
                             <constraint firstItem="u0a-tt-5v1" firstAttribute="trailing" secondItem="Q7g-aO-x6b" secondAttribute="trailing" id="zFv-X8-3Ui"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q7g-aO-x6b"/>
@@ -204,11 +225,12 @@
                         <outlet property="shopAdressLabel" destination="boz-zk-nff" id="zb5-ws-NUp"/>
                         <outlet property="shopNameLabel" destination="gwV-85-X9D" id="uQx-kO-mpg"/>
                         <outlet property="shopTopImageView" destination="u0a-tt-5v1" id="tk5-Pv-jeh"/>
+                        <outlet property="topErrorMessageLabel" destination="IXW-Yr-dbH" id="Kyz-4T-hoc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5D-64-hPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-986" y="-365"/>
+            <point key="canvasLocation" x="-986.39999999999998" y="-365.02463054187194"/>
         </scene>
     </scenes>
 </document>
