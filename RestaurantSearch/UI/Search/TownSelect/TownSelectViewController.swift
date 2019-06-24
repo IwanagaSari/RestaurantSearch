@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TownSelectViewControllerDelegate: AnyObject {
+    func townSelected(_ town: Town)
+}
+
 final class TownSelectViewController: UITableViewController {
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorMessageLabel: UILabel!

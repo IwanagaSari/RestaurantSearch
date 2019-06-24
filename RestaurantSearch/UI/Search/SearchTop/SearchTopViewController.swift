@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SearchTopViewController: UITableViewController, UITextFieldDelegate {
+final class SearchTopViewController: UITableViewController, UITextFieldDelegate, TownSelectViewControllerDelegate {
     @IBOutlet weak private var freewordSearchBar: UITextField!
     @IBOutlet weak private var areaLabel: UILabel!
     @IBOutlet weak private var genreLabel: UILabel!
@@ -86,5 +86,10 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         freewordSearchBar.resignFirstResponder()
         return true
+    }
+
+    func townSelected(_ town: Town) {
+        navigationController?.popToRootViewController(animated: true)
+        areaLabel.text = town.townName
     }
 }
