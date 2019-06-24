@@ -75,6 +75,8 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
         freewordSearchBar.resignFirstResponder()
         return true
     }
+    
+    // MARK: - TownSelectViewControllerDelegate
 
     func townSelected(_ town: Town) {
         navigationController?.popToRootViewController(animated: true)
