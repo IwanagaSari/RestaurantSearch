@@ -13,7 +13,7 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
     @IBOutlet weak private var areaLabel: UILabel!
     @IBOutlet weak private var genreLabel: UILabel!
     @IBOutlet weak private var sceneLabel: UILabel!
-    private var inputTown: Town?
+    private var selectedTown: Town?
     let freewordDatabase = FreewordDatabase.shared
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
     }
     
     private func showShopList() {
-        let vc = ShopListViewController.instantiate(townCode: inputTown?.townCode ?? "", freeword: freewordSearchBar.text ?? "")
+        let vc = ShopListViewController.instantiate(townCode: selectedTown?.townCode ?? "", freeword: freewordSearchBar.text ?? "")
         show(vc, sender: nil)
     }
     
@@ -44,7 +44,7 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
     }
     
     private func validateInput() -> Bool {
-        return inputTown?.townCode == nil && freewordSearchBar.text == ""
+        return selectedTown?.townCode == nil && freewordSearchBar.text == ""
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -81,5 +81,6 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
     func townSelected(_ town: Town) {
         navigationController?.popToRootViewController(animated: true)
         areaLabel.text = town.townName
+        selectedTown = town
     }
 }
