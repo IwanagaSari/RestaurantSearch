@@ -15,11 +15,6 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate,
     @IBOutlet weak private var sceneLabel: UILabel!
     private var selectedTown: Town?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-    }
-    
     private func showAreaSelect() {
         let vc = AreaSelectViewController.instantiate()
         show(vc, sender: nil)
