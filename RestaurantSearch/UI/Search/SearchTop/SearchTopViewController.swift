@@ -8,29 +8,12 @@
 
 import UIKit
 
-final class SearchTopViewController: UITableViewController, UITextFieldDelegate {
+final class SearchTopViewController: UITableViewController, UITextFieldDelegate, TownSelectViewControllerDelegate {
     @IBOutlet weak private var freewordSearchBar: UITextField!
     @IBOutlet weak private var areaLabel: UILabel!
     @IBOutlet weak private var genreLabel: UILabel!
     @IBOutlet weak private var sceneLabel: UILabel!
-    private var town: Town?
-    
-    static func instantiate(town: Town) -> SearchTopViewController {
-        let vc = UIStoryboard(name: "SearchTop", bundle: nil).instantiateInitialViewController() as! SearchTopViewController
-        vc.town = town
-        return vc
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        updateArea()
-    }
-    
-    private func updateArea() {
-        if let town = town {
-            areaLabel.text = town.townName
-        }
-    }
+    private var selectedTown: Town?
     
     private func showAreaSelect() {
         let vc = AreaSelectViewController.instantiate()
@@ -38,7 +21,7 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate 
     }
     
     private func showShopList() {
-        let vc = ShopListViewController.instantiate(townCode: town?.townCode ?? "", freeword: freewordSearchBar.text ?? "")
+        let vc = ShopListViewController.instantiate(townCode: selectedTown?.townCode ?? "", freeword: freewordSearchBar.text ?? "")
         show(vc, sender: nil)
     }
     
@@ -50,7 +33,7 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate 
     }
     
     private func validateInput() -> Bool {
-        return town?.townCode == nil && freewordSearchBar.text == ""
+        return selectedTown?.townCode == nil && freewordSearchBar.text == ""
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -79,5 +62,13 @@ final class SearchTopViewController: UITableViewController, UITextFieldDelegate 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         freewordSearchBar.resignFirstResponder()
         return true
+    }
+    
+    // MARK: - TownSelectViewControllerDelegate
+
+    func townSelected(_ town: Town) {
+        navigationController?.popToRootViewController(animated: true)
+        areaLabel.text = town.townName
+        selectedTown = town
     }
 }
