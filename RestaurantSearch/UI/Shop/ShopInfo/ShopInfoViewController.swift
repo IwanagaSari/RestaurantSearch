@@ -16,6 +16,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet private var addButton: UIBarButtonItem!
     @IBOutlet private var deleteButton: UIBarButtonItem!
+    @IBOutlet weak private var topErrorMessageLabel: UILabel!
     private var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
@@ -37,7 +38,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         super.viewDidLoad()
         
         showTopInfo()
-        showTopImage()
+        getTopImage()
         updateImageList()
     }
     
@@ -46,7 +47,7 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         shopAdressLabel.text = shop.address
     }
     
-    private func showTopImage() {
+    private func getTopImage() {
         if shop.imageUrl.shopImage1.isEmpty {
             shopTopImageView.image = UIImage(named: "error")
         } else {
@@ -54,10 +55,10 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
             
             imageDownloader.getImage(url: topImageURL,
                                      success: { [weak self] topImage in
-                                          self?.shopTopImageView.image = topImage
+                                          self?.showTopImage(topImage)
                                      },
                                      failure: { [weak self] error in
-                                          self?.showError(error)
+                                          self?.showTopImageError(error)
                                      })
         }
     }
@@ -67,8 +68,13 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         show(vc, sender: nil)
     }
     
-    private func showError(_ error: Error) {
-        print(error.localizedDescription)
+    private func showTopImage(_ topImage: UIImage) {
+        topErrorMessageLabel.text = ""
+        shopTopImageView.image = topImage
+    }
+    
+    private func showTopImageError(_ error: Error) {
+        topErrorMessageLabel.text = error.localizedDescription
     }
     
     private func showFavoriteList() {
@@ -97,10 +103,11 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         
         let request = imageDownloader.getImage(url: imageURL,
                                                success: { shopImage in
+                                                    cell.imageListErrorLabelInShopInfo.text = ""
                                                     cell.imageViewInShopInfo.image = shopImage
                                                },
-                                               failure: { [weak self] error in
-                                                    self?.showError(error)
+                                               failure: { error in
+                                                    cell.imageListErrorLabelInShopInfo.text = error.localizedDescription
                                                })
         cell.onReuse = {
             request?.cancel()
