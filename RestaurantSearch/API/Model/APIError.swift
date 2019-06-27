@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct ErrorResponseBody: Codable {
+    let error: Error
+    
+    struct Error: Codable, LocalizedError {
+        let message: String
+        
+        var errorDescription: String? {
+            return message
+        }
+    }
+}
