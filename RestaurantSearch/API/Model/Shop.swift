@@ -27,8 +27,10 @@ struct Shop: Codable {
     let address: String
     let tel: String
     let opentime: String
+    let holiday: String
     let pr: Pr
     let code: Code
+    let budget: Int
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -41,8 +43,10 @@ struct Shop: Codable {
         case address
         case tel
         case opentime
+        case holiday
         case pr
         case code
+        case budget
     }
     
     struct Image: Codable {
