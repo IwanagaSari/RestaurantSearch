@@ -63,9 +63,11 @@ struct Shop: Codable {
     
     struct Pr: Codable {
         let prShort: String
+        let prLong: String
         
         enum CodingKeys: String, CodingKey {
             case prShort = "pr_short"
+            case prLong = "pr_long"
         }
     }
     
