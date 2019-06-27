@@ -10,8 +10,4 @@ import UIKit
 
 final class ShopInfoTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
 }
