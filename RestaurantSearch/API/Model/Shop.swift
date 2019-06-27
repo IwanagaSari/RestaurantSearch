@@ -27,6 +27,7 @@ struct Shop: Codable {
     let address: String
     let tel: String
     let opentime: String
+    let holiday: String
     let pr: Pr
     let code: Code
     
@@ -41,6 +42,7 @@ struct Shop: Codable {
         case address
         case tel
         case opentime
+        case holiday
         case pr
         case code
     }
@@ -59,9 +61,11 @@ struct Shop: Codable {
     
     struct Pr: Codable {
         let prShort: String
+        let prLong: String
         
         enum CodingKeys: String, CodingKey {
             case prShort = "pr_short"
+            case prLong = "pr_long"
         }
     }
     
