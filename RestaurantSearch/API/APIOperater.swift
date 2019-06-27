@@ -20,7 +20,7 @@ protocol APIType {
 
 final class APIOperater: APIType {
     private let commonParameters: [String: Any] = [
-        "keyid": "ca11c104693ded38efb1a2abdd2aea07"
+        "keyid": "ca11c104693ded38efb1a2abdd2aea0"
     ]
     
     private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String: Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
@@ -30,7 +30,13 @@ final class APIOperater: APIType {
             
             // ぐるなびAPI上のエラーがある場合
             if (response.response?.statusCode)! >= 300 || (response.response?.statusCode)! < 200{
-                
+                let result = response.result.flatMap({ try JSONDecoder().decode(ErrorResponseBody.self, from: $0) })
+                switch result {
+                case .success(let errorMessage):
+                    failure(errorMessage.error)
+                case .failure(let error):
+                    failure(error)
+                }
             // ぐるなびAPI上のエラーがない場合
             } else {
                 let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
