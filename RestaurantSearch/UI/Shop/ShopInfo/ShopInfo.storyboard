@@ -275,33 +275,33 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vh-yo-iCe">
                                                     <rect key="frame" x="10" y="10" width="394" height="557"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B91-jg-vVG">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B91-jg-vVG">
                                                             <rect key="frame" x="10" y="38" width="374" height="42"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="カタカナで店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-V5-yxw">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カタカナで店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-V5-yxw">
                                                             <rect key="frame" x="10" y="10" width="374" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="[赤坂駅4分]もっちり食感の生パスタで夜カフェ [誕生日・記念日]ケーキ付メモリアルコースは3,500円 [雰囲気◎]デートや女子会にぴったりなカジュアルイタリアンをどうぞ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E04-vg-EUH">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="[赤坂駅4分]もっちり食感の生パスタで夜カフェ [誕生日・記念日]ケーキ付メモリアルコースは3,500円 [雰囲気◎]デートや女子会にぴったりなカジュアルイタリアンをどうぞ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E04-vg-EUH">
                                                             <rect key="frame" x="10" y="90" width="374" height="81.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNu-zh-jlP">
-                                                            <rect key="frame" x="10" y="370" width="374" height="170"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNu-zh-jlP">
+                                                            <rect key="frame" x="10" y="369.5" width="374" height="180.5"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <string key="text">気軽に楽しめて、居心地が良く何度でも行きたくなる特別空間… そんなことを感じて頂きたいという想いを表現したCOMFORT HOUSE。「食」というお客様の人生のワンシーンに密接し、食の楽しさを感じて頂きたい。都心に佇む隠れ家レストランにて、心地よい空間で最高のひと時をお過ごしください★★月替わりでコースをご用意しております。</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="topImage2" translatesAutoresizingMaskIntoConstraints="NO" id="88M-He-cXK">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage2" translatesAutoresizingMaskIntoConstraints="NO" id="88M-He-cXK">
                                                             <rect key="frame" x="12" y="181.5" width="370" height="180"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="180" id="9IW-Qc-XO4"/>
@@ -468,7 +468,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJN-Ik-2hh">
-                                                    <rect key="frame" x="10" y="0.0" width="100" height="35"/>
+                                                    <rect key="frame" x="10" y="0.0" width="100" height="34.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="WFJ-cH-kiT"/>
                                                     </constraints>
@@ -477,7 +477,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〒810-0041 福岡県福岡市中央区大名1-8-31 1F" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9s-n6-VAu">
-                                                    <rect key="frame" x="110" y="0.0" width="304" height="35"/>
+                                                    <rect key="frame" x="110" y="0.0" width="304" height="34.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
