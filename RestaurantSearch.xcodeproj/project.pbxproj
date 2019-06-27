@@ -42,6 +42,7 @@
 		86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */; };
 		9E01B705585537534CC2A259 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */; };
 		EA18539422C4ED8300C4CA13 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18539322C4ED8300C4CA13 /* APIError.swift */; };
+		EA18539622C4EF6F00C4CA13 /* APIErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA18539522C4EF6F00C4CA13 /* APIErrorTests.swift */; };
 		EA1A080C226DC4AD00550B4F /* SearchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A080B226DC4AD00550B4F /* SearchTopViewController.swift */; };
 		EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */; };
 		EA1D8CA2228C0C2300B6065E /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D8CA1228C0C2300B6065E /* Shop.swift */; };
@@ -112,6 +113,7 @@
 		86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
 		C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearchTests/Pods-RestaurantSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA18539322C4ED8300C4CA13 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		EA18539522C4EF6F00C4CA13 /* APIErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorTests.swift; sourceTree = "<group>"; };
 		EA1A080B226DC4AD00550B4F /* SearchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopViewController.swift; sourceTree = "<group>"; };
 		EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewController.swift; sourceTree = "<group>"; };
 		EA1D8CA1228C0C2300B6065E /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				866273C5224A0EFB007CA319 /* CityTests.swift */,
 				866273C7224C75A9007CA319 /* TownTests.swift */,
 				86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */,
+				EA18539522C4EF6F00C4CA13 /* APIErrorTests.swift */,
 			);
 			path = ModelTests;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */,
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
 				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
+				EA18539622C4EF6F00C4CA13 /* APIErrorTests.swift in Sources */,
 				860AD39422AE42950009E9C6 /* FavoriteDatabaseTests.swift in Sources */,
 				EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */,
 				EA497753229BD428001BE1DB /* TownSelectTests.swift in Sources */,
