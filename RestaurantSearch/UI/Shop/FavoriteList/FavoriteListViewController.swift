@@ -35,8 +35,9 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func getShopByIDList() {
-        for id in favoriteDatabase.all() {
-            apiOperater.getShopByID(shopID: id,
+        favorites = favoriteDatabase.all().map { Favorite(id: $0, name: nil, imageUrl: nil) }
+        for favorite in favorites {
+            apiOperater.getShopByID(shopID: favorite.id,
                                     success: { [weak self] shopResponseBody in
                                         self?.updateShopList(shopResponseBody)
                                     },
