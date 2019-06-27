@@ -27,12 +27,19 @@ final class APIOperater: APIType {
         let finalParameters = commonParameters.merging(parameters) { $1 }
         
         Alamofire.request(url, parameters: finalParameters).responseData { response in
-            let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
-            switch result {
-            case .success(let object):
-                success(object)
-            case .failure(let error):
-                failure(error)
+            
+            // ぐるなびAPI上のエラーがある場合
+            if (response.response?.statusCode)! >= 300 || (response.response?.statusCode)! < 200{
+                
+            // ぐるなびAPI上のエラーがない場合
+            } else {
+                let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
+                switch result {
+                case .success(let object):
+                    success(object)
+                case .failure(let error): // ぐるなびAPI上のエラーはないが、デコード時のエラーがある場合
+                    failure(error)
+                }
             }
         }
     }
