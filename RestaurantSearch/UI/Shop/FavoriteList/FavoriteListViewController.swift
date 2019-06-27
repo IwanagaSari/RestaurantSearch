@@ -48,6 +48,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func updateShopList(_ shopResponseBody: ShopResponseBody) {
+        // ここでidが一致すればimageURLを埋めてあげる処理をする
+        // わからなかったので保留
         shopList.append(shopResponseBody.shop[0])
         collectionView.backgroundView = nil
         collectionView.reloadData()
@@ -64,17 +66,15 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shopList.count
+        return favorites.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
-        let shopImage = shopList[indexPath.row].imageUrl.shopImage1
+        let shopImage = favorites[indexPath.row].imageUrl 
         
-        if shopImage.isEmpty {
-            cell.imageViewInFavoliteList.image = UIImage(named: "error")
-        } else {
-            let imageURL = URL(string: shopImage)!
+        if let image = shopImage {
+            let imageURL = URL(string: image)!
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
                                                         cell.imageViewInFavoliteList.image = shopImage
@@ -85,14 +85,18 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             cell.onReuse = {
                 request?.cancel()
             }
+        } else {
+            // indicatorを表示させるかerror画像を表示させる
+            cell.imageViewInFavoliteList.image = UIImage(named: "error")
         }
-
-        cell.shopNameInfavoriteList.text = shopList[indexPath.row].name
         
+        cell.shopNameInfavoriteList.text = favorites[indexPath.row].name
+
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // ここも変更する
         let shop = shopList[indexPath.row]
         showShopInfo(shop)
     }
