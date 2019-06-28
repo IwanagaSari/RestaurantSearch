@@ -34,7 +34,7 @@ final class APIOperater: APIType {
                 switch result {
                 case .success(let errorMessage):
                     failure(errorMessage.error)
-                case .failure(let error):
+                case .failure(let error): // ぐるなびAPIエラーの、デコードに失敗した時の
                     failure(error)
                 }
             // ぐるなびAPI上のエラーがない場合
