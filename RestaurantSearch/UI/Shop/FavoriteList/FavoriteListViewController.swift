@@ -31,11 +31,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        favorites = favoriteDatabase.all().map { Favorite(id: $0, name: nil, imageUrl: nil) }
+        collectionView.reloadData()
+        
         getShopByIDList()
     }
     
     private func getShopByIDList() {
-        favorites = favoriteDatabase.all().map { Favorite(id: $0, name: nil, imageUrl: nil) }
         for favorite in favorites {
             apiOperater.getShopByID(shopID: favorite.id,
                                     success: { [weak self] shopResponseBody in
@@ -71,6 +73,15 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
+        
+        // 店名の表示
+        if let name = favorites[indexPath.row].name {
+            cell.shopNameInfavoriteList.text = name
+        } else {
+            cell.shopNameInfavoriteList.text = ""
+        }
+        
+        // 画像の表示
         let shopImage = favorites[indexPath.row].imageUrl 
         
         if let image = shopImage {
@@ -89,8 +100,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             // indicatorを表示させるかerror画像を表示させる
             cell.imageViewInFavoliteList.image = UIImage(named: "error")
         }
-        
-        cell.shopNameInfavoriteList.text = favorites[indexPath.row].name
 
         return cell
     }
