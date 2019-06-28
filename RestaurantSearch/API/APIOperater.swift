@@ -30,7 +30,7 @@ final class APIOperater: APIType {
             
             // ぐるなびAPI上のエラーがある場合
             if (response.response?.statusCode)! >= 300 || (response.response?.statusCode)! < 200{
-                let result = response.result.flatMap({ try JSONDecoder().decode(ErrorResponseBody.self, from: $0) })
+                let result = response.result.flatMap({ try JSONDecoder().decode(APIErrorResponseBody.self, from: $0) })
                 switch result {
                 case .success(let errorMessage):
                     failure(errorMessage.error)
