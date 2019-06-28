@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct ErrorResponseBody: Codable {
-    let error: Error
+struct APIErrorResponseBody: Codable {
+    let error: APIError
     
-    struct Error: Codable, LocalizedError {
+    struct APIError: Codable, LocalizedError {
         let message: String
         
         var errorDescription: String? {
