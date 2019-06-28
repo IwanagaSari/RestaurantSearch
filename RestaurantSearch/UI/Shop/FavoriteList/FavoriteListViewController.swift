@@ -55,6 +55,12 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         // ここでidが一致すればimageURLを埋めてあげる処理をする
         // わからなかったので保留
         shopList.append(shopResponseBody.shop[0])
+        for favorite in favorites {
+            if favorite.id == shopResponseBody.shop[0].id {
+                favorite.name = shopResponseBody.shop[0].name
+                favorite.imageUrl = shopResponseBody.shop[0].imageUrl.shopImage1
+            }
+        }
         collectionView.backgroundView = nil
         collectionView.reloadData()
     }
