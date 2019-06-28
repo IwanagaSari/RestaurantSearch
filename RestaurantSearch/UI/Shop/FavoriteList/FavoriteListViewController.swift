@@ -30,11 +30,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        getShopByIDList()
+    }
+    
+    private func updateFavorites() {
         favorites = favoriteDatabase.all().map { Favorite(id: $0, name: nil, imageUrl: nil) }
         collectionView.reloadData()
-        
-        getShopByIDList()
     }
     
     private func getShopByIDList() {
