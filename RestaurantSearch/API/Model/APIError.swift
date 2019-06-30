@@ -10,12 +10,12 @@ import Foundation
 
 struct APIErrorResponseBody: Codable {
     let error: APIError
+}
+
+struct APIError: Codable, LocalizedError {
+    let message: String
     
-    struct APIError: Codable, LocalizedError {
-        let message: String
-        
-        var errorDescription: String? {
-            return message
-        }
+    var errorDescription: String? {
+        return message
     }
 }
