@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import MapKit
 
 final class ShopInfoTableViewController: UITableViewController {
     @IBOutlet weak var category: UILabel!
@@ -21,6 +22,7 @@ final class ShopInfoTableViewController: UITableViewController {
     @IBOutlet weak var holidayLabel: UILabel!
     @IBOutlet weak var telButton: UIButton!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet private var addButton: UIBarButtonItem!
     @IBOutlet private var deleteButton: UIBarButtonItem!
     @IBOutlet weak private var topErrorMessageLabel: UILabel!
