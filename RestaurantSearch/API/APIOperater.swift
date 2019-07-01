@@ -26,31 +26,24 @@ final class APIOperater: APIType {
     private func fetchResponse<ResponseType: Decodable>(url: String, parameters: [String: Any], success: @escaping (ResponseType) -> Void, failure: @escaping (Error) -> Void) {
         let finalParameters = commonParameters.merging(parameters) { $1 }
         
-        Alamofire.request(url, parameters: finalParameters).responseData { response in
-            // レスポンスがあるかどうかをチェック
-            if response.response == nil {
-                failure(response.result.error!)
-            }
-            
-            // ぐるなびAPI上のエラーがないかチェック
-            if 200..<300 ~= response.response!.statusCode {
-                let result = response.result.flatMap { try JSONDecoder().decode(ResponseType.self, from: $0) }
-                switch result {
-                case .success(let object):
-                    success(object)
-                case .failure(let error): // ぐるなびAPI上のエラーはないが、デコード時のエラーがある場合
-                    failure(error)
-                }
-            // ぐるなびAPI上のエラーがある場合
-            } else {
-                let result = response.result.flatMap { try JSONDecoder().decode(APIErrorResponseBody.self, from: $0) }
-                switch result {
-                case .success(let errorMessage):
-                    failure(errorMessage.error)
-                case .failure(let error): // ぐるなびAPIエラーの、デコードに失敗した時
-                    failure(error)
-                }
-            }
+        Alamofire.request(url, parameters: finalParameters)
+                 .validate(statusCode: 200..<300)
+                 .responseData { response in
+                    
+                    let result = response.result.flatMap { try JSONDecoder().decode(ResponseType.self, from: $0) }
+                    switch result {
+                    case .success(let object):
+                        success(object)
+                    case .failure(let error):
+                        // ぐるなびAPI上のエラーかどうかの確認
+                        let result = response.result.flatMap { try JSONDecoder().decode(APIErrorResponseBody.self, from: $0) }
+                        switch result {
+                        case .success(let apiErrorResponseBody):
+                            failure(apiErrorResponseBody.error)
+                        case .failure:
+                            failure(error)
+                        }
+                    }
         }
     }
     
