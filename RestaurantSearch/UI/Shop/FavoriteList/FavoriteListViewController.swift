@@ -10,8 +10,7 @@ import UIKit
 
 struct Favorite {
     let id: String
-    var name: String?
-    var imageUrl: String?
+    var shop: Shop?
 }
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
