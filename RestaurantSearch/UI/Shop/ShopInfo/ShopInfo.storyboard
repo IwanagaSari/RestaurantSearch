@@ -513,15 +513,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResearchCell" id="r6O-AS-cJq">
-                                        <rect key="frame" x="0.0" y="406" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResearchCell" rowHeight="55" id="r6O-AS-cJq">
+                                        <rect key="frame" x="0.0" y="406" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r6O-AS-cJq" id="SQj-pw-8ic">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-XJ-s9X">
-                                                    <rect key="frame" x="100" y="5" width="214" height="33.5"/>
+                                                    <rect key="frame" x="100" y="10" width="214" height="35"/>
                                                     <color key="backgroundColor" red="0.83273521260000005" green="0.76142921610000003" blue="0.42576319810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="さらに詳しく">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -529,9 +529,9 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="zS0-XJ-s9X" secondAttribute="bottom" constant="5" id="8iB-EE-0Tl"/>
+                                                <constraint firstAttribute="bottom" secondItem="zS0-XJ-s9X" secondAttribute="bottom" constant="10" id="8iB-EE-0Tl"/>
                                                 <constraint firstItem="zS0-XJ-s9X" firstAttribute="centerX" secondItem="SQj-pw-8ic" secondAttribute="centerX" id="Fg6-rx-CJ6"/>
-                                                <constraint firstItem="zS0-XJ-s9X" firstAttribute="top" secondItem="SQj-pw-8ic" secondAttribute="top" constant="5" id="eRo-MA-WkL"/>
+                                                <constraint firstItem="zS0-XJ-s9X" firstAttribute="top" secondItem="SQj-pw-8ic" secondAttribute="top" constant="10" id="eRo-MA-WkL"/>
                                                 <constraint firstItem="zS0-XJ-s9X" firstAttribute="centerY" secondItem="SQj-pw-8ic" secondAttribute="centerY" id="gg4-q5-IqS"/>
                                                 <constraint firstItem="zS0-XJ-s9X" firstAttribute="leading" secondItem="SQj-pw-8ic" secondAttribute="leading" constant="100" id="ihx-xB-0f6"/>
                                                 <constraint firstAttribute="trailing" secondItem="zS0-XJ-s9X" secondAttribute="trailing" constant="100" id="l47-Et-T2q"/>
