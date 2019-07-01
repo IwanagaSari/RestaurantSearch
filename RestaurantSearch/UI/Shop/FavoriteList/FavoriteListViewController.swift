@@ -82,6 +82,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         } else {
             cell.shopNameInfavoriteList.text = ""
         }
+        cell.shopNameInfavoriteList.text = favorites[indexPath.row].shop?.name
         
         // 画像の表示
         if let image = favorites[indexPath.row].shop?.imageUrl.shopImage1 {
