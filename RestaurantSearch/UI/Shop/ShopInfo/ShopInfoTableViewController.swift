@@ -109,6 +109,10 @@ final class ShopInfoTableViewController: UITableViewController {
         navigationItem.rightBarButtonItems = isFavorite ? [deleteButton] : [addButton]
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageList.count
     }
