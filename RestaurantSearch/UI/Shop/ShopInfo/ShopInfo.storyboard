@@ -466,6 +466,9 @@
                                                     <rect key="frame" x="110" y="10" width="294" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <state key="normal" title="050-3461-4350"/>
+                                                    <connections>
+                                                        <action selector="telephoneButtonTapped:" destination="6Ul-HG-qiz" eventType="touchUpInside" id="ewl-bf-kGj"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
