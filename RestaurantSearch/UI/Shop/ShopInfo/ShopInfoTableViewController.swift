@@ -12,17 +12,17 @@ import MapKit
 
 final class ShopInfoTableViewController: UITableViewController {
     @IBOutlet weak var category: UILabel!
-    @IBOutlet weak var nameKanaLabel: UILabel!
+    @IBOutlet weak private var nameKanaLabel: UILabel!
     @IBOutlet weak private var nameLabel: UILabel!
-    @IBOutlet weak var prShortLabel: UILabel!
+    @IBOutlet weak private var prShortLabel: UILabel!
     @IBOutlet weak private var topImageView: UIImageView!
-    @IBOutlet weak var prLongLabel: UILabel!
+    @IBOutlet weak private var prLongLabel: UILabel!
     @IBOutlet weak private var shopAdressLabel: UILabel!
-    @IBOutlet weak var opentimeLavel: UILabel!
-    @IBOutlet weak var holidayLabel: UILabel!
-    @IBOutlet weak var telButton: UIButton!
-    @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak private var opentimeLavel: UILabel!
+    @IBOutlet weak private var holidayLabel: UILabel!
+    @IBOutlet weak private var telButton: UIButton!
+    @IBOutlet weak private var addressLabel: UILabel!
+    @IBOutlet weak private var mapView: MKMapView!
     @IBOutlet private var addButton: UIBarButtonItem!
     @IBOutlet private var deleteButton: UIBarButtonItem!
     @IBOutlet weak private var topErrorMessageLabel: UILabel!
