@@ -74,10 +74,10 @@ final class ShopInfoTableViewController: UITableViewController {
             
             imageDownloader.getImage(url: topImageURL,
                                      success: { [weak self] topImage in
-                                        self?.showTopImage(topImage)
+                                        self?.showImage(topImage)
                 },
                                      failure: { [weak self] error in
-                                        self?.showTopImageError(error)
+                                        self?.showImageError(error)
             })
         }
     }
@@ -87,12 +87,12 @@ final class ShopInfoTableViewController: UITableViewController {
         show(vc, sender: nil)
     }
     
-    private func showTopImage(_ topImage: UIImage) {
+    private func showImage(_ topImage: UIImage) {
         //topErrorMessageLabel.text = ""
         topImageView.image = topImage
     }
     
-    private func showTopImageError(_ error: Error) {
+    private func showImageError(_ error: Error) {
         //topErrorMessageLabel.text = error.localizedDescription
     }
     
