@@ -265,18 +265,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="595" id="glY-4C-GHH" customClass="ShopPRCell" customModule="RestaurantSearch" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="25" width="414" height="595"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="glY-4C-GHH" customClass="ShopPRCell" customModule="RestaurantSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="25" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="glY-4C-GHH" id="0pR-GU-3ki">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="595"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vh-yo-iCe">
-                                                    <rect key="frame" x="10" y="10" width="394" height="575"/>
+                                                    <rect key="frame" x="10" y="10" width="394" height="1377"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SRn-RI-iQm">
-                                                            <rect key="frame" x="10" y="10" width="374" height="555"/>
+                                                            <rect key="frame" x="10" y="10" width="374" height="1357"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カタカナで店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-V5-yxw">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -297,13 +297,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage2" translatesAutoresizingMaskIntoConstraints="NO" id="88M-He-cXK">
-                                                                    <rect key="frame" x="0.0" y="162" width="374" height="200"/>
+                                                                    <rect key="frame" x="0.0" y="162" width="374" height="1024.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="200" id="bcC-V3-Kby"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNu-zh-jlP">
-                                                                    <rect key="frame" x="0.0" y="370" width="374" height="185"/>
+                                                                    <rect key="frame" x="0.0" y="1194.5" width="374" height="162.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <string key="text">気軽に楽しめて、居心地が良く何度でも行きたくなる特別空間… そんなことを感じて頂きたいという想いを表現したCOMFORT HOUSE。「食」というお客様の人生のワンシーンに密接し、食の楽しさを感じて頂きたい。都心に佇む隠れ家レストランにて、心地よい空間で最高のひと時をお過ごしください★★月替わりでコースをご用意しております。</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -337,7 +337,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopInfoCell" rowHeight="61" id="dDq-sT-zyK">
-                                        <rect key="frame" x="0.0" y="620" width="414" height="61"/>
+                                        <rect key="frame" x="0.0" y="69" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dDq-sT-zyK" id="CUd-Ug-xk5">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
@@ -359,7 +359,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OpenTimeCell" id="ve6-0l-MJh">
-                                        <rect key="frame" x="0.0" y="681" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="130" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ve6-0l-MJh" id="odm-bk-DTP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -392,7 +392,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f9T-zw-AOT">
-                                        <rect key="frame" x="0.0" y="725" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="174" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f9T-zw-AOT" id="VKF-hK-5J4">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -425,7 +425,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TellCell" id="1HV-cU-IXY">
-                                        <rect key="frame" x="0.0" y="769" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="218" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1HV-cU-IXY" id="9V4-Jn-TqS">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -458,7 +458,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdressCell" id="FX3-PO-dO2">
-                                        <rect key="frame" x="0.0" y="813" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="262" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FX3-PO-dO2" id="PDG-GO-oeY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -492,10 +492,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapCell" rowHeight="100" id="vAG-hu-S3A">
-                                        <rect key="frame" x="0.0" y="857" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="306" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vAG-hu-S3A" id="23R-BH-DtE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZUl-3V-ekT">
@@ -514,10 +514,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResearchCell" id="r6O-AS-cJq">
-                                        <rect key="frame" x="0.0" y="957" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="406" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r6O-AS-cJq" id="SQj-pw-8ic">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-XJ-s9X">
