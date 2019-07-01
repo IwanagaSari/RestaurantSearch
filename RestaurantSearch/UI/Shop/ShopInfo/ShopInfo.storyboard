@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Ul-HG-qiz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Ul-HG-qiz">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -420,45 +420,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="35" id="np6-og-pom">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TellCell" rowHeight="35" id="1HV-cU-IXY">
                                         <rect key="frame" x="0.0" y="782" width="414" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="np6-og-pom" id="brg-Gb-pyJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平均予算：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZr-eF-fad">
-                                                    <rect key="frame" x="10" y="0.0" width="100" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="YJG-AT-gRg"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥5000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pho-XJ-4yC">
-                                                    <rect key="frame" x="110" y="0.0" width="294" height="35"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="XZr-eF-fad" firstAttribute="leading" secondItem="brg-Gb-pyJ" secondAttribute="leading" constant="10" id="H6b-6k-8Qf"/>
-                                                <constraint firstItem="Pho-XJ-4yC" firstAttribute="top" secondItem="brg-Gb-pyJ" secondAttribute="top" id="LQL-lr-Tnr"/>
-                                                <constraint firstAttribute="trailing" secondItem="Pho-XJ-4yC" secondAttribute="trailing" constant="10" id="c8b-XB-Ocr"/>
-                                                <constraint firstItem="XZr-eF-fad" firstAttribute="top" secondItem="brg-Gb-pyJ" secondAttribute="top" id="dIh-Hf-BGL"/>
-                                                <constraint firstAttribute="bottom" secondItem="Pho-XJ-4yC" secondAttribute="bottom" id="jI3-S6-HTL"/>
-                                                <constraint firstItem="Pho-XJ-4yC" firstAttribute="leading" secondItem="XZr-eF-fad" secondAttribute="trailing" id="pXa-WB-qng"/>
-                                                <constraint firstAttribute="bottom" secondItem="XZr-eF-fad" secondAttribute="bottom" id="s81-Lm-nno"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TellCell" rowHeight="35" id="1HV-cU-IXY">
-                                        <rect key="frame" x="0.0" y="817" width="414" height="35"/>
-                                        <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1HV-cU-IXY" id="9V4-Jn-TqS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗TEL：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-y7-0QM">
@@ -488,7 +454,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdressCell" rowHeight="35" id="FX3-PO-dO2">
-                                        <rect key="frame" x="0.0" y="852" width="414" height="35"/>
+                                        <rect key="frame" x="0.0" y="817" width="414" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FX3-PO-dO2" id="PDG-GO-oeY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
@@ -522,7 +488,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapCell" rowHeight="97" id="vAG-hu-S3A">
-                                        <rect key="frame" x="0.0" y="887" width="414" height="97"/>
+                                        <rect key="frame" x="0.0" y="852" width="414" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vAG-hu-S3A" id="23R-BH-DtE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="96.5"/>
@@ -541,7 +507,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResearchCell" id="r6O-AS-cJq">
-                                        <rect key="frame" x="0.0" y="984" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="949" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r6O-AS-cJq" id="SQj-pw-8ic">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -580,6 +546,21 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="addButton" destination="Wyi-d9-0hP" id="r97-sb-LZD"/>
+                        <outlet property="addressLabel" destination="S9s-n6-VAu" id="sMG-EG-UPx"/>
+                        <outlet property="category" destination="TfP-aG-8hg" id="Hkt-Pm-r6X"/>
+                        <outlet property="deleteButton" destination="faW-W5-NHg" id="oAn-Bv-Hk8"/>
+                        <outlet property="holidayLabel" destination="QmX-5V-Lap" id="gVv-9d-YAA"/>
+                        <outlet property="nameKanaLabel" destination="XbB-V5-yxw" id="T5U-Cb-66y"/>
+                        <outlet property="nameLabel" destination="B91-jg-vVG" id="Cc7-VG-DEh"/>
+                        <outlet property="opentimeLavel" destination="cRr-L0-Ppn" id="X4E-vU-zy1"/>
+                        <outlet property="prLongLabel" destination="kNu-zh-jlP" id="Kl1-DH-dUY"/>
+                        <outlet property="prShortLabel" destination="E04-vg-EUH" id="WPO-FS-hpb"/>
+                        <outlet property="shopAdressLabel" destination="S9s-n6-VAu" id="CIL-kR-UlE"/>
+                        <outlet property="telButton" destination="jwn-O8-tWX" id="Bfx-Tq-f60"/>
+                        <outlet property="topImageView" destination="88M-He-cXK" id="rIT-j4-e8G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeV-LC-67B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
