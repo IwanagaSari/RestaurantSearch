@@ -47,6 +47,7 @@ final class ShopInfoViewController: UITableViewController {
         super.viewDidLoad()
         
         showTopInfo()
+        showMapView()
         getTopImage()
     }
     
@@ -100,6 +101,25 @@ final class ShopInfoViewController: UITableViewController {
     private func showUIBarButton() {
         let isFavorite = database.contain(shop.id)
         navigationItem.rightBarButtonItems = isFavorite ? [deleteButton] : [addButton]
+    }
+    
+    private func showMapView() {
+        let latitude = Double(shop.latitude)!
+        let longitude = Double(shop.longitude)!
+        let center = CLLocationCoordinate2DMake(latitude, longitude)
+        mapView.setCenter(center, animated: true)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: center, span: span)
+        mapView.region = region
+        
+        let pin = MKPointAnnotation()
+        pin.coordinate = center
+        
+        pin.title = shop.name
+        pin.subtitle = shop.category
+        
+        mapView.addAnnotation(pin)
     }
     
     // MARK: - Actions
