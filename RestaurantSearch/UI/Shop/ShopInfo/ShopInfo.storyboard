@@ -275,50 +275,64 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vh-yo-iCe">
                                                     <rect key="frame" x="10" y="10" width="394" height="557"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Oj8-Cr-Ov3">
-                                                            <rect key="frame" x="10" y="10" width="374" height="537"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カタカナで店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-V5-yxw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B91-jg-vVG">
-                                                                    <rect key="frame" x="0.0" y="28.5" width="374" height="42"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="[赤坂駅4分]もっちり食感の生パスタで夜カフェ [誕生日・記念日]ケーキ付メモリアルコースは3,500円 [雰囲気◎]デートや女子会にぴったりなカジュアルイタリアンをどうぞ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E04-vg-EUH">
-                                                                    <rect key="frame" x="0.0" y="78.5" width="374" height="81.5"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage2" translatesAutoresizingMaskIntoConstraints="NO" id="88M-He-cXK">
-                                                                    <rect key="frame" x="0.0" y="168" width="374" height="180"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="180" id="9IW-Qc-XO4"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNu-zh-jlP">
-                                                                    <rect key="frame" x="0.0" y="356" width="374" height="181"/>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <string key="text">気軽に楽しめて、居心地が良く何度でも行きたくなる特別空間… そんなことを感じて頂きたいという想いを表現したCOMFORT HOUSE。「食」というお客様の人生のワンシーンに密接し、食の楽しさを感じて頂きたい。都心に佇む隠れ家レストランにて、心地よい空間で最高のひと時をお過ごしください★★月替わりでコースをご用意しております。</string>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カタカナで店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XbB-V5-yxw">
+                                                            <rect key="frame" x="10" y="10" width="374" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店の名前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B91-jg-vVG">
+                                                            <rect key="frame" x="10" y="38.5" width="374" height="42"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="[赤坂駅4分]もっちり食感の生パスタで夜カフェ [誕生日・記念日]ケーキ付メモリアルコースは3,500円 [雰囲気◎]デートや女子会にぴったりなカジュアルイタリアンをどうぞ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E04-vg-EUH">
+                                                            <rect key="frame" x="10" y="88.5" width="374" height="81.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage2" translatesAutoresizingMaskIntoConstraints="NO" id="88M-He-cXK">
+                                                            <rect key="frame" x="10" y="178" width="374" height="200.5"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwl-AF-Hqu">
+                                                            <rect key="frame" x="10" y="178" width="374" height="200.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNu-zh-jlP">
+                                                            <rect key="frame" x="10" y="386.5" width="374" height="162.5"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <string key="text">気軽に楽しめて、居心地が良く何度でも行きたくなる特別空間… そんなことを感じて頂きたいという想いを表現したCOMFORT HOUSE。「食」というお客様の人生のワンシーンに密接し、食の楽しさを感じて頂きたい。都心に佇む隠れ家レストランにて、心地よい空間で最高のひと時をお過ごしください★★月替わりでコースをご用意しております。</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.83273521260000005" green="0.76142921610000003" blue="0.42576319810000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="Oj8-Cr-Ov3" firstAttribute="top" secondItem="0Vh-yo-iCe" secondAttribute="top" constant="10" id="JwW-d1-kSt"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Oj8-Cr-Ov3" secondAttribute="trailing" constant="10" id="Kk6-7j-fUE"/>
-                                                        <constraint firstItem="Oj8-Cr-Ov3" firstAttribute="leading" secondItem="0Vh-yo-iCe" secondAttribute="leading" constant="10" id="vkL-Yv-zFR"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Oj8-Cr-Ov3" secondAttribute="bottom" constant="10" id="vvp-RM-eke"/>
+                                                        <constraint firstAttribute="trailing" secondItem="XbB-V5-yxw" secondAttribute="trailing" constant="10" id="0gJ-VO-7Sc"/>
+                                                        <constraint firstItem="B91-jg-vVG" firstAttribute="top" secondItem="XbB-V5-yxw" secondAttribute="bottom" constant="8" id="1Y7-Gk-M5E"/>
+                                                        <constraint firstItem="E04-vg-EUH" firstAttribute="leading" secondItem="0Vh-yo-iCe" secondAttribute="leading" constant="10" id="5we-fX-OtA"/>
+                                                        <constraint firstItem="XbB-V5-yxw" firstAttribute="top" secondItem="0Vh-yo-iCe" secondAttribute="top" constant="10" id="HuS-MP-ZFe"/>
+                                                        <constraint firstItem="88M-He-cXK" firstAttribute="leading" secondItem="0Vh-yo-iCe" secondAttribute="leading" constant="10" id="IcB-Mv-1tu"/>
+                                                        <constraint firstItem="mwl-AF-Hqu" firstAttribute="leading" secondItem="0Vh-yo-iCe" secondAttribute="leading" constant="10" id="JIN-xE-ACO"/>
+                                                        <constraint firstItem="88M-He-cXK" firstAttribute="top" secondItem="E04-vg-EUH" secondAttribute="bottom" constant="8" id="JTq-tS-Ubs"/>
+                                                        <constraint firstItem="kNu-zh-jlP" firstAttribute="top" secondItem="88M-He-cXK" secondAttribute="bottom" constant="8" id="KGI-ek-SKZ"/>
+                                                        <constraint firstItem="B91-jg-vVG" firstAttribute="leading" secondItem="0Vh-yo-iCe" secondAttribute="leading" constant="10" id="LKa-04-cEq"/>
+                                                        <constraint firstItem="mwl-AF-Hqu" firstAttribute="top" secondItem="E04-vg-EUH" secondAttribute="bottom" constant="8" id="OO2-td-dpz"/>
+                                                        <constraint firstItem="E04-vg-EUH" firstAttribute="top" secondItem="B91-jg-vVG" secondAttribute="bottom" constant="8" id="TFr-2o-KPh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="E04-vg-EUH" secondAttribute="trailing" constant="10" id="U2J-qu-5qQ"/>
+                                                        <constraint firstItem="kNu-zh-jlP" firstAttribute="leading" secondItem="0Vh-yo-iCe" secondAttribute="leading" constant="10" id="Wq3-qu-BFn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mwl-AF-Hqu" secondAttribute="trailing" constant="10" id="YkE-YF-p9n"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kNu-zh-jlP" secondAttribute="trailing" constant="10" id="Z3v-Rc-MVZ"/>
+                                                        <constraint firstItem="XbB-V5-yxw" firstAttribute="leading" secondItem="0Vh-yo-iCe" secondAttribute="leading" constant="10" id="fgZ-d6-jDw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="88M-He-cXK" secondAttribute="trailing" constant="10" id="gyC-nc-frg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="kNu-zh-jlP" secondAttribute="bottom" constant="8" id="iBq-hS-1hY"/>
+                                                        <constraint firstItem="kNu-zh-jlP" firstAttribute="top" secondItem="mwl-AF-Hqu" secondAttribute="bottom" constant="8" id="jfI-BU-TuP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="B91-jg-vVG" secondAttribute="trailing" constant="10" id="tXf-tR-Q1b"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -457,7 +471,7 @@
                                         <rect key="frame" x="0.0" y="817" width="414" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FX3-PO-dO2" id="PDG-GO-oeY">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJN-Ik-2hh">
@@ -491,7 +505,7 @@
                                         <rect key="frame" x="0.0" y="852" width="414" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vAG-hu-S3A" id="23R-BH-DtE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZUl-3V-ekT">
@@ -510,7 +524,7 @@
                                         <rect key="frame" x="0.0" y="949" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r6O-AS-cJq" id="SQj-pw-8ic">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-XJ-s9X">
