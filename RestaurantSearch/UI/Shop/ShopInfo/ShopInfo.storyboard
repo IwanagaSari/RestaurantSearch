@@ -586,8 +586,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="3Zh-AH-Ump">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="Wyi-d9-0hP"/>
-                            <barButtonItem systemItem="trash" id="faW-W5-NHg"/>
+                            <barButtonItem systemItem="add" id="Wyi-d9-0hP">
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="6Ul-HG-qiz" id="S9C-2J-bR7"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="faW-W5-NHg">
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="6Ul-HG-qiz" id="l9F-3C-zAC"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
