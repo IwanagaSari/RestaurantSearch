@@ -91,9 +91,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             cell.onReuse = {
                 request?.cancel()
             }
-        } else {
-            // indicatorを表示させるかerror画像を表示させる
-            cell.imageViewInFavoliteList.image = UIImage(named: "error")
         }
 
         return cell
