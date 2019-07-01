@@ -1,5 +1,5 @@
 //
-//  ShopInfoTableViewController.swift
+//  ShopInfoViewController.swift
 //  RestaurantSearch
 //
 //  Created by 岩永彩里 on 2019/06/26.
@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import MapKit
 
-final class ShopInfoTableViewController: UITableViewController {
+final class ShopInfoViewController: UITableViewController {
     @IBOutlet weak private var category: UILabel!
     @IBOutlet weak private var nameKanaLabel: UILabel!
     @IBOutlet weak private var nameLabel: UILabel!
@@ -33,8 +33,8 @@ final class ShopInfoTableViewController: UITableViewController {
     private var imageList: [String] = []
     private let database: FavoriteDatabaseType = FavoriteDatabase.shared
     
-    static func instantiate(shop: Shop) -> ShopInfoTableViewController {
-        let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoTableViewController
+    static func instantiate(shop: Shop) -> ShopInfoViewController {
+        let vc = UIStoryboard(name: "ShopInfo", bundle: nil).instantiateInitialViewController() as! ShopInfoViewController
         vc.shop = shop
         return vc
     }
