@@ -11,7 +11,7 @@ import SafariServices
 import MapKit
 
 final class ShopInfoTableViewController: UITableViewController {
-    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak private var category: UILabel!
     @IBOutlet weak private var nameKanaLabel: UILabel!
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var prShortLabel: UILabel!
