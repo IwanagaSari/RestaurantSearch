@@ -374,9 +374,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="営業時間：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyd-f4-fr4">
-                                                    <rect key="frame" x="10" y="0.0" width="100" height="84"/>
+                                                    <rect key="frame" x="10" y="32" width="100" height="20.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="8ys-hA-n2S"/>
+                                                        <constraint firstAttribute="width" constant="100" id="qKa-fK-Zey"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -390,13 +390,12 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Oyd-f4-fr4" firstAttribute="centerY" secondItem="odm-bk-DTP" secondAttribute="centerY" id="2Lg-IH-N5a"/>
                                                 <constraint firstItem="cRr-L0-Ppn" firstAttribute="top" secondItem="odm-bk-DTP" secondAttribute="top" id="2cc-Gh-RpW"/>
                                                 <constraint firstItem="cRr-L0-Ppn" firstAttribute="leading" secondItem="Oyd-f4-fr4" secondAttribute="trailing" id="8sK-iM-lSr"/>
-                                                <constraint firstItem="Oyd-f4-fr4" firstAttribute="top" secondItem="odm-bk-DTP" secondAttribute="top" id="AUo-3C-6qj"/>
                                                 <constraint firstAttribute="bottom" secondItem="cRr-L0-Ppn" secondAttribute="bottom" id="BJs-aH-csF"/>
                                                 <constraint firstAttribute="trailing" secondItem="cRr-L0-Ppn" secondAttribute="trailing" constant="10" id="IrF-Vp-2vN"/>
                                                 <constraint firstItem="Oyd-f4-fr4" firstAttribute="leading" secondItem="odm-bk-DTP" secondAttribute="leading" constant="10" id="N2f-fp-y3V"/>
-                                                <constraint firstAttribute="bottom" secondItem="Oyd-f4-fr4" secondAttribute="bottom" id="e75-K3-YI7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -442,7 +441,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店舗TEL：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPc-y7-0QM">
-                                                    <rect key="frame" x="10" y="0.0" width="100" height="34.5"/>
+                                                    <rect key="frame" x="10" y="0.0" width="100" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="5GS-2r-473"/>
                                                     </constraints>
@@ -451,7 +450,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwn-O8-tWX">
-                                                    <rect key="frame" x="110" y="0.0" width="294" height="34.5"/>
+                                                    <rect key="frame" x="110" y="0.0" width="294" height="35"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <state key="normal" title="050-3461-4350"/>
                                                 </button>
@@ -471,7 +470,7 @@
                                         <rect key="frame" x="0.0" y="817" width="414" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FX3-PO-dO2" id="PDG-GO-oeY">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJN-Ik-2hh">
@@ -505,7 +504,7 @@
                                         <rect key="frame" x="0.0" y="852" width="414" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vAG-hu-S3A" id="23R-BH-DtE">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZUl-3V-ekT">
@@ -524,7 +523,7 @@
                                         <rect key="frame" x="0.0" y="949" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r6O-AS-cJq" id="SQj-pw-8ic">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS0-XJ-s9X">
