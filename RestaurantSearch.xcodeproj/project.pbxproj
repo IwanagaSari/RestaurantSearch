@@ -40,7 +40,6 @@
 		86E8FE31225DD3C900DCAD11 /* PrefectureSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE30225DD3C900DCAD11 /* PrefectureSelect.storyboard */; };
 		86E8FE33225DD3DB00DCAD11 /* AreaSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE32225DD3DB00DCAD11 /* AreaSelect.storyboard */; };
 		86E8FE39225DD3FF00DCAD11 /* SearchTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */; };
-		86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */; };
 		9E01B705585537534CC2A259 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */; };
 		EA1A080C226DC4AD00550B4F /* SearchTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A080B226DC4AD00550B4F /* SearchTopViewController.swift */; };
 		EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */; };
@@ -110,7 +109,6 @@
 		86E8FE30225DD3C900DCAD11 /* PrefectureSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrefectureSelect.storyboard; sourceTree = "<group>"; };
 		86E8FE32225DD3DB00DCAD11 /* AreaSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaSelect.storyboard; sourceTree = "<group>"; };
 		86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTop.storyboard; sourceTree = "<group>"; };
-		86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
 		C3175C9061D2C575AFE6005F /* Pods-RestaurantSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearchTests/Pods-RestaurantSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA1A080B226DC4AD00550B4F /* SearchTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopViewController.swift; sourceTree = "<group>"; };
 		EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewController.swift; sourceTree = "<group>"; };
@@ -399,7 +397,6 @@
 		86E8FE08225DCF2800DCAD11 /* ShopInfo */ = {
 			isa = PBXGroup;
 			children = (
-				86E8FE3A225F0DEE00DCAD11 /* ShopInfoViewController.swift */,
 				86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */,
 				8618FBB622C38B2C001E4817 /* ShopInfoTableViewController.swift */,
 			);
@@ -726,7 +723,6 @@
 				865693C422AA18E000B9DEBD /* ImageListCell.swift in Sources */,
 				86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */,
 				EA1A080C226DC4AD00550B4F /* SearchTopViewController.swift in Sources */,
-				86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */,
 				EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */,
 				EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */,
 			);
