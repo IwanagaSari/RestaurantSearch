@@ -27,10 +27,8 @@ final class ShopInfoViewController: UITableViewController {
     @IBOutlet weak private var mapView: MKMapView!
     @IBOutlet private var addButton: UIBarButtonItem!
     @IBOutlet private var deleteButton: UIBarButtonItem!
-
     var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
-    private var imageList: [String] = []
     private let database: FavoriteDatabaseType = FavoriteDatabase.shared
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
