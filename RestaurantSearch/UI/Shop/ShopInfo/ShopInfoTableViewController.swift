@@ -28,7 +28,7 @@ final class ShopInfoTableViewController: UITableViewController {
     @IBOutlet private var addButton: UIBarButtonItem!
     @IBOutlet private var deleteButton: UIBarButtonItem!
 
-    private var shop: Shop!
+    var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
     private let database: FavoriteDatabaseType = FavoriteDatabase.shared
