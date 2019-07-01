@@ -50,7 +50,6 @@ final class ShopInfoViewController: UITableViewController {
         
         showTopInfo()
         getTopImage()
-        updateImageList()
     }
     
     private func showTopInfo() {
@@ -98,11 +97,6 @@ final class ShopInfoViewController: UITableViewController {
     private func showFavoriteList() {
         let vc = FavoriteListViewController.instantiate()
         show(vc, sender: nil)
-    }
-    
-    private func updateImageList() {
-        let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
-        imageList = allImage.filter { !$0.isEmpty }
     }
     
     private func showUIBarButton() {
