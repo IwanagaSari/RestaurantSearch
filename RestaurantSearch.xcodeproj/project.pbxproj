@@ -14,7 +14,7 @@
 		860CCD1A22A4D88700943F17 /* ShopInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1922A4D88700943F17 /* ShopInfoTests.swift */; };
 		860CCD1C22A4E35C00943F17 /* ShopListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1B22A4E35C00943F17 /* ShopListTests.swift */; };
 		860CCD2022A7611000943F17 /* FavoriteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */; };
-		8618FBB722C38B2C001E4817 /* ShopInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618FBB622C38B2C001E4817 /* ShopInfoTableViewController.swift */; };
+		8618FBB722C38B2C001E4817 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618FBB622C38B2C001E4817 /* ShopInfoViewController.swift */; };
 		865693C422AA18E000B9DEBD /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865693C322AA18E000B9DEBD /* ImageListCell.swift */; };
 		866273C2224A0165007CA319 /* AreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C1224A0165007CA319 /* AreaTests.swift */; };
 		866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C3224A09A9007CA319 /* PrefectureTests.swift */; };
@@ -83,7 +83,7 @@
 		860CCD1922A4D88700943F17 /* ShopInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoTests.swift; sourceTree = "<group>"; };
 		860CCD1B22A4E35C00943F17 /* ShopListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListTests.swift; sourceTree = "<group>"; };
 		860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDatabase.swift; sourceTree = "<group>"; };
-		8618FBB622C38B2C001E4817 /* ShopInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoTableViewController.swift; sourceTree = "<group>"; };
+		8618FBB622C38B2C001E4817 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
 		865693C322AA18E000B9DEBD /* ImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
 		866273C1224A0165007CA319 /* AreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTests.swift; sourceTree = "<group>"; };
 		866273C3224A09A9007CA319 /* PrefectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureTests.swift; sourceTree = "<group>"; };
@@ -398,7 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */,
-				8618FBB622C38B2C001E4817 /* ShopInfoTableViewController.swift */,
+				8618FBB622C38B2C001E4817 /* ShopInfoViewController.swift */,
 			);
 			path = ShopInfo;
 			sourceTree = "<group>";
@@ -708,7 +708,7 @@
 				86E8FE25225DD36E00DCAD11 /* GenreSelectViewController.swift in Sources */,
 				EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */,
 				EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */,
-				8618FBB722C38B2C001E4817 /* ShopInfoTableViewController.swift in Sources */,
+				8618FBB722C38B2C001E4817 /* ShopInfoViewController.swift in Sources */,
 				860CCD2022A7611000943F17 /* FavoriteDatabase.swift in Sources */,
 				86E8FE1F225DD34300DCAD11 /* SceneSelectViewController.swift in Sources */,
 				EA267A102248F49200F3091C /* Town.swift in Sources */,
