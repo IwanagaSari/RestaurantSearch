@@ -58,6 +58,10 @@ final class ShopInfoTableViewController: UITableViewController {
         prShortLabel.text = shop.pr.prShort
         prLongLabel.text = shop.pr.prLong
         shopAdressLabel.text = shop.address
+        opentimeLavel.text = shop.opentime
+        holidayLabel.text = shop.holiday
+        telButton.titleLabel?.text = shop.tel
+        addressLabel.text = shop.address
     }
     
     private func getTopImage() {
