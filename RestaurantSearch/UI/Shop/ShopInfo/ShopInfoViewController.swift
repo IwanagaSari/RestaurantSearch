@@ -104,10 +104,6 @@ final class ShopInfoViewController: UITableViewController {
         navigationItem.rightBarButtonItems = isFavorite ? [deleteButton] : [addButton]
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
     // MARK: - Actions
     
     /// 追加するボタンをタップされた時
