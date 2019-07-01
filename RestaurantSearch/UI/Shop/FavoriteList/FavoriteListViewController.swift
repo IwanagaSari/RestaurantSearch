@@ -51,7 +51,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func showShopInfo(_ shop: Shop) {
-        let vc = ShopInfoTableViewController.instantiate(shop: shop)
+        let vc = ShopInfoViewController.instantiate(shop: shop)
         show(vc, sender: nil)
     }
     

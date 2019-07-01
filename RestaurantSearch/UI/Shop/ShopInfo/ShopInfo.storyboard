@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shop Info Table View Controller-->
+        <!--Shop Info View Controller-->
         <scene sceneID="ptu-Nq-E0E">
             <objects>
-                <tableViewController id="6Ul-HG-qiz" customClass="ShopInfoTableViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6Ul-HG-qiz" customClass="ShopInfoViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VYZ-Vm-tUD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -397,7 +397,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeV-LC-67B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-259.4202898550725" y="-367.63392857142856"/>
+            <point key="canvasLocation" x="-906" y="-490"/>
         </scene>
     </scenes>
     <resources>
