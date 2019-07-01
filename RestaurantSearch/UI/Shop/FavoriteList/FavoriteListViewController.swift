@@ -15,7 +15,6 @@ struct Favorite {
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private var favorites: [Favorite] = []
-    private var shopList: [Shop] = []
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
