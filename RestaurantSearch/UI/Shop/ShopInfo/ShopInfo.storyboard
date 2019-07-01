@@ -312,7 +312,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="cUl-cL-l6Z" firstAttribute="top" secondItem="8fw-zC-pc5" secondAttribute="top" id="4wt-yH-In9"/>
                                                                         <constraint firstAttribute="trailing" secondItem="88M-He-cXK" secondAttribute="trailing" id="7Ix-F3-Yeo"/>
@@ -580,6 +580,8 @@
                         <outlet property="addressLabel" destination="S9s-n6-VAu" id="sMG-EG-UPx"/>
                         <outlet property="category" destination="TfP-aG-8hg" id="Hkt-Pm-r6X"/>
                         <outlet property="deleteButton" destination="faW-W5-NHg" id="oAn-Bv-Hk8"/>
+                        <outlet property="errorBackgroundView" destination="8fw-zC-pc5" id="fV0-Fq-5Gy"/>
+                        <outlet property="errorMessageLabel" destination="cUl-cL-l6Z" id="hnm-rr-1gF"/>
                         <outlet property="holidayLabel" destination="QmX-5V-Lap" id="gVv-9d-YAA"/>
                         <outlet property="mapView" destination="ZUl-3V-ekT" id="XWa-B3-3xG"/>
                         <outlet property="nameKanaLabel" destination="XbB-V5-yxw" id="T5U-Cb-66y"/>

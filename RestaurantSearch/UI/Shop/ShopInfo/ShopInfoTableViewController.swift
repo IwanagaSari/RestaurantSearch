@@ -16,6 +16,8 @@ final class ShopInfoTableViewController: UITableViewController {
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var prShortLabel: UILabel!
     @IBOutlet weak private var topImageView: UIImageView!
+    @IBOutlet weak private var errorBackgroundView: UIView!
+    @IBOutlet weak private var errorMessageLabel: UILabel!
     @IBOutlet weak private var prLongLabel: UILabel!
     @IBOutlet weak private var shopAdressLabel: UILabel!
     @IBOutlet weak private var opentimeLavel: UILabel!
@@ -25,7 +27,7 @@ final class ShopInfoTableViewController: UITableViewController {
     @IBOutlet weak private var mapView: MKMapView!
     @IBOutlet private var addButton: UIBarButtonItem!
     @IBOutlet private var deleteButton: UIBarButtonItem!
-    @IBOutlet weak private var topErrorMessageLabel: UILabel!
+
     private var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
     private var imageList: [String] = []
