@@ -135,5 +135,4 @@ final class ShopInfoViewController: UITableViewController {
             present(safari, animated: true, completion: nil)
         }
     }
-
 }
