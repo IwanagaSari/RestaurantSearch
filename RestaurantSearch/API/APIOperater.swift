@@ -23,7 +23,7 @@ final class APIOperater: APIType {
         "keyid": "ca11c104693ded38efb1a2abdd2aea07"
     ]
     
-    private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String: Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
+    private func fetchResponse<ResponseType: Decodable>(url: String, parameters: [String: Any], success: @escaping (ResponseType) -> Void, failure: @escaping (Error) -> Void) {
         let finalParameters = commonParameters.merging(parameters) { $1 }
         
         Alamofire.request(url, parameters: finalParameters).responseData { response in
@@ -34,7 +34,7 @@ final class APIOperater: APIType {
             
             // ぐるなびAPI上のエラーがないかチェック
             if 200..<300 ~= response.response!.statusCode {
-                let result = response.result.flatMap { try JSONDecoder().decode(Responsetype.self, from: $0) }
+                let result = response.result.flatMap { try JSONDecoder().decode(ResponseType.self, from: $0) }
                 switch result {
                 case .success(let object):
                     success(object)
