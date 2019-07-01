@@ -41,7 +41,7 @@
                                                 <constraint firstItem="TfP-aG-8hg" firstAttribute="leading" secondItem="B6u-DR-aHE" secondAttribute="leading" constant="10" id="von-wQ-HUF"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.48534063463444704" green="0.58336556392905525" blue="0.66494048757643309" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.33032814368853503" green="0.29326385022478729" blue="0.2599441377519438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="glY-4C-GHH" customClass="ShopPRCell" customModule="RestaurantSearch" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="25" width="414" height="44"/>
