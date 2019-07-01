@@ -561,6 +561,9 @@
                                                     <state key="normal" title="さらに詳しく">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="detailButtonTapped:" destination="6Ul-HG-qiz" eventType="touchUpInside" id="ONW-tR-dCx"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
