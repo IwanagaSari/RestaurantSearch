@@ -52,7 +52,11 @@ final class ShopInfoTableViewController: UITableViewController {
     }
     
     private func showTopInfo() {
+        category.text = shop.category
+        nameKanaLabel.text = shop.nameKana
         nameLabel.text = shop.name
+        prShortLabel.text = shop.pr.prShort
+        prLongLabel.text = shop.pr.prLong
         shopAdressLabel.text = shop.address
     }
     
