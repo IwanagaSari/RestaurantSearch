@@ -88,16 +88,14 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
         
         // 店名の表示
-        if let name = favorites[indexPath.row].name {
+        if let name = favorites[indexPath.row].shop?.name {
             cell.shopNameInfavoriteList.text = name
         } else {
             cell.shopNameInfavoriteList.text = ""
         }
         
         // 画像の表示
-        let shopImage = favorites[indexPath.row].imageUrl 
-        
-        if let image = shopImage {
+        if let image = favorites[indexPath.row].shop?.imageUrl.shopImage1 {
             let imageURL = URL(string: image)!
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
