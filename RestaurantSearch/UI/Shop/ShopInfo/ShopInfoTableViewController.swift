@@ -113,36 +113,6 @@ final class ShopInfoTableViewController: UITableViewController {
         return UITableView.automaticDimension
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath) as! ImageListCell
-        
-        let imageURL = URL(string: imageList[indexPath.row])!
-        
-        let request = imageDownloader.getImage(url: imageURL,
-                                               success: { shopImage in
-                                                cell.imageListErrorLabelInShopInfo.text = ""
-                                                cell.imageViewInShopInfo.image = shopImage
-        },
-                                               failure: { error in
-                                                cell.imageListErrorLabelInShopInfo.text = error.localizedDescription
-        })
-        cell.onReuse = {
-            request?.cancel()
-        }
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
-        
-        return CGSize(width: width, height: width)
-    }
-    
     // MARK: - Actions
     
     /// 追加するボタンをタップされた時
