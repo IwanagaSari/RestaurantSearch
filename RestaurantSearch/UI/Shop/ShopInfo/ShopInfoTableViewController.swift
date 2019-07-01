@@ -77,7 +77,7 @@ final class ShopInfoTableViewController: UITableViewController {
     
     private func showTopImage(_ topImage: UIImage) {
         topErrorMessageLabel.text = ""
-        shopTopImageView.image = topImage
+        topImageView.image = topImage
     }
     
     private func showTopImageError(_ error: Error) {
