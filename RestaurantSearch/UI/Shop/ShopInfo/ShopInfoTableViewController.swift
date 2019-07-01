@@ -88,12 +88,11 @@ final class ShopInfoTableViewController: UITableViewController {
     }
     
     private func showImage(_ topImage: UIImage) {
-        //topErrorMessageLabel.text = ""
         topImageView.image = topImage
     }
     
     private func showImageError(_ error: Error) {
-        //topErrorMessageLabel.text = error.localizedDescription
+        errorMessageLabel.text = error.localizedDescription
     }
     
     private func showFavoriteList() {
