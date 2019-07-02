@@ -27,7 +27,6 @@ final class APIOperater: APIType {
         let finalParameters = commonParameters.merging(parameters) { $1 }
         
         Alamofire.request(url, parameters: finalParameters)
-                 .validate(statusCode: 200..<300)
                  .responseData { response in
                     
                     let result = response.result.flatMap { try JSONDecoder().decode(ResponseType.self, from: $0) }
