@@ -321,6 +321,11 @@
                             <outlet property="delegate" destination="hQ8-sD-ZUh" id="X64-Xy-Sux"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="areaSelectButton" destination="qFS-7b-4UH" id="ZR5-jn-MeF"/>
+                        <outlet property="freewordTextField" destination="gIq-fe-WLX" id="7lu-Yb-3hp"/>
+                        <outlet property="searchButton" destination="byO-Qe-Msi" id="H6Y-GH-4hD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZy-HL-EXP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
