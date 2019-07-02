@@ -9,5 +9,8 @@
 import UIKit
 
 final class SearchTopDetailViewController: UITableViewController {
-
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return (tableView.frame.height - view.safeAreaInsets.top) / 3 // 3は使っているセルの数
+    }
 }
