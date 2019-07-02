@@ -2,24 +2,33 @@
 //  ShopInfoViewController.swift
 //  RestaurantSearch
 //
-//  Created by 岩永彩里 on 2019/04/10.
+//  Created by 岩永彩里 on 2019/06/26.
 //  Copyright © 2019 岩永 彩里. All rights reserved.
 //
 
 import UIKit
 import SafariServices
+import MapKit
 
-final class ShopInfoViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    @IBOutlet weak private var shopNameLabel: UILabel!
+final class ShopInfoViewController: UITableViewController {
+    @IBOutlet weak private var category: UILabel!
+    @IBOutlet weak private var nameKanaLabel: UILabel!
+    @IBOutlet weak private var nameLabel: UILabel!
+    @IBOutlet weak private var prShortLabel: UILabel!
+    @IBOutlet weak private var topImageView: UIImageView!
+    @IBOutlet weak private var errorBackgroundView: UIView!
+    @IBOutlet weak private var errorMessageLabel: UILabel!
+    @IBOutlet weak private var prLongLabel: UILabel!
     @IBOutlet weak private var shopAdressLabel: UILabel!
-    @IBOutlet weak private var shopTopImageView: UIImageView!
-    @IBOutlet weak private var collectionView: UICollectionView!
+    @IBOutlet weak private var opentimeLavel: UILabel!
+    @IBOutlet weak private var holidayLabel: UILabel!
+    @IBOutlet weak private var telButton: UIButton!
+    @IBOutlet weak private var addressLabel: UILabel!
+    @IBOutlet weak private var mapView: MKMapView!
     @IBOutlet private var addButton: UIBarButtonItem!
     @IBOutlet private var deleteButton: UIBarButtonItem!
-    @IBOutlet weak private var topErrorMessageLabel: UILabel!
-    private var shop: Shop!
+    var shop: Shop!
     private let imageDownloader = ImageDownloader.shared
-    private var imageList: [String] = []
     private let database: FavoriteDatabaseType = FavoriteDatabase.shared
     
     static func instantiate(shop: Shop) -> ShopInfoViewController {
@@ -38,27 +47,35 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         super.viewDidLoad()
         
         showTopInfo()
+        showMapView()
         getTopImage()
-        updateImageList()
     }
     
     private func showTopInfo() {
-        shopNameLabel.text = shop.name
+        category.text = shop.category
+        nameKanaLabel.text = shop.nameKana
+        nameLabel.text = shop.name
+        prShortLabel.text = shop.pr.prShort
+        prLongLabel.text = shop.pr.prLong
         shopAdressLabel.text = shop.address
+        opentimeLavel.text = shop.opentime
+        holidayLabel.text = shop.holiday
+        telButton.titleLabel?.text = shop.tel
+        addressLabel.text = shop.address
     }
     
     private func getTopImage() {
         if shop.imageUrl.shopImage1.isEmpty {
-            shopTopImageView.image = UIImage(named: "error")
+            topImageView.image = UIImage(named: "error")
         } else {
             let topImageURL = URL(string: shop.imageUrl.shopImage1)!
             
             imageDownloader.getImage(url: topImageURL,
                                      success: { [weak self] topImage in
-                                          self?.showTopImage(topImage)
+                                          self?.showImage(topImage)
                                      },
                                      failure: { [weak self] error in
-                                          self?.showTopImageError(error)
+                                          self?.showImageError(error)
                                      })
         }
     }
@@ -68,13 +85,12 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         show(vc, sender: nil)
     }
     
-    private func showTopImage(_ topImage: UIImage) {
-        topErrorMessageLabel.text = ""
-        shopTopImageView.image = topImage
+    private func showImage(_ topImage: UIImage) {
+        topImageView.image = topImage
     }
     
-    private func showTopImageError(_ error: Error) {
-        topErrorMessageLabel.text = error.localizedDescription
+    private func showImageError(_ error: Error) {
+        errorMessageLabel.text = error.localizedDescription
     }
     
     private func showFavoriteList() {
@@ -82,44 +98,28 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
         show(vc, sender: nil)
     }
     
-    private func updateImageList() {
-        let allImage = [shop.imageUrl.shopImage1, shop.imageUrl.shopImage2, shop.imageUrl.qrcode]
-        imageList = allImage.filter { !$0.isEmpty }
-    }
-    
     private func showUIBarButton() {
         let isFavorite = database.contain(shop.id)
         navigationItem.rightBarButtonItems = isFavorite ? [deleteButton] : [addButton]
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopInfoCell", for: indexPath) as! ImageListCell
+    private func showMapView() {
+        let latitude = Double(shop.latitude)!
+        let longitude = Double(shop.longitude)!
+        let center = CLLocationCoordinate2DMake(latitude, longitude)
+        mapView.setCenter(center, animated: true)
         
-        let imageURL = URL(string: imageList[indexPath.row])!
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: center, span: span)
+        mapView.region = region
         
-        let request = imageDownloader.getImage(url: imageURL,
-                                               success: { shopImage in
-                                                    cell.imageListErrorLabelInShopInfo.text = ""
-                                                    cell.imageViewInShopInfo.image = shopImage
-                                               },
-                                               failure: { error in
-                                                    cell.imageListErrorLabelInShopInfo.text = error.localizedDescription
-                                               })
-        cell.onReuse = {
-            request?.cancel()
-        }
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
+        let pin = MKPointAnnotation()
+        pin.coordinate = center
         
-        return CGSize(width: width, height: width)
+        pin.title = shop.name
+        pin.subtitle = shop.category
+        
+        mapView.addAnnotation(pin)
     }
     
     // MARK: - Actions
@@ -154,5 +154,10 @@ final class ShopInfoViewController: UIViewController, UICollectionViewDataSource
             let safari = SFSafariViewController(url: url)
             present(safari, animated: true, completion: nil)
         }
+    }
+    
+    // storyboad上でCellのデザインを見やすくするため、あえてコード上で設定
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
