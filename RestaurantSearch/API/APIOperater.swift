@@ -33,15 +33,16 @@ final class APIOperater: APIType {
                     switch result {
                     case .success(let object):
                         success(object)
-                    case .failure(let error):
-                        // ぐるなびAPI上のエラーかどうかの確認
+                    case .failure(let error):  // リクエストに失敗した　or デコードに失敗した　時のエラーが入る
+                        // ぐるなびAPI上のエラーかどうか、APIErrorResponseBodyでデコードして確かめる
                         if let errorResponseBody = response.data.flatMap({ try? JSONDecoder().decode(APIErrorResponseBody.self, from: $0) }) {
                             failure(errorResponseBody.error)
                         } else {
+                            // そうでない場合は、リクエスト失敗時のエラーがここに入る
                             failure(error)
                         }
                     }
-                }
+                 }
     }
     
     /// エリアの取得
