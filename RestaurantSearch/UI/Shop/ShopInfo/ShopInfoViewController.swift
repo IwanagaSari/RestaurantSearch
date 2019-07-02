@@ -72,10 +72,10 @@ final class ShopInfoViewController: UITableViewController {
             
             imageDownloader.getImage(url: topImageURL,
                                      success: { [weak self] topImage in
-                                        self?.showImage(topImage)
+                                          self?.showImage(topImage)
                                      },
                                      failure: { [weak self] error in
-                                        self?.showImageError(error)
+                                          self?.showImageError(error)
                                      })
         }
     }
