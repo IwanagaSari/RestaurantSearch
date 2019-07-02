@@ -21,6 +21,7 @@
 		866273C8224C75A9007CA319 /* TownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C7224C75A9007CA319 /* TownTests.swift */; };
 		8699813B22C0A5AC009A6C05 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699813A22C0A5AC009A6C05 /* TopViewController.swift */; };
 		86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */; };
+		86DE32EE22CB2B9800B7627B /* SearchTopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DE32ED22CB2B9800B7627B /* SearchTopDetailViewController.swift */; };
 		86E8FE0E225DD03D00DCAD11 /* FavoriteList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE0D225DD03D00DCAD11 /* FavoriteList.storyboard */; };
 		86E8FE10225DD05800DCAD11 /* FavoriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE0F225DD05800DCAD11 /* FavoriteListViewController.swift */; };
 		86E8FE12225DD09D00DCAD11 /* ShopMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE11225DD09D00DCAD11 /* ShopMap.storyboard */; };
@@ -91,6 +92,7 @@
 		866273C7224C75A9007CA319 /* TownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownTests.swift; sourceTree = "<group>"; };
 		8699813A22C0A5AC009A6C05 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTests.swift; sourceTree = "<group>"; };
+		86DE32ED22CB2B9800B7627B /* SearchTopDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopDetailViewController.swift; sourceTree = "<group>"; };
 		86E8FE0D225DD03D00DCAD11 /* FavoriteList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteList.storyboard; sourceTree = "<group>"; };
 		86E8FE0F225DD05800DCAD11 /* FavoriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewController.swift; sourceTree = "<group>"; };
 		86E8FE11225DD09D00DCAD11 /* ShopMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopMap.storyboard; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				86E8FE38225DD3FF00DCAD11 /* SearchTop.storyboard */,
 				EA1A080B226DC4AD00550B4F /* SearchTopViewController.swift */,
 				8699813A22C0A5AC009A6C05 /* TopViewController.swift */,
+				86DE32ED22CB2B9800B7627B /* SearchTopDetailViewController.swift */,
 			);
 			path = SearchTop;
 			sourceTree = "<group>";
@@ -727,6 +730,7 @@
 				86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */,
 				EA1A080C226DC4AD00550B4F /* SearchTopViewController.swift in Sources */,
 				86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */,
+				86DE32EE22CB2B9800B7627B /* SearchTopDetailViewController.swift in Sources */,
 				EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */,
 				EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */,
 			);
