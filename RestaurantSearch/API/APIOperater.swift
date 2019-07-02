@@ -41,8 +41,6 @@ final class APIOperater: APIType {
                         } else {
                             failure(error)
                         }
-                        
-                        //failure(response.data.flatMap({ try? JSONDecoder().decode(APIErrorResponseBody.self, from: $0) })?.error ?? error)
                     }
                 }
     }
