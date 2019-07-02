@@ -287,14 +287,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ff-Tq-ddj">
-                                                    <rect key="frame" x="334" y="16" width="50" height="30"/>
-                                                    <state key="normal" title="My List">
+                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ff-Tq-ddj">
+                                                    <rect key="frame" x="292" y="16" width="92" height="30"/>
+                                                    <state key="normal" title="My List" image="book">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byO-Qe-Msi">
-                                                    <rect key="frame" x="105" y="16" width="219" height="30"/>
+                                                    <rect key="frame" x="105" y="16" width="177" height="30"/>
                                                     <color key="backgroundColor" red="0.62343204659999996" green="0.84702787030000004" blue="0.30246782150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Search">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -333,6 +333,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" width="33" height="33"/>
         <image name="topImage1" width="300" height="281"/>
     </resources>
 </document>
