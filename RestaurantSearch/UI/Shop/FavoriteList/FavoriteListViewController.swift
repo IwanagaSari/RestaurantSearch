@@ -97,8 +97,9 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let shop = favorites[indexPath.row].shop!
-        showShopInfo(shop)
+        if let shop = favorites[indexPath.row].shop {
+            showShopInfo(shop)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
