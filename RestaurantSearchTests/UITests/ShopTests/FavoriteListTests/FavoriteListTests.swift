@@ -7,7 +7,12 @@
 //
 
 import XCTest
+@testable import RestaurantSearch
 
 final class FavoriteListTests: XCTestCase {
-
+    
+    func testInstantiate() {
+        let vc = FavoriteListViewController.instantiate()
+        XCTAssertNotNil(vc)
+    }
 }
