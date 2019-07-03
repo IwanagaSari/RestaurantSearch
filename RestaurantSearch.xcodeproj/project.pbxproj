@@ -737,11 +737,7 @@
 				865693C422AA18E000B9DEBD /* ImageListCell.swift in Sources */,
 				86E8FE2F225DD3BF00DCAD11 /* PrefectureSelectViewController.swift in Sources */,
 				EA1A080C226DC4AD00550B4F /* SearchTopViewController.swift in Sources */,
-<<<<<<< HEAD
-				86E8FE3B225F0DEE00DCAD11 /* ShopInfoViewController.swift in Sources */,
 				86DE32EE22CB2B9800B7627B /* SearchTopDetailViewController.swift in Sources */,
-=======
->>>>>>> master
 				EA267A0C2248EC3E00F3091C /* Prefecture.swift in Sources */,
 				EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */,
 			);
