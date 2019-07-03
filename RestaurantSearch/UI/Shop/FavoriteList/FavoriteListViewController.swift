@@ -74,12 +74,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
+        let shop = favorites[indexPath.row].shop
         
         // 店名の表示
-        cell.shopNameInfavoriteList.text = favorites[indexPath.row].shop?.name
+        cell.shopNameInfavoriteList.text = shop?.name
         
         // 画像の表示
-        if let image = favorites[indexPath.row].shop?.imageUrl.shopImage1 {
+        if let image = shop?.imageUrl.shopImage1 {
             let imageURL = URL(string: image)!
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
