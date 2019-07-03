@@ -20,21 +20,29 @@ protocol APIType {
 
 final class APIOperater: APIType {
     private let commonParameters: [String: Any] = [
-        "keyid": "9e168ecbfa31f841eb3a8bc16045a424"
+        "keyid": "ca11c104693ded38efb1a2abdd2aea07"
     ]
     
-    private func fetchResponse<Responsetype: Decodable>(url: String, parameters: [String: Any], success: @escaping (Responsetype) -> Void, failure: @escaping (Error) -> Void) {
+    private func fetchResponse<ResponseType: Decodable>(url: String, parameters: [String: Any], success: @escaping (ResponseType) -> Void, failure: @escaping (Error) -> Void) {
         let finalParameters = commonParameters.merging(parameters) { $1 }
         
-        Alamofire.request(url, parameters: finalParameters).responseData { response in
-            let result = response.result.flatMap({ try JSONDecoder().decode(Responsetype.self, from: $0) })
-            switch result {
-            case .success(let object):
-                success(object)
-            case .failure(let error):
-                failure(error)
-            }
-        }
+        Alamofire.request(url, parameters: finalParameters)
+                 .responseData { response in
+                    
+                    let result = response.result.flatMap { try JSONDecoder().decode(ResponseType.self, from: $0) }
+                    switch result {
+                    case .success(let object):
+                        success(object)
+                    case .failure(let error):  // リクエストに失敗した　or デコードに失敗した　時のエラーが入る
+                        // ぐるなびAPI上のエラーかどうか、APIErrorResponseBodyでデコードして確かめる
+                        if let errorResponseBody = response.data.flatMap({ try? JSONDecoder().decode(APIErrorResponseBody.self, from: $0) }) {
+                            failure(errorResponseBody.error)
+                        } else {
+                            // そうでない場合は、リクエスト失敗時のエラーがここに入る
+                            failure(error)
+                        }
+                    }
+                 }
     }
     
     /// エリアの取得

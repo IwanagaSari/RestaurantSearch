@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol TownSelectViewControllerDelegate: AnyObject {
+    func townSelected(_ town: Town)
+}
+
 final class TownSelectViewController: UITableViewController {
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorMessageLabel: UILabel!
@@ -51,8 +55,8 @@ final class TownSelectViewController: UITableViewController {
     }
     
     private func showSearchTop(_ town: Town) {
-        let vc = SearchTopViewController.instantiate(town: town)
-        show(vc, sender: nil)
+        let vc = navigationController?.viewControllers.first as? TownSelectViewControllerDelegate
+        vc?.townSelected(town)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

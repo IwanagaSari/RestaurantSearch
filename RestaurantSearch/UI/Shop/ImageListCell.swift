@@ -18,6 +18,7 @@ final class ImageListCell: UICollectionViewCell {
     @IBOutlet weak var imageViewInShopInfo: UIImageView!
     @IBOutlet weak var imageViewInFavoliteList: UIImageView!
     @IBOutlet weak var shopNameInfavoriteList: UILabel!
+    @IBOutlet weak var imageListErrorLabelInShopInfo: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
