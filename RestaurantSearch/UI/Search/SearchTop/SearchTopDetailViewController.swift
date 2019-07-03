@@ -23,7 +23,7 @@ final class SearchTopDetailViewController: UITableViewController {
         return (tableView.frame.height - view.safeAreaInsets.top) / 3 // 3は使っているセルの数
     }
     
-    func layout() {
+    private func layout() {
         areaSelectButton.layer.cornerRadius = 5.0
         searchButton.layer.cornerRadius = 5.0
     }
