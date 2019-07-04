@@ -80,20 +80,23 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         cell.shopNameInfavoriteList.text = shop?.name
         
         // 画像の表示
-        if shop?.imageUrl.shopImage1 == "" || shop?.imageUrl.shopImage1 == nil {
-            cell.imageViewInFavoliteList.image = nil // これ外すと""の店は別の画像（全部同じ）が表示される
-        } else {
-            let imageURL = URL(string: (shop?.imageUrl.shopImage1)!)!
-            let request = imageDownloader.getImage(url: imageURL,
+        if let urlString = shop?.imageUrl.shopImage1, !urlString.isEmpty {
+            
+        }
+        
+        if let url = URL(string: shop?.imageUrl.shopImage1 ?? "") {
+            let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
-                                                        cell.imageViewInFavoliteList.image = shopImage
-                                                   },
+                                                    cell.imageViewInFavoliteList.image = shopImage
+            },
                                                    failure: { [weak self] error in
-                                                        self?.showError(error)
-                                                   })
+                                                    self?.showError(error)
+            })
             cell.onReuse = {
                 request?.cancel()
             }
+        } else {
+            cell.imageViewInFavoliteList.image = nil // これ外すと""の店は別の画像（全部同じ）が表示される
         }
         return cell
     }
