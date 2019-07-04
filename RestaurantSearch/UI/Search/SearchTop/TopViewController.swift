@@ -9,6 +9,7 @@
 import UIKit
 
 final class TopViewController: UIViewController, TownSelectViewControllerDelegate {
+    var detailViewController: SearchTopDetailViewController?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -26,10 +27,13 @@ final class TopViewController: UIViewController, TownSelectViewControllerDelegat
         tabBarController?.tabBar.isHidden = false
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        detailViewController = segue.destination as? SearchTopDetailViewController
+    }
+    
     func townSelected(_ town: Town) {
         navigationController?.popToRootViewController(animated: true)
         
-        let searchTopDetailViewController = SearchTopDetailViewController()
-        searchTopDetailViewController.townSelected(town)
+        detailViewController?.townSelected(town)
     }
 }
