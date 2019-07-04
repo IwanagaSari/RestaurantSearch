@@ -72,6 +72,15 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         freewordTextField.resignFirstResponder()
     }
     
+    @IBAction func areaButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func searchButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func myListButtonTapped(_ sender: UIButton) {
+    }
+    
     // MARK: - UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
