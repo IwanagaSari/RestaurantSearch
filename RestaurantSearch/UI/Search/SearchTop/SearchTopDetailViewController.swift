@@ -51,21 +51,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         return selectedTown?.townCode == nil && freewordTextField.text == ""
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 1:
-            showAreaSelect()
-        case 4:
-            if validateInput() {
-                showValidationAlert()
-            } else {
-                showShopList()
-            }
-        default:
-            return
-        }
-    }
-    
     // MARK: - Actions
     
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
@@ -73,9 +58,15 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     }
     
     @IBAction func areaButtonTapped(_ sender: UIButton) {
+        showAreaSelect()
     }
     
     @IBAction func searchButtonTapped(_ sender: UIButton) {
+        if validateInput() {
+            showValidationAlert()
+        } else {
+            showShopList()
+        }
     }
     
     @IBAction func myListButtonTapped(_ sender: UIButton) {
