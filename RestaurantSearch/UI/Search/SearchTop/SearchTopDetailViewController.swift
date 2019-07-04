@@ -20,10 +20,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         layout()
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (tableView.frame.height - view.safeAreaInsets.top) / 3 // 3は使っているセルの数
-    }
-    
     private func layout() {
         areaSelectButton.layer.cornerRadius = 5.0
         searchButton.layer.cornerRadius = 5.0
@@ -53,6 +49,10 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     private func showFavoriteList() {
         let vc = FavoriteListViewController.instantiate()
         show(vc, sender: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return (tableView.frame.height - view.safeAreaInsets.top) / 3 // 3は使っているセルの数
     }
     
     // MARK: - Actions
