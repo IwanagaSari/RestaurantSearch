@@ -219,6 +219,11 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyK-SM-qV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EIR-Y0-Yk9">
+                    <connections>
+                        <outlet property="delegate" destination="flP-rl-d6M" id="9uW-m6-wwf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="840.57971014492762" y="87.723214285714278"/>
         </scene>

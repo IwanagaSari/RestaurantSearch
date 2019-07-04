@@ -31,8 +31,7 @@ final class TopViewController: UIViewController, UIGestureRecognizerDelegate, To
         super.viewDidLoad()
         
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TopViewController.tapped(_:)))
-        tapGesture.delegate = self
-        self.view.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
     }
     
     @IBAction func tapped(_ sender: UITapGestureRecognizer) {
