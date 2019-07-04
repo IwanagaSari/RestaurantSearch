@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TopViewController: UIViewController, UIGestureRecognizerDelegate, TownSelectViewControllerDelegate {
+final class TopViewController: UIViewController, TownSelectViewControllerDelegate {
     var detailViewController: SearchTopDetailViewController?
     
     override func viewWillAppear(_ animated: Bool) {
