@@ -57,10 +57,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     
     // MARK: - Actions
     
-    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
-        freewordTextField.resignFirstResponder()
-    }
-    
     @IBAction func areaButtonTapped(_ sender: UIButton) {
         showAreaSelect()
     }
