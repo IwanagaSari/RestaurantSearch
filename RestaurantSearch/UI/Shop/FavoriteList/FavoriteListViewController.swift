@@ -80,10 +80,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         cell.shopNameInfavoriteList.text = shop?.name
         
         // 画像の表示
-        if let urlString = shop?.imageUrl.shopImage1, !urlString.isEmpty {
-            
-        }
-        
         if let url = URL(string: shop?.imageUrl.shopImage1 ?? "") {
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
@@ -96,7 +92,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                 request?.cancel()
             }
         } else {
-            cell.imageViewInFavoliteList.image = nil 
+            cell.imageViewInFavoliteList.image = nil
         }
         return cell
     }
