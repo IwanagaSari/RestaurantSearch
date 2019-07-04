@@ -18,7 +18,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         super.viewDidLoad()
         
         layout()
-        freewordTextField.delegate = self
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
