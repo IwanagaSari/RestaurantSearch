@@ -51,6 +51,11 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         return selectedTown?.townCode == nil && freewordTextField.text == ""
     }
     
+    private func showFavoriteList() {
+        let vc = FavoriteListViewController.instantiate()
+        show(vc, sender: nil)
+    }
+    
     // MARK: - Actions
     
     @IBAction func tapView(_ sender: UITapGestureRecognizer) {
@@ -70,6 +75,7 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     }
     
     @IBAction func myListButtonTapped(_ sender: UIButton) {
+        showFavoriteList()
     }
     
     // MARK: - UITextFieldDelegate
