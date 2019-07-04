@@ -30,19 +30,14 @@ final class TopViewController: UIViewController, UIGestureRecognizerDelegate, To
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TopViewController.tapped(_:)))
-        
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TopViewController.tapped(_:)))
         tapGesture.delegate = self
-        
         self.view.addGestureRecognizer(tapGesture)
     }
     
-    @objc func tapped(_ sender: UITapGestureRecognizer){
-        if sender.state == .ended {
-           detailViewController?.freewordTextField.resignFirstResponder()
-        }
+    @IBAction func tapped(_ sender: UITapGestureRecognizer) {
+        detailViewController?.freewordTextField.resignFirstResponder()
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         detailViewController = segue.destination as? SearchTopDetailViewController
