@@ -30,12 +30,12 @@ final class TopViewController: UIViewController, TownSelectViewControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TopViewController.tapped(_:)))
-        view.addGestureRecognizer(tapGesture)
+        tapGesture()
     }
     
-    @IBAction func tapped(_ sender: UITapGestureRecognizer) {
-        detailViewController?.freewordTextField.resignFirstResponder()
+    private func tapGesture() {
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TopViewController.tapped(_:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
