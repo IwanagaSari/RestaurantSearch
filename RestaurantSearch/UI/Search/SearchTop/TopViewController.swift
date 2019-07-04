@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TopViewController: UIViewController {
+final class TopViewController: UIViewController, TownSelectViewControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -24,5 +24,12 @@ final class TopViewController: UIViewController {
         // NavigationBar 表示
         navigationController?.setNavigationBarHidden(false, animated: false)
         tabBarController?.tabBar.isHidden = false
+    }
+    
+    func townSelected(_ town: Town) {
+        navigationController?.popToRootViewController(animated: true)
+        
+        let searchTopDetailViewController = SearchTopDetailViewController()
+        searchTopDetailViewController.townSelected(town)
     }
 }

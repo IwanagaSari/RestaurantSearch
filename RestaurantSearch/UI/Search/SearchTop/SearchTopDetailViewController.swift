@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class SearchTopDetailViewController: UITableViewController, UITextFieldDelegate, TownSelectViewControllerDelegate {
+final class SearchTopDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak private var freewordTextField: UITextField!
     @IBOutlet weak private var areaSelectButton: UIButton!
     @IBOutlet weak private var searchButton: UIButton!
@@ -28,7 +28,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         areaSelectButton.layer.cornerRadius = 5.0
         searchButton.layer.cornerRadius = 5.0
     }
-    
     
     private func showAreaSelect() {
         let vc = AreaSelectViewController.instantiate()
@@ -89,7 +88,7 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     
     func townSelected(_ town: Town) {
         navigationController?.popToRootViewController(animated: true)
-        areaSelectButton.titleLabel?.text = town.townName
-        selectedTown = town
+        print("TownDetail:\(town.townName)")
+        //areaSelectButton.setTitle(town.townName, for: .normal)
     }
 }
