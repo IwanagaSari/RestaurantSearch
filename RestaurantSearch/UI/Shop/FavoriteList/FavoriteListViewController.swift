@@ -96,7 +96,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                 request?.cancel()
             }
         } else {
-            cell.imageViewInFavoliteList.image = nil // これ外すと""の店は別の画像（全部同じ）が表示される
+            cell.imageViewInFavoliteList.image = nil 
         }
         return cell
     }
