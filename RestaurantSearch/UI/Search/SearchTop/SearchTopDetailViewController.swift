@@ -9,7 +9,7 @@
 import UIKit
 
 final class SearchTopDetailViewController: UITableViewController, UITextFieldDelegate {
-    @IBOutlet weak private var freewordTextField: UITextField!
+    @IBOutlet weak var freewordTextField: UITextField!
     @IBOutlet weak private var areaSelectButton: UIButton!
     @IBOutlet weak private var searchButton: UIButton!
     private var selectedTown: Town?

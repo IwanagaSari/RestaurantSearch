@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class TopViewController: UIViewController, TownSelectViewControllerDelegate {
+final class TopViewController: UIViewController, UIGestureRecognizerDelegate, TownSelectViewControllerDelegate {
     var detailViewController: SearchTopDetailViewController?
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,6 +26,23 @@ final class TopViewController: UIViewController, TownSelectViewControllerDelegat
         navigationController?.setNavigationBarHidden(false, animated: false)
         tabBarController?.tabBar.isHidden = false
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TopViewController.tapped(_:)))
+        
+        tapGesture.delegate = self
+        
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tapped(_ sender: UITapGestureRecognizer){
+        if sender.state == .ended {
+           detailViewController?.freewordTextField.resignFirstResponder()
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         detailViewController = segue.destination as? SearchTopDetailViewController
