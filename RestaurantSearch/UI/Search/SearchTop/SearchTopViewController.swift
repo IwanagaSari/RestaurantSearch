@@ -2,73 +2,55 @@
 //  SearchTopViewController.swift
 //  RestaurantSearch
 //
-//  Created by 岩永 彩里 on 2019/04/22.
-//  Copyright © 2019年 岩永 彩里. All rights reserved.
+//  Created by 岩永彩里 on 2019/06/24.
+//  Copyright © 2019 岩永 彩里. All rights reserved.
 //
 
 import UIKit
 
-final class SearchTopViewController: UITableViewController, UITextFieldDelegate, TownSelectViewControllerDelegate {
-    @IBOutlet weak private var freewordSearchBar: UITextField!
-    @IBOutlet weak private var areaLabel: UILabel!
-    @IBOutlet weak private var genreLabel: UILabel!
-    @IBOutlet weak private var sceneLabel: UILabel!
-    private var selectedTown: Town?
+final class SearchTopViewController: UIViewController, TownSelectViewControllerDelegate {
+    var detailViewController: SearchTopDetailViewController?
     
-    private func showAreaSelect() {
-        let vc = AreaSelectViewController.instantiate()
-        show(vc, sender: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // NavigationBar 非表示
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        tabBarController?.tabBar.isHidden = true
     }
     
-    private func showShopList() {
-        let vc = ShopListViewController.instantiate(townCode: selectedTown?.townCode ?? "", freeword: freewordSearchBar.text ?? "")
-        show(vc, sender: nil)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        // NavigationBar 表示
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        tabBarController?.tabBar.isHidden = false
     }
     
-    private func showValidationAlert() {
-        let alertController = UIAlertController(title: "Error", message: "検索条件を入力してください", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(action)
-        present(alertController, animated: true, completion: nil)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tapGesture()
     }
     
-    private func validateInput() -> Bool {
-        return selectedTown?.townCode == nil && freewordSearchBar.text == ""
+    private func tapGesture() {
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchTopViewController.tapped(_:)))
+        view.addGestureRecognizer(tapGesture)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 1:
-            showAreaSelect()
-        case 4:
-            if validateInput() {
-                showValidationAlert()
-            } else {
-                showShopList()
-            }
-        default:
-            return
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        detailViewController = segue.destination as? SearchTopDetailViewController
+    }
+    
+    func townSelected(_ town: Town) {
+        navigationController?.popToRootViewController(animated: true)
+        
+        detailViewController?.townSelected(town)
     }
     
     // MARK: - Actions
-
-    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
-        freewordSearchBar.resignFirstResponder()
-    }
-
-    // MARK: - UITextFieldDelegate
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        freewordSearchBar.resignFirstResponder()
-        return true
-    }
-    
-    // MARK: - TownSelectViewControllerDelegate
-
-    func townSelected(_ town: Town) {
-        navigationController?.popToRootViewController(animated: true)
-        areaLabel.text = town.townName
-        selectedTown = town
+    @IBAction func tapped(_ sender: UITapGestureRecognizer) {
+        detailViewController?.freewordTextField.resignFirstResponder()
     }
 }
