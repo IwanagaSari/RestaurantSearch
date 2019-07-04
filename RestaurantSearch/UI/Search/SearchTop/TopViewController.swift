@@ -47,4 +47,10 @@ final class TopViewController: UIViewController, TownSelectViewControllerDelegat
         
         detailViewController?.townSelected(town)
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func tapped(_ sender: UITapGestureRecognizer) {
+        detailViewController?.freewordTextField.resignFirstResponder()
+    }
 }
