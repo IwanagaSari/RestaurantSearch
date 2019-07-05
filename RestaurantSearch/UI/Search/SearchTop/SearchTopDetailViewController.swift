@@ -51,6 +51,8 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         show(vc, sender: nil)
     }
     
+    // MARK: - UITableViewDelegate
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return (tableView.frame.height - view.safeAreaInsets.top) / 3 // 3は使っているセルの数
     }
