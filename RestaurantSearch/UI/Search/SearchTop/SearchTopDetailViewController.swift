@@ -14,17 +14,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     @IBOutlet weak private var searchButton: UIButton!
     private var selectedTown: Town?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        layout()
-    }
-    
-    private func layout() {
-        areaSelectButton.layer.cornerRadius = 5.0
-        searchButton.layer.cornerRadius = 5.0
-    }
-    
     private func showAreaSelect() {
         let vc = AreaSelectViewController.instantiate()
         show(vc, sender: nil)
