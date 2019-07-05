@@ -34,7 +34,7 @@ final class SearchTopViewController: UIViewController, TownSelectViewControllerD
     }
     
     private func tapGesture() {
-        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SearchTopViewController.tapped(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SearchTopViewController.tapped(_:)))
         view.addGestureRecognizer(tapGesture)
     }
     
