@@ -9,7 +9,7 @@
 import UIKit
 
 final class SearchTopViewController: UIViewController, TownSelectViewControllerDelegate {
-    var detailViewController: SearchTopDetailViewController?
+    private var detailViewController: SearchTopDetailViewController?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
