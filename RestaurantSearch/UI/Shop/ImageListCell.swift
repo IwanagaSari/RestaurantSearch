@@ -13,10 +13,8 @@ import UIKit
 
 final class ImageListCell: UICollectionViewCell {
     var onReuse: (() -> Void)?
-    @IBOutlet weak var imageViewInShopList: UIImageView!
-    @IBOutlet weak var shopNameInShopList: UILabel!
-    @IBOutlet weak var imageViewInFavoliteList: UIImageView!
-    @IBOutlet weak var shopNameInfavoriteList: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
