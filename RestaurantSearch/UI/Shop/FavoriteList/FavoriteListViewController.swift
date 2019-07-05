@@ -77,13 +77,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let shop = favorites[indexPath.row].shop
         
         // 店名の表示
-        cell.shopNameInfavoriteList.text = shop?.name
+        cell.nameLabel.text = shop?.name
         
         // 画像の表示
         if let url = URL(string: shop?.imageUrl.shopImage1 ?? "") {
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
-                                                       cell.imageViewInFavoliteList.image = shopImage
+                                                       cell.imageView.image = shopImage
                                                    },
                                                    failure: { [weak self] error in
                                                        self?.showError(error)
@@ -92,7 +92,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                 request?.cancel()
             }
         } else {
-            cell.imageViewInFavoliteList.image = nil
+            cell.imageView.image = nil
         }
         return cell
     }

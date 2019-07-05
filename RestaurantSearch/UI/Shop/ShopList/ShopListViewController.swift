@@ -66,12 +66,12 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         let shopImage = shopList[indexPath.row].imageUrl.shopImage1
         
         if shopImage.isEmpty {
-            cell.imageViewInShopList.image = UIImage(named: "error")
+            cell.imageView.image = UIImage(named: "error")
         } else {
             let imageURL = URL(string: shopImage)!
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
-                                                        cell.imageViewInShopList.image = shopImage
+                                                        cell.imageView.image = shopImage
                                                    },
                                                    failure: { [weak self] error in
                                                         self?.showError(error)
@@ -81,7 +81,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
             }
         }
     
-        cell.shopNameInShopList.text = shopList[indexPath.row].name
+        cell.nameLabel.text = shopList[indexPath.row].name
         
         return cell
     }
