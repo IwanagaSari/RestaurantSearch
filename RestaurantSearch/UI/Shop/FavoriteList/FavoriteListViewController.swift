@@ -8,8 +8,13 @@
 
 import UIKit
 
+struct Favorite {
+    let id: String
+    var shop: Shop?
+}
+
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    private var shopList: [Shop] = []
+    private var favorites: [Favorite] = []
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
@@ -24,12 +29,18 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateFavorites()
         getShopByIDList()
     }
     
+    private func updateFavorites() {
+        favorites = favoriteDatabase.all().map { Favorite(id: $0, shop: nil) }
+        collectionView.reloadData()
+    }
+    
     private func getShopByIDList() {
-        for id in favoriteDatabase.all() {
-            apiOperater.getShopByID(shopID: id,
+        for favorite in favorites {
+            apiOperater.getShopByID(shopID: favorite.id,
                                     success: { [weak self] shopResponseBody in
                                         self?.updateShopList(shopResponseBody)
                                     },
@@ -40,7 +51,9 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func updateShopList(_ shopResponseBody: ShopResponseBody) {
-        shopList.append(shopResponseBody.shop[0])
+        if let index = favorites.firstIndex(where: { $0.id == shopResponseBody.shop[0].id }) {
+            favorites[index].shop = shopResponseBody.shop[0]
+        }
         collectionView.backgroundView = nil
         collectionView.reloadData()
     }
@@ -56,37 +69,38 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shopList.count
+        return favorites.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
-        let shopImage = shopList[indexPath.row].imageUrl.shopImage1
+        let shop = favorites[indexPath.row].shop
         
-        if shopImage.isEmpty {
-            cell.imageViewInFavoliteList.image = UIImage(named: "error")
-        } else {
-            let imageURL = URL(string: shopImage)!
-            let request = imageDownloader.getImage(url: imageURL,
+        // 店名の表示
+        cell.shopNameInfavoriteList.text = shop?.name
+        
+        // 画像の表示
+        if let url = URL(string: shop?.imageUrl.shopImage1 ?? "") {
+            let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
-                                                        cell.imageViewInFavoliteList.image = shopImage
+                                                       cell.imageViewInFavoliteList.image = shopImage
                                                    },
                                                    failure: { [weak self] error in
-                                                        self?.showError(error)
+                                                       self?.showError(error)
                                                    })
             cell.onReuse = {
                 request?.cancel()
             }
+        } else {
+            cell.imageViewInFavoliteList.image = nil
         }
-
-        cell.shopNameInfavoriteList.text = shopList[indexPath.row].name
-        
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let shop = shopList[indexPath.row]
-        showShopInfo(shop)
+        if let shop = favorites[indexPath.row].shop {
+            showShopInfo(shop)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
