@@ -53,15 +53,25 @@
                                                 <constraint firstAttribute="trailing" secondItem="VYh-Tj-NKA" secondAttribute="trailing" id="oC8-gy-UMp"/>
                                             </constraints>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ho-T7-QbE">
+                                            <rect key="frame" x="0.0" y="0.0" width="188" height="177"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="coD-nR-LKe" firstAttribute="leading" secondItem="k9C-vp-mKQ" secondAttribute="leading" id="1Ay-qZ-C32"/>
                                     <constraint firstAttribute="bottom" secondItem="coD-nR-LKe" secondAttribute="bottom" id="Fu3-Uq-k0E"/>
+                                    <constraint firstItem="4Ho-T7-QbE" firstAttribute="centerY" secondItem="k9C-vp-mKQ" secondAttribute="centerY" id="UWP-1G-qOh"/>
                                     <constraint firstAttribute="bottom" secondItem="fCf-jE-BwR" secondAttribute="bottom" id="UhJ-SX-nLS"/>
+                                    <constraint firstItem="4Ho-T7-QbE" firstAttribute="width" secondItem="fCf-jE-BwR" secondAttribute="width" id="ZYd-Ru-DgG"/>
                                     <constraint firstAttribute="trailing" secondItem="fCf-jE-BwR" secondAttribute="trailing" id="bYR-Dp-EzT"/>
                                     <constraint firstItem="fCf-jE-BwR" firstAttribute="leading" secondItem="k9C-vp-mKQ" secondAttribute="leading" id="bk3-zs-U8v"/>
+                                    <constraint firstItem="4Ho-T7-QbE" firstAttribute="height" secondItem="fCf-jE-BwR" secondAttribute="height" id="hIR-K9-r0L"/>
                                     <constraint firstItem="fCf-jE-BwR" firstAttribute="top" secondItem="k9C-vp-mKQ" secondAttribute="top" id="jML-3A-MXV"/>
+                                    <constraint firstItem="4Ho-T7-QbE" firstAttribute="centerX" secondItem="k9C-vp-mKQ" secondAttribute="centerX" id="vCu-sm-lbV"/>
                                     <constraint firstAttribute="trailing" secondItem="coD-nR-LKe" secondAttribute="trailing" id="xie-Hs-bhh"/>
                                 </constraints>
                                 <connections>
