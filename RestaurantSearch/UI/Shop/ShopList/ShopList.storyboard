@@ -65,8 +65,8 @@
                                     <constraint firstAttribute="trailing" secondItem="coD-nR-LKe" secondAttribute="trailing" id="xie-Hs-bhh"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageViewInShopList" destination="fCf-jE-BwR" id="3eg-A6-UR0"/>
-                                    <outlet property="shopNameInShopList" destination="VYh-Tj-NKA" id="p7f-K1-Hk0"/>
+                                    <outlet property="imageView" destination="fCf-jE-BwR" id="5fI-VB-z00"/>
+                                    <outlet property="nameLabel" destination="VYh-Tj-NKA" id="vt4-Xk-dkJ"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
