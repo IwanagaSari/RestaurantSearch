@@ -64,15 +64,19 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell", for: indexPath) as! ImageListCell
-        let shopImage = shopList[indexPath.row].imageUrl.shopImage1
+        let shop = shopList[indexPath.row]
         
         //エラー表示
         cell.errorMessageLabel.text = errorMessage?.localizedDescription
         
-        if shopImage.isEmpty {
+        // 店名の表示
+        cell.nameLabel.text = shopList[indexPath.row].name
+        
+        // 画像の表示
+        if shop.imageUrl.shopImage1.isEmpty {
             cell.imageView.image = UIImage(named: "error")
         } else {
-            let imageURL = URL(string: shopImage)!
+            let imageURL = URL(string: shop.imageUrl.shopImage1)!
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
                                                         cell.imageView.image = shopImage
@@ -84,8 +88,6 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
                 request?.cancel()
             }
         }
-    
-        cell.nameLabel.text = shopList[indexPath.row].name
         
         return cell
     }
