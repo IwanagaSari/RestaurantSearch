@@ -45,7 +45,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                                         self?.updateShopList(shopResponseBody)
                                     },
                                     failure: { [weak self] error in
-                                        self?.showError(error)
+                                        self?.updateShopError(error, shopID: favorite.id)
                                     })
         }
     }
@@ -57,8 +57,10 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         collectionView.reloadData()
     }
     
-    private func showError(_ error: Error) {
-        errorMessage = error
+    private func updateShopError(_ error: Error, shopID: String) {
+        if let index = favorites.firstIndex(where: { $0.id == shopID }) {
+            favorites[index].error = error
+        }
         collectionView.reloadData()
     }
     
@@ -73,7 +75,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
-        let shop = favorites[indexPath.row].shop
+        let favorite = favorites[indexPath.row]
+        let shop = favorite.shop
         
         //エラー表示
         cell.errorMessageLabel.text = errorMessage?.localizedDescription
@@ -88,7 +91,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                                                        cell.imageView.image = shopImage
                                                    },
                                                    failure: { [weak self] error in
-                                                       self?.showError(error)
+                                                       self?.updateShopError(error, shopID: favorite.id)
                                                    })
             cell.onReuse = {
                 request?.cancel()
