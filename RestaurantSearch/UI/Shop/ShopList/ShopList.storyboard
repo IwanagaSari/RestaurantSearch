@@ -75,6 +75,7 @@
                                     <constraint firstAttribute="trailing" secondItem="coD-nR-LKe" secondAttribute="trailing" id="xie-Hs-bhh"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="errorMessageLabel" destination="4Ho-T7-QbE" id="sGu-mq-RDH"/>
                                     <outlet property="imageView" destination="fCf-jE-BwR" id="5fI-VB-z00"/>
                                     <outlet property="nameLabel" destination="VYh-Tj-NKA" id="vt4-Xk-dkJ"/>
                                 </connections>

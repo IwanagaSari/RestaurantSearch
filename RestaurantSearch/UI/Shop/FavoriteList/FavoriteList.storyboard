@@ -81,6 +81,7 @@
                                     <constraint firstItem="oc9-9c-B93" firstAttribute="height" secondItem="8Ol-DI-gAn" secondAttribute="height" id="yzu-zC-He1"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="errorMessageLabel" destination="oc9-9c-B93" id="wrd-f1-jEG"/>
                                     <outlet property="imageView" destination="8Ol-DI-gAn" id="Ufu-jt-VOe"/>
                                     <outlet property="nameLabel" destination="4Sp-SW-psv" id="sNq-DF-ucX"/>
                                 </connections>

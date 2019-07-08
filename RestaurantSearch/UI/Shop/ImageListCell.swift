@@ -15,6 +15,7 @@ final class ImageListCell: UICollectionViewCell {
     var onReuse: (() -> Void)?
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
