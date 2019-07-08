@@ -16,7 +16,6 @@ final class SearchTopViewController: UIViewController, TownSelectViewControllerD
         
         // NavigationBar 非表示
         navigationController?.setNavigationBarHidden(true, animated: false)
-        tabBarController?.tabBar.isHidden = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -24,7 +23,6 @@ final class SearchTopViewController: UIViewController, TownSelectViewControllerD
         
         // NavigationBar 表示
         navigationController?.setNavigationBarHidden(false, animated: false)
-        tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidLoad() {
