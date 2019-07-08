@@ -26,12 +26,17 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         return vc
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateFavorites()
+        getShopByIDList()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tabBarController?.delegate = self
-        updateFavorites()
-        getShopByIDList()
     }
     
     private func updateFavorites() {
