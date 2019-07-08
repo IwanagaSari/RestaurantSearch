@@ -14,6 +14,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private let imageDownloader = ImageDownloader.shared
     private var townCode: String = "AREAS5504" // とりあえず
     private var freeword: String = "焼肉"
+    private var errorMessage: Error?
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorMessageLabel: UILabel!
     
@@ -48,8 +49,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     private func showError(_ error: Error) {
-        collectionView.backgroundView = errorView
-        errorMessageLabel.text = error.localizedDescription
+        errorMessage = error
+        collectionView.reloadData()
     }
     
     private func showShopInfo(_ shop: Shop) {
@@ -64,6 +65,9 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell", for: indexPath) as! ImageListCell
         let shopImage = shopList[indexPath.row].imageUrl.shopImage1
+        
+        //エラー表示
+        cell.errorMessageLabel.text = errorMessage?.localizedDescription
         
         if shopImage.isEmpty {
             cell.imageView.image = UIImage(named: "error")
