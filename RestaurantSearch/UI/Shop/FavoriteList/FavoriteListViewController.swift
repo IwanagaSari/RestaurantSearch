@@ -13,7 +13,7 @@ struct Favorite {
     var shop: Shop?
 }
 
-final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, ShopInfoViewControllerDelegate {
+final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, ShopInfoViewControllerDelegate, UITabBarControllerDelegate {
     private var favorites: [Favorite] = []
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
@@ -29,6 +29,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tabBarController?.delegate = self
         updateFavorites()
         getShopByIDList()
     }
@@ -114,5 +115,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let width = (collectionView.frame.width - layout.minimumInteritemSpacing) / 2
         
         return CGSize(width: width, height: width)
+    }
+    
+    // MARK: - UITabBarControllerDelegate
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if let navigationController = viewController as? UINavigationController {
+            navigationController.popToRootViewController(animated: true)
+        }
     }
 }
