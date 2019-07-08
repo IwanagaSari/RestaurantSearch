@@ -73,20 +73,19 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         cell.nameLabel.text = shopList[indexPath.row].name
         
         // 画像の表示
-        if shop.imageUrl.shopImage1.isEmpty {
-            cell.imageView.image = UIImage(named: "error")
-        } else {
-            let imageURL = URL(string: shop.imageUrl.shopImage1)!
+        if let imageURL = URL(string: shop.imageUrl.shopImage1) {
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
-                                                        cell.imageView.image = shopImage
-                                                   },
+                                                    cell.imageView.image = shopImage
+            },
                                                    failure: { [weak self] error in
-                                                        self?.showError(error)
-                                                   })
+                                                    self?.showError(error)
+            })
             cell.onReuse = {
                 request?.cancel()
             }
+        } else {
+            cell.imageView.image = nil
         }
         
         return cell
