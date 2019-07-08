@@ -12,8 +12,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private let apiOperater: APIType = APIOperater()
     private var shopList: [Shop] = []
     private let imageDownloader = ImageDownloader.shared
-    private var townCode: String = "AREAS5504" // とりあえず
-    private var freeword: String = "焼肉"
+    private var townCode: String = ""
+    private var freeword: String = ""
     private var errorMessage: Error?
     
     static func instantiate(townCode: String, freeword: String) -> ShopListViewController {
