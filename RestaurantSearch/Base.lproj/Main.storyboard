@@ -27,11 +27,11 @@
             </objects>
             <point key="canvasLocation" x="-28" y="-272"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="R31-fW-ybV">
             <objects>
                 <navigationController id="UAj-ei-QKR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yxM-Xn-P70"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="yxM-Xn-P70"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PQt-9U-yZs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -64,11 +64,11 @@
             </objects>
             <point key="canvasLocation" x="1684" y="112"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="uFo-DC-tkm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pcs-Dc-MLs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GYC-5v-uty"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="GYC-5v-uty"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YAU-8S-c2q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
