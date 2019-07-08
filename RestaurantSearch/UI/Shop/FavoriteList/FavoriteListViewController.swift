@@ -18,6 +18,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
+    private var errorMessage: Error?
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorMessageLabel: UILabel!
     
@@ -59,8 +60,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func showError(_ error: Error) {
-        errorMessageLabel.text = error.localizedDescription
-        collectionView.backgroundView = errorView
+        errorMessage = error
+        collectionView.reloadData()
     }
     
     private func showShopInfo(_ shop: Shop) {
@@ -75,6 +76,9 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
         let shop = favorites[indexPath.row].shop
+        
+        //エラー表示
+        cell.errorMessageLabel.text = errorMessage?.localizedDescription
         
         // 店名の表示
         cell.nameLabel.text = shop?.name
