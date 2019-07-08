@@ -10,6 +10,10 @@ import UIKit
 import SafariServices
 import MapKit
 
+protocol ShopInfoViewControllerDelegate: AnyObject {
+    func shopRemoved()
+}
+
 final class ShopInfoViewController: UITableViewController {
     @IBOutlet weak private var category: UILabel!
     @IBOutlet weak private var nameKanaLabel: UILabel!
