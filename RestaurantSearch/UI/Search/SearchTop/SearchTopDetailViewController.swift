@@ -12,8 +12,14 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     @IBOutlet weak var freewordTextField: UITextField!
     @IBOutlet weak private var areaSelectButton: UIButton!
     @IBOutlet weak private var searchButton: UIButton!
-    @IBOutlet weak var areaDeleteButton: UIButton!
+    @IBOutlet weak private var areaDeleteButton: UIButton!
     private var selectedTown: Town?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        areaDeleteButton.isHidden = true
+    }
     
     private func showAreaSelect() {
         let vc = AreaSelectViewController.instantiate()
@@ -62,6 +68,11 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     }
     
     @IBAction func areaDeleteButtonTapped(_ sender: UIButton) {
+        if selectedTown != nil {
+            selectedTown = nil
+            areaSelectButton.setTitle("エリアで検索", for: .normal)
+            tableView.reloadData()
+        }
     }
     
     @IBAction func myListButtonTapped(_ sender: UIButton) {
@@ -81,5 +92,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         navigationController?.popToRootViewController(animated: true)
         areaSelectButton.setTitle(town.townName, for: .normal)
         selectedTown = town
+        areaDeleteButton.isHidden = false
     }
 }
