@@ -144,17 +144,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ff-Tq-ddj">
-                                                    <rect key="frame" x="292" y="16" width="92" height="30"/>
-                                                    <state key="normal" title="My List" image="book">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="myListButtonTapped:" destination="hQ8-sD-ZUh" eventType="touchUpInside" id="ioe-Mg-hWL"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byO-Qe-Msi">
-                                                    <rect key="frame" x="105" y="16" width="177" height="30"/>
+                                                    <rect key="frame" x="105" y="16" width="204" height="30"/>
                                                     <color key="backgroundColor" red="0.62343204659999996" green="0.84702787030000004" blue="0.30246782150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Search">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -171,12 +162,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="byO-Qe-Msi" firstAttribute="leading" secondItem="CYf-vF-gPp" secondAttribute="leadingMargin" constant="85" id="7FR-3B-Rbw"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8Ff-Tq-ddj" secondAttribute="trailing" constant="10" id="Jik-1s-7jr"/>
                                                 <constraint firstItem="byO-Qe-Msi" firstAttribute="top" secondItem="CYf-vF-gPp" secondAttribute="topMargin" constant="5" id="QsI-oV-txp"/>
-                                                <constraint firstItem="8Ff-Tq-ddj" firstAttribute="top" secondItem="CYf-vF-gPp" secondAttribute="topMargin" constant="5" id="VgO-gf-l44"/>
-                                                <constraint firstItem="8Ff-Tq-ddj" firstAttribute="leading" secondItem="byO-Qe-Msi" secondAttribute="trailing" constant="10" id="aOP-tN-eXV"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="8Ff-Tq-ddj" secondAttribute="bottom" constant="5" id="bXq-Qq-YVc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="byO-Qe-Msi" secondAttribute="bottom" constant="5" id="hWg-fz-Kss"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="byO-Qe-Msi" secondAttribute="trailing" constant="85" id="kQ4-2C-Edr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -201,7 +189,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" width="33" height="33"/>
         <image name="topImage1" width="300" height="281"/>
     </resources>
 </document>
