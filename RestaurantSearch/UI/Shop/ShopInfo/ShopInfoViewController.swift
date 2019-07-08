@@ -134,7 +134,7 @@ final class ShopInfoViewController: UITableViewController {
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
         database.add(shop.id)
-        showFavoriteList()
+        showValidationAlert()
     }
     
     /// 削除ボタンをタップされた時
