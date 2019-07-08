@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flP-rl-d6M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flP-rl-d6M">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage1" translatesAutoresizingMaskIntoConstraints="NO" id="BgZ-mM-9x8">
-                                <rect key="frame" x="103.5" y="312.5" width="207" height="271"/>
+                                <rect key="frame" x="103.5" y="299.5" width="207" height="297"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b23-HJ-X1J">
-                                <rect key="frame" x="10" y="593.5" width="394" height="24"/>
+                                <rect key="frame" x="10" y="606.5" width="394" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Restaurant Search">
                                         <attributes>
@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mF-dA-cn3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="262.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
                                 <connections>
                                     <segue destination="hQ8-sD-ZUh" kind="embed" id="mBc-qd-SAZ"/>
                                 </connections>
@@ -43,7 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BgZ-mM-9x8" firstAttribute="centerY" secondItem="Ue4-nw-yYI" secondAttribute="centerY" id="2Q5-86-wIP"/>
-                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="height" secondItem="QTw-dM-Yhx" secondAttribute="height" multiplier="0.33" constant="1" id="DOG-hN-VSt"/>
+                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="height" secondItem="Ue4-nw-yYI" secondAttribute="height" multiplier="0.33" constant="1" id="DOG-hN-VSt"/>
                             <constraint firstItem="BgZ-mM-9x8" firstAttribute="centerX" secondItem="Ue4-nw-yYI" secondAttribute="centerX" id="Kax-jV-zyE"/>
                             <constraint firstItem="BgZ-mM-9x8" firstAttribute="width" secondItem="QTw-dM-Yhx" secondAttribute="width" multiplier="0.5" id="OLQ-sA-YgF"/>
                             <constraint firstItem="b23-HJ-X1J" firstAttribute="top" secondItem="BgZ-mM-9x8" secondAttribute="bottom" constant="10" id="Rww-vX-71Z"/>
@@ -57,6 +57,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QTw-dM-Yhx"/>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyK-SM-qV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="EIR-Y0-Yk9">
@@ -72,7 +73,7 @@
             <objects>
                 <tableViewController id="hQ8-sD-ZUh" customClass="SearchTopDetailViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="umB-W4-hGv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="262.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
