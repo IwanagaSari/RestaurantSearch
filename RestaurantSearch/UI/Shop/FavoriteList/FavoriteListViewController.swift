@@ -19,8 +19,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
     private var errorMessage: Error?
-    @IBOutlet private var errorView: UIView!
-    @IBOutlet weak private var errorMessageLabel: UILabel!
     
     static func instantiate() -> FavoriteListViewController {
         let vc = UIStoryboard(name: "FavoriteList", bundle: nil).instantiateInitialViewController() as! FavoriteListViewController
@@ -55,7 +53,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         if let index = favorites.firstIndex(where: { $0.id == shopResponseBody.shop[0].id }) {
             favorites[index].shop = shopResponseBody.shop[0]
         }
-        collectionView.backgroundView = nil
         collectionView.reloadData()
     }
     
