@@ -122,6 +122,13 @@ final class ShopInfoViewController: UITableViewController {
         mapView.addAnnotation(pin)
     }
     
+    private func showValidationAlert() {
+        let alertController = UIAlertController(title: "追加完了！", message: "お気に入りに追加しました", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     // MARK: - Actions
     
     /// 追加するボタンをタップされた時
