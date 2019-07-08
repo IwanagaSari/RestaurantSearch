@@ -68,6 +68,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         show(vc, sender: nil)
     }
     
+    private func showValidationAlert() {
+        let alertController = UIAlertController(title: "追加完了！", message: "お気に入りに追加しました", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorites.count
     }
