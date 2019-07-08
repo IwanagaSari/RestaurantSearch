@@ -132,6 +132,9 @@
                                                         <constraint firstAttribute="width" secondItem="JdJ-K0-bVQ" secondAttribute="height" multiplier="1:1" id="xEo-Po-lId"/>
                                                     </constraints>
                                                     <state key="normal" image="delete"/>
+                                                    <connections>
+                                                        <action selector="areaDeleteButtonTapped:" destination="hQ8-sD-ZUh" eventType="touchUpInside" id="hXC-df-4HT"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -199,9 +202,10 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="areaDeleteButton" destination="JdJ-K0-bVQ" id="ulb-bG-UBV"/>
                         <outlet property="areaSelectButton" destination="qFS-7b-4UH" id="ZR5-jn-MeF"/>
                         <outlet property="freewordTextField" destination="gIq-fe-WLX" id="7lu-Yb-3hp"/>
-                        <outlet property="searchButton" destination="byO-Qe-Msi" id="H6Y-GH-4hD"/>
+                        <outlet property="searchButton" destination="JdJ-K0-bVQ" id="Ttj-wm-NLf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZy-HL-EXP" userLabel="First Responder" sceneMemberID="firstResponder"/>

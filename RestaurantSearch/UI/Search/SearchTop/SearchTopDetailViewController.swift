@@ -12,6 +12,7 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     @IBOutlet weak var freewordTextField: UITextField!
     @IBOutlet weak private var areaSelectButton: UIButton!
     @IBOutlet weak private var searchButton: UIButton!
+    @IBOutlet weak var areaDeleteButton: UIButton!
     private var selectedTown: Town?
     
     private func showAreaSelect() {
@@ -58,6 +59,9 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         } else {
             showShopList()
         }
+    }
+    
+    @IBAction func areaDeleteButtonTapped(_ sender: UIButton) {
     }
     
     @IBAction func myListButtonTapped(_ sender: UIButton) {
