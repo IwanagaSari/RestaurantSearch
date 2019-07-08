@@ -98,8 +98,9 @@ final class ShopInfoViewController: UITableViewController {
     }
     
     private func showFavoriteList() {
-        let vc = FavoriteListViewController.instantiate()
-        show(vc, sender: nil)
+        let vc = navigationController?.viewControllers.first as? ShopInfoViewControllerDelegate
+        vc?.shopRemoved()
+
     }
     
     private func showUIBarButton() {
