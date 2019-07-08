@@ -31,7 +31,7 @@
         <scene sceneID="R31-fW-ybV">
             <objects>
                 <navigationController id="UAj-ei-QKR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="yxM-Xn-P70"/>
+                    <tabBarItem key="tabBarItem" tag="1" systemItem="search" id="yxM-Xn-P70"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PQt-9U-yZs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -68,7 +68,7 @@
         <scene sceneID="uFo-DC-tkm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pcs-Dc-MLs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="GYC-5v-uty"/>
+                    <tabBarItem key="tabBarItem" tag="2" systemItem="favorites" id="GYC-5v-uty"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YAU-8S-c2q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
