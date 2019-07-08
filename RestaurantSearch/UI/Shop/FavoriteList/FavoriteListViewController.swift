@@ -11,6 +11,7 @@ import UIKit
 struct Favorite {
     let id: String
     var shop: Shop?
+    var error: Error?
 }
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -33,7 +34,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func updateFavorites() {
-        favorites = favoriteDatabase.all().map { Favorite(id: $0, shop: nil) }
+        favorites = favoriteDatabase.all().map { Favorite(id: $0, shop: nil, error: nil) }
         collectionView.reloadData()
     }
     
