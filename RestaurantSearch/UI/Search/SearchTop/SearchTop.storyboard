@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flP-rl-d6M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flP-rl-d6M">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mF-dA-cn3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="279.5"/>
                                 <connections>
                                     <segue destination="hQ8-sD-ZUh" kind="embed" id="mBc-qd-SAZ"/>
                                 </connections>
@@ -47,7 +47,7 @@
                             <constraint firstItem="BgZ-mM-9x8" firstAttribute="centerX" secondItem="Ue4-nw-yYI" secondAttribute="centerX" id="Kax-jV-zyE"/>
                             <constraint firstItem="BgZ-mM-9x8" firstAttribute="width" secondItem="Ue4-nw-yYI" secondAttribute="width" multiplier="0.5" id="OLQ-sA-YgF"/>
                             <constraint firstItem="b23-HJ-X1J" firstAttribute="top" secondItem="BgZ-mM-9x8" secondAttribute="bottom" constant="10" id="Rww-vX-71Z"/>
-                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="top" secondItem="4mF-dA-cn3" secondAttribute="bottom" constant="50" id="Ueu-xK-Wj3"/>
+                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="top" secondItem="4mF-dA-cn3" secondAttribute="bottom" constant="20" id="Ueu-xK-Wj3"/>
                             <constraint firstItem="QTw-dM-Yhx" firstAttribute="trailing" secondItem="4mF-dA-cn3" secondAttribute="trailing" id="Wnu-eW-Sqb"/>
                             <constraint firstItem="4mF-dA-cn3" firstAttribute="top" secondItem="Ue4-nw-yYI" secondAttribute="top" id="aUr-fT-y7X"/>
                             <constraint firstItem="b23-HJ-X1J" firstAttribute="centerX" secondItem="Ue4-nw-yYI" secondAttribute="centerX" id="f5g-BC-wjI"/>
@@ -73,7 +73,7 @@
             <objects>
                 <tableViewController id="hQ8-sD-ZUh" customClass="SearchTopDetailViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="umB-W4-hGv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="249.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="279.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -87,7 +87,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリーワード検索" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-fe-WLX">
-                                                    <rect key="frame" x="30" y="16" width="354" height="21"/>
+                                                    <rect key="frame" x="30" y="13" width="354" height="27"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -97,9 +97,9 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gIq-fe-WLX" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="5" id="5Gi-JF-qJe"/>
+                                                <constraint firstItem="gIq-fe-WLX" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="2" id="5Gi-JF-qJe"/>
                                                 <constraint firstItem="gIq-fe-WLX" firstAttribute="leading" secondItem="ukD-bk-7En" secondAttribute="leadingMargin" constant="10" id="LYc-qL-ser"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="gIq-fe-WLX" secondAttribute="bottom" constant="5" id="WKG-vP-xfU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gIq-fe-WLX" secondAttribute="bottom" constant="2" id="WKG-vP-xfU"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gIq-fe-WLX" secondAttribute="trailing" constant="10" id="xma-zj-0NV"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -113,7 +113,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFS-7b-4UH">
-                                                    <rect key="frame" x="30" y="16" width="354" height="35"/>
+                                                    <rect key="frame" x="30" y="13" width="354" height="41"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="エリアで検索">
                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,8 +129,8 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="qFS-7b-4UH" secondAttribute="bottom" constant="5" id="4YZ-zI-NDw"/>
-                                                <constraint firstItem="qFS-7b-4UH" firstAttribute="top" secondItem="oGN-tP-DRj" secondAttribute="topMargin" constant="5" id="91B-B9-RQe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qFS-7b-4UH" secondAttribute="bottom" constant="2" id="4YZ-zI-NDw"/>
+                                                <constraint firstItem="qFS-7b-4UH" firstAttribute="top" secondItem="oGN-tP-DRj" secondAttribute="topMargin" constant="2" id="91B-B9-RQe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qFS-7b-4UH" secondAttribute="trailing" constant="10" id="Nhr-eZ-gIi"/>
                                                 <constraint firstItem="qFS-7b-4UH" firstAttribute="leading" secondItem="oGN-tP-DRj" secondAttribute="leadingMargin" constant="10" id="x75-q5-AfI"/>
                                             </constraints>
@@ -145,7 +145,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byO-Qe-Msi">
-                                                    <rect key="frame" x="105" y="16" width="204" height="30"/>
+                                                    <rect key="frame" x="105" y="13" width="204" height="36"/>
                                                     <color key="backgroundColor" red="0.62343204659999996" green="0.84702787030000004" blue="0.30246782150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Search">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,8 +162,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="byO-Qe-Msi" firstAttribute="leading" secondItem="CYf-vF-gPp" secondAttribute="leadingMargin" constant="85" id="7FR-3B-Rbw"/>
-                                                <constraint firstItem="byO-Qe-Msi" firstAttribute="top" secondItem="CYf-vF-gPp" secondAttribute="topMargin" constant="5" id="QsI-oV-txp"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="byO-Qe-Msi" secondAttribute="bottom" constant="5" id="hWg-fz-Kss"/>
+                                                <constraint firstItem="byO-Qe-Msi" firstAttribute="top" secondItem="CYf-vF-gPp" secondAttribute="topMargin" constant="2" id="QsI-oV-txp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="byO-Qe-Msi" secondAttribute="bottom" constant="2" id="hWg-fz-Kss"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="byO-Qe-Msi" secondAttribute="trailing" constant="85" id="kQ4-2C-Edr"/>
                                             </constraints>
                                         </tableViewCellContentView>
