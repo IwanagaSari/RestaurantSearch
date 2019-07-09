@@ -147,7 +147,6 @@ final class ShopInfoViewController: UITableViewController {
         database.remove(shop.id)
         showFavoriteList()
         showUIBarButton()
-        print("削除")
     }
     
     /// 地図ボタンをタップされた時
