@@ -214,6 +214,7 @@
                     <connections>
                         <outlet property="areaDeleteButton" destination="JdJ-K0-bVQ" id="ulb-bG-UBV"/>
                         <outlet property="areaSelectButton" destination="qFS-7b-4UH" id="ZR5-jn-MeF"/>
+                        <outlet property="freewordDeleteButton" destination="iru-yP-mVB" id="piJ-TI-I1w"/>
                         <outlet property="freewordTextField" destination="gIq-fe-WLX" id="7lu-Yb-3hp"/>
                         <outlet property="searchButton" destination="JdJ-K0-bVQ" id="Ttj-wm-NLf"/>
                     </connections>

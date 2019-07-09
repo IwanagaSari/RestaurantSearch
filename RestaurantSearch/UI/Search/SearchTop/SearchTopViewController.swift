@@ -52,5 +52,10 @@ final class SearchTopViewController: UIViewController, TownSelectViewControllerD
     
     @IBAction func tapped(_ sender: UITapGestureRecognizer) {
         detailViewController?.freewordTextField.resignFirstResponder()
+        if detailViewController?.freewordTextField.text != "" {
+            detailViewController?.freewordDeleteButton.isHidden = false
+        } else {
+            detailViewController?.freewordDeleteButton.isHidden = true
+        }
     }
 }
