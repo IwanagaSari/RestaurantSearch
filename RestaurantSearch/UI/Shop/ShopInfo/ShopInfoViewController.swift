@@ -14,7 +14,7 @@ protocol ShopInfoViewControllerDelegate: AnyObject {
     func shopRemoved()
 }
 
-final class ShopInfoViewController: UITableViewController, UITabBarControllerDelegate {
+final class ShopInfoViewController: UITableViewController {
     @IBOutlet weak private var category: UILabel!
     @IBOutlet weak private var nameKanaLabel: UILabel!
     @IBOutlet weak private var nameLabel: UILabel!
@@ -50,7 +50,6 @@ final class ShopInfoViewController: UITableViewController, UITabBarControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBarController?.delegate = self
         showTopInfo()
         showMapView()
         getTopImage()
@@ -171,12 +170,5 @@ final class ShopInfoViewController: UITableViewController, UITabBarControllerDel
     // storyboad上でCellのデザインを見やすくするため、あえてコード上で設定
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
-    }
-    
-    // MARK: - UITabBarControllerDelegate
-    
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let vc = FavoriteListViewController.instantiate()
-        show(vc, sender: nil)
     }
 }
