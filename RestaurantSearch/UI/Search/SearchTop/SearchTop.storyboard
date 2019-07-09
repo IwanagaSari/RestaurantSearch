@@ -100,6 +100,9 @@
                                                         <constraint firstAttribute="width" secondItem="iru-yP-mVB" secondAttribute="height" multiplier="1:1" id="gZd-a3-fC1"/>
                                                     </constraints>
                                                     <state key="normal" image="delete"/>
+                                                    <connections>
+                                                        <action selector="freewordDeleteButtonTapped:" destination="hQ8-sD-ZUh" eventType="touchUpInside" id="4DX-m2-uFB"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

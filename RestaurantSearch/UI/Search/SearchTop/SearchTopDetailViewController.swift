@@ -69,6 +69,11 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         }
     }
     
+    @IBAction func freewordDeleteButtonTapped(_ sender: UIButton) {
+        freewordTextField.text = ""
+        freewordDeleteButton.isHidden = true
+    }
+    
     @IBAction func areaDeleteButtonTapped(_ sender: UIButton) {
         if selectedTown != nil {
             selectedTown = nil
