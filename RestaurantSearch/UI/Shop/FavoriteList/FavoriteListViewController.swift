@@ -19,7 +19,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
-    private var errorMessage: Error?
     
     static func instantiate() -> FavoriteListViewController {
         let vc = UIStoryboard(name: "FavoriteList", bundle: nil).instantiateInitialViewController() as! FavoriteListViewController
@@ -79,7 +78,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let shop = favorite.shop
         
         //エラー表示
-        cell.errorMessageLabel.text = errorMessage?.localizedDescription
+        cell.errorMessageLabel.text = favorite.error?.localizedDescription
         
         // 店名の表示
         cell.nameLabel.text = shop?.name
