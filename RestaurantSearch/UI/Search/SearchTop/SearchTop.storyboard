@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flP-rl-d6M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flP-rl-d6M">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -94,11 +94,21 @@
                                                         <outlet property="delegate" destination="hQ8-sD-ZUh" id="R9H-GB-s4r"/>
                                                     </connections>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iru-yP-mVB">
+                                                    <rect key="frame" x="363" y="16" width="21" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="iru-yP-mVB" secondAttribute="height" multiplier="1:1" id="gZd-a3-fC1"/>
+                                                    </constraints>
+                                                    <state key="normal" image="delete"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gIq-fe-WLX" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="5" id="5Gi-JF-qJe"/>
+                                                <constraint firstItem="iru-yP-mVB" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="5" id="GFI-zp-eoz"/>
                                                 <constraint firstItem="gIq-fe-WLX" firstAttribute="leading" secondItem="ukD-bk-7En" secondAttribute="leadingMargin" constant="10" id="LYc-qL-ser"/>
+                                                <constraint firstItem="iru-yP-mVB" firstAttribute="height" secondItem="gIq-fe-WLX" secondAttribute="height" id="VaU-no-cNi"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="gIq-fe-WLX" secondAttribute="bottom" constant="5" id="WKG-vP-xfU"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iru-yP-mVB" secondAttribute="trailing" constant="10" id="Xtb-4v-pBa"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gIq-fe-WLX" secondAttribute="trailing" constant="10" id="xma-zj-0NV"/>
                                             </constraints>
                                         </tableViewCellContentView>
