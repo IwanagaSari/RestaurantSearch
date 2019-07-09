@@ -11,20 +11,6 @@ import UIKit
 final class SearchTopViewController: UIViewController, TownSelectViewControllerDelegate {
     private var detailViewController: SearchTopDetailViewController?
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // NavigationBar 非表示
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        
-        // NavigationBar 表示
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
