@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct APIErrorResponseBody: Codable {
-    let error: APIError
+struct APIErrorResponseBody2: Codable {
+    let error: [APIError2]
 }
 
-struct APIError: Codable, LocalizedError {
+struct APIError2: Codable, LocalizedError {
     let message: String
     
     var errorDescription: String? {
