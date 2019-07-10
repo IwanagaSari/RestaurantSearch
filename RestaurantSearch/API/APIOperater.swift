@@ -28,14 +28,15 @@ final class APIOperater: APIType {
         
         Alamofire.request(url, parameters: finalParameters)
                  .responseData { response in
-                    
                     let result = response.result.flatMap { try JSONDecoder().decode(ResponseType.self, from: $0) }
                     switch result {
                     case .success(let object):
                         success(object)
                     case .failure(let error):  // リクエストに失敗した　or デコードに失敗した　時のエラーが入る
                         // ぐるなびAPI上のエラーかどうか、APIErrorResponseBodyでデコードして確かめる
-                        if let errorResponseBody = response.data.flatMap({ try? JSONDecoder().decode(APIErrorResponseBody.self, from: $0) }) {
+                        if let errorResponseBody = response.data.flatMap({ try? JSONDecoder().decode(APIErrorResponseBody2.self, from: $0) }) {
+                            failure(errorResponseBody.error[0])
+                        } else if let errorResponseBody = response.data.flatMap({ try? JSONDecoder().decode(APIErrorResponseBody.self, from: $0) }) {
                             failure(errorResponseBody.error)
                         } else {
                             // そうでない場合は、リクエスト失敗時のエラーがここに入る
