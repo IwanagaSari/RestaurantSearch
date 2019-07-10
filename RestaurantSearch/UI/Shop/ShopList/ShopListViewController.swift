@@ -15,6 +15,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private var townCode: String = ""
     private var freeword: String = ""
     private var errorMessage: Error?
+    @IBOutlet var errorMessageView: UIView!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     
     static func instantiate(townCode: String, freeword: String) -> ShopListViewController {
         let vc = UIStoryboard(name: "ShopList", bundle: nil).instantiateInitialViewController() as! ShopListViewController
@@ -46,8 +48,14 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     private func showError(_ error: Error) {
-        errorMessage = error
-        collectionView.reloadData()
+        if shopList.isEmpty {
+            errorMessage = error
+            collectionView.backgroundView = errorMessageView
+            errorMessageLabel.text = errorMessage?.localizedDescription
+        } else {
+            errorMessage = error
+            collectionView.reloadData()
+        }
     }
     
     private func showShopInfo(_ shop: Shop) {
