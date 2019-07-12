@@ -20,7 +20,6 @@ struct APIError: Codable, LocalizedError {
     }
 }
 
-
 struct APIErrorResponseBody2: Codable {
     let error: [APIError2]
 }
