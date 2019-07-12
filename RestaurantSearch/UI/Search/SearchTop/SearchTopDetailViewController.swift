@@ -13,14 +13,12 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     @IBOutlet weak private var areaSelectButton: UIButton!
     @IBOutlet weak private var searchButton: UIButton!
     @IBOutlet weak private var areaDeleteButton: UIButton!
-    @IBOutlet weak var freewordDeleteButton: UIButton!
     private var selectedTown: Town?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         areaDeleteButton.isHidden = true
-        freewordDeleteButton.isHidden = true
     }
     
     private func showAreaSelect() {
@@ -69,11 +67,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         }
     }
     
-    @IBAction func freewordDeleteButtonTapped(_ sender: UIButton) {
-        freewordTextField.text = ""
-        freewordDeleteButton.isHidden = true
-    }
-    
     @IBAction func areaDeleteButtonTapped(_ sender: UIButton) {
         if selectedTown != nil {
             selectedTown = nil
@@ -90,11 +83,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         freewordTextField.resignFirstResponder()
-        if freewordTextField.text != "" {
-            freewordDeleteButton.isHidden = false
-        } else {
-           freewordDeleteButton.isHidden = true
-        }
         return true
     }
     

@@ -85,7 +85,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="52.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリーワード検索" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-fe-WLX">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリーワード検索" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-fe-WLX">
                                                     <rect key="frame" x="30" y="16" width="354" height="21"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -94,24 +94,11 @@
                                                         <outlet property="delegate" destination="hQ8-sD-ZUh" id="R9H-GB-s4r"/>
                                                     </connections>
                                                 </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iru-yP-mVB">
-                                                    <rect key="frame" x="363" y="16" width="21" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="iru-yP-mVB" secondAttribute="height" multiplier="1:1" id="gZd-a3-fC1"/>
-                                                    </constraints>
-                                                    <state key="normal" image="delete"/>
-                                                    <connections>
-                                                        <action selector="freewordDeleteButtonTapped:" destination="hQ8-sD-ZUh" eventType="touchUpInside" id="4DX-m2-uFB"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gIq-fe-WLX" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="5" id="5Gi-JF-qJe"/>
-                                                <constraint firstItem="iru-yP-mVB" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="5" id="GFI-zp-eoz"/>
                                                 <constraint firstItem="gIq-fe-WLX" firstAttribute="leading" secondItem="ukD-bk-7En" secondAttribute="leadingMargin" constant="10" id="LYc-qL-ser"/>
-                                                <constraint firstItem="iru-yP-mVB" firstAttribute="height" secondItem="gIq-fe-WLX" secondAttribute="height" id="VaU-no-cNi"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="gIq-fe-WLX" secondAttribute="bottom" constant="5" id="WKG-vP-xfU"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="iru-yP-mVB" secondAttribute="trailing" constant="10" id="Xtb-4v-pBa"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gIq-fe-WLX" secondAttribute="trailing" constant="10" id="xma-zj-0NV"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -217,7 +204,6 @@
                     <connections>
                         <outlet property="areaDeleteButton" destination="JdJ-K0-bVQ" id="ulb-bG-UBV"/>
                         <outlet property="areaSelectButton" destination="qFS-7b-4UH" id="ZR5-jn-MeF"/>
-                        <outlet property="freewordDeleteButton" destination="iru-yP-mVB" id="piJ-TI-I1w"/>
                         <outlet property="freewordTextField" destination="gIq-fe-WLX" id="7lu-Yb-3hp"/>
                         <outlet property="searchButton" destination="JdJ-K0-bVQ" id="Ttj-wm-NLf"/>
                     </connections>
