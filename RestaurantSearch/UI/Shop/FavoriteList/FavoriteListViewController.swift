@@ -13,7 +13,7 @@ struct Favorite {
     var shop: Shop?
 }
 
-final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout, ShopInfoViewControllerDelegate {
+final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private var favorites: [Favorite] = []
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
@@ -66,12 +66,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     private func showShopInfo(_ shop: Shop) {
         let vc = ShopInfoViewController.instantiate(shop: shop)
         show(vc, sender: nil)
-    }
-    
-    func shopRemoved() {
-        navigationController?.popToRootViewController(animated: true)
-        updateFavorites()
-        getShopByIDList()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

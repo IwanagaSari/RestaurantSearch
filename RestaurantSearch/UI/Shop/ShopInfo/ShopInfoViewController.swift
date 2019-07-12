@@ -10,10 +10,6 @@ import UIKit
 import SafariServices
 import MapKit
 
-protocol ShopInfoViewControllerDelegate: AnyObject {
-    func shopRemoved()
-}
-
 final class ShopInfoViewController: UITableViewController {
     @IBOutlet weak private var category: UILabel!
     @IBOutlet weak private var nameKanaLabel: UILabel!
@@ -98,8 +94,7 @@ final class ShopInfoViewController: UITableViewController {
     }
     
     private func showFavoriteList() {
-        let vc = navigationController?.viewControllers.first as? ShopInfoViewControllerDelegate
-        vc?.shopRemoved()
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func showUIBarButton() {
