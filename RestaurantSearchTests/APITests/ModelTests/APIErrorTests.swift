@@ -18,7 +18,7 @@ final class APIErrorTests: XCTestCase {
         "message": "無効なkeyidです"
 }
 """
-        let apiError2 = try JSONDecoder().decode(APIError2.self, from: json.data(using: .utf8)!)
+        let apiError2 = try JSONDecoder().decode(APIError.self, from: json.data(using: .utf8)!)
         XCTAssertEqual(apiError2.message, "無効なkeyidです")
     }
     
