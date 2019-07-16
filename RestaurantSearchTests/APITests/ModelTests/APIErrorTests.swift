@@ -39,4 +39,21 @@ final class APIErrorTests: XCTestCase {
         let apiError = try? errorFromData(json.data(using: .utf8)!)
         XCTAssertEqual(apiError?.message, "無効なkeyidです")
     }
+    
+    func testErrorFromDataWithErrorObject() throws {
+        let json = """
+{
+    "@attributes": {
+        "api_version": "v3"
+    },
+    "error":
+        {
+            "code": 401,
+            "message": "無効なkeyidです"
+        }
+}
+"""
+        let apiError = try? errorFromData(json.data(using: .utf8)!)
+        XCTAssertEqual(apiError?.message, "無効なkeyidです")
+    }
 }
