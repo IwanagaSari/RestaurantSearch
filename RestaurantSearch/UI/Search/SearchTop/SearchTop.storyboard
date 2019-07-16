@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topImage1" translatesAutoresizingMaskIntoConstraints="NO" id="BgZ-mM-9x8">
-                                <rect key="frame" x="103.5" y="312.5" width="207" height="271"/>
+                                <rect key="frame" x="103.5" y="299.5" width="207" height="297"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b23-HJ-X1J">
-                                <rect key="frame" x="10" y="593.5" width="394" height="24"/>
+                                <rect key="frame" x="10" y="606.5" width="394" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Restaurant Search">
                                         <attributes>
@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mF-dA-cn3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="262.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="279.5"/>
                                 <connections>
                                     <segue destination="hQ8-sD-ZUh" kind="embed" id="mBc-qd-SAZ"/>
                                 </connections>
@@ -43,11 +43,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BgZ-mM-9x8" firstAttribute="centerY" secondItem="Ue4-nw-yYI" secondAttribute="centerY" id="2Q5-86-wIP"/>
-                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="height" secondItem="QTw-dM-Yhx" secondAttribute="height" multiplier="0.33" constant="1" id="DOG-hN-VSt"/>
+                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="height" secondItem="Ue4-nw-yYI" secondAttribute="height" multiplier="0.33" constant="1" id="DOG-hN-VSt"/>
                             <constraint firstItem="BgZ-mM-9x8" firstAttribute="centerX" secondItem="Ue4-nw-yYI" secondAttribute="centerX" id="Kax-jV-zyE"/>
-                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="width" secondItem="QTw-dM-Yhx" secondAttribute="width" multiplier="0.5" id="OLQ-sA-YgF"/>
+                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="width" secondItem="Ue4-nw-yYI" secondAttribute="width" multiplier="0.5" id="OLQ-sA-YgF"/>
                             <constraint firstItem="b23-HJ-X1J" firstAttribute="top" secondItem="BgZ-mM-9x8" secondAttribute="bottom" constant="10" id="Rww-vX-71Z"/>
-                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="top" secondItem="4mF-dA-cn3" secondAttribute="bottom" constant="50" id="Ueu-xK-Wj3"/>
+                            <constraint firstItem="BgZ-mM-9x8" firstAttribute="top" secondItem="4mF-dA-cn3" secondAttribute="bottom" constant="20" id="Ueu-xK-Wj3"/>
                             <constraint firstItem="QTw-dM-Yhx" firstAttribute="trailing" secondItem="4mF-dA-cn3" secondAttribute="trailing" id="Wnu-eW-Sqb"/>
                             <constraint firstItem="4mF-dA-cn3" firstAttribute="top" secondItem="Ue4-nw-yYI" secondAttribute="top" id="aUr-fT-y7X"/>
                             <constraint firstItem="b23-HJ-X1J" firstAttribute="centerX" secondItem="Ue4-nw-yYI" secondAttribute="centerX" id="f5g-BC-wjI"/>
@@ -57,6 +57,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QTw-dM-Yhx"/>
                     </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyK-SM-qV8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="EIR-Y0-Yk9">
@@ -72,7 +73,7 @@
             <objects>
                 <tableViewController id="hQ8-sD-ZUh" customClass="SearchTopDetailViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="umB-W4-hGv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="262.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="279.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
@@ -86,7 +87,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリーワード検索" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-fe-WLX">
-                                                    <rect key="frame" x="30" y="16" width="354" height="21"/>
+                                                    <rect key="frame" x="30" y="13" width="354" height="27"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -96,9 +97,9 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gIq-fe-WLX" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="5" id="5Gi-JF-qJe"/>
+                                                <constraint firstItem="gIq-fe-WLX" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="2" id="5Gi-JF-qJe"/>
                                                 <constraint firstItem="gIq-fe-WLX" firstAttribute="leading" secondItem="ukD-bk-7En" secondAttribute="leadingMargin" constant="10" id="LYc-qL-ser"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="gIq-fe-WLX" secondAttribute="bottom" constant="5" id="WKG-vP-xfU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gIq-fe-WLX" secondAttribute="bottom" constant="2" id="WKG-vP-xfU"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gIq-fe-WLX" secondAttribute="trailing" constant="10" id="xma-zj-0NV"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -112,7 +113,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFS-7b-4UH">
-                                                    <rect key="frame" x="30" y="16" width="354" height="35"/>
+                                                    <rect key="frame" x="30" y="13" width="354" height="41"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="エリアで検索">
                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,8 +129,8 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="qFS-7b-4UH" secondAttribute="bottom" constant="5" id="4YZ-zI-NDw"/>
-                                                <constraint firstItem="qFS-7b-4UH" firstAttribute="top" secondItem="oGN-tP-DRj" secondAttribute="topMargin" constant="5" id="91B-B9-RQe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qFS-7b-4UH" secondAttribute="bottom" constant="2" id="4YZ-zI-NDw"/>
+                                                <constraint firstItem="qFS-7b-4UH" firstAttribute="top" secondItem="oGN-tP-DRj" secondAttribute="topMargin" constant="2" id="91B-B9-RQe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qFS-7b-4UH" secondAttribute="trailing" constant="10" id="Nhr-eZ-gIi"/>
                                                 <constraint firstItem="qFS-7b-4UH" firstAttribute="leading" secondItem="oGN-tP-DRj" secondAttribute="leadingMargin" constant="10" id="x75-q5-AfI"/>
                                             </constraints>
@@ -143,17 +144,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ff-Tq-ddj">
-                                                    <rect key="frame" x="292" y="16" width="92" height="30"/>
-                                                    <state key="normal" title="My List" image="book">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="myListButtonTapped:" destination="hQ8-sD-ZUh" eventType="touchUpInside" id="ioe-Mg-hWL"/>
-                                                    </connections>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byO-Qe-Msi">
-                                                    <rect key="frame" x="105" y="16" width="177" height="30"/>
+                                                    <rect key="frame" x="105" y="13" width="204" height="36"/>
                                                     <color key="backgroundColor" red="0.62343204659999996" green="0.84702787030000004" blue="0.30246782150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Search">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -170,12 +162,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="byO-Qe-Msi" firstAttribute="leading" secondItem="CYf-vF-gPp" secondAttribute="leadingMargin" constant="85" id="7FR-3B-Rbw"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8Ff-Tq-ddj" secondAttribute="trailing" constant="10" id="Jik-1s-7jr"/>
-                                                <constraint firstItem="byO-Qe-Msi" firstAttribute="top" secondItem="CYf-vF-gPp" secondAttribute="topMargin" constant="5" id="QsI-oV-txp"/>
-                                                <constraint firstItem="8Ff-Tq-ddj" firstAttribute="top" secondItem="CYf-vF-gPp" secondAttribute="topMargin" constant="5" id="VgO-gf-l44"/>
-                                                <constraint firstItem="8Ff-Tq-ddj" firstAttribute="leading" secondItem="byO-Qe-Msi" secondAttribute="trailing" constant="10" id="aOP-tN-eXV"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="8Ff-Tq-ddj" secondAttribute="bottom" constant="5" id="bXq-Qq-YVc"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="byO-Qe-Msi" secondAttribute="bottom" constant="5" id="hWg-fz-Kss"/>
+                                                <constraint firstItem="byO-Qe-Msi" firstAttribute="top" secondItem="CYf-vF-gPp" secondAttribute="topMargin" constant="2" id="QsI-oV-txp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="byO-Qe-Msi" secondAttribute="bottom" constant="2" id="hWg-fz-Kss"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="byO-Qe-Msi" secondAttribute="trailing" constant="85" id="kQ4-2C-Edr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,7 +189,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" width="33" height="33"/>
         <image name="topImage1" width="300" height="281"/>
     </resources>
 </document>

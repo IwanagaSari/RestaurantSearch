@@ -26,8 +26,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         return vc
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         updateFavorites()
         getShopByIDList()
@@ -67,7 +67,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let vc = ShopInfoViewController.instantiate(shop: shop)
         show(vc, sender: nil)
     }
-    
+
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorites.count
     }
