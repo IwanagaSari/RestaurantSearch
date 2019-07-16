@@ -94,8 +94,7 @@ final class ShopInfoViewController: UITableViewController {
     }
     
     private func showFavoriteList() {
-        let vc = FavoriteListViewController.instantiate()
-        show(vc, sender: nil)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func showUIBarButton() {
@@ -122,18 +121,27 @@ final class ShopInfoViewController: UITableViewController {
         mapView.addAnnotation(pin)
     }
     
+    private func showValidationAlert() {
+        let alertController = UIAlertController(title: "追加完了！", message: "お気に入りに追加しました", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     // MARK: - Actions
     
     /// 追加するボタンをタップされた時
     @IBAction func addButtonTapped(_ sender: UIBarButtonItem) {
         database.add(shop.id)
-        showFavoriteList()
+        showValidationAlert()
+        showUIBarButton()
     }
     
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
         database.remove(shop.id)
         showFavoriteList()
+        showUIBarButton()
     }
     
     /// 地図ボタンをタップされた時
