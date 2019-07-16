@@ -79,6 +79,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
             cell.onReuse = {
                 request?.cancel()
             }
+        } else {
+            cell.imageView.image = UIImage(named: "noImage")
         }
         
         return cell
