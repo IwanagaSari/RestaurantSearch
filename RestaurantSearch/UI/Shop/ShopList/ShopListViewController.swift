@@ -79,9 +79,6 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
             cell.onReuse = {
                 request?.cancel()
             }
-        } else {
-            cell.imageView.image = nil
-            cell.errorMessageLabel.text = "画像を取得できませんでした"
         }
         
         return cell
