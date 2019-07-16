@@ -15,8 +15,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private var townCode: String = ""
     private var freeword: String = ""
     private var errorMessage: Error?
-    @IBOutlet var errorMessageView: UIView!
-    @IBOutlet weak var errorMessageLabel: UILabel!
+    @IBOutlet private var errorMessageView: UIView!
+    @IBOutlet weak private var errorMessageLabel: UILabel!
     
     static func instantiate(townCode: String, freeword: String) -> ShopListViewController {
         let vc = UIStoryboard(name: "ShopList", bundle: nil).instantiateInitialViewController() as! ShopListViewController
