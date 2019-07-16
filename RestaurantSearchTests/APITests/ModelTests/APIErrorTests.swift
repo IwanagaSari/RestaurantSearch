@@ -18,8 +18,8 @@ final class APIErrorTests: XCTestCase {
         "message": "無効なkeyidです"
 }
 """
-        let apiError2 = try JSONDecoder().decode(APIError.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(apiError2.message, "無効なkeyidです")
+        let apiError = try JSONDecoder().decode(APIError.self, from: json.data(using: .utf8)!)
+        XCTAssertEqual(apiError.message, "無効なkeyidです")
     }
     
     func testErrorFromDataWithErrorArray() throws {
@@ -36,8 +36,7 @@ final class APIErrorTests: XCTestCase {
     ]
 }
 """
-        let body = try JSONDecoder().decode(APIErrorResponseBody2.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(body.error.count, 1)
+        let apiError = try? errorFromData(json.data(using: .utf8)!)
+        XCTAssertEqual(apiError?.message, "無効なkeyidです")
     }
-    
 }
