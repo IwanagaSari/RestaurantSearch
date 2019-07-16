@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PoL-qu-je0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PoL-qu-je0">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -89,8 +89,8 @@
                     <navigationItem key="navigationItem" title="検索結果一覧" id="qgE-hH-2BF"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="errorMessageLabel" destination="3ZO-f5-IAQ" id="0Fi-e1-SVJ"/>
-                        <outlet property="errorMessageView" destination="hvm-DV-Fj8" id="8mE-5Z-QcB"/>
+                        <outlet property="errorBackgroundLabel" destination="3ZO-f5-IAQ" id="0Fi-e1-SVJ"/>
+                        <outlet property="errorBackgroundView" destination="hvm-DV-Fj8" id="8mE-5Z-QcB"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKJ-hf-ppn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -115,7 +115,7 @@
                     <viewLayoutGuide key="safeArea" id="ub3-Ge-Dz4"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="455" y="-157"/>
+            <point key="canvasLocation" x="361" y="-161"/>
         </scene>
     </scenes>
 </document>
