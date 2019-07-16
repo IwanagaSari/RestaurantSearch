@@ -66,7 +66,7 @@ final class ShopInfoViewController: UITableViewController {
     
     private func getTopImage() {
         if shop.imageUrl.shopImage1.isEmpty {
-            topImageView.image = UIImage(named: "error")
+            topImageView.image = UIImage(named: "noImage")
         } else {
             let topImageURL = URL(string: shop.imageUrl.shopImage1)!
             
