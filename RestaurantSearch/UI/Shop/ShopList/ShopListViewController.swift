@@ -64,9 +64,6 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell", for: indexPath) as! ImageListCell
         let shop = shopList[indexPath.row]
         
-        //エラー表示
-        cell.errorMessageLabel.text = errorMessage?.localizedDescription
-        
         // 店名の表示
         cell.nameLabel.text = shopList[indexPath.row].name
         
@@ -76,8 +73,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
                                                    success: { shopImage in
                                                        cell.imageView.image = shopImage
                                                    },
-                                                   failure: { [weak self] error in
-                                                       self?.showError(error)
+                                                   failure: { error in
+                                                       cell.errorMessageLabel.text = "画像を取得できませんでした"
                                                    })
             cell.onReuse = {
                 request?.cancel()
