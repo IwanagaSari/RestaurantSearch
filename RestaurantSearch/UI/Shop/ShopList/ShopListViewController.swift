@@ -81,6 +81,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
             }
         } else {
             cell.imageView.image = nil
+            cell.errorMessageLabel.text = "画像を取得できませんでした"
         }
         
         return cell
