@@ -20,6 +20,9 @@ final class ImageListCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        imageView.image = nil
+        errorMessageLabel.text = nil
+        
         onReuse?()
     }
 }
