@@ -27,11 +27,9 @@ struct APIError: Codable, LocalizedError {
 func errorFromData(_ data: Data) throws -> APIError {
     
     do {
-        let responsBody2 = try JSONDecoder().decode(APIErrorResponseBody2.self, from: data)
-        return responsBody2.error[0]
+        return try JSONDecoder().decode(APIErrorResponseBody2.self, from: data).error[0]
     } catch {
        //
-    }
-    
+    }    
     return try JSONDecoder().decode(APIErrorResponseBody.self, from: data).error
 }
