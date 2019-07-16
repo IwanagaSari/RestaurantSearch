@@ -47,6 +47,15 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         show(vc, sender: nil)
     }
     
+    private func updateAreaDeleteButton() {
+        if selectedTown != nil {
+            selectedTown = nil
+            areaSelectButton.setTitle("エリアで検索", for: .normal)
+            areaDeleteButton.isHidden = true
+            tableView.reloadData()
+        }
+    }
+    
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -68,11 +77,7 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     }
     
     @IBAction func areaDeleteButtonTapped(_ sender: UIButton) {
-        if selectedTown != nil {
-            selectedTown = nil
-            areaSelectButton.setTitle("エリアで検索", for: .normal)
-            tableView.reloadData()
-        }
+        updateAreaDeleteButton()
     }
     
     @IBAction func myListButtonTapped(_ sender: UIButton) {
