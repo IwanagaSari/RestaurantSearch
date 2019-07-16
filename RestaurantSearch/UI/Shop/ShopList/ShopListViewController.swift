@@ -14,7 +14,6 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private let imageDownloader = ImageDownloader.shared
     private var townCode: String = ""
     private var freeword: String = ""
-    private var errorMessage: Error?
     @IBOutlet private var errorBackgroundView: UIView!
     @IBOutlet weak private var errorBackgroundLabel: UILabel!
     
@@ -48,14 +47,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     }
     
     private func showError(_ error: Error) {
-        if shopList.isEmpty {
-            errorMessage = error
-            collectionView.backgroundView = errorMessageView
-            errorMessageLabel.text = errorMessage?.localizedDescription
-        } else {
-            errorMessage = error
-            collectionView.reloadData()
-        }
+        collectionView.backgroundView = errorBackgroundView
+        errorBackgroundLabel.text = error.localizedDescription
     }
     
     private func showShopInfo(_ shop: Shop) {
