@@ -11,7 +11,7 @@ import XCTest
 
 final class APIErrorTests: XCTestCase {
     
-    func testAPIErrorDecode2() throws {
+    func testDecodeAPIError() throws {
         let json = """
 {
         "code": 401,
@@ -22,7 +22,7 @@ final class APIErrorTests: XCTestCase {
         XCTAssertEqual(apiError2.message, "無効なkeyidです")
     }
     
-    func testAPIErrorDecode3() throws {
+    func testErrorFromDataWithErrorArray() throws {
         let json = """
 {
     "@attributes": {
