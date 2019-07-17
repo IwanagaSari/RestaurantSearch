@@ -65,7 +65,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
         let shop = shopList[indexPath.row]
         
         // 店名の表示
-        cell.nameLabel.text = shopList[indexPath.row].name
+        cell.nameLabel.text = shop.name
         
         // 画像の表示
         if let imageURL = URL(string: shop.imageUrl.shopImage1) {
