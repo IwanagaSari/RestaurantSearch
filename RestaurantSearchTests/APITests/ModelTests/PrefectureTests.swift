@@ -19,7 +19,7 @@ final class PrefectureTests: XCTestCase {
     "area_code": "AREA150"
 }
 """
-        let pref = try JSONDecoder().decode(Prefecture.self, from: json.data(using: .utf8)!)
+        let pref = try JSONDecoder().decode(Prefecture.self, from: Data(json.utf8))
         XCTAssertEqual(pref.prefCode, "PREF01")
         XCTAssertEqual(pref.prefName, "北海道")
         XCTAssertEqual(pref.areaCode, "AREA150")
@@ -40,7 +40,7 @@ final class PrefectureTests: XCTestCase {
     ]
 }
 """
-        let body = try JSONDecoder().decode(PrefectureResponseBody.self, from: json.data(using: .utf8)!)
+        let body = try JSONDecoder().decode(PrefectureResponseBody.self, from: Data(json.utf8))
         XCTAssertEqual(body.prefectureList.count, 1)
     }
 }
