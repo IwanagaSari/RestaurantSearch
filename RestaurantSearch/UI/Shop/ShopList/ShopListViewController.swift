@@ -74,7 +74,7 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
                                                        cell.imageView.image = shopImage
                                                    },
                                                    failure: { error in
-                                                       cell.errorMessageLabel.text = "画像を取得できませんでした"
+                                                       cell.errorMessageLabel.text = error.localizedDescription
                                                    })
             cell.onReuse = {
                 request?.cancel()
