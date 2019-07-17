@@ -32,7 +32,7 @@ final class APIOperater: APIType {
                     switch result {
                     case .success(let object):
                         success(object)
-                    case .failure(let error):// リクエスト失敗のエラー　or ぐるなびAPI上のエラーが入る
+                    case .failure(let error):  // リクエスト失敗のエラー　or ぐるなびAPI上のエラーが入る
                         if let apiError = response.data.flatMap({ try? errorFromData($0) }) {
                             // ぐるなびAPI上のエラー
                             failure(apiError)
