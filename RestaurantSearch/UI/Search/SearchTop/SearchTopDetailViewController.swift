@@ -47,7 +47,7 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         show(vc, sender: nil)
     }
     
-    private func updateAreaDeleteButton() {
+    private func clearSelectedTown() {
         if selectedTown != nil {
             selectedTown = nil
             areaSelectButton.setTitle("エリアで検索", for: .normal)
@@ -78,7 +78,7 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     }
     
     @IBAction func areaDeleteButtonTapped(_ sender: UIButton) {
-        updateAreaDeleteButton()
+        clearSelectedTown()()
     }
     
     @IBAction func myListButtonTapped(_ sender: UIButton) {
