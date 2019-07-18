@@ -19,12 +19,15 @@ final class ShopListTests: XCTestCase {
         XCTAssertNotNil(vc)
     }
     
-    func testCellCount() {
+    func testCell() {
         let vc = ShopListViewController.instantiate(townCode: "test", freeword: "test")
         vc.apiOperater = dummyAPI
         vc.loadViewIfNeeded()
             
         let number = vc.collectionView.numberOfItems(inSection: 0)
         XCTAssertEqual(number, 1)
+        
+        let cell = vc.collectionView(vc.collectionView, cellForItemAt: IndexPath(row: 0, section: 0)) as! ImageListCell
+        XCTAssertEqual(cell.nameLabel.text, "店の名前")
     }
 }
