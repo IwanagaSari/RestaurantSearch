@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct APIErrorResponseBody: Codable {
+private struct APIErrorResponseBody: Codable {
     let error: APIError
+}
+
+private struct APIErrorArrayResponseBody: Codable {
+    let error: [APIError]
 }
 
 struct APIError: Codable, LocalizedError {
@@ -18,4 +22,14 @@ struct APIError: Codable, LocalizedError {
     var errorDescription: String? {
         return message
     }
+}
+
+func errorFromData(_ data: Data) throws -> APIError {
+    
+    do {
+        return try JSONDecoder().decode(APIErrorArrayResponseBody.self, from: data).error[0]
+    } catch {
+       //
+    }    
+    return try JSONDecoder().decode(APIErrorResponseBody.self, from: data).error
 }

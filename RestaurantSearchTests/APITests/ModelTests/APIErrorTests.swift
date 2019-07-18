@@ -11,19 +11,49 @@ import XCTest
 
 final class APIErrorTests: XCTestCase {
     
-    func testAPIErrorDecode() throws {
+    func testDecodeAPIError() throws {
         let json = """
 {
-    "@attributes":{
-        "api_version":"v3"
-    },
-    "error":{
-        "code":"400",
-        "message":"指定されたパラメーターは存在しません"
-    }
+        "code": 401,
+        "message": "無効なkeyidです"
 }
 """
-        let body = try JSONDecoder().decode(APIErrorResponseBody.self, from: json.data(using: .utf8)!)
-        XCTAssertEqual(body.error.message, "指定されたパラメーターは存在しません")
+        let apiError = try JSONDecoder().decode(APIError.self, from: Data(json.utf8))
+        XCTAssertEqual(apiError.message, "無効なkeyidです")
+    }
+    
+    func testErrorFromDataWithErrorArray() throws {
+        let json = """
+{
+    "@attributes": {
+        "api_version": "v3"
+    },
+    "error": [
+        {
+            "code": 401,
+            "message": "無効なkeyidです"
+        }
+    ]
+}
+"""
+        let apiError = try errorFromData(Data(json.utf8))
+        XCTAssertEqual(apiError.message, "無効なkeyidです")
+    }
+    
+    func testErrorFromDataWithErrorObject() throws {
+        let json = """
+{
+    "@attributes": {
+        "api_version": "v3"
+    },
+    "error":
+        {
+            "code": 401,
+            "message": "無効なkeyidです"
+        }
+}
+"""
+        let apiError = try errorFromData(Data(json.utf8))
+        XCTAssertEqual(apiError.message, "無効なkeyidです")
     }
 }

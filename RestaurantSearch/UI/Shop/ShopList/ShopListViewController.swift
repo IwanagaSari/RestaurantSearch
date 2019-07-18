@@ -12,10 +12,10 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     private let apiOperater: APIType = APIOperater()
     private var shopList: [Shop] = []
     private let imageDownloader = ImageDownloader.shared
-    private var townCode: String = "AREAS5504" // とりあえず
-    private var freeword: String = "焼肉"
-    @IBOutlet private var errorView: UIView!
-    @IBOutlet weak private var errorMessageLabel: UILabel!
+    private var townCode: String = ""
+    private var freeword: String = ""
+    @IBOutlet private var errorBackgroundView: UIView!
+    @IBOutlet weak private var errorBackgroundLabel: UILabel!
     
     static func instantiate(townCode: String, freeword: String) -> ShopListViewController {
         let vc = UIStoryboard(name: "ShopList", bundle: nil).instantiateInitialViewController() as! ShopListViewController
@@ -43,13 +43,12 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     
     private func showShopList(_ shopResponseBody: ShopResponseBody) {
         shopList = shopResponseBody.shop
-        collectionView.backgroundView = nil
         collectionView.reloadData()
     }
     
     private func showError(_ error: Error) {
-        collectionView.backgroundView = errorView
-        errorMessageLabel.text = error.localizedDescription
+        collectionView.backgroundView = errorBackgroundView
+        errorBackgroundLabel.text = error.localizedDescription
     }
     
     private func showShopInfo(_ shop: Shop) {
@@ -63,25 +62,26 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShopListCell", for: indexPath) as! ImageListCell
-        let shopImage = shopList[indexPath.row].imageUrl.shopImage1
+        let shop = shopList[indexPath.row]
         
-        if shopImage.isEmpty {
-            cell.imageViewInShopList.image = UIImage(named: "error")
-        } else {
-            let imageURL = URL(string: shopImage)!
+        // 店名の表示
+        cell.nameLabel.text = shop.name
+        
+        // 画像の表示
+        if let imageURL = URL(string: shop.imageUrl.shopImage1) {
             let request = imageDownloader.getImage(url: imageURL,
                                                    success: { shopImage in
-                                                        cell.imageViewInShopList.image = shopImage
+                                                       cell.imageView.image = shopImage
                                                    },
-                                                   failure: { [weak self] error in
-                                                        self?.showError(error)
+                                                   failure: { error in
+                                                       cell.errorMessageLabel.text = error.localizedDescription
                                                    })
             cell.onReuse = {
                 request?.cancel()
             }
+        } else {
+            cell.imageView.image = UIImage(named: "noImage")
         }
-    
-        cell.shopNameInShopList.text = shopList[indexPath.row].name
         
         return cell
     }

@@ -11,6 +11,7 @@ import UIKit
 struct Favorite {
     let id: String
     var shop: Shop?
+    var error: Error?
 }
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -18,8 +19,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
-    @IBOutlet private var errorView: UIView!
-    @IBOutlet weak private var errorMessageLabel: UILabel!
     
     static func instantiate() -> FavoriteListViewController {
         let vc = UIStoryboard(name: "FavoriteList", bundle: nil).instantiateInitialViewController() as! FavoriteListViewController
@@ -34,7 +33,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func updateFavorites() {
-        favorites = favoriteDatabase.all().map { Favorite(id: $0, shop: nil) }
+        favorites = favoriteDatabase.all().map { Favorite(id: $0, shop: nil, error: nil) }
         collectionView.reloadData()
     }
     
@@ -45,7 +44,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                                         self?.updateShopList(shopResponseBody)
                                     },
                                     failure: { [weak self] error in
-                                        self?.showError(error)
+                                        self?.updateShopError(error, shopID: favorite.id)
                                     })
         }
     }
@@ -54,13 +53,14 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         if let index = favorites.firstIndex(where: { $0.id == shopResponseBody.shop[0].id }) {
             favorites[index].shop = shopResponseBody.shop[0]
         }
-        collectionView.backgroundView = nil
         collectionView.reloadData()
     }
     
-    private func showError(_ error: Error) {
-        errorMessageLabel.text = error.localizedDescription
-        collectionView.backgroundView = errorView
+    private func updateShopError(_ error: Error, shopID: String) {
+        if let index = favorites.firstIndex(where: { $0.id == shopID }) {
+            favorites[index].error = error
+        }
+        collectionView.reloadData()
     }
     
     private func showShopInfo(_ shop: Shop) {
@@ -74,25 +74,29 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
-        let shop = favorites[indexPath.row].shop
+        let favorite = favorites[indexPath.row]
+        let shop = favorite.shop
+        
+        //エラー表示
+        cell.errorMessageLabel.text = favorite.error?.localizedDescription
         
         // 店名の表示
-        cell.shopNameInfavoriteList.text = shop?.name
+        cell.nameLabel.text = shop?.name
         
         // 画像の表示
         if let url = URL(string: shop?.imageUrl.shopImage1 ?? "") {
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
-                                                       cell.imageViewInFavoliteList.image = shopImage
+                                                       cell.imageView.image = shopImage
                                                    },
                                                    failure: { [weak self] error in
-                                                       self?.showError(error)
+                                                       self?.updateShopError(error, shopID: favorite.id)
                                                    })
             cell.onReuse = {
                 request?.cancel()
             }
         } else {
-            cell.imageViewInFavoliteList.image = nil
+            cell.imageView.image = nil
         }
         return cell
     }

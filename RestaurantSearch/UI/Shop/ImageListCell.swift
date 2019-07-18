@@ -13,15 +13,15 @@ import UIKit
 
 final class ImageListCell: UICollectionViewCell {
     var onReuse: (() -> Void)?
-    @IBOutlet weak var imageViewInShopList: UIImageView!
-    @IBOutlet weak var shopNameInShopList: UILabel!
-    @IBOutlet weak var imageViewInShopInfo: UIImageView!
-    @IBOutlet weak var imageViewInFavoliteList: UIImageView!
-    @IBOutlet weak var shopNameInfavoriteList: UILabel!
-    @IBOutlet weak var imageListErrorLabelInShopInfo: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        
+        imageView.image = nil
+        errorMessageLabel.text = nil
         
         onReuse?()
     }
