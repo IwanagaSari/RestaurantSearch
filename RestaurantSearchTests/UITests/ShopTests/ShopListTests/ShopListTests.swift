@@ -29,5 +29,13 @@ final class ShopListTests: XCTestCase {
         
         let cell = vc.collectionView(vc.collectionView, cellForItemAt: IndexPath(row: 0, section: 0)) as! ImageListCell
         XCTAssertEqual(cell.nameLabel.text, "店の名前")
+        
+        var called = false
+        cell.onReuse = { called = true }
+        
+        cell.prepareForReuse()
+        XCTAssertTrue(called)
+        XCTAssertNil(cell.imageView.image)
+        XCTAssertNil(cell.errorMessageLabel.text)
     }
 }
