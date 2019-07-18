@@ -29,6 +29,7 @@ final class ShopListViewControllerTests: XCTestCase {
         
         let cell = vc.collectionView(vc.collectionView, cellForItemAt: IndexPath(row: 0, section: 0)) as! ImageListCell
         XCTAssertEqual(cell.nameLabel.text, "店の名前")
+        XCTAssertEqual(cell.imageView.image, UIImage(named: "noImage"))
         
         var called = false
         cell.onReuse = { called = true }
@@ -37,14 +38,5 @@ final class ShopListViewControllerTests: XCTestCase {
         XCTAssertTrue(called)
         XCTAssertNil(cell.imageView.image)
         XCTAssertNil(cell.errorMessageLabel.text)
-    }
-    
-    func testGetImage() {
-        let vc = ShopListViewController.instantiate(townCode: "test", freeword: "test")
-        vc.apiOperater = dummyAPI
-        vc.loadViewIfNeeded()
-        
-        let cell = vc.collectionView(vc.collectionView, cellForItemAt: IndexPath(row: 0, section: 0)) as! ImageListCell
-        XCTAssertEqual(cell.imageView.image, UIImage(named: "noImage"))
     }
 }
