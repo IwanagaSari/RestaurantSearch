@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-final class ShopListTests: XCTestCase {
+final class ShopListViewControllerTests: XCTestCase {
     private let dummyAPI = DummyAPI()
     
     func testInstantiate() {
