@@ -38,4 +38,13 @@ final class ShopListViewControllerTests: XCTestCase {
         XCTAssertNil(cell.imageView.image)
         XCTAssertNil(cell.errorMessageLabel.text)
     }
+    
+    func testGetImage() {
+        let vc = ShopListViewController.instantiate(townCode: "test", freeword: "test")
+        vc.apiOperater = dummyAPI
+        vc.loadViewIfNeeded()
+        
+        let cell = vc.collectionView(vc.collectionView, cellForItemAt: IndexPath(row: 0, section: 0)) as! ImageListCell
+        XCTAssertEqual(cell.imageView.image, UIImage(named: "noImage"))
+    }
 }
