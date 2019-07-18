@@ -10,11 +10,21 @@ import XCTest
 @testable import RestaurantSearch
 
 final class ShopListTests: XCTestCase {
+    private let dummyAPI = DummyAPI()
     
     func testInstantiate() {
         let townCode = "AREAS5504"
         let freeword = "焼肉"
         let vc = ShopListViewController.instantiate(townCode: townCode, freeword: freeword)
         XCTAssertNotNil(vc)
+    }
+    
+    func testCellCount() {
+        let vc = ShopListViewController.instantiate(townCode: "test", freeword: "test")
+        vc.apiOperater = dummyAPI
+        vc.loadViewIfNeeded()
+            
+        let cell = vc.collectionView.numberOfItems(inSection: 0)
+        XCTAssertEqual(cell, 1)
     }
 }
