@@ -24,7 +24,7 @@ final class ShopListTests: XCTestCase {
         vc.apiOperater = dummyAPI
         vc.loadViewIfNeeded()
             
-        let cell = vc.collectionView.numberOfItems(inSection: 0)
-        XCTAssertEqual(cell, 1)
+        let number = vc.collectionView.numberOfItems(inSection: 0)
+        XCTAssertEqual(number, 1)
     }
 }
