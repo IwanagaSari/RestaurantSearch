@@ -24,7 +24,7 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     }
     
     private func updateViews() {
-        let title = selectedTown != nil ? selectedTown?.townName : "エリアで検索"
+        let title = selectedTown?.townName ?? "エリアで検索"
         let color: UIColor = selectedTown != nil ? .black : .lightGray
         
         areaSelectButton.setTitle(title, for: .normal)
