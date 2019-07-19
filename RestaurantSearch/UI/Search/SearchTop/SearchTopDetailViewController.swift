@@ -98,8 +98,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     
     func townSelected(_ town: Town) {
         navigationController?.popToRootViewController(animated: true)
-        areaSelectButton.setTitle(town.townName, for: .normal)
-        areaSelectButton.setTitleColor(UIColor.black, for: .normal)
         selectedTown = town
     }
 }
