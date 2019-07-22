@@ -228,8 +228,8 @@
 		86AE04A722BA8D6200F9DC94 /* FavoriteListTests */ = {
 			isa = PBXGroup;
 			children = (
-				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
 				865BBD0F22CCF96C0038873D /* FavoriteListViewControllerTests.swift */,
+				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
 			);
 			path = FavoriteListTests;
 			sourceTree = "<group>";
