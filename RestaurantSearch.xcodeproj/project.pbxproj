@@ -59,6 +59,7 @@
 		EA497753229BD428001BE1DB /* TownSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */; };
 		EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66AD7D22929F6E007355BB /* DummyAPI.swift */; };
 		EAF737A822E5D641005F104A /* AreaSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */; };
+		EAF737AC22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +134,7 @@
 		EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectViewControllerTests.swift; sourceTree = "<group>"; };
 		EA66AD7D22929F6E007355BB /* DummyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyAPI.swift; sourceTree = "<group>"; };
 		EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewControllerTests.swift; sourceTree = "<group>"; };
+		EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -483,6 +485,7 @@
 		EAF737AA22E5DA08005F104A /* SearchTopTests */ = {
 			isa = PBXGroup;
 			children = (
+				EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */,
 			);
 			name = SearchTopTests;
 			path = "New Group";
@@ -721,6 +724,7 @@
 				EA497751229BD419001BE1DB /* CitySelectViewControllerTests.swift in Sources */,
 				EAF737A822E5D641005F104A /* AreaSelectViewControllerTests.swift in Sources */,
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
+				EAF737AC22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift in Sources */,
 				865BBD1022CCF96C0038873D /* FavoriteListViewControllerTests.swift in Sources */,
 				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
 				EA18539622C4EF6F00C4CA13 /* APIErrorTests.swift in Sources */,

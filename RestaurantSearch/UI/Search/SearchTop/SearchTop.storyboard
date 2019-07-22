@@ -71,7 +71,7 @@
         <!--Search Top Detail View Controller-->
         <scene sceneID="8pz-dM-HgL">
             <objects>
-                <tableViewController id="hQ8-sD-ZUh" customClass="SearchTopDetailViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchTopDetailViewController" id="hQ8-sD-ZUh" customClass="SearchTopDetailViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="umB-W4-hGv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="279.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
