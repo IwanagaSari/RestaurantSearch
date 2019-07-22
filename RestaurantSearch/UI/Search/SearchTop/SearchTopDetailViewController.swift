@@ -17,6 +17,11 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         didSet { updateViews() }
     }
     
+    static func instantiate() -> SearchTopDetailViewController {
+        let vc = UIStoryboard(name: "SearchTop", bundle: nil).instantiateViewController(withIdentifier: "SearchTopDetailViewController") as! SearchTopDetailViewController
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
