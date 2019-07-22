@@ -12,7 +12,26 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     @IBOutlet weak var freewordTextField: UITextField!
     @IBOutlet weak private var areaSelectButton: UIButton!
     @IBOutlet weak private var searchButton: UIButton!
-    private var selectedTown: Town?
+    @IBOutlet weak private var areaDeleteButton: UIButton!
+    private var selectedTown: Town? {
+        didSet { updateViews() }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        updateViews()
+    }
+    
+    private func updateViews() {
+        let isTownSelected = selectedTown != nil
+        let title = selectedTown?.townName ?? "エリアで検索"
+        let color: UIColor = isTownSelected ? .black : .lightGray
+        
+        areaSelectButton.setTitle(title, for: .normal)
+        areaSelectButton.setTitleColor(color, for: .normal)
+        areaDeleteButton.isHidden = !isTownSelected
+    }
     
     private func showAreaSelect() {
         let vc = AreaSelectViewController.instantiate()
@@ -60,6 +79,10 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         }
     }
     
+    @IBAction func areaDeleteButtonTapped(_ sender: UIButton) {
+        selectedTown = nil
+    }
+    
     @IBAction func myListButtonTapped(_ sender: UIButton) {
         showFavoriteList()
     }
@@ -75,7 +98,6 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
     
     func townSelected(_ town: Town) {
         navigationController?.popToRootViewController(animated: true)
-        areaSelectButton.setTitle(town.townName, for: .normal)
         selectedTown = town
     }
 }
