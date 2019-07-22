@@ -1,5 +1,5 @@
 //
-//  ShopListTests.swift
+//  ShopListViewControllerTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永彩里 on 2019/06/03.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-final class ShopListTests: XCTestCase {
+final class ShopListViewControllerTests: XCTestCase {
     
     func testInstantiate() {
         let townCode = "AREAS5504"
