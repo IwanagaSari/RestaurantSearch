@@ -1,5 +1,5 @@
 //
-//  ShopMapTests.swift
+//  ShopMapViewControllerTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永彩里 on 2019/06/03.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-final class ShopMapTests: XCTestCase {
+final class ShopMapViewControllerTests: XCTestCase {
     
     func testInstantiate() {
         let shop = Shop(id: "h793032",
