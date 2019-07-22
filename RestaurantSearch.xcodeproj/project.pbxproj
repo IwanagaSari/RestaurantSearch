@@ -60,6 +60,7 @@
 		EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66AD7D22929F6E007355BB /* DummyAPI.swift */; };
 		EAF737A822E5D641005F104A /* AreaSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */; };
 		EAF737AC22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */; };
+		EAF737AE22E5DFE3005F104A /* SearchTopViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737AD22E5DFE3005F104A /* SearchTopViewControllerTests.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		EA66AD7D22929F6E007355BB /* DummyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyAPI.swift; sourceTree = "<group>"; };
 		EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewControllerTests.swift; sourceTree = "<group>"; };
 		EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		EAF737AD22E5DFE3005F104A /* SearchTopViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopViewControllerTests.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -486,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */,
+				EAF737AD22E5DFE3005F104A /* SearchTopViewControllerTests.swift */,
 			);
 			name = SearchTopTests;
 			path = "New Group";
@@ -733,6 +736,7 @@
 				EA497753229BD428001BE1DB /* TownSelectViewControllerTests.swift in Sources */,
 				866273C2224A0165007CA319 /* AreaTests.swift in Sources */,
 				860CCD1C22A4E35C00943F17 /* ShopListViewControllerTests.swift in Sources */,
+				EAF737AE22E5DFE3005F104A /* SearchTopViewControllerTests.swift in Sources */,
 				860CCD1622A4BAC700943F17 /* ShopMapViewControllerTests.swift in Sources */,
 				866273C8224C75A9007CA319 /* TownTests.swift in Sources */,
 				860CCD0E229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift in Sources */,
