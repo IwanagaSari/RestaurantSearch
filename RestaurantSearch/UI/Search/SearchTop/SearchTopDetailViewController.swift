@@ -30,7 +30,7 @@ final class SearchTopDetailViewController: UITableViewController, UITextFieldDel
         
         areaSelectButton.setTitle(title, for: .normal)
         areaSelectButton.setTitleColor(color, for: .normal)
-        areaDeleteButton.isHidden = isTownSelected ? false : true
+        areaDeleteButton.isHidden = !isTownSelected
     }
     
     private func showAreaSelect() {
