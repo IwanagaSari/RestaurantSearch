@@ -58,6 +58,7 @@
 		EA497751229BD419001BE1DB /* CitySelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */; };
 		EA497753229BD428001BE1DB /* TownSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */; };
 		EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66AD7D22929F6E007355BB /* DummyAPI.swift */; };
+		EAF737A822E5D641005F104A /* AreaSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectViewControllerTests.swift; sourceTree = "<group>"; };
 		EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectViewControllerTests.swift; sourceTree = "<group>"; };
 		EA66AD7D22929F6E007355BB /* DummyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyAPI.swift; sourceTree = "<group>"; };
+		EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewControllerTests.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,7 +200,7 @@
 				86AE04AB22BA8E0400F9DC94 /* TownSelectTests */,
 				86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */,
 				86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */,
-				86AE04AE22BA8E3000F9DC94 /* AreaSelectTests */,
+				EAF737A622E5D610005F104A /* AreaSelectTests */,
 				86AE04AF22BA8E3900F9DC94 /* SearchTopTests */,
 			);
 			path = SearchTests;
@@ -272,13 +274,6 @@
 				860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */,
 			);
 			path = PrefectureSelectTests;
-			sourceTree = "<group>";
-		};
-		86AE04AE22BA8E3000F9DC94 /* AreaSelectTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AreaSelectTests;
 			sourceTree = "<group>";
 		};
 		86AE04AF22BA8E3900F9DC94 /* SearchTopTests */ = {
@@ -482,6 +477,14 @@
 				EA66AD7D22929F6E007355BB /* DummyAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		EAF737A622E5D610005F104A /* AreaSelectTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */,
+			);
+			path = AreaSelectTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -715,6 +718,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA497751229BD419001BE1DB /* CitySelectViewControllerTests.swift in Sources */,
+				EAF737A822E5D641005F104A /* AreaSelectViewControllerTests.swift in Sources */,
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
 				865BBD1022CCF96C0038873D /* FavoriteListViewControllerTests.swift in Sources */,
 				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
