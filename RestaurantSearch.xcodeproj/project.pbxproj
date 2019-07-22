@@ -487,8 +487,8 @@
 		EAF737AA22E5DA08005F104A /* SearchTopTests */ = {
 			isa = PBXGroup;
 			children = (
-				EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */,
 				EAF737AD22E5DFE3005F104A /* SearchTopViewControllerTests.swift */,
+				EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */,
 			);
 			name = SearchTopTests;
 			path = "New Group";
