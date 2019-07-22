@@ -1,5 +1,5 @@
 //
-//  FavoriteListTests.swift
+//  FavoriteListViewControllerTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永彩里 on 2019/07/03.
