@@ -10,5 +10,9 @@ import XCTest
 @testable import RestaurantSearch
 
 final class SearchTopViewControllerTests: XCTestCase {
-
+    
+    func testInstantiate() {
+        let vc = SearchTopViewController.instantiate()
+        XCTAssertNotNil(vc)
+    }
 }
