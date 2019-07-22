@@ -201,7 +201,7 @@
 				86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */,
 				86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */,
 				EAF737A622E5D610005F104A /* AreaSelectTests */,
-				86AE04AF22BA8E3900F9DC94 /* SearchTopTests */,
+				EAF737AA22E5DA08005F104A /* SearchTopTests */,
 			);
 			path = SearchTests;
 			sourceTree = "<group>";
@@ -274,13 +274,6 @@
 				860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */,
 			);
 			path = PrefectureSelectTests;
-			sourceTree = "<group>";
-		};
-		86AE04AF22BA8E3900F9DC94 /* SearchTopTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchTopTests;
 			sourceTree = "<group>";
 		};
 		86E8FDFD225DCE4400DCAD11 /* UI */ = {
@@ -485,6 +478,14 @@
 				EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */,
 			);
 			path = AreaSelectTests;
+			sourceTree = "<group>";
+		};
+		EAF737AA22E5DA08005F104A /* SearchTopTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SearchTopTests;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
