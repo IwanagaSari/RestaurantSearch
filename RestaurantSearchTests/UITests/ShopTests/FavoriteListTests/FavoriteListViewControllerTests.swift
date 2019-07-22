@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-final class FavoriteListTests: XCTestCase {
+final class FavoriteListViewControllerTests: XCTestCase {
     
     func testInstantiate() {
         let vc = FavoriteListViewController.instantiate()
