@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		860AD39422AE42950009E9C6 /* FavoriteDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */; };
-		860CCD0E229BC0CA00943F17 /* PrefectureSelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */; };
+		860CCD0E229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */; };
 		860CCD10229E4C4700943F17 /* ImageDownloder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0F229E4C4700943F17 /* ImageDownloder.swift */; };
 		860CCD1622A4BAC700943F17 /* ShopMapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1522A4BAC700943F17 /* ShopMapViewControllerTests.swift */; };
 		860CCD1A22A4D88700943F17 /* ShopInfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1922A4D88700943F17 /* ShopInfoViewControllerTests.swift */; };
@@ -77,7 +77,7 @@
 		55DA32510038EF2A008F17D9 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		6B8D096C2BEB44B89D1587B4 /* Pods-RestaurantSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDatabaseTests.swift; sourceTree = "<group>"; };
-		860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureSelectTests.swift; sourceTree = "<group>"; };
+		860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureSelectViewControllerTests.swift; sourceTree = "<group>"; };
 		860CCD0F229E4C4700943F17 /* ImageDownloder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloder.swift; sourceTree = "<group>"; };
 		860CCD1522A4BAC700943F17 /* ShopMapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMapViewControllerTests.swift; sourceTree = "<group>"; };
 		860CCD1922A4D88700943F17 /* ShopInfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoViewControllerTests.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 		86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */ = {
 			isa = PBXGroup;
 			children = (
-				860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */,
+				860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */,
 			);
 			path = PrefectureSelectTests;
 			sourceTree = "<group>";
@@ -726,7 +726,7 @@
 				860CCD1C22A4E35C00943F17 /* ShopListViewControllerTests.swift in Sources */,
 				860CCD1622A4BAC700943F17 /* ShopMapViewControllerTests.swift in Sources */,
 				866273C8224C75A9007CA319 /* TownTests.swift in Sources */,
-				860CCD0E229BC0CA00943F17 /* PrefectureSelectTests.swift in Sources */,
+				860CCD0E229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift in Sources */,
 				860CCD1A22A4D88700943F17 /* ShopInfoViewControllerTests.swift in Sources */,
 				866273C6224A0EFB007CA319 /* CityTests.swift in Sources */,
 			);
