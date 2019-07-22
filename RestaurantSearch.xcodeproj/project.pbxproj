@@ -31,8 +31,6 @@
 		86E8FE18225DD21500DCAD11 /* ShopInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */; };
 		86E8FE1A225DD22400DCAD11 /* ShopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE19225DD22400DCAD11 /* ShopList.storyboard */; };
 		86E8FE1C225DD23200DCAD11 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE1B225DD23200DCAD11 /* ShopListViewController.swift */; };
-		86E8FE23225DD36100DCAD11 /* GenreSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE22225DD36100DCAD11 /* GenreSelect.storyboard */; };
-		86E8FE25225DD36E00DCAD11 /* GenreSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE24225DD36E00DCAD11 /* GenreSelectViewController.swift */; };
 		86E8FE27225DD37C00DCAD11 /* TownSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE26225DD37C00DCAD11 /* TownSelectViewController.swift */; };
 		86E8FE29225DD38500DCAD11 /* TownSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE28225DD38500DCAD11 /* TownSelect.storyboard */; };
 		86E8FE2B225DD39700DCAD11 /* CitySelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE2A225DD39700DCAD11 /* CitySelect.storyboard */; };
@@ -102,8 +100,6 @@
 		86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopInfo.storyboard; sourceTree = "<group>"; };
 		86E8FE19225DD22400DCAD11 /* ShopList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopList.storyboard; sourceTree = "<group>"; };
 		86E8FE1B225DD23200DCAD11 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
-		86E8FE22225DD36100DCAD11 /* GenreSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GenreSelect.storyboard; sourceTree = "<group>"; };
-		86E8FE24225DD36E00DCAD11 /* GenreSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSelectViewController.swift; sourceTree = "<group>"; };
 		86E8FE26225DD37C00DCAD11 /* TownSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectViewController.swift; sourceTree = "<group>"; };
 		86E8FE28225DD38500DCAD11 /* TownSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TownSelect.storyboard; sourceTree = "<group>"; };
 		86E8FE2A225DD39700DCAD11 /* CitySelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitySelect.storyboard; sourceTree = "<group>"; };
@@ -304,7 +300,6 @@
 		86E8FDFE225DCE4D00DCAD11 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				86E8FE05225DCEE900DCAD11 /* GenreSelect */,
 				86E8FE04225DCEDC00DCAD11 /* TownSelect */,
 				86E8FE03225DCED300DCAD11 /* CitySelect */,
 				86E8FE02225DCEC800DCAD11 /* PrefectureSelect */,
@@ -371,15 +366,6 @@
 				86E8FE28225DD38500DCAD11 /* TownSelect.storyboard */,
 			);
 			path = TownSelect;
-			sourceTree = "<group>";
-		};
-		86E8FE05225DCEE900DCAD11 /* GenreSelect */ = {
-			isa = PBXGroup;
-			children = (
-				86E8FE22225DD36100DCAD11 /* GenreSelect.storyboard */,
-				86E8FE24225DD36E00DCAD11 /* GenreSelectViewController.swift */,
-			);
-			path = GenreSelect;
 			sourceTree = "<group>";
 		};
 		86E8FE07225DCF1E00DCAD11 /* ShopList */ = {
@@ -585,7 +571,6 @@
 			files = (
 				86E8FE1A225DD22400DCAD11 /* ShopList.storyboard in Resources */,
 				86E8FE18225DD21500DCAD11 /* ShopInfo.storyboard in Resources */,
-				86E8FE23225DD36100DCAD11 /* GenreSelect.storyboard in Resources */,
 				EA2679F02248CCC100F3091C /* LaunchScreen.storyboard in Resources */,
 				86E8FE33225DD3DB00DCAD11 /* AreaSelect.storyboard in Resources */,
 				86E8FE39225DD3FF00DCAD11 /* SearchTop.storyboard in Resources */,
@@ -702,7 +687,6 @@
 				EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */,
 				EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */,
 				EA267A0A2248E2EE00F3091C /* Area.swift in Sources */,
-				86E8FE25225DD36E00DCAD11 /* GenreSelectViewController.swift in Sources */,
 				EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */,
 				EA18539422C4ED8300C4CA13 /* APIError.swift in Sources */,
 				EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */,
