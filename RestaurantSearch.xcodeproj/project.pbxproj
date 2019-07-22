@@ -55,7 +55,7 @@
 		EA267A102248F49200F3091C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* Town.swift */; };
 		EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCAE22842F2E00EB5656 /* APIOperater.swift */; };
 		EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */; };
-		EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497750229BD419001BE1DB /* CitySelectTests.swift */; };
+		EA497751229BD419001BE1DB /* CitySelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */; };
 		EA497753229BD428001BE1DB /* TownSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */; };
 		EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66AD7D22929F6E007355BB /* DummyAPI.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
@@ -128,7 +128,7 @@
 		EA267A0F2248F49200F3091C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		EA47FCAE22842F2E00EB5656 /* APIOperater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperater.swift; sourceTree = "<group>"; };
 		EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperaterTests.swift; sourceTree = "<group>"; };
-		EA497750229BD419001BE1DB /* CitySelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectTests.swift; sourceTree = "<group>"; };
+		EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectViewControllerTests.swift; sourceTree = "<group>"; };
 		EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectViewControllerTests.swift; sourceTree = "<group>"; };
 		EA66AD7D22929F6E007355BB /* DummyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyAPI.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,7 +261,7 @@
 		86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA497750229BD419001BE1DB /* CitySelectTests.swift */,
+				EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */,
 			);
 			path = CitySelectTests;
 			sourceTree = "<group>";
@@ -714,7 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */,
+				EA497751229BD419001BE1DB /* CitySelectViewControllerTests.swift in Sources */,
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
 				865BBD1022CCF96C0038873D /* FavoriteListViewControllerTests.swift in Sources */,
 				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
