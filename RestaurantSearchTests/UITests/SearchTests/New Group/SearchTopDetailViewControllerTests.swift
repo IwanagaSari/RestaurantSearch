@@ -9,6 +9,6 @@
 import XCTest
 @testable import RestaurantSearch
 
-class SearchTopDetailViewControllerTests: XCTestCase {
+final class SearchTopDetailViewControllerTests: XCTestCase {
 
 }
