@@ -15,6 +15,7 @@ struct Favorite {
 }
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    @IBOutlet private var backgroundView: UIView!
     private var favorites: [Favorite] = []
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
