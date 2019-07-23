@@ -287,21 +287,13 @@
 				86E8FE07225DCF1E00DCAD11 /* ShopList */,
 				860CCD0F229E4C4700943F17 /* ImageDownloder.swift */,
 				865693C322AA18E000B9DEBD /* ImageListCell.swift */,
-				86E8FDFE225DCE4D00DCAD11 /* Search */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		86E8FDFE225DCE4D00DCAD11 /* Search */ = {
-			isa = PBXGroup;
-			children = (
 				86E8FE04225DCEDC00DCAD11 /* TownSelect */,
 				86E8FE03225DCED300DCAD11 /* CitySelect */,
 				86E8FE02225DCEC800DCAD11 /* PrefectureSelect */,
 				86E8FE01225DCEBD00DCAD11 /* AreaSelect */,
 				86E8FE00225DCEA400DCAD11 /* SearchTop */,
 			);
-			path = Search;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		86E8FE00225DCEA400DCAD11 /* SearchTop */ = {
