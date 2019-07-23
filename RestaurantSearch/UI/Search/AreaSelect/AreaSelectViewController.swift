@@ -11,7 +11,7 @@ import UIKit
 final class AreaSelectViewController: UITableViewController {
     @IBOutlet private var errorView: UIView!
     @IBOutlet weak private var errorMessageLabel: UILabel!
-    private let apiOperater: APIType = APIOperater()
+    var apiOperater: APIType = APIOperater()
     private var areaList: [Area] = []
     
     static func instantiate() -> AreaSelectViewController {

@@ -1,5 +1,5 @@
 //
-//  ShopListTests.swift
+//  ShopListViewControllerTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永彩里 on 2019/06/03.
@@ -23,7 +23,7 @@ final class ShopListViewControllerTests: XCTestCase {
         let vc = ShopListViewController.instantiate(townCode: "test", freeword: "test")
         vc.apiOperater = dummyAPI
         vc.loadViewIfNeeded()
-            
+        
         let number = vc.collectionView.numberOfItems(inSection: 0)
         XCTAssertEqual(number, 1)
         

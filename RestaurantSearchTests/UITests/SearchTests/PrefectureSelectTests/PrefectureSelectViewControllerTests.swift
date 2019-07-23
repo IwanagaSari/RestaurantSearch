@@ -1,5 +1,5 @@
 //
-//  PrefectureSelectTests.swift
+//  PrefectureSelectViewControllerTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永彩里 on 2019/05/27.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-final class PrefectureSelectTests: XCTestCase {
+final class PrefectureSelectViewControllerTests: XCTestCase {
     private let dummyAPI = DummyAPI()
     
     func testInstantiate() {

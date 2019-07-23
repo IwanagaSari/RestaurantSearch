@@ -11,6 +11,11 @@ import UIKit
 final class SearchTopViewController: UIViewController, TownSelectViewControllerDelegate {
     private var detailViewController: SearchTopDetailViewController?
     
+    static func instantiate() -> SearchTopViewController {
+        let vc = UIStoryboard(name: "SearchTop", bundle: nil).instantiateInitialViewController() as! SearchTopViewController
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

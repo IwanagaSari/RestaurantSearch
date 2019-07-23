@@ -1,5 +1,5 @@
 //
-//  CitySelectTests.swift
+//  CitySelectViewControllerTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永 彩里 on 2019/05/27.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-final class CitySelectTests: XCTestCase {
+final class CitySelectViewControllerTests: XCTestCase {
     private let dummyAPI = DummyAPI()
     
     func testInstantiate() {

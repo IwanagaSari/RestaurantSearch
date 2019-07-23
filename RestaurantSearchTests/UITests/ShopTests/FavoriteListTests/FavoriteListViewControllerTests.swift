@@ -1,5 +1,5 @@
 //
-//  FavoriteListTests.swift
+//  FavoriteListViewControllerTests.swift
 //  RestaurantSearchTests
 //
 //  Created by 岩永彩里 on 2019/07/03.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import RestaurantSearch
 
-final class FavoriteListTests: XCTestCase {
+final class FavoriteListViewControllerTests: XCTestCase {
     
     func testInstantiate() {
         let vc = FavoriteListViewController.instantiate()

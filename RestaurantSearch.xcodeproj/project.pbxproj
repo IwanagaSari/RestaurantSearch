@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		860AD39422AE42950009E9C6 /* FavoriteDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */; };
-		860CCD0E229BC0CA00943F17 /* PrefectureSelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */; };
+		860CCD0E229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */; };
 		860CCD10229E4C4700943F17 /* ImageDownloder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD0F229E4C4700943F17 /* ImageDownloder.swift */; };
-		860CCD1622A4BAC700943F17 /* ShopMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1522A4BAC700943F17 /* ShopMapTests.swift */; };
-		860CCD1A22A4D88700943F17 /* ShopInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1922A4D88700943F17 /* ShopInfoTests.swift */; };
+		860CCD1622A4BAC700943F17 /* ShopMapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1522A4BAC700943F17 /* ShopMapViewControllerTests.swift */; };
+		860CCD1A22A4D88700943F17 /* ShopInfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1922A4D88700943F17 /* ShopInfoViewControllerTests.swift */; };
 		860CCD1C22A4E35C00943F17 /* ShopListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1B22A4E35C00943F17 /* ShopListViewControllerTests.swift */; };
 		860CCD2022A7611000943F17 /* FavoriteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */; };
 		8618FBB722C38B2C001E4817 /* ShopInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8618FBB622C38B2C001E4817 /* ShopInfoViewController.swift */; };
 		865693C422AA18E000B9DEBD /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865693C322AA18E000B9DEBD /* ImageListCell.swift */; };
-		865BBD1022CCF96C0038873D /* FavoriteListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BBD0F22CCF96C0038873D /* FavoriteListTests.swift */; };
+		865BBD1022CCF96C0038873D /* FavoriteListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865BBD0F22CCF96C0038873D /* FavoriteListViewControllerTests.swift */; };
 		866273C2224A0165007CA319 /* AreaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C1224A0165007CA319 /* AreaTests.swift */; };
 		866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C3224A09A9007CA319 /* PrefectureTests.swift */; };
 		866273C6224A0EFB007CA319 /* CityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866273C5224A0EFB007CA319 /* CityTests.swift */; };
@@ -31,10 +31,6 @@
 		86E8FE18225DD21500DCAD11 /* ShopInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */; };
 		86E8FE1A225DD22400DCAD11 /* ShopList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE19225DD22400DCAD11 /* ShopList.storyboard */; };
 		86E8FE1C225DD23200DCAD11 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE1B225DD23200DCAD11 /* ShopListViewController.swift */; };
-		86E8FE1F225DD34300DCAD11 /* SceneSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE1E225DD34300DCAD11 /* SceneSelectViewController.swift */; };
-		86E8FE21225DD35500DCAD11 /* SceneSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE20225DD35500DCAD11 /* SceneSelect.storyboard */; };
-		86E8FE23225DD36100DCAD11 /* GenreSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE22225DD36100DCAD11 /* GenreSelect.storyboard */; };
-		86E8FE25225DD36E00DCAD11 /* GenreSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE24225DD36E00DCAD11 /* GenreSelectViewController.swift */; };
 		86E8FE27225DD37C00DCAD11 /* TownSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E8FE26225DD37C00DCAD11 /* TownSelectViewController.swift */; };
 		86E8FE29225DD38500DCAD11 /* TownSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE28225DD38500DCAD11 /* TownSelect.storyboard */; };
 		86E8FE2B225DD39700DCAD11 /* CitySelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E8FE2A225DD39700DCAD11 /* CitySelect.storyboard */; };
@@ -49,7 +45,6 @@
 		EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A08112271A65A00550B4F /* AreaSelectViewController.swift */; };
 		EA1D8CA2228C0C2300B6065E /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D8CA1228C0C2300B6065E /* Shop.swift */; };
 		EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E52248CCBF00F3091C /* AppDelegate.swift */; };
-		EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2679E72248CCBF00F3091C /* ViewController.swift */; };
 		EA2679EB2248CCBF00F3091C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2679E92248CCBF00F3091C /* Main.storyboard */; };
 		EA2679ED2248CCC100F3091C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA2679EC2248CCC100F3091C /* Assets.xcassets */; };
 		EA2679F02248CCC100F3091C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA2679EE2248CCC100F3091C /* LaunchScreen.storyboard */; };
@@ -59,9 +54,12 @@
 		EA267A102248F49200F3091C /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA267A0F2248F49200F3091C /* Town.swift */; };
 		EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCAE22842F2E00EB5656 /* APIOperater.swift */; };
 		EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */; };
-		EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497750229BD419001BE1DB /* CitySelectTests.swift */; };
-		EA497753229BD428001BE1DB /* TownSelectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497752229BD428001BE1DB /* TownSelectTests.swift */; };
+		EA497751229BD419001BE1DB /* CitySelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */; };
+		EA497753229BD428001BE1DB /* TownSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */; };
 		EA66AD7E22929F6E007355BB /* DummyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA66AD7D22929F6E007355BB /* DummyAPI.swift */; };
+		EAF737A822E5D641005F104A /* AreaSelectViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */; };
+		EAF737AC22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */; };
+		EAF737AE22E5DFE3005F104A /* SearchTopViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF737AD22E5DFE3005F104A /* SearchTopViewControllerTests.swift */; };
 		FA1FD2AA3FC5553B52E467C7 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220642DE50B3FAD388916D3A /* Pods_RestaurantSearchTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,15 +79,15 @@
 		55DA32510038EF2A008F17D9 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		6B8D096C2BEB44B89D1587B4 /* Pods-RestaurantSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.debug.xcconfig"; sourceTree = "<group>"; };
 		860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDatabaseTests.swift; sourceTree = "<group>"; };
-		860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureSelectTests.swift; sourceTree = "<group>"; };
+		860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureSelectViewControllerTests.swift; sourceTree = "<group>"; };
 		860CCD0F229E4C4700943F17 /* ImageDownloder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloder.swift; sourceTree = "<group>"; };
-		860CCD1522A4BAC700943F17 /* ShopMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMapTests.swift; sourceTree = "<group>"; };
-		860CCD1922A4D88700943F17 /* ShopInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoTests.swift; sourceTree = "<group>"; };
+		860CCD1522A4BAC700943F17 /* ShopMapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMapViewControllerTests.swift; sourceTree = "<group>"; };
+		860CCD1922A4D88700943F17 /* ShopInfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoViewControllerTests.swift; sourceTree = "<group>"; };
 		860CCD1B22A4E35C00943F17 /* ShopListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewControllerTests.swift; sourceTree = "<group>"; };
 		860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDatabase.swift; sourceTree = "<group>"; };
 		8618FBB622C38B2C001E4817 /* ShopInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopInfoViewController.swift; sourceTree = "<group>"; };
 		865693C322AA18E000B9DEBD /* ImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
-		865BBD0F22CCF96C0038873D /* FavoriteListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListTests.swift; sourceTree = "<group>"; };
+		865BBD0F22CCF96C0038873D /* FavoriteListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewControllerTests.swift; sourceTree = "<group>"; };
 		866273C1224A0165007CA319 /* AreaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTests.swift; sourceTree = "<group>"; };
 		866273C3224A09A9007CA319 /* PrefectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefectureTests.swift; sourceTree = "<group>"; };
 		866273C5224A0EFB007CA319 /* CityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTests.swift; sourceTree = "<group>"; };
@@ -104,10 +102,6 @@
 		86E8FE17225DD21500DCAD11 /* ShopInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopInfo.storyboard; sourceTree = "<group>"; };
 		86E8FE19225DD22400DCAD11 /* ShopList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopList.storyboard; sourceTree = "<group>"; };
 		86E8FE1B225DD23200DCAD11 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
-		86E8FE1E225DD34300DCAD11 /* SceneSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneSelectViewController.swift; sourceTree = "<group>"; };
-		86E8FE20225DD35500DCAD11 /* SceneSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SceneSelect.storyboard; sourceTree = "<group>"; };
-		86E8FE22225DD36100DCAD11 /* GenreSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GenreSelect.storyboard; sourceTree = "<group>"; };
-		86E8FE24225DD36E00DCAD11 /* GenreSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreSelectViewController.swift; sourceTree = "<group>"; };
 		86E8FE26225DD37C00DCAD11 /* TownSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectViewController.swift; sourceTree = "<group>"; };
 		86E8FE28225DD38500DCAD11 /* TownSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TownSelect.storyboard; sourceTree = "<group>"; };
 		86E8FE2A225DD39700DCAD11 /* CitySelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CitySelect.storyboard; sourceTree = "<group>"; };
@@ -123,7 +117,6 @@
 		EA1D8CA1228C0C2300B6065E /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		EA2679E22248CCBF00F3091C /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA2679E52248CCBF00F3091C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA2679E72248CCBF00F3091C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA2679EA2248CCBF00F3091C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA2679EC2248CCC100F3091C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA2679EF2248CCC100F3091C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,9 +129,12 @@
 		EA267A0F2248F49200F3091C /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
 		EA47FCAE22842F2E00EB5656 /* APIOperater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperater.swift; sourceTree = "<group>"; };
 		EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOperaterTests.swift; sourceTree = "<group>"; };
-		EA497750229BD419001BE1DB /* CitySelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectTests.swift; sourceTree = "<group>"; };
-		EA497752229BD428001BE1DB /* TownSelectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectTests.swift; sourceTree = "<group>"; };
+		EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySelectViewControllerTests.swift; sourceTree = "<group>"; };
+		EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownSelectViewControllerTests.swift; sourceTree = "<group>"; };
 		EA66AD7D22929F6E007355BB /* DummyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyAPI.swift; sourceTree = "<group>"; };
+		EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelectViewControllerTests.swift; sourceTree = "<group>"; };
+		EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		EAF737AD22E5DFE3005F104A /* SearchTopViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTopViewControllerTests.swift; sourceTree = "<group>"; };
 		FB08ACD26BEF5D8BC6EB509F /* Pods_RestaurantSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -206,8 +202,8 @@
 				86AE04AB22BA8E0400F9DC94 /* TownSelectTests */,
 				86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */,
 				86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */,
-				86AE04AE22BA8E3000F9DC94 /* AreaSelectTests */,
-				86AE04AF22BA8E3900F9DC94 /* SearchTopTests */,
+				EAF737A622E5D610005F104A /* AreaSelectTests */,
+				EAF737AA22E5DA08005F104A /* SearchTopTests */,
 			);
 			path = SearchTests;
 			sourceTree = "<group>";
@@ -228,8 +224,8 @@
 		86AE04A722BA8D6200F9DC94 /* FavoriteListTests */ = {
 			isa = PBXGroup;
 			children = (
+				865BBD0F22CCF96C0038873D /* FavoriteListViewControllerTests.swift */,
 				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
-				865BBD0F22CCF96C0038873D /* FavoriteListTests.swift */,
 			);
 			path = FavoriteListTests;
 			sourceTree = "<group>";
@@ -237,7 +233,7 @@
 		86AE04A822BA8D7200F9DC94 /* ShopMapTests */ = {
 			isa = PBXGroup;
 			children = (
-				860CCD1522A4BAC700943F17 /* ShopMapTests.swift */,
+				860CCD1522A4BAC700943F17 /* ShopMapViewControllerTests.swift */,
 			);
 			path = ShopMapTests;
 			sourceTree = "<group>";
@@ -245,7 +241,7 @@
 		86AE04A922BA8D7B00F9DC94 /* ShopInfoTests */ = {
 			isa = PBXGroup;
 			children = (
-				860CCD1922A4D88700943F17 /* ShopInfoTests.swift */,
+				860CCD1922A4D88700943F17 /* ShopInfoViewControllerTests.swift */,
 			);
 			path = ShopInfoTests;
 			sourceTree = "<group>";
@@ -261,7 +257,7 @@
 		86AE04AB22BA8E0400F9DC94 /* TownSelectTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA497752229BD428001BE1DB /* TownSelectTests.swift */,
+				EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */,
 			);
 			path = TownSelectTests;
 			sourceTree = "<group>";
@@ -269,7 +265,7 @@
 		86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA497750229BD419001BE1DB /* CitySelectTests.swift */,
+				EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */,
 			);
 			path = CitySelectTests;
 			sourceTree = "<group>";
@@ -277,23 +273,9 @@
 		86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */ = {
 			isa = PBXGroup;
 			children = (
-				860CCD0D229BC0CA00943F17 /* PrefectureSelectTests.swift */,
+				860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */,
 			);
 			path = PrefectureSelectTests;
-			sourceTree = "<group>";
-		};
-		86AE04AE22BA8E3000F9DC94 /* AreaSelectTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AreaSelectTests;
-			sourceTree = "<group>";
-		};
-		86AE04AF22BA8E3900F9DC94 /* SearchTopTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchTopTests;
 			sourceTree = "<group>";
 		};
 		86E8FDFD225DCE4400DCAD11 /* UI */ = {
@@ -308,8 +290,6 @@
 		86E8FDFE225DCE4D00DCAD11 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				86E8FE06225DCF0300DCAD11 /* SceneSelect */,
-				86E8FE05225DCEE900DCAD11 /* GenreSelect */,
 				86E8FE04225DCEDC00DCAD11 /* TownSelect */,
 				86E8FE03225DCED300DCAD11 /* CitySelect */,
 				86E8FE02225DCEC800DCAD11 /* PrefectureSelect */,
@@ -376,24 +356,6 @@
 				86E8FE28225DD38500DCAD11 /* TownSelect.storyboard */,
 			);
 			path = TownSelect;
-			sourceTree = "<group>";
-		};
-		86E8FE05225DCEE900DCAD11 /* GenreSelect */ = {
-			isa = PBXGroup;
-			children = (
-				86E8FE22225DD36100DCAD11 /* GenreSelect.storyboard */,
-				86E8FE24225DD36E00DCAD11 /* GenreSelectViewController.swift */,
-			);
-			path = GenreSelect;
-			sourceTree = "<group>";
-		};
-		86E8FE06225DCF0300DCAD11 /* SceneSelect */ = {
-			isa = PBXGroup;
-			children = (
-				86E8FE1E225DD34300DCAD11 /* SceneSelectViewController.swift */,
-				86E8FE20225DD35500DCAD11 /* SceneSelect.storyboard */,
-			);
-			path = SceneSelect;
 			sourceTree = "<group>";
 		};
 		86E8FE07225DCF1E00DCAD11 /* ShopList */ = {
@@ -483,7 +445,6 @@
 				86E8FDFD225DCE4400DCAD11 /* UI */,
 				EA267A062248E18A00F3091C /* API */,
 				EA2679E52248CCBF00F3091C /* AppDelegate.swift */,
-				EA2679E72248CCBF00F3091C /* ViewController.swift */,
 				EA2679E92248CCBF00F3091C /* Main.storyboard */,
 				EA2679EC2248CCC100F3091C /* Assets.xcassets */,
 				EA2679EE2248CCC100F3091C /* LaunchScreen.storyboard */,
@@ -510,6 +471,24 @@
 				EA66AD7D22929F6E007355BB /* DummyAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		EAF737A622E5D610005F104A /* AreaSelectTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */,
+			);
+			path = AreaSelectTests;
+			sourceTree = "<group>";
+		};
+		EAF737AA22E5DA08005F104A /* SearchTopTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAF737AD22E5DFE3005F104A /* SearchTopViewControllerTests.swift */,
+				EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */,
+			);
+			name = SearchTopTests;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -599,9 +578,7 @@
 			files = (
 				86E8FE1A225DD22400DCAD11 /* ShopList.storyboard in Resources */,
 				86E8FE18225DD21500DCAD11 /* ShopInfo.storyboard in Resources */,
-				86E8FE23225DD36100DCAD11 /* GenreSelect.storyboard in Resources */,
 				EA2679F02248CCC100F3091C /* LaunchScreen.storyboard in Resources */,
-				86E8FE21225DD35500DCAD11 /* SceneSelect.storyboard in Resources */,
 				86E8FE33225DD3DB00DCAD11 /* AreaSelect.storyboard in Resources */,
 				86E8FE39225DD3FF00DCAD11 /* SearchTop.storyboard in Resources */,
 				EA2679ED2248CCC100F3091C /* Assets.xcassets in Resources */,
@@ -715,15 +692,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA47FCAF22842F2E00EB5656 /* APIOperater.swift in Sources */,
-				EA2679E82248CCBF00F3091C /* ViewController.swift in Sources */,
 				EA267A0A2248E2EE00F3091C /* Area.swift in Sources */,
-				86E8FE25225DD36E00DCAD11 /* GenreSelectViewController.swift in Sources */,
 				EA2679E62248CCBF00F3091C /* AppDelegate.swift in Sources */,
 				EA18539422C4ED8300C4CA13 /* APIError.swift in Sources */,
 				EA1A08122271A65A00550B4F /* AreaSelectViewController.swift in Sources */,
 				8618FBB722C38B2C001E4817 /* ShopInfoViewController.swift in Sources */,
 				860CCD2022A7611000943F17 /* FavoriteDatabase.swift in Sources */,
-				86E8FE1F225DD34300DCAD11 /* SceneSelectViewController.swift in Sources */,
 				EA267A102248F49200F3091C /* Town.swift in Sources */,
 				EA267A0E2248EFF200F3091C /* City.swift in Sources */,
 				860CCD10229E4C4700943F17 /* ImageDownloder.swift in Sources */,
@@ -746,20 +720,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA497751229BD419001BE1DB /* CitySelectTests.swift in Sources */,
+				EA497751229BD419001BE1DB /* CitySelectViewControllerTests.swift in Sources */,
+				EAF737A822E5D641005F104A /* AreaSelectViewControllerTests.swift in Sources */,
 				866273C4224A09A9007CA319 /* PrefectureTests.swift in Sources */,
-				865BBD1022CCF96C0038873D /* FavoriteListTests.swift in Sources */,
+				EAF737AC22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift in Sources */,
+				865BBD1022CCF96C0038873D /* FavoriteListViewControllerTests.swift in Sources */,
 				86BCA2AC228D1D6D0063E5F6 /* ShopTests.swift in Sources */,
 				EA18539622C4EF6F00C4CA13 /* APIErrorTests.swift in Sources */,
 				860AD39422AE42950009E9C6 /* FavoriteDatabaseTests.swift in Sources */,
 				EA47FCB1228430D700EB5656 /* APIOperaterTests.swift in Sources */,
-				EA497753229BD428001BE1DB /* TownSelectTests.swift in Sources */,
+				EA497753229BD428001BE1DB /* TownSelectViewControllerTests.swift in Sources */,
 				866273C2224A0165007CA319 /* AreaTests.swift in Sources */,
 				860CCD1C22A4E35C00943F17 /* ShopListViewControllerTests.swift in Sources */,
-				860CCD1622A4BAC700943F17 /* ShopMapTests.swift in Sources */,
+				EAF737AE22E5DFE3005F104A /* SearchTopViewControllerTests.swift in Sources */,
+				860CCD1622A4BAC700943F17 /* ShopMapViewControllerTests.swift in Sources */,
 				866273C8224C75A9007CA319 /* TownTests.swift in Sources */,
-				860CCD0E229BC0CA00943F17 /* PrefectureSelectTests.swift in Sources */,
-				860CCD1A22A4D88700943F17 /* ShopInfoTests.swift in Sources */,
+				860CCD0E229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift in Sources */,
+				860CCD1A22A4D88700943F17 /* ShopInfoViewControllerTests.swift in Sources */,
 				866273C6224A0EFB007CA319 /* CityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
