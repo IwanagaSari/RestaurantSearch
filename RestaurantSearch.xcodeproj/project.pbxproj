@@ -281,7 +281,12 @@
 		86E8FDFD225DCE4400DCAD11 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				86E8FDFF225DCE5F00DCAD11 /* Shop */,
+				86E8FE0A225DCF4400DCAD11 /* FavoriteList */,
+				86E8FE09225DCF3A00DCAD11 /* ShopMap */,
+				86E8FE08225DCF2800DCAD11 /* ShopInfo */,
+				86E8FE07225DCF1E00DCAD11 /* ShopList */,
+				860CCD0F229E4C4700943F17 /* ImageDownloder.swift */,
+				865693C322AA18E000B9DEBD /* ImageListCell.swift */,
 				86E8FDFE225DCE4D00DCAD11 /* Search */,
 			);
 			path = UI;
@@ -297,19 +302,6 @@
 				86E8FE00225DCEA400DCAD11 /* SearchTop */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		86E8FDFF225DCE5F00DCAD11 /* Shop */ = {
-			isa = PBXGroup;
-			children = (
-				86E8FE0A225DCF4400DCAD11 /* FavoriteList */,
-				86E8FE09225DCF3A00DCAD11 /* ShopMap */,
-				86E8FE08225DCF2800DCAD11 /* ShopInfo */,
-				86E8FE07225DCF1E00DCAD11 /* ShopList */,
-				860CCD0F229E4C4700943F17 /* ImageDownloder.swift */,
-				865693C322AA18E000B9DEBD /* ImageListCell.swift */,
-			);
-			path = Shop;
 			sourceTree = "<group>";
 		};
 		86E8FE00225DCEA400DCAD11 /* SearchTop */ = {
