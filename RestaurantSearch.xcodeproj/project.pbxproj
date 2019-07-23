@@ -174,7 +174,11 @@
 				86AE04A822BA8D7200F9DC94 /* ShopMapTests */,
 				86AE04A922BA8D7B00F9DC94 /* ShopInfoTests */,
 				86AE04AA22BA8D8500F9DC94 /* ShopListTests */,
-				86AE04A522BA8D0400F9DC94 /* SearchTests */,
+				86AE04AB22BA8E0400F9DC94 /* TownSelectTests */,
+				86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */,
+				86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */,
+				EAF737A622E5D610005F104A /* AreaSelectTests */,
+				EAF737AA22E5DA08005F104A /* SearchTopTests */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -186,18 +190,6 @@
 				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
 			);
 			path = APITests;
-			sourceTree = "<group>";
-		};
-		86AE04A522BA8D0400F9DC94 /* SearchTests */ = {
-			isa = PBXGroup;
-			children = (
-				86AE04AB22BA8E0400F9DC94 /* TownSelectTests */,
-				86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */,
-				86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */,
-				EAF737A622E5D610005F104A /* AreaSelectTests */,
-				EAF737AA22E5DA08005F104A /* SearchTopTests */,
-			);
-			path = SearchTests;
 			sourceTree = "<group>";
 		};
 		86AE04A622BA8D1800F9DC94 /* ModelTests */ = {
