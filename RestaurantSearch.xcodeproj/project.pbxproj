@@ -170,7 +170,10 @@
 		86AE04A222BA8C2B00F9DC94 /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				86AE04A422BA8CFA00F9DC94 /* ShopTests */,
+				86AE04A722BA8D6200F9DC94 /* FavoriteListTests */,
+				86AE04A822BA8D7200F9DC94 /* ShopMapTests */,
+				86AE04A922BA8D7B00F9DC94 /* ShopInfoTests */,
+				86AE04AA22BA8D8500F9DC94 /* ShopListTests */,
 				86AE04A522BA8D0400F9DC94 /* SearchTests */,
 			);
 			path = UITests;
@@ -183,17 +186,6 @@
 				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
 			);
 			path = APITests;
-			sourceTree = "<group>";
-		};
-		86AE04A422BA8CFA00F9DC94 /* ShopTests */ = {
-			isa = PBXGroup;
-			children = (
-				86AE04A722BA8D6200F9DC94 /* FavoriteListTests */,
-				86AE04A822BA8D7200F9DC94 /* ShopMapTests */,
-				86AE04A922BA8D7B00F9DC94 /* ShopInfoTests */,
-				86AE04AA22BA8D8500F9DC94 /* ShopListTests */,
-			);
-			path = ShopTests;
 			sourceTree = "<group>";
 		};
 		86AE04A522BA8D0400F9DC94 /* SearchTests */ = {
