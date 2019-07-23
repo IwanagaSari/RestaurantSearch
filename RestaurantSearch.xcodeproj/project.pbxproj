@@ -187,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				86AE04A622BA8D1800F9DC94 /* Model */,
-				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -209,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				865BBD0F22CCF96C0038873D /* FavoriteListViewControllerTests.swift */,
-				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
 			);
 			path = FavoriteList;
 			sourceTree = "<group>";
@@ -396,6 +394,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		EA215AEF22E7160D00462E7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
+				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		EA2679D92248CCBF00F3091C = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +441,7 @@
 		EA2679F92248CCC100F3091C /* RestaurantSearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				EA215AEF22E7160D00462E7B /* Common */,
 				86AE04A222BA8C2B00F9DC94 /* UI */,
 				86AE04A322BA8CE400F9DC94 /* API */,
 				EA2679FC2248CCC100F3091C /* Info.plist */,
