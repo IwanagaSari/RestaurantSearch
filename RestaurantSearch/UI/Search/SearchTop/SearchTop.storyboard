@@ -87,7 +87,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="フリーワード検索" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gIq-fe-WLX">
-                                                    <rect key="frame" x="30" y="13" width="354" height="27"/>
+                                                    <rect key="frame" x="30" y="11" width="354" height="31"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -97,9 +97,9 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="gIq-fe-WLX" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" constant="2" id="5Gi-JF-qJe"/>
+                                                <constraint firstItem="gIq-fe-WLX" firstAttribute="top" secondItem="ukD-bk-7En" secondAttribute="topMargin" id="5Gi-JF-qJe"/>
                                                 <constraint firstItem="gIq-fe-WLX" firstAttribute="leading" secondItem="ukD-bk-7En" secondAttribute="leadingMargin" constant="10" id="LYc-qL-ser"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="gIq-fe-WLX" secondAttribute="bottom" constant="2" id="WKG-vP-xfU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gIq-fe-WLX" secondAttribute="bottom" id="WKG-vP-xfU"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gIq-fe-WLX" secondAttribute="trailing" constant="10" id="xma-zj-0NV"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -113,7 +113,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFS-7b-4UH">
-                                                    <rect key="frame" x="30" y="13" width="354" height="41"/>
+                                                    <rect key="frame" x="30" y="11" width="354" height="45"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="エリアで検索">
                                                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,20 +128,20 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdJ-K0-bVQ">
-                                                    <rect key="frame" x="343" y="13" width="41" height="41"/>
+                                                    <rect key="frame" x="339" y="13" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="JdJ-K0-bVQ" secondAttribute="height" multiplier="1:1" id="xEo-Po-lId"/>
                                                     </constraints>
-                                                    <state key="normal" image="delete"/>
+                                                    <state key="normal" image="clear"/>
                                                     <connections>
                                                         <action selector="areaDeleteButtonTapped:" destination="hQ8-sD-ZUh" eventType="touchUpInside" id="hXC-df-4HT"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="qFS-7b-4UH" secondAttribute="bottom" constant="2" id="4YZ-zI-NDw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qFS-7b-4UH" secondAttribute="bottom" id="4YZ-zI-NDw"/>
                                                 <constraint firstItem="JdJ-K0-bVQ" firstAttribute="height" secondItem="qFS-7b-4UH" secondAttribute="height" id="7rS-BM-pf6"/>
-                                                <constraint firstItem="qFS-7b-4UH" firstAttribute="top" secondItem="oGN-tP-DRj" secondAttribute="topMargin" constant="2" id="91B-B9-RQe"/>
+                                                <constraint firstItem="qFS-7b-4UH" firstAttribute="top" secondItem="oGN-tP-DRj" secondAttribute="topMargin" id="91B-B9-RQe"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qFS-7b-4UH" secondAttribute="trailing" constant="10" id="Nhr-eZ-gIi"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JdJ-K0-bVQ" secondAttribute="trailing" constant="10" id="TZk-P5-nbD"/>
                                                 <constraint firstItem="qFS-7b-4UH" firstAttribute="leading" secondItem="oGN-tP-DRj" secondAttribute="leadingMargin" constant="10" id="x75-q5-AfI"/>
@@ -203,7 +203,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="delete" width="32" height="32"/>
+        <image name="clear" width="16" height="16"/>
         <image name="topImage1" width="300" height="281"/>
     </resources>
 </document>
