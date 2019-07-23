@@ -23,8 +23,6 @@ final class ShopListViewControllerTests: XCTestCase {
         let vc = ShopListViewController.instantiate(townCode: "test", freeword: "test")
         vc.apiOperater = dummyAPI
         vc.loadViewIfNeeded()
-        
-        XCTAssertNotNil(vc)
             
         let number = vc.collectionView.numberOfItems(inSection: 0)
         XCTAssertEqual(number, 1)
