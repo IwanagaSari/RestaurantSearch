@@ -27,7 +27,7 @@ class DummyAPI: APIType {
                                             latitude: "緯度",
                                             longitude: "経度",
                                             category: "カテゴリー",
-                                            imageUrl: Shop.Image(shopImage1: "https://uds.gnst.jp/rest/img/e0p4w8tb0000/t_0n5s.png",
+                                            imageUrl: Shop.Image(shopImage1: "",
                                                                  shopImage2: "",
                                                                  qrcode: "https://c-r.gnst.jp/tool/qr/?id=h598811&q=6"),
                                             address: "福岡市東区馬出",

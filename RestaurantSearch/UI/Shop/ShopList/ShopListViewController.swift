@@ -9,7 +9,7 @@
 import UIKit
 
 final class ShopListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    private let apiOperater: APIType = APIOperater()
+    var apiOperater: APIType = APIOperater()
     private var shopList: [Shop] = []
     private let imageDownloader = ImageDownloader.shared
     private var townCode: String = ""
