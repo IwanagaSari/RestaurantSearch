@@ -21,6 +21,7 @@ final class ImageListCell: UICollectionViewCell {
         super.prepareForReuse()
         
         imageView.image = nil
+        nameLabel.text = nil
         errorMessageLabel.text = nil
         
         onReuse?()
