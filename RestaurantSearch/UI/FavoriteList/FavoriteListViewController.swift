@@ -17,7 +17,9 @@ struct Favorite {
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     @IBOutlet private var noneFavoritesBackgroundView: UIView!
     @IBOutlet weak private var noneFavoritesMessageLabel: UILabel!
-    private var favorites: [Favorite] = []
+    private var favorites: [Favorite] = [] {
+        didSet { settingBackgroundView() }
+    }
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
@@ -31,7 +33,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         super.viewWillAppear(animated)
         
         updateFavorites()
-        settingBackgroundView()
         getShopByIDList()
     }
     
