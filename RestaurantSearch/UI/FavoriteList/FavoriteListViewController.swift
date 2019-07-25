@@ -37,8 +37,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     private func updateFavorites() {
         let favoriteIds = favoriteDatabase.all()
-        collectionView.backgroundView = favoriteIds.isEmpty ? noneFavoritesBackgroundView : nil
-        noneFavoritesMessageLabel.text = favoriteIds.isEmpty ? "お気に入りが登録されていません" : nil
         favorites = favoriteIds.map { Favorite(id: $0, shop: nil, error: nil) }
         collectionView.reloadData()
     }
