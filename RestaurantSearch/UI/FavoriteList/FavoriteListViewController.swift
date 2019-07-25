@@ -113,7 +113,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let shop = favorites[indexPath.row].shop {
             showShopInfo(shop)
-            favorites.removeAll()
         }
     }
     
