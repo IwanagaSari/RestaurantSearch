@@ -364,12 +364,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="3Zh-AH-Ump">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="Wyi-d9-0hP">
+                            <barButtonItem title="Item" image="addToFavorites" id="Wyi-d9-0hP">
                                 <connections>
                                     <action selector="addButtonTapped:" destination="6Ul-HG-qiz" id="S9C-2J-bR7"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="trash" id="faW-W5-NHg">
+                            <barButtonItem image="deleteFromFavorites" id="faW-W5-NHg">
                                 <connections>
                                     <action selector="deleteButtonTapped:" destination="6Ul-HG-qiz" id="l9F-3C-zAC"/>
                                 </connections>
@@ -398,10 +398,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeV-LC-67B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-907.24637681159425" y="-490.17857142857139"/>
+            <point key="canvasLocation" x="-1122" y="-505"/>
         </scene>
     </scenes>
     <resources>
+        <image name="addToFavorites" width="24" height="24"/>
+        <image name="deleteFromFavorites" width="24" height="24"/>
         <image name="topImage2" width="1024" height="1024"/>
     </resources>
 </document>

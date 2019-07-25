@@ -167,48 +167,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		86AE04A222BA8C2B00F9DC94 /* UITests */ = {
+		86AE04A222BA8C2B00F9DC94 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				86AE04A422BA8CFA00F9DC94 /* ShopTests */,
-				86AE04A522BA8D0400F9DC94 /* SearchTests */,
+				86AE04A722BA8D6200F9DC94 /* FavoriteList */,
+				86AE04A822BA8D7200F9DC94 /* ShopMap */,
+				86AE04A922BA8D7B00F9DC94 /* ShopInfo */,
+				86AE04AA22BA8D8500F9DC94 /* ShopList */,
+				86AE04AB22BA8E0400F9DC94 /* TownSelect */,
+				86AE04AC22BA8E0D00F9DC94 /* CitySelect */,
+				86AE04AD22BA8E2300F9DC94 /* PrefectureSelect */,
+				EAF737A622E5D610005F104A /* AreaSelect */,
+				EAF737AA22E5DA08005F104A /* SearchTop */,
 			);
-			path = UITests;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		86AE04A322BA8CE400F9DC94 /* APITests */ = {
+		86AE04A322BA8CE400F9DC94 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				86AE04A622BA8D1800F9DC94 /* ModelTests */,
-				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
+				86AE04A622BA8D1800F9DC94 /* Model */,
 			);
-			path = APITests;
+			path = API;
 			sourceTree = "<group>";
 		};
-		86AE04A422BA8CFA00F9DC94 /* ShopTests */ = {
-			isa = PBXGroup;
-			children = (
-				86AE04A722BA8D6200F9DC94 /* FavoriteListTests */,
-				86AE04A822BA8D7200F9DC94 /* ShopMapTests */,
-				86AE04A922BA8D7B00F9DC94 /* ShopInfoTests */,
-				86AE04AA22BA8D8500F9DC94 /* ShopListTests */,
-			);
-			path = ShopTests;
-			sourceTree = "<group>";
-		};
-		86AE04A522BA8D0400F9DC94 /* SearchTests */ = {
-			isa = PBXGroup;
-			children = (
-				86AE04AB22BA8E0400F9DC94 /* TownSelectTests */,
-				86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */,
-				86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */,
-				EAF737A622E5D610005F104A /* AreaSelectTests */,
-				EAF737AA22E5DA08005F104A /* SearchTopTests */,
-			);
-			path = SearchTests;
-			sourceTree = "<group>";
-		};
-		86AE04A622BA8D1800F9DC94 /* ModelTests */ = {
+		86AE04A622BA8D1800F9DC94 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				866273C1224A0165007CA319 /* AreaTests.swift */,
@@ -218,98 +201,79 @@
 				86BCA2AB228D1D6D0063E5F6 /* ShopTests.swift */,
 				EA18539522C4EF6F00C4CA13 /* APIErrorTests.swift */,
 			);
-			path = ModelTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		86AE04A722BA8D6200F9DC94 /* FavoriteListTests */ = {
+		86AE04A722BA8D6200F9DC94 /* FavoriteList */ = {
 			isa = PBXGroup;
 			children = (
 				865BBD0F22CCF96C0038873D /* FavoriteListViewControllerTests.swift */,
-				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
 			);
-			path = FavoriteListTests;
+			path = FavoriteList;
 			sourceTree = "<group>";
 		};
-		86AE04A822BA8D7200F9DC94 /* ShopMapTests */ = {
+		86AE04A822BA8D7200F9DC94 /* ShopMap */ = {
 			isa = PBXGroup;
 			children = (
 				860CCD1522A4BAC700943F17 /* ShopMapViewControllerTests.swift */,
 			);
-			path = ShopMapTests;
+			path = ShopMap;
 			sourceTree = "<group>";
 		};
-		86AE04A922BA8D7B00F9DC94 /* ShopInfoTests */ = {
+		86AE04A922BA8D7B00F9DC94 /* ShopInfo */ = {
 			isa = PBXGroup;
 			children = (
 				860CCD1922A4D88700943F17 /* ShopInfoViewControllerTests.swift */,
 			);
-			path = ShopInfoTests;
+			path = ShopInfo;
 			sourceTree = "<group>";
 		};
-		86AE04AA22BA8D8500F9DC94 /* ShopListTests */ = {
+		86AE04AA22BA8D8500F9DC94 /* ShopList */ = {
 			isa = PBXGroup;
 			children = (
 				860CCD1B22A4E35C00943F17 /* ShopListViewControllerTests.swift */,
 			);
-			path = ShopListTests;
+			path = ShopList;
 			sourceTree = "<group>";
 		};
-		86AE04AB22BA8E0400F9DC94 /* TownSelectTests */ = {
+		86AE04AB22BA8E0400F9DC94 /* TownSelect */ = {
 			isa = PBXGroup;
 			children = (
 				EA497752229BD428001BE1DB /* TownSelectViewControllerTests.swift */,
 			);
-			path = TownSelectTests;
+			path = TownSelect;
 			sourceTree = "<group>";
 		};
-		86AE04AC22BA8E0D00F9DC94 /* CitySelectTests */ = {
+		86AE04AC22BA8E0D00F9DC94 /* CitySelect */ = {
 			isa = PBXGroup;
 			children = (
 				EA497750229BD419001BE1DB /* CitySelectViewControllerTests.swift */,
 			);
-			path = CitySelectTests;
+			path = CitySelect;
 			sourceTree = "<group>";
 		};
-		86AE04AD22BA8E2300F9DC94 /* PrefectureSelectTests */ = {
+		86AE04AD22BA8E2300F9DC94 /* PrefectureSelect */ = {
 			isa = PBXGroup;
 			children = (
 				860CCD0D229BC0CA00943F17 /* PrefectureSelectViewControllerTests.swift */,
 			);
-			path = PrefectureSelectTests;
+			path = PrefectureSelect;
 			sourceTree = "<group>";
 		};
 		86E8FDFD225DCE4400DCAD11 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				86E8FDFF225DCE5F00DCAD11 /* Shop */,
-				86E8FDFE225DCE4D00DCAD11 /* Search */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		86E8FDFE225DCE4D00DCAD11 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				86E8FE04225DCEDC00DCAD11 /* TownSelect */,
-				86E8FE03225DCED300DCAD11 /* CitySelect */,
-				86E8FE02225DCEC800DCAD11 /* PrefectureSelect */,
-				86E8FE01225DCEBD00DCAD11 /* AreaSelect */,
-				86E8FE00225DCEA400DCAD11 /* SearchTop */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		86E8FDFF225DCE5F00DCAD11 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
 				86E8FE0A225DCF4400DCAD11 /* FavoriteList */,
 				86E8FE09225DCF3A00DCAD11 /* ShopMap */,
 				86E8FE08225DCF2800DCAD11 /* ShopInfo */,
 				86E8FE07225DCF1E00DCAD11 /* ShopList */,
-				860CCD0F229E4C4700943F17 /* ImageDownloder.swift */,
-				865693C322AA18E000B9DEBD /* ImageListCell.swift */,
+				86E8FE04225DCEDC00DCAD11 /* TownSelect */,
+				86E8FE03225DCED300DCAD11 /* CitySelect */,
+				86E8FE02225DCEC800DCAD11 /* PrefectureSelect */,
+				86E8FE01225DCEBD00DCAD11 /* AreaSelect */,
+				86E8FE00225DCEA400DCAD11 /* SearchTop */,
 			);
-			path = Shop;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		86E8FE00225DCEA400DCAD11 /* SearchTop */ = {
@@ -390,7 +354,6 @@
 			children = (
 				86E8FE0D225DD03D00DCAD11 /* FavoriteList.storyboard */,
 				86E8FE0F225DD05800DCAD11 /* FavoriteListViewController.swift */,
-				860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */,
 			);
 			path = FavoriteList;
 			sourceTree = "<group>";
@@ -419,6 +382,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EA215AEE22E714EA00462E7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EA66AD7D22929F6E007355BB /* DummyAPI.swift */,
+				EA47FCAE22842F2E00EB5656 /* APIOperater.swift */,
+				860CCD1F22A7611000943F17 /* FavoriteDatabase.swift */,
+				860CCD0F229E4C4700943F17 /* ImageDownloder.swift */,
+				865693C322AA18E000B9DEBD /* ImageListCell.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EA215AEF22E7160D00462E7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				860AD39322AE42950009E9C6 /* FavoriteDatabaseTests.swift */,
+				EA47FCB0228430D700EB5656 /* APIOperaterTests.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		EA2679D92248CCBF00F3091C = {
 			isa = PBXGroup;
 			children = (
@@ -442,6 +426,7 @@
 		EA2679E42248CCBF00F3091C /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
+				EA215AEE22E714EA00462E7B /* Common */,
 				86E8FDFD225DCE4400DCAD11 /* UI */,
 				EA267A062248E18A00F3091C /* API */,
 				EA2679E52248CCBF00F3091C /* AppDelegate.swift */,
@@ -456,8 +441,9 @@
 		EA2679F92248CCC100F3091C /* RestaurantSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				86AE04A222BA8C2B00F9DC94 /* UITests */,
-				86AE04A322BA8CE400F9DC94 /* APITests */,
+				EA215AEF22E7160D00462E7B /* Common */,
+				86AE04A222BA8C2B00F9DC94 /* UI */,
+				86AE04A322BA8CE400F9DC94 /* API */,
 				EA2679FC2248CCC100F3091C /* Info.plist */,
 			);
 			path = RestaurantSearchTests;
@@ -467,27 +453,25 @@
 			isa = PBXGroup;
 			children = (
 				EA0AD329224A2C8900D6526B /* Model */,
-				EA47FCAE22842F2E00EB5656 /* APIOperater.swift */,
-				EA66AD7D22929F6E007355BB /* DummyAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		EAF737A622E5D610005F104A /* AreaSelectTests */ = {
+		EAF737A622E5D610005F104A /* AreaSelect */ = {
 			isa = PBXGroup;
 			children = (
 				EAF737A722E5D641005F104A /* AreaSelectViewControllerTests.swift */,
 			);
-			path = AreaSelectTests;
+			path = AreaSelect;
 			sourceTree = "<group>";
 		};
-		EAF737AA22E5DA08005F104A /* SearchTopTests */ = {
+		EAF737AA22E5DA08005F104A /* SearchTop */ = {
 			isa = PBXGroup;
 			children = (
 				EAF737AD22E5DFE3005F104A /* SearchTopViewControllerTests.swift */,
 				EAF737AB22E5DB36005F104A /* SearchTopDetailViewControllerTests.swift */,
 			);
-			name = SearchTopTests;
+			name = SearchTop;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
