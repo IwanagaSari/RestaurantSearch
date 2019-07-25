@@ -93,10 +93,6 @@ final class ShopInfoViewController: UITableViewController {
         errorMessageLabel.text = error.localizedDescription
     }
     
-    private func showFavoriteList() {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
     private func showUIBarButton() {
         let isFavorite = database.contain(shop.id)
         navigationItem.rightBarButtonItems = isFavorite ? [deleteButton] : [addButton]
@@ -140,7 +136,6 @@ final class ShopInfoViewController: UITableViewController {
     /// 削除ボタンをタップされた時
     @IBAction func deleteButtonTapped(_ sender: UIBarButtonItem) {
         database.remove(shop.id)
-        showFavoriteList()
         showUIBarButton()
     }
     
