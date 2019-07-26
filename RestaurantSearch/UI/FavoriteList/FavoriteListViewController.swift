@@ -67,6 +67,18 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let vc = ShopInfoViewController.instantiate(shop: shop)
         show(vc, sender: nil)
     }
+    
+    private func showDeleteAlert(number: Int) {
+        let alertController = UIAlertController(title: "お店情報が取得できません", message: "お気に入りから削除してもよろしいですか？", preferredStyle: .alert)
+        let action1 = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+            self.favorites.remove(at: number)
+            self.collectionView.reloadData()
+        })
+        let action2 = UIAlertAction(title: "NO", style: .default, handler: nil)
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        present(alertController, animated: true, completion: nil)
+    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorites.count
@@ -104,6 +116,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let shop = favorites[indexPath.row].shop {
             showShopInfo(shop)
+        } else {
+            showDeleteAlert(number: indexPath.row)
         }
     }
     

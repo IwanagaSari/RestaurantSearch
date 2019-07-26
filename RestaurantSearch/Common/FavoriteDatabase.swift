@@ -52,6 +52,7 @@ final class FavoriteDatabase: FavoriteDatabaseType {
     }
     
     func all() -> [String] {
-        return Array(shopIDList.reversed())
+        return ["fap1004","fap1004","ha0n308"]
+        // return Array(shopIDList.reversed())
     }
 }
