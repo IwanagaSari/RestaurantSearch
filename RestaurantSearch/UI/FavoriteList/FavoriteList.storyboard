@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,6 +65,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Iik-cn-r86">
+                                            <rect key="frame" x="60.5" y="61.5" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </view>
                                 <constraints>
@@ -72,9 +75,11 @@
                                     <constraint firstItem="8Ol-DI-gAn" firstAttribute="top" secondItem="NPr-wP-Hjh" secondAttribute="top" id="0na-9t-qKT"/>
                                     <constraint firstAttribute="trailing" secondItem="8Ol-DI-gAn" secondAttribute="trailing" id="3xl-Nc-5Rq"/>
                                     <constraint firstItem="oc9-9c-B93" firstAttribute="width" secondItem="8Ol-DI-gAn" secondAttribute="width" id="4Gz-3k-Rrw"/>
+                                    <constraint firstItem="Iik-cn-r86" firstAttribute="centerY" secondItem="NPr-wP-Hjh" secondAttribute="centerY" id="B4b-HA-cnf"/>
                                     <constraint firstAttribute="bottom" secondItem="qtQ-PK-4UV" secondAttribute="bottom" id="Sk9-11-4WO"/>
                                     <constraint firstItem="qtQ-PK-4UV" firstAttribute="leading" secondItem="NPr-wP-Hjh" secondAttribute="leading" id="cwp-KM-IOd"/>
                                     <constraint firstItem="oc9-9c-B93" firstAttribute="centerY" secondItem="NPr-wP-Hjh" secondAttribute="centerY" id="jJq-YV-WiE"/>
+                                    <constraint firstItem="Iik-cn-r86" firstAttribute="centerX" secondItem="NPr-wP-Hjh" secondAttribute="centerX" id="pPJ-MG-CRn"/>
                                     <constraint firstAttribute="trailing" secondItem="qtQ-PK-4UV" secondAttribute="trailing" id="pjl-Bm-4QJ"/>
                                     <constraint firstItem="8Ol-DI-gAn" firstAttribute="leading" secondItem="NPr-wP-Hjh" secondAttribute="leading" id="wTA-eq-AZd"/>
                                     <constraint firstItem="oc9-9c-B93" firstAttribute="centerX" secondItem="NPr-wP-Hjh" secondAttribute="centerX" id="wn6-rt-xFf"/>
@@ -83,6 +88,7 @@
                                 <connections>
                                     <outlet property="errorMessageLabel" destination="oc9-9c-B93" id="wrd-f1-jEG"/>
                                     <outlet property="imageView" destination="8Ol-DI-gAn" id="Ufu-jt-VOe"/>
+                                    <outlet property="lodingIndicator" destination="Iik-cn-r86" id="hrX-P6-dsL"/>
                                     <outlet property="nameLabel" destination="4Sp-SW-psv" id="sNq-DF-ucX"/>
                                 </connections>
                             </collectionViewCell>
