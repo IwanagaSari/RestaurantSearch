@@ -68,10 +68,11 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         show(vc, sender: nil)
     }
     
-    private func showDeleteAlert(number: Int) {
-        let alertController = UIAlertController(title: "お店情報が取得できません", message: "お気に入りから削除してもよろしいですか？", preferredStyle: .alert)
-        let action1 = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction!) in
+    private func showDeleteAlert(number: Int, shopID: String) {
+        let alertController = UIAlertController(title: "お店情報が取得できません", message: "お気に入りから削除しますか？", preferredStyle: .alert)
+        let action1 = UIAlertAction(title: "YES", style: .default, handler: { (action: UIAlertAction!) in
             self.favorites.remove(at: number)
+            self.favoriteDatabase.remove(shopID)
             self.collectionView.reloadData()
         })
         let action2 = UIAlertAction(title: "NO", style: .default, handler: nil)
@@ -117,7 +118,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         if let shop = favorites[indexPath.row].shop {
             showShopInfo(shop)
         } else {
-            showDeleteAlert(number: indexPath.row)
+            showDeleteAlert(number: indexPath.row, shopID: favorites[indexPath.row].id)
         }
     }
     
