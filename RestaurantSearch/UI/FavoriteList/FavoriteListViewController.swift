@@ -134,7 +134,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let favorite = favorites[indexPath.row]
         if let shop = favorite.shop {
             showShopInfo(shop)
-        } else {
+        } else if favorite.error != nil {
             showDeleteAlert(shopID: favorite.id)
         }
     }
