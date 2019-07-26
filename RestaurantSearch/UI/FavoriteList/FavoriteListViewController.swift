@@ -106,11 +106,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let favorite = favorites[indexPath.row]
         let shop = favorite.shop
         
-        // インジケーターの表示
         cell.lodingIndicator.startAnimating()
         
-        //エラー表示
-        cell.errorMessageLabel.text = favorite.error?.localizedDescription
+        // エラー表示
+        if let error = favorite.error {
+            cell.errorMessageLabel.text = error.localizedDescription
+            cell.lodingIndicator.stopAnimating()
+        }
         
         // 店名の表示
         cell.nameLabel.text = shop?.name
@@ -124,7 +126,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                                                    },
                                                    failure: { [weak self] error in
                                                        self?.updateShopError(error, shopID: favorite.id)
-                                                       cell.lodingIndicator.stopAnimating()
                                                    })
             cell.onReuse = {
                 request?.cancel()
