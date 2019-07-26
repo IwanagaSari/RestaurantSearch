@@ -111,6 +111,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         // エラー表示
         if let error = favorite.error {
             cell.errorMessageLabel.text = error.localizedDescription
+            cell.imageView.backgroundColor = UIColor.lightGray
             cell.lodingIndicator.stopAnimating()
         }
         
