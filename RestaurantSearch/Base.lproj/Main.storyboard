@@ -69,11 +69,11 @@
             </objects>
             <point key="canvasLocation" x="1684" y="112"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--お気に入り-->
         <scene sceneID="uFo-DC-tkm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pcs-Dc-MLs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" systemItem="favorites" id="GYC-5v-uty"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="お気に入り" image="deleteFromFavorites" id="GYC-5v-uty"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YAU-8S-c2q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -89,4 +89,7 @@
             <point key="canvasLocation" x="764" y="442"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="deleteFromFavorites" width="24" height="24"/>
+    </resources>
 </document>
