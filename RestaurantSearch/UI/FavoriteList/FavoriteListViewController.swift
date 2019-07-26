@@ -70,8 +70,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     private func showDeleteAlert(shopID: String) {
         let alertController = UIAlertController(title: "お店情報が取得できません", message: "お気に入りから削除しますか？", preferredStyle: .alert)
-        let action1 = UIAlertAction(title: "YES", style: .default, handler: { (action: UIAlertAction!) in
-            self.removeShop(shopID)
+        let action1 = UIAlertAction(title: "YES", style: .default, handler: { [weak self] _ in
+            self?.removeShop(shopID)
         })
         let action2 = UIAlertAction(title: "NO", style: .default, handler: nil)
         alertController.addAction(action1)
