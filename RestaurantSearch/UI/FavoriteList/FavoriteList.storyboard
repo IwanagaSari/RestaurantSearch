@@ -5,7 +5,8 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -95,8 +96,32 @@
                         <barButtonItem key="rightBarButtonItem" title="編集" id="MNz-5o-sN5"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="noneFavoritesBackgroundView" destination="Cgb-0x-MuH" id="rDz-hg-H37"/>
+                        <outlet property="noneFavoritesMessageLabel" destination="BNI-Tl-D4P" id="Gjt-Uk-BTe"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1H-RG-YGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Cgb-0x-MuH">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNI-Tl-D4P">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="BNI-Tl-D4P" firstAttribute="leading" secondItem="pLy-cA-pnO" secondAttribute="leading" id="0IL-fE-iJd"/>
+                        <constraint firstItem="BNI-Tl-D4P" firstAttribute="top" secondItem="pLy-cA-pnO" secondAttribute="top" id="NQY-RU-P6v"/>
+                        <constraint firstItem="BNI-Tl-D4P" firstAttribute="bottom" secondItem="pLy-cA-pnO" secondAttribute="bottom" id="a9Z-2j-5t1"/>
+                        <constraint firstItem="BNI-Tl-D4P" firstAttribute="trailing" secondItem="pLy-cA-pnO" secondAttribute="trailing" id="fY9-fy-6eq"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="pLy-cA-pnO"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="188" y="143"/>
         </scene>
