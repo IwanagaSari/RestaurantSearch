@@ -15,7 +15,11 @@ struct Favorite {
 }
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    private var favorites: [Favorite] = []
+    @IBOutlet private var noneFavoritesBackgroundView: UIView!
+    @IBOutlet weak private var noneFavoritesMessageLabel: UILabel!
+    private var favorites: [Favorite] = [] {
+        didSet { settingBackgroundView() }
+    }
     private let apiOperater: APIType = APIOperater()
     private let imageDownloader = ImageDownloader.shared
     private let favoriteDatabase: FavoriteDatabaseType = FavoriteDatabase.shared
@@ -33,8 +37,14 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     private func updateFavorites() {
-        favorites = favoriteDatabase.all().map { Favorite(id: $0, shop: nil, error: nil) }
+        let favoriteIds = favoriteDatabase.all()
+        favorites = favoriteIds.map { Favorite(id: $0, shop: nil, error: nil) }
         collectionView.reloadData()
+    }
+    
+    private func settingBackgroundView() {
+        collectionView.backgroundView = favorites.isEmpty ? noneFavoritesBackgroundView : nil
+        noneFavoritesMessageLabel.text = favorites.isEmpty ? "お気に入りが登録されていません" : nil
     }
     
     private func getShopByIDList() {
