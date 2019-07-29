@@ -104,7 +104,7 @@ final class ShopInfoViewController: UITableViewController {
         let center = CLLocationCoordinate2DMake(latitude, longitude)
         mapView.setCenter(center, animated: true)
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.region = region
         
