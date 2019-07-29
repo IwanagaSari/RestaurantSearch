@@ -12,6 +12,15 @@ struct Favorite {
     let id: String
     var shop: Shop?
     var error: Error?
+    var isImageDownloading: Bool = false
+    
+    var isShopLoading: Bool {
+        return shop == nil && error == nil
+    }
+    
+    var isLoading: Bool {
+        return isImageDownloading || isShopLoading
+    }
 }
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -103,16 +112,20 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
-        let favorite = favorites[indexPath.row]
+        var favorite = favorites[indexPath.row]
         let shop = favorite.shop
         
-        cell.lodingIndicator.startAnimating()
+        if favorite.isLoading {
+            cell.loadingIndicator.startAnimating()
+        } else {
+            cell.loadingIndicator.stopAnimating()
+        }
         
         // エラー表示
         if let error = favorite.error {
             cell.errorMessageLabel.text = error.localizedDescription
             cell.imageView.backgroundColor = UIColor.lightGray
-            cell.lodingIndicator.stopAnimating()
+            cell.loadingIndicator.stopAnimating()
         }
         
         // 店名の表示
@@ -120,13 +133,15 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         
         // 画像の表示
         if let url = URL(string: shop?.imageUrl.shopImage1 ?? "") {
+            favorite.isImageDownloading = true
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
                                                        cell.imageView.image = shopImage
-                                                       cell.lodingIndicator.stopAnimating()
+                                                       favorite.isImageDownloading = false
                                                    },
                                                    failure: { [weak self] error in
                                                        self?.updateShopError(error, shopID: favorite.id)
+                                                       favorite.isImageDownloading = false
                                                    })
             cell.onReuse = {
                 request?.cancel()
