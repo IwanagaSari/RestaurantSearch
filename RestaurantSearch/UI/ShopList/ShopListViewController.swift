@@ -81,6 +81,8 @@ final class ShopListViewController: UICollectionViewController, UICollectionView
             }
         } else {
             cell.imageView.image = UIImage(named: "noImage")
+            cell.imageView.layer.borderColor = UIColor.lightGray.cgColor
+            cell.imageView.layer.borderWidth = 0.5
         }
         
         return cell
