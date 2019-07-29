@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 final class ShopMapViewController: UIViewController {
-    @IBOutlet weak var addressLabel: UITextView!
+    @IBOutlet weak private var addressLabel: UITextView!
     @IBOutlet weak private var mapView: MKMapView!
     private var shop: Shop!
     
