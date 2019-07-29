@@ -98,6 +98,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         present(alertController, animated: true, completion: nil)
     }
     
+    private func showLoadingAlert() {
+        let alertController = UIAlertController(title: "情報取得中", message: "しばらくお待ち下さい", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     private func removeShop(_ shopID: String) {
         if let index = favorites.firstIndex(where: { $0.id == shopID }) {
             favorites.remove(at: index)
@@ -158,6 +165,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             showShopInfo(shop)
         } else if favorite.error != nil {
             showDeleteAlert(shopID: favorite.id)
+        } else {
+            showLoadingAlert()
         }
     }
     
