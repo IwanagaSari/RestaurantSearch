@@ -132,7 +132,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         if let error = favorite.error {
             cell.errorMessageLabel.text = error.localizedDescription
             cell.imageView.backgroundColor = UIColor.lightGray
-            cell.loadingIndicator.stopAnimating()
         }
         
         // 店名の表示
