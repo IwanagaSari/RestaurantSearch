@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 final class ShopMapViewController: UIViewController {
-    @IBOutlet weak var addressLabel: UITextView!
+    @IBOutlet weak private var addressLabel: UITextView!
     @IBOutlet weak private var mapView: MKMapView!
     private var shop: Shop!
     
@@ -33,7 +33,7 @@ final class ShopMapViewController: UIViewController {
         let center = CLLocationCoordinate2DMake(latitude, longitude)
         mapView.setCenter(center, animated: true)
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.region = region
         
