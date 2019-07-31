@@ -151,6 +151,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             }
         } else {
             cell.imageView.image = nil
+            cell.imageView.layer.borderColor = UIColor.lightGray.cgColor
+            cell.imageView.layer.borderWidth = 0.5
         }
         return cell
     }
