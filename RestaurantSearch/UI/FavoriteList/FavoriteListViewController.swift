@@ -120,7 +120,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
         let index = indexPath.row
-        
+        let id = favorites[indexPath.row].id
+
         if favorites[index].isLoading {
             cell.loadingIndicator.startAnimating()
         } else {
@@ -140,11 +141,15 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
                                                        cell.imageView.image = shopImage
-                                                       self.favorites[index].isImageDownloading = false
+                                                       if let index = self.favorites.firstIndex(where: { $0.id == id }) {
+                                                          self.favorites[index].isImageDownloading = false
+                                                       }
                                                    },
                                                    failure: { [weak self] error in
-                                                       self?.updateShopError(error, shopID: self?.favorites[index].id ?? "")
-                                                       self?.favorites[index].isImageDownloading = false
+                                                       if let index = self?.favorites.firstIndex(where: { $0.id == id }) {
+                                                          self?.updateShopError(error, shopID: self?.favorites[index].id ?? "")
+                                                          self?.favorites[index].isImageDownloading = false
+                                                       }
                                                    })
             cell.onReuse = {
                 request?.cancel()
