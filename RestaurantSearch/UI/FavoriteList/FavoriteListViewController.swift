@@ -12,6 +12,15 @@ struct Favorite {
     let id: String
     var shop: Shop?
     var error: Error?
+    var isImageDownloading: Bool = false
+    
+    var isShopLoading: Bool {
+        return shop == nil && error == nil
+    }
+    
+    var isLoading: Bool {
+        return isImageDownloading || isShopLoading
+    }
 }
 
 final class FavoriteListViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
@@ -38,7 +47,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     private func updateFavorites() {
         let favoriteIds = favoriteDatabase.all()
-        favorites = favoriteIds.map { Favorite(id: $0, shop: nil, error: nil) }
+        favorites = favoriteIds.map { Favorite(id: $0, shop: nil, error: nil, isImageDownloading: false) }
         collectionView.reloadData()
     }
     
@@ -77,6 +86,32 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         let vc = ShopInfoViewController.instantiate(shop: shop)
         show(vc, sender: nil)
     }
+    
+    private func showDeleteAlert(shopID: String) {
+        let alertController = UIAlertController(title: "お店情報が取得できません", message: "お気に入りから削除しますか？", preferredStyle: .alert)
+        let yesAction = UIAlertAction(title: "YES", style: .default, handler: { [weak self] _ in
+            self?.removeShop(shopID)
+        })
+        let noAction = UIAlertAction(title: "NO", style: .default, handler: nil)
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func showLoadingAlert() {
+        let alertController = UIAlertController(title: "情報取得中", message: "しばらくお待ち下さい", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func removeShop(_ shopID: String) {
+        if let index = favorites.firstIndex(where: { $0.id == shopID }) {
+            favorites.remove(at: index)
+        }
+        favoriteDatabase.remove(shopID)
+        collectionView.reloadData()
+    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorites.count
@@ -84,23 +119,32 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
-        let favorite = favorites[indexPath.row]
-        let shop = favorite.shop
+        let index = indexPath.row
         
-        //エラー表示
-        cell.errorMessageLabel.text = favorite.error?.localizedDescription
+        if favorites[index].isLoading {
+            cell.loadingIndicator.startAnimating()
+        } else {
+            cell.loadingIndicator.stopAnimating()
+        }
+        
+        // エラー表示
+        cell.errorMessageLabel.text = favorites[index].error?.localizedDescription
+        cell.imageView.backgroundColor = favorites[index].error == nil ? .clear : .lightGray
         
         // 店名の表示
-        cell.nameLabel.text = shop?.name
+        cell.nameLabel.text = favorites[index].shop?.name
         
         // 画像の表示
-        if let url = URL(string: shop?.imageUrl.shopImage1 ?? "") {
+        if let url = URL(string: favorites[index].shop?.imageUrl.shopImage1 ?? "") {
+            favorites[index].isImageDownloading = true
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
                                                        cell.imageView.image = shopImage
+                                                       self.favorites[index].isImageDownloading = false
                                                    },
                                                    failure: { [weak self] error in
-                                                       self?.updateShopError(error, shopID: favorite.id)
+                                                       self?.updateShopError(error, shopID: self?.favorites[index].id ?? "")
+                                                       self?.favorites[index].isImageDownloading = false
                                                    })
             cell.onReuse = {
                 request?.cancel()
@@ -112,8 +156,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let shop = favorites[indexPath.row].shop {
+        let favorite = favorites[indexPath.row]
+        if let shop = favorite.shop {
             showShopInfo(shop)
+        } else if favorite.error != nil {
+            showDeleteAlert(shopID: favorite.id)
+        } else {
+            showLoadingAlert()
         }
     }
     
