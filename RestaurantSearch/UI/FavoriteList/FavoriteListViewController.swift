@@ -144,7 +144,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                                                        self.favorites[index].isImageDownloading = false
                                                    },
                                                    failure: { [weak self] error in
-                                                    self?.updateShopError(error, shopID: self?.favorites[index].id ?? "")
+                                                       self?.updateShopError(error, shopID: self?.favorites[index].id ?? "")
                                                        self?.favorites[index].isImageDownloading = false
                                                    })
             cell.onReuse = {
