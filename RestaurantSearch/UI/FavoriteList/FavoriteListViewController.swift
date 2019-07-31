@@ -47,7 +47,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     
     private func updateFavorites() {
         let favoriteIds = favoriteDatabase.all()
-        favorites = favoriteIds.map { Favorite(id: $0, shop: nil, error: nil) }
+        favorites = favoriteIds.map { Favorite(id: $0, shop: nil, error: nil, isImageDownloading: false) }
         collectionView.reloadData()
     }
     
@@ -129,10 +129,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         }
         
         // エラー表示
-        if let error = favorite.error {
-            cell.errorMessageLabel.text = error.localizedDescription
-            cell.imageView.backgroundColor = UIColor.lightGray
-        }
+        cell.errorMessageLabel.text = favorite.error?.localizedDescription
+        cell.imageView.backgroundColor = favorite.error == nil ? .clear : .lightGray
         
         // 店名の表示
         cell.nameLabel.text = shop?.name
