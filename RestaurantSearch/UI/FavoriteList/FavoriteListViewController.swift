@@ -137,7 +137,6 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         // 画像の表示
         if let url = URL(string: favorites[index].shop?.imageUrl.shopImage1 ?? "") {
             favorites[index].isImageDownloading = true
-            //favorite.isImageDownloading = true
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
                                                        cell.imageView.image = shopImage
