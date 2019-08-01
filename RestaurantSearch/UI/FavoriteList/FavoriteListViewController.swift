@@ -112,6 +112,19 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         favoriteDatabase.remove(shopID)
         collectionView.reloadData()
     }
+    
+    private func ImageDownloadIsSuccess(_ id: String) {
+        if let index = favorites.firstIndex(where: { $0.id == id }) {
+            favorites[index].isImageDownloading = false
+        }
+    }
+    
+    private func ImageDownloadIsFailure(_ id: String, _ error: Error) {
+        if let index = favorites.firstIndex(where: { $0.id == id }) {
+            updateShopError(error, shopID: favorites[index].id)
+            favorites[index].isImageDownloading = false
+        }
+    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorites.count
@@ -141,15 +154,10 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
                                                        cell.imageView.image = shopImage
-                                                       if let index = self.favorites.firstIndex(where: { $0.id == id }) {
-                                                          self.favorites[index].isImageDownloading = false
-                                                       }
+                                                       self.ImageDownloadIsSuccess(id)
                                                    },
                                                    failure: { [weak self] error in
-                                                       if let index = self?.favorites.firstIndex(where: { $0.id == id }) {
-                                                          self?.updateShopError(error, shopID: self?.favorites[index].id ?? "")
-                                                          self?.favorites[index].isImageDownloading = false
-                                                       }
+                                                       self?.ImageDownloadIsFailure(id, error)
                                                    })
             cell.onReuse = {
                 request?.cancel()
