@@ -1,10 +1,10 @@
 coverage:
-  status:	  status:
-    project:	    project:
-      default:	      default:
-        # basic	        # basic
-        target: auto	        target: number 0%
-        threshold: 0%	        threshold: null
+  status:
+    project:
+      default:
+        # basic
+        target: auto
+        threshold: 0%
         base: auto 
         # advanced
         branches: null
