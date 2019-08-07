@@ -17,3 +17,5 @@
 
 ## API
 [ぐるなびAPI](https://api.gnavi.co.jp/api/)
+
+## 仕様
