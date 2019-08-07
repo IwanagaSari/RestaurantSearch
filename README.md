@@ -18,6 +18,9 @@
 ## API
 [ぐるなびAPI](https://api.gnavi.co.jp/api/)
 
+## ライブラリ
+[Alamofire](https://github.com/Alamofire/Alamofire)
+
 ## 仕様
 ![](https://github.com/IwanagaSari/RestaurantSearch/blob/readme/Screenshots/ApplicationStructure1.png)  
 ***
