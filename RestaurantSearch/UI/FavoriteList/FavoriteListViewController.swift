@@ -113,13 +113,13 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         collectionView.reloadData()
     }
     
-    private func ImageDownloadIsSuccess(_ id: String) {
+    private func imageDownloadIsSuccess(_ id: String) {
         if let index = favorites.firstIndex(where: { $0.id == id }) {
             favorites[index].isImageDownloading = false
         }
     }
     
-    private func ImageDownloadIsFailure(_ id: String, _ error: Error) {
+    private func imageDownloadIsFailure(_ id: String, _ error: Error) {
         if let index = favorites.firstIndex(where: { $0.id == id }) {
             updateShopError(error, shopID: favorites[index].id)
             favorites[index].isImageDownloading = false
@@ -154,10 +154,10 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             let request = imageDownloader.getImage(url: url,
                                                    success: { shopImage in
                                                        cell.imageView.image = shopImage
-                                                       self.ImageDownloadIsSuccess(id)
+                                                       self.imageDownloadIsSuccess(id)
                                                    },
                                                    failure: { [weak self] error in
-                                                       self?.ImageDownloadIsFailure(id, error)
+                                                       self?.imageDownloadIsFailure(id, error)
                                                    })
             cell.onReuse = {
                 request?.cancel()
