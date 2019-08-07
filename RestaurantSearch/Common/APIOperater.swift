@@ -20,7 +20,7 @@ protocol APIType {
 
 final class APIOperater: APIType {
     private let commonParameters: [String: Any] = [
-        "keyid": "44b3998d75d52f6b3ab9efe7ca84acbe"
+        "keyid": "0b2b99e35af2ce054236f4f61700284f"
     ]
     
     private func fetchResponse<ResponseType: Decodable>(url: String, parameters: [String: Any], success: @escaping (ResponseType) -> Void, failure: @escaping (Error) -> Void) {
