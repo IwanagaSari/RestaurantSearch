@@ -19,5 +19,6 @@
 [ぐるなびAPI](https://api.gnavi.co.jp/api/)
 
 ## 仕様
-![仕様1](https://github.com/IwanagaSari/RestaurantSearch/blob/readme/Screenshots/specification1.pdf)  
-![仕様2](https://github.com/IwanagaSari/RestaurantSearch/blob/readme/Screenshots/specification2.pdf)
+![](https://github.com/IwanagaSari/RestaurantSearch/blob/readme/Screenshots/ApplicationStructure1.png)  
+***
+![](https://github.com/IwanagaSari/RestaurantSearch/blob/readme/Screenshots/ApplicationStructure2.png)
