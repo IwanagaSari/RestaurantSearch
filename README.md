@@ -19,3 +19,4 @@
 [ぐるなびAPI](https://api.gnavi.co.jp/api/)
 
 ## 仕様
+![](https://github.com/IwanagaSari/RestaurantSearch/blob/readme/Screenshots/specification1.pdf)
