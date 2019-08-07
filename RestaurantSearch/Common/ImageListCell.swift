@@ -22,6 +22,7 @@ final class ImageListCell: UICollectionViewCell {
         super.prepareForReuse()
         
         imageView.image = nil
+        imageView.layer.borderColor = nil
         nameLabel.text = nil
         errorMessageLabel.text = nil
         
