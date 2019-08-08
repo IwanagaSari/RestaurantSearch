@@ -112,6 +112,14 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         favoriteDatabase.remove(shopID)
         collectionView.reloadData()
     }
+    
+    private func imageDownloadIsFinished(_ id: String, _ error: Error?) {
+        guard let index = favorites.firstIndex(where: { $0.id == id }) else { return }
+        var favorite = favorites[index]
+        favorite.isImageDownloading = false
+        favorite.error = error
+        favorites[index] = favorite
+    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return favorites.count
@@ -120,7 +128,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoriteListCell", for: indexPath) as! ImageListCell
         let index = indexPath.row
-        
+        let id = favorites[indexPath.row].id
+
         if favorites[index].isLoading {
             cell.loadingIndicator.startAnimating()
         } else {
@@ -138,15 +147,14 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
         if let url = URL(string: favorites[index].shop?.imageUrl.shopImage1 ?? "") {
             favorites[index].isImageDownloading = true
             let request = imageDownloader.getImage(url: url,
-                                                   success: { shopImage in
+                                                   success: { [weak self] shopImage in
                                                        cell.imageView.image = shopImage
                                                        cell.imageView.layer.borderColor = nil
                                                        cell.imageView.layer.borderWidth = 0
-                                                       self.favorites[index].isImageDownloading = false
+                                                       self?.imageDownloadIsFinished(id, nil)
                                                    },
                                                    failure: { [weak self] error in
-                                                       self?.updateShopError(error, shopID: self?.favorites[index].id ?? "")
-                                                       self?.favorites[index].isImageDownloading = false
+                                                       self?.imageDownloadIsFinished(id, error)
                                                    })
             cell.onReuse = {
                 request?.cancel()
