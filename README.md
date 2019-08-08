@@ -22,6 +22,6 @@
 [Alamofire](https://github.com/Alamofire/Alamofire)
 
 ## 仕様
-![](https://github.com/IwanagaSari/RestaurantSearch/blob/readme/Screenshots/ApplicationStructure1.png)  
+![](https://github.com/IwanagaSari/RestaurantSearch/blob/master/Screenshots/ApplicationStructure1.png)  
 ***
-![](https://github.com/IwanagaSari/RestaurantSearch/blob/readme/Screenshots/ApplicationStructure2.png)
+![](https://github.com/IwanagaSari/RestaurantSearch/blob/master/Screenshots/ApplicationStructure2.png)
