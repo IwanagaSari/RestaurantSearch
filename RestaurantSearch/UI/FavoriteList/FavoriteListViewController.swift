@@ -141,6 +141,7 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
                                                    success: { shopImage in
                                                        cell.imageView.image = shopImage
                                                        cell.imageView.layer.borderColor = nil
+                                                       cell.imageView.layer.borderWidth = 0
                                                        self.favorites[index].isImageDownloading = false
                                                    },
                                                    failure: { [weak self] error in

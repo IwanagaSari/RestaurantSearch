@@ -23,6 +23,7 @@ final class ImageListCell: UICollectionViewCell {
         
         imageView.image = nil
         imageView.layer.borderColor = nil
+        imageView.layer.borderWidth = 0
         nameLabel.text = nil
         errorMessageLabel.text = nil
         
