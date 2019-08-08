@@ -149,8 +149,9 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             let request = imageDownloader.getImage(url: url,
                                                    success: { [weak self] shopImage in
                                                        cell.imageView.image = shopImage
+                                                       cell.imageView.layer.borderColor = nil
+                                                       cell.imageView.layer.borderWidth = 0
                                                        self?.imageDownloadIsFinished(id, nil)
-
                                                    },
                                                    failure: { [weak self] error in
                                                        self?.imageDownloadIsFinished(id, error)
@@ -160,6 +161,8 @@ final class FavoriteListViewController: UICollectionViewController, UICollection
             }
         } else {
             cell.imageView.image = nil
+            cell.imageView.layer.borderColor = UIColor.lightGray.cgColor
+            cell.imageView.layer.borderWidth = 0.5
         }
         return cell
     }
